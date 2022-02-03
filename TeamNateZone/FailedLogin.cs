@@ -12,9 +12,22 @@ namespace TeamNateZone
 {
     public partial class FailedLogin : Form
     {
+        LoginForm login;
         public FailedLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnRetry_Click(object sender, EventArgs e)
+        {
+            login = new LoginForm();
+            this.Hide();
+            login.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

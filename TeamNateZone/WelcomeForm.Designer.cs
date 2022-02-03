@@ -29,12 +29,34 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(31, 40);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(258, 62);
+            this.welcomeLabel.TabIndex = 0;
+            this.welcomeLabel.Text = "Welcome!";
+            // 
+            // WelcomeForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "WelcomeForm";
+            this.ClientSize = new System.Drawing.Size(1144, 732);
+            this.Controls.Add(this.welcomeLabel);
+            this.Name = "WelcomeForm";
+            this.Text = "Welcome!";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label welcomeLabel;
     }
 }

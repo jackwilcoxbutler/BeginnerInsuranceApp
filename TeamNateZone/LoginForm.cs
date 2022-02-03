@@ -43,5 +43,10 @@ namespace TeamNateZone
             cancelLogin = new CancelLogin();
             cancelLogin.Show();
         }
+
+        private void LoginForm_FormClosing(object sender,EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
