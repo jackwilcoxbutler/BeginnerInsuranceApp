@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TeamNateZone
 {
-    public partial class LoginForm : Form
+    public partial class CancelLogin : Form
     {
-        public LoginForm()
+        public CancelLogin()
         {
             InitializeComponent();
         }
