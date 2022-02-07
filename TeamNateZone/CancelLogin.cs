@@ -20,14 +20,16 @@ namespace TeamNateZone
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            login = new LoginForm();
-            login.Show();
+            LoginForm lf = (LoginForm)this.Owner;
+            this.Close();
+            lf.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }

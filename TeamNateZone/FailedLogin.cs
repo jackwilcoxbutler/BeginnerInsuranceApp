@@ -20,9 +20,9 @@ namespace TeamNateZone
 
         private void btnRetry_Click(object sender, EventArgs e)
         {
-            login = new LoginForm();
-            this.Hide();
-            login.Show();
+            LoginForm lf = (LoginForm)this.Owner;
+            this.Close();
+            lf.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

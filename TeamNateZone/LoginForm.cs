@@ -33,6 +33,7 @@ namespace TeamNateZone
             else{
                 this.Hide();
                 failedLogin = new FailedLogin();
+                failedLogin.Owner = this;
                 failedLogin.Show();
             }
         }
@@ -41,13 +42,13 @@ namespace TeamNateZone
         {
             this.Hide();
             cancelLogin = new CancelLogin();
+            cancelLogin.Owner = this;
             cancelLogin.Show();
         }
 
-        private void LoginForm_FormClosing(object sender,EventArgs e)
+        private void LoginForm_FormClosing(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
     }
 }

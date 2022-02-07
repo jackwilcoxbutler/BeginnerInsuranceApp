@@ -77,6 +77,7 @@ namespace TeamNateZone
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(388, 48);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
