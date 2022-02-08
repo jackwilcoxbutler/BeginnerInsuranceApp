@@ -53,8 +53,9 @@ namespace TeamNateZone
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
+            this.labelUsername.BackColor = System.Drawing.Color.White;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(211, 326);
+            this.labelUsername.Location = new System.Drawing.Point(204, 326);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(190, 41);
             this.labelUsername.TabIndex = 1;
@@ -63,8 +64,9 @@ namespace TeamNateZone
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
+            this.labelPassword.BackColor = System.Drawing.Color.White;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(207, 376);
+            this.labelPassword.Location = new System.Drawing.Point(215, 376);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(180, 41);
             this.labelPassword.TabIndex = 2;
@@ -73,8 +75,9 @@ namespace TeamNateZone
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 426);
+            this.label1.Location = new System.Drawing.Point(120, 426);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 41);
             this.label1.TabIndex = 3;
@@ -119,6 +122,8 @@ namespace TeamNateZone
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 1066);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txtPassword);
