@@ -120,7 +120,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icon1.ico" />
     <Content Include="Panda Logo.jpeg" />
+    <None Include="Resources\vsback.jpeg" />
+    <None Include="Resources\vsback2.jpeg" />
+    <None Include="Resources\vs3.jpeg" />
+    <None Include="Resources\vs4.jpeg" />
+    <None Include="Resources\vs5.jpeg" />
+    <Content Include="vsback.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

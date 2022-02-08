@@ -12,3 +12,17 @@ C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Canc
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
+C:\Users\nknight\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
+C:\Users\nknight\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb

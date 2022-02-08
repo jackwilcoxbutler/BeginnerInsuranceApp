@@ -118,6 +118,7 @@ namespace TeamNateZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(960, 1066);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txtPassword);
