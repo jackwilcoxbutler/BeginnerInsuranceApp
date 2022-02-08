@@ -13,8 +13,8 @@ namespace TeamNateZone
 {
     public partial class LoginForm : Form
     {
-        string[] usernames = { "Jack" };
-        string[] passwords = { "Wilcox" };
+        //string[] usernames = { "Jack" };
+        //string[] passwords = { "Wilcox" };
         WelcomeForm welcomeForm;
         // FailedLogin failedLogin;
         // CancelLogin cancelLogin;
@@ -36,7 +36,7 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "SELECT Password FROM SignInInfo WHERE Username = @username";
+                cmd.CommandText = "SELECT Password FROM SignInInfo WHERE Username = @username OR Email = @username";
 
                 cmd.Parameters.AddWithValue("@username", userName);
 
