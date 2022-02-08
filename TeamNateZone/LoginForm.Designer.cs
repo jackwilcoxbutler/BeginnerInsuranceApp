@@ -37,6 +37,7 @@ namespace TeamNateZone
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkRegister = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,18 +65,20 @@ namespace TeamNateZone
             // 
             // txtUsername
             // 
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(363, 395);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(388, 48);
+            this.txtUsername.Size = new System.Drawing.Size(388, 41);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(363, 480);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(388, 48);
+            this.txtPassword.Size = new System.Drawing.Size(388, 41);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -114,6 +117,19 @@ namespace TeamNateZone
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // linkRegister
+            // 
+            this.linkRegister.AutoSize = true;
+            this.linkRegister.BackColor = System.Drawing.Color.Transparent;
+            this.linkRegister.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRegister.LinkColor = System.Drawing.Color.Red;
+            this.linkRegister.Location = new System.Drawing.Point(182, 742);
+            this.linkRegister.Name = "linkRegister";
+            this.linkRegister.Size = new System.Drawing.Size(545, 35);
+            this.linkRegister.TabIndex = 7;
+            this.linkRegister.TabStop = true;
+            this.linkRegister.Text = "Not already a user? Click here to register.";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -121,6 +137,7 @@ namespace TeamNateZone
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 1066);
+            this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
@@ -146,6 +163,7 @@ namespace TeamNateZone
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkRegister;
     }
 }
 

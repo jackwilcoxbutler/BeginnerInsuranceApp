@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TeamNateZone
 {
-    public partial class WelcomeForm : Form
+    public partial class RegistrationForm : Form
     {
-        public WelcomeForm()
+        public RegistrationForm()
         {
             InitializeComponent();
-        }
-
-        private void WelcomeForm_FormClosing(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
