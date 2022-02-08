@@ -74,6 +74,7 @@ namespace TeamNateZone
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.ClientSize = new System.Drawing.Size(424, 229);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturn);

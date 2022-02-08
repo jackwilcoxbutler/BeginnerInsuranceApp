@@ -46,6 +46,8 @@ namespace TeamNateZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 732);
             this.Controls.Add(this.welcomeLabel);
             this.Name = "WelcomeForm";
