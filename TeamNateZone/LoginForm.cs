@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,32 +24,78 @@ namespace TeamNateZone
             InitializeComponent();
         }
 
+        private String getAuthorizedPassword(string userName)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    "@Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=***********;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+
+                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @username";
+
+                cmd.Parameters.AddWithValue("@username", userName);
+
+                cn.Open();
+
+                dr= cmd.ExecuteReader();
+
+                dr.Read();
+
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
-                this.Hide();
-                welcomeForm = new WelcomeForm();
-                welcomeForm.Owner = this;
-                welcomeForm.Show();
-            }
-            else{
-                /*this.Hide();
-                failedLogin = new FailedLogin();
-                failedLogin.Owner = this;
-                failedLogin.Show();*/
-                string message = "Incorrect username or password";
-                string title = "Login Failed";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Cancel)
-                {
-                    Application.Exit();
+            string enteredPW = txtPassword.Text;
+
+            try
+            {
+                //if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
+                if(enteredPW == getAuthorizedPassword(txtUsername.Text)){ 
+                    this.Hide();
+                    welcomeForm = new WelcomeForm();
+                    welcomeForm.Owner = this;
+                    welcomeForm.Show();
                 }
-                else
-                {
-                    // Do something  
+                else{
+                    /*this.Hide();
+                    failedLogin = new FailedLogin();
+                    failedLogin.Owner = this;
+                    failedLogin.Show();*/
+                    string message = "Incorrect username or password";
+                    string title = "Login Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        // Do something  
+                    }
                 }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
