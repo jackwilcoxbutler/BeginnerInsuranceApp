@@ -33,10 +33,10 @@ namespace TeamNateZone
             try
             {
                 cn.ConnectionString =
-                    "@Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=***********;Encrypt=True;TrustServerCertificate=True";
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @username";
+                cmd.CommandText = "SELECT Password FROM SignInInfo WHERE Username = @username";
 
                 cmd.Parameters.AddWithValue("@username", userName);
 
@@ -66,13 +66,27 @@ namespace TeamNateZone
             try
             {
                 //if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
-                if(enteredPW == getAuthorizedPassword(txtUsername.Text)){ 
+                if (txtUsername.Text == "" || txtPassword.Text == "") {
+                    string message = "Username or Password Blank";
+                    string title = "Login Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        // Do something  
+                    }
+                }
+                else if (enteredPW == getAuthorizedPassword(txtUsername.Text)) {
                     this.Hide();
                     welcomeForm = new WelcomeForm();
                     welcomeForm.Owner = this;
                     welcomeForm.Show();
                 }
-                else{
+                else {
                     /*this.Hide();
                     failedLogin = new FailedLogin();
                     failedLogin.Owner = this;
