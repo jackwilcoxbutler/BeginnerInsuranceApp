@@ -17,9 +17,5 @@ namespace TeamNateZone
             InitializeComponent();
         }
 
-        private void WelcomeForm_FormClosing(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

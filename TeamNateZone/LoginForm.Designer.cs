@@ -129,6 +129,7 @@ namespace TeamNateZone
             this.linkRegister.TabIndex = 7;
             this.linkRegister.TabStop = true;
             this.linkRegister.Text = "Not already a user? Click here to register.";
+            this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
             // 
             // LoginForm
             // 

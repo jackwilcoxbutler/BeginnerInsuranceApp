@@ -15,9 +15,9 @@ namespace TeamNateZone
         string[] usernames = { "Jack" };
         string[] passwords = { "Wilcox" };
         WelcomeForm welcomeForm;
-        FailedLogin failedLogin;
-        CancelLogin cancelLogin;
-
+        // FailedLogin failedLogin;
+        // CancelLogin cancelLogin;
+        RegistrationForm registrationForm;
         public LoginForm()
         {
             InitializeComponent();
@@ -74,6 +74,14 @@ namespace TeamNateZone
         private void LoginForm_FormClosing(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            registrationForm = new RegistrationForm();
+            registrationForm.Owner = this;
+            registrationForm.Show();
+            this.Hide();
         }
     }
 }
