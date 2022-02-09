@@ -73,6 +73,7 @@ namespace TeamNateZone
             this.btnFileClaim.TabIndex = 8;
             this.btnFileClaim.Text = "File a New Claim";
             this.btnFileClaim.UseVisualStyleBackColor = true;
+            this.btnFileClaim.Click += new System.EventHandler(this.btnFileClaim_Click);
             // 
             // btnListClaims
             // 
@@ -94,6 +95,7 @@ namespace TeamNateZone
             this.btnManageAccount.TabIndex = 10;
             this.btnManageAccount.Text = "Manage Account";
             this.btnManageAccount.UseVisualStyleBackColor = true;
+            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
             // 
             // btnLogOut
             // 
@@ -118,7 +120,7 @@ namespace TeamNateZone
             this.Controls.Add(this.btnFileClaim);
             this.Controls.Add(this.pbPanda);
             this.Controls.Add(this.welcomeLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WelcomeForm";
             this.Text = "Welcome!";
             ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).EndInit();
