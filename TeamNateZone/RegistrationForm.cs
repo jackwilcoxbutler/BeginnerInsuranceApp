@@ -23,6 +23,7 @@ namespace TeamNateZone
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
             string clearAnce = "client";
 
             try
@@ -40,6 +41,10 @@ namespace TeamNateZone
                 cmd.Parameters.AddWithValue("@clear", clearAnce);
 
                 cn.Open();
+
+                dr = cmd.ExecuteReader();
+
+                dr.Read();
 
             }
             catch (Exception err)
@@ -90,44 +95,47 @@ namespace TeamNateZone
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPassword.Text == "" || txtEmail.Text == "")
+            try
             {
-                string message = "ERROR : Required Field is blank";
-                string title = "Registration Failed";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Cancel)
+                if (txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPassword.Text == "" ||
+                    txtEmail.Text == "")
                 {
-                    Application.Exit();
-                }
-                else
-                {
-                    txtPassword.Clear();
-                    txtVerifyPassword.Clear();
-                }
+                    string message = "ERROR : Required Field is blank";
+                    string title = "Registration Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        txtPassword.Clear();
+                        txtVerifyPassword.Clear();
+                    }
 
-            }
-            //may have to test to see if this stuff works just started adding some stuff if it doesnt
-            //work you can comment it out and continue on with other testing 
-            else if (txtEmail.Text == getAlreadyDeclaredAccount(txtUsername.Text, txtEmail.Text) ||
-                     txtUsername.Text == getAlreadyDeclaredAccount(txtUsername.Text, txtEmail.Text))
-            {
-                string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
-                string title = "Registration Failed";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Cancel)
-                {
-                    Application.Exit();
                 }
-                else
+                //may have to test to see if this stuff works just started adding some stuff if it doesnt
+                //work you can comment it out and continue on with other testing 
+                else if (txtEmail.Text == getAlreadyDeclaredAccount(txtUsername.Text, txtEmail.Text) ||
+                         txtUsername.Text == getAlreadyDeclaredAccount(txtUsername.Text, txtEmail.Text))
                 {
-                    LoginForm lf = (LoginForm)this.Owner;
-                    this.Close();
-                    lf.Show();
+                    string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
+                    string title = "Registration Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        LoginForm lf = (LoginForm) this.Owner;
+                        this.Close();
+                        lf.Show();
+                    }
                 }
-            }
-            /*else if(txtPassword.Text == "test")//FUNCTION TO QUERY FOR EMAIL AND USERNAME)
+                /*else if(txtPassword.Text == "test")//FUNCTION TO QUERY FOR EMAIL AND USERNAME)
             {
                 string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
                 string title = "Registration Failed";
@@ -144,29 +152,35 @@ namespace TeamNateZone
                     lf.Show();
                 }
             }*/
-            else if (txtPassword.Text == txtVerifyPassword.Text)
-            {
-                string message = "Registration Successful! Click return to log into application.";
-                MessageBox.Show(message);
-                //search database to see if username or email already exists
-                //if not, add username email and password to signininfo database
-            }
-            else
-            {
-                string message = "ERROR : Passwords do not match";
-                string title = "Registration Failed";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Cancel)
+                else if (txtPassword.Text == txtVerifyPassword.Text)
                 {
-                    Application.Exit();
+                    string message = "Registration Successful! Click return to log into application.";
+                    MessageBox.Show(message);
+                    storeSignInInfo(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                    //search database to see if username or email already exists
+                    //if not, add username email and password to signininfo database
                 }
                 else
                 {
+                    string message = "ERROR : Passwords do not match";
+                    string title = "Registration Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
 
-                    txtPassword.Clear();
-                    txtVerifyPassword.Clear();
+                        txtPassword.Clear();
+                        txtVerifyPassword.Clear();
+                    }
                 }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
             }
         }
 
