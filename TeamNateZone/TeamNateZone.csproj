@@ -58,6 +58,12 @@
     <Compile Include="FailedLogin.Designer.cs">
       <DependentUpon>FailedLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="claimList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="claimList.Designer.cs">
+      <DependentUpon>claimList.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="CancelLogin.resx">
       <DependentUpon>CancelLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="claimList.resx">
+      <DependentUpon>claimList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FailedLogin.resx">
       <DependentUpon>FailedLogin.cs</DependentUpon>
