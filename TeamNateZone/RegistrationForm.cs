@@ -157,8 +157,6 @@ namespace TeamNateZone
                     string message = "Registration Successful! Click return to log into application.";
                     MessageBox.Show(message);
                     storeSignInInfo(txtUsername.Text, txtPassword.Text, txtEmail.Text);
-                    //search database to see if username or email already exists
-                    //if not, add username email and password to signininfo database
                 }
                 else
                 {

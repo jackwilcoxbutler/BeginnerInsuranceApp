@@ -13,8 +13,8 @@ namespace TeamNateZone
     public partial class WelcomeForm : Form
     {
         claimList listClaims;
-        CreateClaim fileClaim;
-        ManageAccount manage;
+       // CreateClaim fileClaim;
+        //ManageAccount manage;
         public WelcomeForm()
         {
             InitializeComponent();
@@ -36,17 +36,17 @@ namespace TeamNateZone
         private void btnFileClaim_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fileClaim = new CreateClaim();
+           /* fileClaim = new CreateClaim();
             fileClaim.Owner = this;
-            fileClaim.Show();
+            fileClaim.Show();*/
         }
 
         private void btnManageAccount_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();/*
             manage = new ManageAccount();
             manage.Owner = this;
-            manage.Show();
+            manage.Show();*/
         }
     }
 }
