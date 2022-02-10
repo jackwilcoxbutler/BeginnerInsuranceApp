@@ -43,12 +43,12 @@ namespace TeamNateZone
             this.lstClaimList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstClaimList.HideSelection = false;
             this.lstClaimList.HoverSelection = true;
-            listViewItem1.ToolTipText = "1/2/2022";
-            listViewItem2.ToolTipText = "2/2/2022";
-            listViewItem3.ToolTipText = "2/3/2022";
-            listViewItem4.ToolTipText = "2/4/2022";
-            listViewItem5.ToolTipText = "2/5/2022";
-            listViewItem6.ToolTipText = "2/6/2022";
+            listViewItem1.ToolTipText = "ID: 1 Date: 1/2/2022";
+            listViewItem2.ToolTipText = "ID: 2 Date: 2/2/2022";
+            listViewItem3.ToolTipText = "ID: 3 Date: 2/3/2022";
+            listViewItem4.ToolTipText = "ID: 4 Date: 2/4/2022";
+            listViewItem5.ToolTipText = "ID: 5 Date: 2/5/2022";
+            listViewItem6.ToolTipText = "ID: 6 Date: 2/6/2022";
             this.lstClaimList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
