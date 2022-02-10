@@ -19,11 +19,6 @@ namespace TeamNateZone
             InitializeComponent();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReturnToWelcome_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -35,6 +30,13 @@ namespace TeamNateZone
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void claimList_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'tEAM_A_Claims_Dataset.Claims' table. You can move, or remove it, as needed.
+            this.claimsTableAdapter.Fill(this.tEAM_A_Claims_Dataset.Claims);
+
         }
     }
 }

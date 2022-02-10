@@ -95,6 +95,11 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TEAM_A_Claims_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
@@ -140,6 +145,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TEAM_A_Claims_Dataset.xsc">
+      <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_A_Claims_Dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_A_Claims_Dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_A_Claims_Dataset.xss">
+      <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
