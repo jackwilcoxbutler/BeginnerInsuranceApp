@@ -12,6 +12,7 @@ namespace TeamNateZone
 {
     public partial class claimList : Form
     {
+        User user;
         WelcomeForm welcomeForm;
         public claimList()
         {
@@ -26,7 +27,7 @@ namespace TeamNateZone
         private void btnReturnToWelcome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            welcomeForm = new WelcomeForm();
+            welcomeForm = new WelcomeForm(user);
             welcomeForm.Owner = this;
             welcomeForm.Show();
         }

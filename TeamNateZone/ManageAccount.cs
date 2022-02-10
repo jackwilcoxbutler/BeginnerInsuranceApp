@@ -12,6 +12,7 @@ namespace TeamNateZone
 {
     public partial class ManageAccount : Form
     {
+        User user;
         WelcomeForm welcomeForm;
         public ManageAccount()
         {
@@ -21,7 +22,7 @@ namespace TeamNateZone
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            welcomeForm = new WelcomeForm();
+            welcomeForm = new WelcomeForm(user);
             welcomeForm.Owner = this;
             welcomeForm.Show();
         }

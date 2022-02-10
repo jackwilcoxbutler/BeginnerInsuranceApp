@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace TeamNateZone
 {
+    
     public partial class WelcomeForm : Form
     {
+        User user;
         claimList listClaims;
         CreateClaim fileClaim;
         ManageAccount manage;
-        public WelcomeForm()
+        public WelcomeForm(User user)
         {
             InitializeComponent();
-        }
-
-        private void welcomeLabel_Click(object sender, EventArgs e)
-        {
-
+            this.user = user;
         }
 
         private void btnListClaims_Click(object sender, EventArgs e)
@@ -36,7 +34,7 @@ namespace TeamNateZone
         private void btnFileClaim_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fileClaim = new CreateClaim();
+            fileClaim = new CreateClaim(user);
             fileClaim.Owner = this;
             fileClaim.Show();
         }
@@ -49,7 +47,11 @@ namespace TeamNateZone
             manage.Show();
         }
 
-
-
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            this.Hide();
+            lf.Show();
+        }
     }
 }

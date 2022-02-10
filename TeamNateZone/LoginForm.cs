@@ -15,9 +15,94 @@ namespace TeamNateZone
     {
         WelcomeForm welcomeForm;
         RegistrationForm registrationForm;
+        User user = new User(); // this is why we need default constructor :D
         public LoginForm()
         {
             InitializeComponent();
+        }
+        private string getUserPermissions(string username)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT clearance FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", username);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        private int getUserID(string username)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+
+                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE Username = @username";
+
+                cmd.Parameters.AddWithValue("@username", username);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetInt32(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return 0; // this may lead to erroneous results..
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        private string getUserEmail(string username)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT Email FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", username);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private String getAuthorizedPassword(string userName)
@@ -77,8 +162,15 @@ namespace TeamNateZone
                     }
                 }
                 else if (enteredPW == getAuthorizedPassword(txtUsername.Text)) {
+                    // verified user, assign info to User object (log in)
+                    user.setUserID(getUserID(txtUsername.Text));
+                    user.setUsername(txtUsername.Text);
+                    user.setPassword(txtPassword.Text);
+                    user.setEmail(getUserEmail(txtUsername.Text));
+                    user.setUserType(getUserPermissions(txtUsername.Text));
+
                     this.Hide();
-                    welcomeForm = new WelcomeForm();
+                    welcomeForm = new WelcomeForm(user);
                     welcomeForm.Owner = this;
                     welcomeForm.Show();
                 }
