@@ -49,9 +49,34 @@ namespace TeamNateZone
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            LoginForm lf = new LoginForm();
-            this.Hide();
-            lf.Show();
+            MessageBox.Show("Logout Successful");
+            var newForm = new LoginForm();
+            newForm.Show();
+            this.Close();
+            
+        }
+
+        private Boolean isClosed;
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            if (pnlDropDown.Height == pnlDropDown.MinimumSize.Height)
+                isClosed = true;
+            else
+                isClosed = false;
+
+            if (isClosed == true)
+            {
+                pnlDropDown.Height = pnlDropDown.MaximumSize.Height;
+            }
+            else
+            {
+                pnlDropDown.Height = pnlDropDown.MinimumSize.Height;
+            }
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

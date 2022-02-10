@@ -153,6 +153,12 @@
     <None Include="Resources\vs3.jpeg" />
     <None Include="Resources\vsback.jpeg" />
     <None Include="Resources\vs4.jpeg" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\menuImage.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\1200px-Home-icon.svg.png" />
+    <None Include="Resources\settingsIcon.png" />
     <Content Include="vsback.jpeg" />
   </ItemGroup>
   <ItemGroup>

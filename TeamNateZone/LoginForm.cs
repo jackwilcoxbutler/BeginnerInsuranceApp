@@ -228,5 +228,58 @@ namespace TeamNateZone
             registrationForm.Show();
             this.Hide();
         }
+
+        private void txtPassword_KeyDown(object sender, KeyPressEventArgs e)
+        {
+            string enteredPW = txtPassword.Text;
+
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                    try{ 
+                        if (txtUsername.Text == "" || txtPassword.Text == "")
+                        {
+                        string message = "Username or Password Blank";
+                        string title = "Login Failed";
+                        MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Cancel)
+                        {
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            // Do something  
+                        }
+                    }
+                    else if (enteredPW == getAuthorizedPassword(txtUsername.Text))
+                    {
+                        this.Hide();
+                        welcomeForm = new WelcomeForm();
+                        welcomeForm.Owner = this;
+                        welcomeForm.Show();
+                    }
+                    else
+                    {
+                        string message = "Incorrect username or password";
+                        string title = "Login Failed";
+                        MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Cancel)
+                        {
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            // Do something  
+                        }
+                    }
+                }
+            catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                }
+
+            }
+        }
     }
 }

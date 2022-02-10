@@ -46,9 +46,10 @@ namespace TeamNateZone
             this.username.AutoSize = true;
             this.username.BackColor = System.Drawing.Color.Transparent;
             this.username.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(136, 399);
+            this.username.Location = new System.Drawing.Point(91, 255);
+            this.username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(210, 42);
+            this.username.Size = new System.Drawing.Size(133, 27);
             this.username.TabIndex = 0;
             this.username.Text = "Username : ";
             // 
@@ -57,9 +58,10 @@ namespace TeamNateZone
             this.password.AutoSize = true;
             this.password.BackColor = System.Drawing.Color.Transparent;
             this.password.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(136, 484);
+            this.password.Location = new System.Drawing.Point(91, 310);
+            this.password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(191, 42);
+            this.password.Size = new System.Drawing.Size(120, 27);
             this.password.TabIndex = 1;
             this.password.Text = "Password :";
             // 
@@ -67,28 +69,32 @@ namespace TeamNateZone
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(363, 395);
+            this.txtUsername.Location = new System.Drawing.Point(242, 253);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(388, 41);
+            this.txtUsername.Size = new System.Drawing.Size(259, 26);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(363, 480);
+            this.txtPassword.Location = new System.Drawing.Point(242, 307);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(388, 41);
+            this.txtPassword.Size = new System.Drawing.Size(259, 26);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyDown);
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(230, 600);
+            this.btnLogin.Location = new System.Drawing.Point(153, 384);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(179, 65);
+            this.btnLogin.Size = new System.Drawing.Size(119, 42);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -98,9 +104,10 @@ namespace TeamNateZone
             // 
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(515, 600);
+            this.btnCancel.Location = new System.Drawing.Point(343, 384);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(179, 65);
+            this.btnCancel.Size = new System.Drawing.Size(119, 42);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -110,9 +117,10 @@ namespace TeamNateZone
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::TeamNateZone.Properties.Resources.Panda_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(383, 166);
+            this.pictureBox1.Location = new System.Drawing.Point(255, 106);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -123,9 +131,10 @@ namespace TeamNateZone
             this.linkRegister.BackColor = System.Drawing.Color.Transparent;
             this.linkRegister.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkRegister.LinkColor = System.Drawing.Color.Red;
-            this.linkRegister.Location = new System.Drawing.Point(159, 742);
+            this.linkRegister.Location = new System.Drawing.Point(106, 475);
+            this.linkRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkRegister.Name = "linkRegister";
-            this.linkRegister.Size = new System.Drawing.Size(623, 39);
+            this.linkRegister.Size = new System.Drawing.Size(408, 26);
             this.linkRegister.TabIndex = 7;
             this.linkRegister.TabStop = true;
             this.linkRegister.Text = "Not already a user? Click here to register.";
@@ -133,11 +142,11 @@ namespace TeamNateZone
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(960, 1066);
+            this.ClientSize = new System.Drawing.Size(640, 675);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
@@ -147,7 +156,9 @@ namespace TeamNateZone
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panda Insurance Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
