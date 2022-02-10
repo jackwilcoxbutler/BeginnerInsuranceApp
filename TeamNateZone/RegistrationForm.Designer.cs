@@ -46,10 +46,10 @@ namespace TeamNateZone
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(49, 207);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Location = new System.Drawing.Point(194, 217);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(90, 29);
+            this.btnRegister.Size = new System.Drawing.Size(165, 40);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -58,75 +58,75 @@ namespace TeamNateZone
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.BackColor = System.Drawing.Color.White;
-            this.labelUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(59, 93);
-            this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUsername.BackColor = System.Drawing.Color.Transparent;
+            this.labelUsername.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(30, 116);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(96, 21);
+            this.labelUsername.Size = new System.Drawing.Size(102, 18);
             this.labelUsername.TabIndex = 9;
             this.labelUsername.Text = "Username :";
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.BackColor = System.Drawing.Color.White;
-            this.labelPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(63, 119);
-            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
+            this.labelPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(30, 147);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(91, 21);
+            this.labelPassword.Size = new System.Drawing.Size(97, 18);
             this.labelPassword.TabIndex = 10;
             this.labelPassword.Text = "Password :";
             // 
             // labelVerify
             // 
             this.labelVerify.AutoSize = true;
-            this.labelVerify.BackColor = System.Drawing.Color.White;
-            this.labelVerify.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVerify.Location = new System.Drawing.Point(15, 145);
-            this.labelVerify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelVerify.BackColor = System.Drawing.Color.Transparent;
+            this.labelVerify.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVerify.Location = new System.Drawing.Point(30, 175);
+            this.labelVerify.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVerify.Name = "labelVerify";
-            this.labelVerify.Size = new System.Drawing.Size(140, 21);
+            this.labelVerify.Size = new System.Drawing.Size(151, 18);
             this.labelVerify.TabIndex = 11;
             this.labelVerify.Text = "Verify Password :";
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(157, 91);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Location = new System.Drawing.Point(194, 109);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(228, 25);
+            this.txtUsername.Size = new System.Drawing.Size(415, 25);
             this.txtUsername.TabIndex = 2;
             // 
             // txtVerifyPassword
             // 
             this.txtVerifyPassword.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerifyPassword.Location = new System.Drawing.Point(157, 143);
-            this.txtVerifyPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVerifyPassword.Location = new System.Drawing.Point(194, 168);
+            this.txtVerifyPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
-            this.txtVerifyPassword.Size = new System.Drawing.Size(228, 25);
+            this.txtVerifyPassword.Size = new System.Drawing.Size(415, 25);
             this.txtVerifyPassword.TabIndex = 4;
             this.txtVerifyPassword.UseSystemPasswordChar = true;
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(157, 117);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(194, 140);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(228, 25);
+            this.txtPassword.Size = new System.Drawing.Size(415, 25);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnReturn
             // 
             this.btnReturn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(219, 207);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Location = new System.Drawing.Point(367, 217);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(144, 29);
+            this.btnReturn.Size = new System.Drawing.Size(242, 40);
             this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Return to Login";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -135,23 +135,22 @@ namespace TeamNateZone
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.BackColor = System.Drawing.Color.White;
-            this.labelEmail.Enabled = false;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(94, 65);
-            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmail.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(30, 85);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(60, 21);
+            this.labelEmail.Size = new System.Drawing.Size(67, 18);
             this.labelEmail.TabIndex = 8;
             this.labelEmail.Text = "Email :";
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(157, 64);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(194, 78);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(228, 25);
+            this.txtEmail.Size = new System.Drawing.Size(293, 25);
             this.txtEmail.TabIndex = 1;
             // 
             // label2
@@ -160,7 +159,8 @@ namespace TeamNateZone
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Georgia", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(22, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(229, 29);
             this.label2.TabIndex = 12;
@@ -168,12 +168,12 @@ namespace TeamNateZone
             // 
             // RegistrationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(475, 300);
+            this.ClientSize = new System.Drawing.Size(706, 313);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.labelEmail);
@@ -185,8 +185,9 @@ namespace TeamNateZone
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.btnRegister);
+            this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RegistrationForm";
             this.Text = "Register";
             this.ResumeLayout(false);
