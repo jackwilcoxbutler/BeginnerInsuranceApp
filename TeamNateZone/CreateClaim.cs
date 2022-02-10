@@ -37,7 +37,6 @@ namespace TeamNateZone
             welcomeForm.Show();
         }
 
-<<<<<<< HEAD
         private void btnFile_Click(object sender, EventArgs e)
         {
             SqlConnection cn = new SqlConnection();
@@ -75,7 +74,7 @@ namespace TeamNateZone
             welcomeForm = new WelcomeForm(user);
             this.Hide();
             welcomeForm.Show();
-=======
+/*
         private Boolean isClosed;
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -100,7 +99,7 @@ namespace TeamNateZone
             var newForm = new LoginForm();
             newForm.Show();
             this.Close();
->>>>>>> 451c61d8e2e8013e8809ed46785e7f94e1848e92
+            */
         }
     }
 }

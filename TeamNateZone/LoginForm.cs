@@ -254,7 +254,7 @@ namespace TeamNateZone
                     else if (enteredPW == getAuthorizedPassword(txtUsername.Text))
                     {
                         this.Hide();
-                        welcomeForm = new WelcomeForm();
+                        welcomeForm = new WelcomeForm(user);
                         welcomeForm.Owner = this;
                         welcomeForm.Show();
                     }

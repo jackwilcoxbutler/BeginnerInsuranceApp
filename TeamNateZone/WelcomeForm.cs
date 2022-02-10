@@ -55,28 +55,5 @@ namespace TeamNateZone
             this.Close();
             
         }
-
-        private Boolean isClosed;
-        private void menuButton_Click(object sender, EventArgs e)
-        {
-            if (pnlDropDown.Height == pnlDropDown.MinimumSize.Height)
-                isClosed = true;
-            else
-                isClosed = false;
-
-            if (isClosed == true)
-            {
-                pnlDropDown.Height = pnlDropDown.MaximumSize.Height;
-            }
-            else
-            {
-                pnlDropDown.Height = pnlDropDown.MinimumSize.Height;
-            }
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

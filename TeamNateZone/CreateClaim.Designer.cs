@@ -41,14 +41,6 @@ namespace TeamNateZone
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(220, 110);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(320, 26);
-            this.txtDate.TabIndex = 0;
-            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
-            // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,14 +74,7 @@ namespace TeamNateZone
             this.labelType.Size = new System.Drawing.Size(89, 18);
             this.labelType.TabIndex = 3;
             this.labelType.Text = "Claim Type";
-            // 
-            // txtType
-            // 
-            this.txtType.Location = new System.Drawing.Point(296, 175);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(295, 26);
-            this.txtType.TabIndex = 4;
-            // 
+            //
             // btnFile
             // 
             this.btnFile.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,72 +140,6 @@ namespace TeamNateZone
             this.label2.TabIndex = 10;
             this.label2.Text = "NateZone";
             // 
-            // pnlDropDown
-            // 
-            this.pnlDropDown.Controls.Add(this.btnSettings);
-            this.pnlDropDown.Controls.Add(this.btnLogout2);
-            this.pnlDropDown.Controls.Add(this.btnMenu);
-            this.pnlDropDown.Controls.Add(this.btnMainMenu);
-            this.pnlDropDown.Controls.Add(this.btnMail);
-            this.pnlDropDown.Location = new System.Drawing.Point(739, 12);
-            this.pnlDropDown.MaximumSize = new System.Drawing.Size(70, 345);
-            this.pnlDropDown.MinimumSize = new System.Drawing.Size(70, 70);
-            this.pnlDropDown.Name = "pnlDropDown";
-            this.pnlDropDown.Size = new System.Drawing.Size(70, 70);
-            this.pnlDropDown.TabIndex = 13;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(3, 211);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(64, 64);
-            this.btnSettings.TabIndex = 1;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout2
-            // 
-            this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout2.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
-            this.btnLogout2.Location = new System.Drawing.Point(3, 277);
-            this.btnLogout2.Name = "btnLogout2";
-            this.btnLogout2.Size = new System.Drawing.Size(64, 64);
-            this.btnLogout2.TabIndex = 1;
-            this.btnLogout2.UseVisualStyleBackColor = true;
-            this.btnLogout2.Click += new System.EventHandler(this.btnLogout2_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenu.Location = new System.Drawing.Point(3, 3);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(64, 64);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnMainMenu
-            // 
-            this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainMenu.Image = global::TeamNateZone.Properties.Resources.homeIcon;
-            this.btnMainMenu.Location = new System.Drawing.Point(3, 82);
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(64, 60);
-            this.btnMainMenu.TabIndex = 1;
-            this.btnMainMenu.UseVisualStyleBackColor = true;
-            // 
-            // btnMail
-            // 
-            this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMail.Image = global::TeamNateZone.Properties.Resources.mailIcon;
-            this.btnMail.Location = new System.Drawing.Point(3, 144);
-            this.btnMail.Name = "btnMail";
-            this.btnMail.Size = new System.Drawing.Size(64, 64);
-            this.btnMail.TabIndex = 1;
-            this.btnMail.UseVisualStyleBackColor = true;
-            // 
             // CreateClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +160,6 @@ namespace TeamNateZone
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CreateClaim";
             this.Text = "Make a claim";
-            this.pnlDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
