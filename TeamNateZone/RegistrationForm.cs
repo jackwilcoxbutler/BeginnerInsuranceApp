@@ -62,19 +62,14 @@ namespace TeamNateZone
                 cmd.Connection = cn;
 
                 cmd.CommandText = "INSERT INTO SignInInfo(Email, Password, clearance, Username) VALUES (@email, @password, @clear, @username);";
-
-
-                cmd.Parameters.AddWithValue("@username", userName);
                 cmd.Parameters.AddWithValue("@email", eMail);
                 cmd.Parameters.AddWithValue("@password", passWord);
                 cmd.Parameters.AddWithValue("@clear", clearAnce);
+                cmd.Parameters.AddWithValue("@username", userName);
 
                 cn.Open();
-
                 dr = cmd.ExecuteReader();
-
                 dr.Read();
-
             }
             catch (Exception err)
             {
