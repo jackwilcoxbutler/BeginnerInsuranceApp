@@ -58,7 +58,7 @@ namespace TeamNateZone
         }
 
         //not tested yet 
-        private string getAlreadyDeclaredAccount(string userName, string eMail)
+        private string getAlreadyDeclaredEmail(string eMail)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -69,10 +69,43 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "SELECT Email, Username FROM SignInInfo WHERE Username = @username OR Email = @email";
+                cmd.CommandText = "SELECT Email FROM SignInInfo WHERE Email = @email";
+
+                cmd.Parameters.AddWithValue("@email", eMail);
+
+                cn.Open();
+
+                dr = cmd.ExecuteReader();
+
+                dr.Read();
+
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getAlreadyDeclaredUsername(string userName)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+
+                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @username";
 
                 cmd.Parameters.AddWithValue("@username", userName);
-                cmd.Parameters.AddWithValue("@email", eMail);
 
                 cn.Open();
 
@@ -115,10 +148,8 @@ namespace TeamNateZone
                     }
 
                 }
-                //may have to test to see if this stuff works just started adding some stuff if it doesnt
-                //work you can comment it out and continue on with other testing 
-                else if (txtEmail.Text == getAlreadyDeclaredAccount(txtUsername.Text, txtEmail.Text) ||
-                         txtUsername.Text == getAlreadyDeclaredAccount(txtUsername.Text, txtEmail.Text))
+                else if (txtEmail.Text == getAlreadyDeclaredEmail(txtEmail.Text) ||
+                         txtUsername.Text == getAlreadyDeclaredUsername(txtUsername.Text))
                 {
                     string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
                     string title = "Registration Failed";
@@ -135,23 +166,6 @@ namespace TeamNateZone
                         lf.Show();
                     }
                 }
-                /*else if(txtPassword.Text == "test")//FUNCTION TO QUERY FOR EMAIL AND USERNAME)
-            {
-                string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
-                string title = "Registration Failed";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Cancel)
-                {
-                    Application.Exit();
-                }
-                else
-                {
-                    LoginForm lf = (LoginForm)this.Owner;
-                    this.Close();
-                    lf.Show();
-                }
-            }*/
                 else if (txtPassword.Text == txtVerifyPassword.Text)
                 {
                     string message = "Registration Successful! Click return to log into application.";

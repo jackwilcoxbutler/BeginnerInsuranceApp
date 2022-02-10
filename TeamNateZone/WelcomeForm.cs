@@ -48,5 +48,8 @@ namespace TeamNateZone
             manage.Owner = this;
             manage.Show();
         }
+
+
+
     }
 }

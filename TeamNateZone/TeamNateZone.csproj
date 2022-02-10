@@ -52,6 +52,12 @@
     <Compile Include="CancelLogin.Designer.cs">
       <DependentUpon>CancelLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateClaim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateClaim.Designer.cs">
+      <DependentUpon>CreateClaim.cs</DependentUpon>
+    </Compile>
     <Compile Include="FailedLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAccount.Designer.cs">
+      <DependentUpon>ManageAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,11 +107,17 @@
     <EmbeddedResource Include="claimList.resx">
       <DependentUpon>claimList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateClaim.resx">
+      <DependentUpon>CreateClaim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FailedLogin.resx">
       <DependentUpon>FailedLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAccount.resx">
+      <DependentUpon>ManageAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

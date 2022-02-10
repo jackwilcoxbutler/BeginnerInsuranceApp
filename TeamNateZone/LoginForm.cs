@@ -13,11 +13,7 @@ namespace TeamNateZone
 {
     public partial class LoginForm : Form
     {
-        //string[] usernames = { "Jack" };
-        //string[] passwords = { "Wilcox" };
         WelcomeForm welcomeForm;
-        // FailedLogin failedLogin;
-        // CancelLogin cancelLogin;
         RegistrationForm registrationForm;
         public LoginForm()
         {
@@ -87,10 +83,6 @@ namespace TeamNateZone
                     welcomeForm.Show();
                 }
                 else {
-                    /*this.Hide();
-                    failedLogin = new FailedLogin();
-                    failedLogin.Owner = this;
-                    failedLogin.Show();*/
                     string message = "Incorrect username or password";
                     string title = "Login Failed";
                     MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;

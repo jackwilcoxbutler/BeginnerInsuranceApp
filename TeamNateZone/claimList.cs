@@ -12,6 +12,7 @@ namespace TeamNateZone
 {
     public partial class claimList : Form
     {
+        WelcomeForm welcomeForm;
         public claimList()
         {
             InitializeComponent();
@@ -20,6 +21,19 @@ namespace TeamNateZone
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReturnToWelcome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            welcomeForm = new WelcomeForm();
+            welcomeForm.Owner = this;
+            welcomeForm.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

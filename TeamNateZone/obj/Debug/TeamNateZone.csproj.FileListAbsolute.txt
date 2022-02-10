@@ -41,3 +41,5 @@ C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.Cor
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
