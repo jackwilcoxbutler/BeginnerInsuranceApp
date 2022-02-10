@@ -45,7 +45,7 @@ namespace TeamNateZone
             // 
             this.btnBack.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(288, 423);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(89, 30);
             this.btnBack.TabIndex = 1;
@@ -74,12 +74,12 @@ namespace TeamNateZone
             this.labelType.Size = new System.Drawing.Size(89, 18);
             this.labelType.TabIndex = 3;
             this.labelType.Text = "Claim Type";
-            //
+            // 
             // btnFile
             // 
             this.btnFile.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.Location = new System.Drawing.Point(160, 424);
-            this.btnFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(124, 29);
             this.btnFile.TabIndex = 5;
@@ -136,9 +136,9 @@ namespace TeamNateZone
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(36, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 29);
+            this.label2.Size = new System.Drawing.Size(229, 29);
             this.label2.TabIndex = 10;
-            this.label2.Text = "NateZone";
+            this.label2.Text = "Panda Insurance";
             // 
             // CreateClaim
             // 
@@ -157,7 +157,7 @@ namespace TeamNateZone
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.btnBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateClaim";
             this.Text = "Make a claim";
             this.ResumeLayout(false);

@@ -29,12 +29,14 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.pbPanda = new System.Windows.Forms.PictureBox();
             this.btnFileClaim = new System.Windows.Forms.Button();
             this.btnListClaims = new System.Windows.Forms.Button();
             this.btnManageAccount = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +67,7 @@ namespace TeamNateZone
             // 
             // btnFileClaim
             // 
+            this.btnFileClaim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFileClaim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFileClaim.Location = new System.Drawing.Point(107, 204);
             this.btnFileClaim.Margin = new System.Windows.Forms.Padding(2);
@@ -77,6 +80,7 @@ namespace TeamNateZone
             // 
             // btnListClaims
             // 
+            this.btnListClaims.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnListClaims.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListClaims.Location = new System.Drawing.Point(239, 204);
             this.btnListClaims.Margin = new System.Windows.Forms.Padding(2);
@@ -89,6 +93,7 @@ namespace TeamNateZone
             // 
             // btnManageAccount
             // 
+            this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnManageAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageAccount.Location = new System.Drawing.Point(369, 204);
             this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
@@ -101,6 +106,7 @@ namespace TeamNateZone
             // 
             // btnLogOut
             // 
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Location = new System.Drawing.Point(230, 311);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
@@ -111,6 +117,18 @@ namespace TeamNateZone
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Georgia", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 29);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Panda Insurance";
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,15 +136,17 @@ namespace TeamNateZone
             this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(572, 381);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnManageAccount);
             this.Controls.Add(this.btnListClaims);
             this.Controls.Add(this.btnFileClaim);
             this.Controls.Add(this.pbPanda);
             this.Controls.Add(this.welcomeLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "WelcomeForm";
-            this.Text = "Welcome!";
+            this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,5 +161,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Button btnListClaims;
         private System.Windows.Forms.Button btnManageAccount;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Label label2;
     }
 }

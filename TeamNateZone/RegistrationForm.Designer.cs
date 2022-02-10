@@ -29,6 +29,7 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.btnRegister = new System.Windows.Forms.Button();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
@@ -39,12 +40,13 @@ namespace TeamNateZone
             this.btnReturn = new System.Windows.Forms.Button();
             this.labelEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(104, 284);
+            this.btnRegister.Location = new System.Drawing.Point(49, 207);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(90, 29);
@@ -58,7 +60,7 @@ namespace TeamNateZone
             this.labelUsername.AutoSize = true;
             this.labelUsername.BackColor = System.Drawing.Color.White;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(114, 170);
+            this.labelUsername.Location = new System.Drawing.Point(59, 93);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(96, 21);
@@ -70,7 +72,7 @@ namespace TeamNateZone
             this.labelPassword.AutoSize = true;
             this.labelPassword.BackColor = System.Drawing.Color.White;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(118, 196);
+            this.labelPassword.Location = new System.Drawing.Point(63, 119);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(91, 21);
@@ -82,7 +84,7 @@ namespace TeamNateZone
             this.labelVerify.AutoSize = true;
             this.labelVerify.BackColor = System.Drawing.Color.White;
             this.labelVerify.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVerify.Location = new System.Drawing.Point(70, 222);
+            this.labelVerify.Location = new System.Drawing.Point(15, 145);
             this.labelVerify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVerify.Name = "labelVerify";
             this.labelVerify.Size = new System.Drawing.Size(140, 21);
@@ -92,7 +94,7 @@ namespace TeamNateZone
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(212, 168);
+            this.txtUsername.Location = new System.Drawing.Point(157, 91);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(228, 25);
@@ -101,7 +103,7 @@ namespace TeamNateZone
             // txtVerifyPassword
             // 
             this.txtVerifyPassword.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerifyPassword.Location = new System.Drawing.Point(212, 220);
+            this.txtVerifyPassword.Location = new System.Drawing.Point(157, 143);
             this.txtVerifyPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
             this.txtVerifyPassword.Size = new System.Drawing.Size(228, 25);
@@ -111,7 +113,7 @@ namespace TeamNateZone
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(212, 194);
+            this.txtPassword.Location = new System.Drawing.Point(157, 117);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(228, 25);
@@ -121,7 +123,7 @@ namespace TeamNateZone
             // btnReturn
             // 
             this.btnReturn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(274, 284);
+            this.btnReturn.Location = new System.Drawing.Point(219, 207);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(144, 29);
@@ -136,7 +138,7 @@ namespace TeamNateZone
             this.labelEmail.BackColor = System.Drawing.Color.White;
             this.labelEmail.Enabled = false;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(149, 142);
+            this.labelEmail.Location = new System.Drawing.Point(94, 65);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(60, 21);
@@ -146,11 +148,23 @@ namespace TeamNateZone
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(212, 141);
+            this.txtEmail.Location = new System.Drawing.Point(157, 64);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(228, 25);
             this.txtEmail.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Georgia", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 29);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Panda Insurance";
             // 
             // RegistrationForm
             // 
@@ -159,7 +173,8 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(480, 552);
+            this.ClientSize = new System.Drawing.Size(475, 300);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.btnReturn);
@@ -170,9 +185,10 @@ namespace TeamNateZone
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.btnRegister);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegistrationForm";
-            this.Text = "RegistrationForm";
+            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +206,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label2;
     }
 }
