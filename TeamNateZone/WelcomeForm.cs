@@ -52,7 +52,9 @@ namespace TeamNateZone
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Logout Successful");
-            Application.Exit();
+            var newForm = new LoginForm();
+            newForm.Show();
+            this.Close();
             
         }
 
