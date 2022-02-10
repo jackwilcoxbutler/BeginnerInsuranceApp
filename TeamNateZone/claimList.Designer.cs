@@ -33,9 +33,6 @@ namespace TeamNateZone
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReturnToWelcome = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
-            this.claimsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.claimsTableAdapter = new TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter();
             this.claimIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +41,12 @@ namespace TeamNateZone
             this.claimDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claimsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
+            this.claimsTableAdapter = new TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -54,7 +54,7 @@ namespace TeamNateZone
             this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(684, 394);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(116, 34);
             this.btnExit.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace TeamNateZone
             this.btnReturnToWelcome.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnToWelcome.Location = new System.Drawing.Point(564, 394);
-            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnToWelcome.Name = "btnReturnToWelcome";
             this.btnReturnToWelcome.Size = new System.Drawing.Size(116, 34);
             this.btnReturnToWelcome.TabIndex = 2;
@@ -95,20 +95,6 @@ namespace TeamNateZone
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 448);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // tEAM_A_Claims_Dataset
-            // 
-            this.tEAM_A_Claims_Dataset.DataSetName = "TEAM_A_Claims_Dataset";
-            this.tEAM_A_Claims_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // claimsBindingSource
-            // 
-            this.claimsBindingSource.DataMember = "Claims";
-            this.claimsBindingSource.DataSource = this.tEAM_A_Claims_Dataset;
-            // 
-            // claimsTableAdapter
-            // 
-            this.claimsTableAdapter.ClearBeforeFill = true;
             // 
             // claimIdDataGridViewTextBoxColumn
             // 
@@ -159,6 +145,20 @@ namespace TeamNateZone
             this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
             // 
+            // claimsBindingSource
+            // 
+            this.claimsBindingSource.DataMember = "Claims";
+            this.claimsBindingSource.DataSource = this.tEAM_A_Claims_Dataset;
+            // 
+            // tEAM_A_Claims_Dataset
+            // 
+            this.tEAM_A_Claims_Dataset.DataSetName = "TEAM_A_Claims_Dataset";
+            this.tEAM_A_Claims_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // claimsTableAdapter
+            // 
+            this.claimsTableAdapter.ClearBeforeFill = true;
+            // 
             // claimList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,8 +172,8 @@ namespace TeamNateZone
             this.Text = "List of Claims";
             this.Load += new System.EventHandler(this.claimList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,7 +183,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Button btnReturnToWelcome;
         private System.Windows.Forms.DataGridView dataGridView1;
         private TEAM_A_Claims_Dataset tEAM_A_Claims_Dataset;
-        private System.Windows.Forms.BindingSource claimsBindingSource;
         private TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter claimsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn claimIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
@@ -193,5 +192,6 @@ namespace TeamNateZone
         private System.Windows.Forms.DataGridViewTextBoxColumn claimDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        public System.Windows.Forms.BindingSource claimsBindingSource;
     }
 }

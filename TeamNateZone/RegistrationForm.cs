@@ -17,7 +17,36 @@ namespace TeamNateZone
         {
             InitializeComponent();
         }
+        private int getUserID(string username)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
 
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+
+                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE Username = @username";
+
+                cmd.Parameters.AddWithValue("@username", username);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetInt32(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return 0; // this may lead to erroneous results..
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         //not tested yet 
         private void storeSignInInfo(string userName, string passWord, string eMail)
         {
@@ -168,7 +197,7 @@ namespace TeamNateZone
                 }
                 else if (txtPassword.Text == txtVerifyPassword.Text)
                 {
-                    string message = "Registration Successful! Click return to log into application.";
+                    string message = "Registration Successful! Logging you in...";
                     MessageBox.Show(message);
                     storeSignInInfo(txtUsername.Text, txtPassword.Text, txtEmail.Text);
                 }
@@ -194,6 +223,10 @@ namespace TeamNateZone
             {
                 MessageBox.Show(err.Message, "Error Occurred");
             }
+            User user =  new User(getUserID(txtUsername.Text), txtUsername.Text, txtPassword.Text, txtEmail.Text, "client");
+            WelcomeForm wf = new WelcomeForm(user);
+            this.Close();
+            wf.Show();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
