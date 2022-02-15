@@ -235,9 +235,9 @@ namespace TeamNateZone
 
             if (e.KeyChar == (Char)Keys.Enter)
             {
-                    try{ 
-                        if (txtUsername.Text == "" || txtPassword.Text == "")
-                        {
+                try{ 
+                    if (txtUsername.Text == "" || txtPassword.Text == "") 
+                    { 
                         string message = "Username or Password Blank";
                         string title = "Login Failed";
                         MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
@@ -274,7 +274,7 @@ namespace TeamNateZone
                         }
                     }
                 }
-            catch (Exception err)
+                catch (Exception err)
                 {
                     MessageBox.Show(err.Message, "Error Occurred");
                 }
