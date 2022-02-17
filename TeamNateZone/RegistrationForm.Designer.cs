@@ -113,6 +113,7 @@ namespace TeamNateZone
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(415, 25);
             this.txtUsername.TabIndex = 8;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // txtVerifyPassword
             // 
@@ -123,6 +124,7 @@ namespace TeamNateZone
             this.txtVerifyPassword.Size = new System.Drawing.Size(415, 25);
             this.txtVerifyPassword.TabIndex = 10;
             this.txtVerifyPassword.UseSystemPasswordChar = true;
+            this.txtVerifyPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // txtPassword
             // 
@@ -133,6 +135,7 @@ namespace TeamNateZone
             this.txtPassword.Size = new System.Drawing.Size(415, 25);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // btnReturn
             // 
@@ -166,6 +169,7 @@ namespace TeamNateZone
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(415, 25);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label2
             // 
@@ -188,6 +192,7 @@ namespace TeamNateZone
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(147, 29);
             this.txtFname.TabIndex = 1;
+            this.txtFname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label1
             // 
@@ -209,6 +214,7 @@ namespace TeamNateZone
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(155, 29);
             this.txtLname.TabIndex = 2;
+            this.txtLname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label3
             // 
@@ -246,6 +252,7 @@ namespace TeamNateZone
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(129, 29);
             this.txtZip.TabIndex = 6;
+            this.txtZip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label7
             // 
@@ -315,6 +322,7 @@ namespace TeamNateZone
             this.comboState.Name = "comboState";
             this.comboState.Size = new System.Drawing.Size(74, 27);
             this.comboState.TabIndex = 5;
+            this.comboState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label6
             // 
@@ -335,6 +343,7 @@ namespace TeamNateZone
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(136, 29);
             this.txtCity.TabIndex = 20;
+            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label5
             // 
@@ -367,6 +376,7 @@ namespace TeamNateZone
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(208, 29);
             this.txtAddress.TabIndex = 3;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // RegistrationForm
             // 
@@ -397,7 +407,6 @@ namespace TeamNateZone
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RegistrationForm";
             this.Text = "Register";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RegistrationForm_KeyPress);
             this.addressBox.ResumeLayout(false);
             this.addressBox.PerformLayout();
             this.ResumeLayout(false);

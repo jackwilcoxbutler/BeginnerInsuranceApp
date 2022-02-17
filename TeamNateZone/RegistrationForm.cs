@@ -192,8 +192,8 @@ namespace TeamNateZone
                     }
 
                 }
-                else if (txtEmail.Text == getAlreadyDeclaredEmail(txtEmail.Text) ||
-                         txtUsername.Text == getAlreadyDeclaredUsername(txtUsername.Text))
+                else if (txtEmail.Text.Equals(getAlreadyDeclaredEmail(txtEmail.Text)) ||
+                         txtUsername.Text.Equals(getAlreadyDeclaredUsername(txtUsername.Text)))
                 {
                     string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
                     string title = "Registration Failed";
@@ -215,6 +215,10 @@ namespace TeamNateZone
                     string message = "Registration Successful! Logging you in...";
                     MessageBox.Show(message);
                     storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, comboState.SelectedItem.ToString(), txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                    User user = new User(getUserID(txtUsername.Text), txtFname.Text, txtLname.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, 0);
+                    WelcomeForm wf = new WelcomeForm(user);
+                    this.Close();
+                    wf.Show();
                 }
                 else
                 {
@@ -238,10 +242,6 @@ namespace TeamNateZone
             {
                 MessageBox.Show(err.Message, "Error Occurred");
             }
-            User user =  new User(getUserID(txtUsername.Text), txtFname.Text, txtLname.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, 0);
-            WelcomeForm wf = new WelcomeForm(user);
-            this.Close();
-            wf.Show();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -251,9 +251,9 @@ namespace TeamNateZone
             lf.Show();
         }
 
-        private void RegistrationForm_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtVerifyPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (Char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 btnRegister_Click(sender, e);
             }

@@ -289,7 +289,6 @@ namespace TeamNateZone
             if (e.KeyChar == (Char)Keys.Enter)
             {
                 btnLogin_Click(sender, e);
-
             }
         }
     }
