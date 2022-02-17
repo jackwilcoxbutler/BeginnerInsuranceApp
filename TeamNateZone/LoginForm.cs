@@ -226,7 +226,7 @@ namespace TeamNateZone
 
                     this.Hide();
                     welcomeForm = new WelcomeForm(user);
-                    welcomeForm.Owner = this;
+                    welcomeForm.Owner = this; // why are we setting a form owner? 
                     welcomeForm.Show();
                 }
                 else {
@@ -290,49 +290,7 @@ namespace TeamNateZone
 
             if (e.KeyChar == (Char)Keys.Enter)
             {
-                try{ 
-                    if (txtUsername.Text == "" || txtPassword.Text == "") 
-                    { 
-                        string message = "Username or Password Blank";
-                        string title = "Login Failed";
-                        MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                        DialogResult result = MessageBox.Show(message, title, buttons);
-                        if (result == DialogResult.Cancel)
-                        {
-                            Application.Exit();
-                        }
-                        else
-                        {
-                            // Do something  
-                        }
-                    }
-                    else if (enteredPW == getAuthorizedPassword(txtUsername.Text))
-                    {
-                        this.Hide();
-                        welcomeForm = new WelcomeForm(user);
-                        welcomeForm.Owner = this;
-                        welcomeForm.Show();
-                    }
-                    else
-                    {
-                        string message = "Incorrect username or password";
-                        string title = "Login Failed";
-                        MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                        DialogResult result = MessageBox.Show(message, title, buttons);
-                        if (result == DialogResult.Cancel)
-                        {
-                            Application.Exit();
-                        }
-                        else
-                        {
-                            // Do something  
-                        }
-                    }
-                }
-                catch (Exception err)
-                {
-                    MessageBox.Show(err.Message, "Error Occurred");
-                }
+                btnLogin_Click(sender, e);
 
             }
         }

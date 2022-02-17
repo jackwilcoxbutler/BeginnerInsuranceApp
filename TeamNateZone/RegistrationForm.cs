@@ -109,7 +109,11 @@ namespace TeamNateZone
 
                 dr.Read();
 
-                return dr.GetString(0);
+                if (dr.GetString(0).Equals(null))
+                {
+                    return "";
+                }
+                else return dr.GetString(0);
             }
             catch (Exception err)
             {
@@ -143,7 +147,11 @@ namespace TeamNateZone
 
                 dr.Read();
 
-                return dr.GetString(0);
+                if (dr.GetString(0).Equals(null))
+                {
+                    return "";
+                }
+                else return dr.GetString(0);
             }
             catch (Exception err)
             {
@@ -160,8 +168,8 @@ namespace TeamNateZone
         {
             try
             {
-                if (txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPassword.Text == "" ||
-                    txtEmail.Text == "")
+                if (txtPassword.Text.Equals("") || txtUsername.Text.Equals("") || txtVerifyPassword.Text.Equals("") ||
+                    txtEmail.Text.Equals("") || txtFname.Text.Equals("") || txtLname.Text.Equals(""))
                 {
                     string message = "ERROR : Required Field is blank";
                     string title = "Registration Failed";
