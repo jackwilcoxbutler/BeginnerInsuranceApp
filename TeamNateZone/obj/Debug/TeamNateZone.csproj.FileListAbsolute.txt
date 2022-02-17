@@ -1,7 +1,6 @@
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
@@ -78,3 +77,4 @@ C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.Cor
 C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources

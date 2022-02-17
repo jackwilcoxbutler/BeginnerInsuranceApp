@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TeamNateZone
 {
-    public partial class AdminConsole : Form
+public partial class AdminConsole : Form
     {
         public AdminConsole()
         {

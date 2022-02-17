@@ -53,10 +53,10 @@ namespace TeamNateZone
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(684, 394);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(1368, 758);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(116, 34);
+            this.btnExit.Size = new System.Drawing.Size(232, 65);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -66,10 +66,10 @@ namespace TeamNateZone
             // 
             this.btnReturnToWelcome.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnToWelcome.Location = new System.Drawing.Point(564, 394);
-            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturnToWelcome.Location = new System.Drawing.Point(1128, 758);
+            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReturnToWelcome.Name = "btnReturnToWelcome";
-            this.btnReturnToWelcome.Size = new System.Drawing.Size(116, 34);
+            this.btnReturnToWelcome.Size = new System.Drawing.Size(232, 65);
             this.btnReturnToWelcome.TabIndex = 2;
             this.btnReturnToWelcome.Text = "Return";
             this.btnReturnToWelcome.UseVisualStyleBackColor = false;
@@ -92,58 +92,76 @@ namespace TeamNateZone
             this.dataGridView1.DataSource = this.claimsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 448);
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.Size = new System.Drawing.Size(1600, 862);
             this.dataGridView1.TabIndex = 3;
             // 
             // claimIdDataGridViewTextBoxColumn
             // 
             this.claimIdDataGridViewTextBoxColumn.DataPropertyName = "ClaimId";
             this.claimIdDataGridViewTextBoxColumn.HeaderText = "ClaimId";
+            this.claimIdDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimIdDataGridViewTextBoxColumn.Name = "claimIdDataGridViewTextBoxColumn";
             this.claimIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.claimIdDataGridViewTextBoxColumn.Width = 200;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.Width = 200;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
             this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
             this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.Width = 200;
             // 
             // userEmailDataGridViewTextBoxColumn
             // 
             this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "UserEmail";
             this.userEmailDataGridViewTextBoxColumn.HeaderText = "UserEmail";
+            this.userEmailDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
+            this.userEmailDataGridViewTextBoxColumn.Width = 200;
             // 
             // claimTypeDataGridViewTextBoxColumn
             // 
             this.claimTypeDataGridViewTextBoxColumn.DataPropertyName = "Claim_Type";
             this.claimTypeDataGridViewTextBoxColumn.HeaderText = "Claim_Type";
+            this.claimTypeDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimTypeDataGridViewTextBoxColumn.Name = "claimTypeDataGridViewTextBoxColumn";
+            this.claimTypeDataGridViewTextBoxColumn.Width = 200;
             // 
             // claimDescriptionDataGridViewTextBoxColumn
             // 
             this.claimDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Claim_Description";
             this.claimDescriptionDataGridViewTextBoxColumn.HeaderText = "Claim_Description";
+            this.claimDescriptionDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimDescriptionDataGridViewTextBoxColumn.Name = "claimDescriptionDataGridViewTextBoxColumn";
+            this.claimDescriptionDataGridViewTextBoxColumn.Width = 200;
             // 
             // startDateDataGridViewTextBoxColumn
             // 
             this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
             this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 200;
             // 
             // endDateDataGridViewTextBoxColumn
             // 
             this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
             this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.Width = 200;
             // 
             // claimsBindingSource
             // 
@@ -161,13 +179,14 @@ namespace TeamNateZone
             // 
             // claimList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 448);
+            this.ClientSize = new System.Drawing.Size(1600, 862);
             this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "claimList";
             this.Text = "List of Claims";
             this.Load += new System.EventHandler(this.claimList_Load);

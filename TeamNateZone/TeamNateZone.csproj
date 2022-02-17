@@ -101,6 +101,9 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="rndButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TEAM_A_Claims_Dataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -31,9 +31,6 @@ namespace TeamNateZone
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tEAM_A_UserInfo = new TeamNateZone.TEAM_A_UserInfo();
-            this.signInInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.signInInfoTableAdapter = new TeamNateZone.TEAM_A_UserInfoTableAdapters.SignInInfoTableAdapter();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +39,15 @@ namespace TeamNateZone
             this.clearanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.signInInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tEAM_A_UserInfo = new TeamNateZone.TEAM_A_UserInfo();
+            this.signInInfoTableAdapter = new TeamNateZone.TEAM_A_UserInfoTableAdapters.SignInInfoTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.pbPanda = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.signInInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,73 +66,91 @@ namespace TeamNateZone
             this.usernameDataGridViewTextBoxColumn,
             this.userIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.signInInfoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 194);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(803, 150);
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.Size = new System.Drawing.Size(1606, 288);
             this.dataGridView1.TabIndex = 0;
             // 
-            // tEAM_A_UserInfo
+            // emailDataGridViewTextBoxColumn
             // 
-            this.tEAM_A_UserInfo.DataSetName = "TEAM_A_UserInfo";
-            this.tEAM_A_UserInfo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // fNameDataGridViewTextBoxColumn
+            // 
+            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "fName";
+            this.fNameDataGridViewTextBoxColumn.HeaderText = "fName";
+            this.fNameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // lNameDataGridViewTextBoxColumn
+            // 
+            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "lName";
+            this.lNameDataGridViewTextBoxColumn.HeaderText = "lName";
+            this.lNameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            this.lNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // clearanceDataGridViewTextBoxColumn
+            // 
+            this.clearanceDataGridViewTextBoxColumn.DataPropertyName = "clearance";
+            this.clearanceDataGridViewTextBoxColumn.HeaderText = "clearance";
+            this.clearanceDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.clearanceDataGridViewTextBoxColumn.Name = "clearanceDataGridViewTextBoxColumn";
+            this.clearanceDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIDDataGridViewTextBoxColumn.Width = 200;
             // 
             // signInInfoBindingSource
             // 
             this.signInInfoBindingSource.DataMember = "SignInInfo";
             this.signInInfoBindingSource.DataSource = this.tEAM_A_UserInfo;
             // 
+            // tEAM_A_UserInfo
+            // 
+            this.tEAM_A_UserInfo.DataSetName = "TEAM_A_UserInfo";
+            this.tEAM_A_UserInfo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // signInInfoTableAdapter
             // 
             this.signInInfoTableAdapter.ClearBeforeFill = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // fNameDataGridViewTextBoxColumn
-            // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "fName";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "fName";
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
-            // 
-            // lNameDataGridViewTextBoxColumn
-            // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "lName";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "lName";
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // clearanceDataGridViewTextBoxColumn
-            // 
-            this.clearanceDataGridViewTextBoxColumn.DataPropertyName = "clearance";
-            this.clearanceDataGridViewTextBoxColumn.HeaderText = "clearance";
-            this.clearanceDataGridViewTextBoxColumn.Name = "clearanceDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // label1
             // 
@@ -140,9 +158,10 @@ namespace TeamNateZone
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(24, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 38);
+            this.label1.Size = new System.Drawing.Size(456, 77);
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage Users";
             // 
@@ -151,9 +170,10 @@ namespace TeamNateZone
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnExit.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExit.Location = new System.Drawing.Point(644, 271);
+            this.btnExit.Location = new System.Drawing.Point(1288, 521);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(171, 49);
+            this.btnExit.Size = new System.Drawing.Size(342, 94);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -163,31 +183,32 @@ namespace TeamNateZone
             // 
             this.pbPanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbPanda.Image = global::TeamNateZone.Properties.Resources.Panda_Logo;
-            this.pbPanda.Location = new System.Drawing.Point(735, 17);
-            this.pbPanda.Margin = new System.Windows.Forms.Padding(1);
+            this.pbPanda.Location = new System.Drawing.Point(1470, 33);
+            this.pbPanda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbPanda.Name = "pbPanda";
-            this.pbPanda.Size = new System.Drawing.Size(80, 80);
+            this.pbPanda.Size = new System.Drawing.Size(160, 154);
             this.pbPanda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPanda.TabIndex = 8;
             this.pbPanda.TabStop = false;
             // 
             // AdminConsole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(828, 332);
+            this.ClientSize = new System.Drawing.Size(1656, 638);
             this.Controls.Add(this.pbPanda);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "AdminConsole";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.AdminConsole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.signInInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
