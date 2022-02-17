@@ -77,3 +77,4 @@ C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.Gen
 C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources

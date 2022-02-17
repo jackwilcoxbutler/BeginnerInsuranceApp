@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminConsole.Designer.cs">
+      <DependentUpon>AdminConsole.cs</DependentUpon>
+    </Compile>
     <Compile Include="CancelLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TEAM_A_UserInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_A_UserInfo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
@@ -107,6 +118,9 @@
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminConsole.resx">
+      <DependentUpon>AdminConsole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CancelLogin.resx">
       <DependentUpon>CancelLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +169,17 @@
     </None>
     <None Include="TEAM_A_Claims_Dataset.xss">
       <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_A_UserInfo.xsc">
+      <DependentUpon>TEAM_A_UserInfo.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_A_UserInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_A_UserInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_A_UserInfo.xss">
+      <DependentUpon>TEAM_A_UserInfo.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

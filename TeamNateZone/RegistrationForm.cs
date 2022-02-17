@@ -48,12 +48,12 @@ namespace TeamNateZone
             }
         }
         //not tested yet 
-        private void storeSignInInfo(string userName, string passWord, string eMail)
+        private void storeSignInInfo(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            string clearAnce = "client";
+            int clearance = 0;
 
             try
             {
@@ -61,10 +61,16 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "INSERT INTO SignInInfo(Email, Password, clearance, Username) VALUES (@email, @password, @clear, @username);";
+                cmd.CommandText = "INSERT INTO SignInInfo(Email, Password, fName, lName, Street, City, State, Zip, clearance, Username) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username);";
                 cmd.Parameters.AddWithValue("@email", eMail);
                 cmd.Parameters.AddWithValue("@password", passWord);
-                cmd.Parameters.AddWithValue("@clear", clearAnce);
+                cmd.Parameters.AddWithValue("@f", first);
+                cmd.Parameters.AddWithValue("@l", last);
+                cmd.Parameters.AddWithValue("@str", address);
+                cmd.Parameters.AddWithValue("@city", city);
+                cmd.Parameters.AddWithValue("@st", state);
+                cmd.Parameters.AddWithValue("@zip5", zip);
+                cmd.Parameters.AddWithValue("@clear", clearance);
                 cmd.Parameters.AddWithValue("@username", userName);
 
                 cn.Open();
@@ -194,7 +200,7 @@ namespace TeamNateZone
                 {
                     string message = "Registration Successful! Logging you in...";
                     MessageBox.Show(message);
-                    storeSignInInfo(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                    storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, comboState.SelectedItem.ToString(), txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
                 }
                 else
                 {
@@ -218,7 +224,7 @@ namespace TeamNateZone
             {
                 MessageBox.Show(err.Message, "Error Occurred");
             }
-            User user =  new User(getUserID(txtUsername.Text), txtUsername.Text, txtPassword.Text, txtEmail.Text, "client");
+            User user =  new User(getUserID(txtUsername.Text), txtFname.Text, txtLname.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, 0);
             WelcomeForm wf = new WelcomeForm(user);
             this.Close();
             wf.Show();

@@ -9,26 +9,30 @@ namespace TeamNateZone
     public class User
     {
         //Data
-        String username, password, email, userType;
-        int id;
+        String username, password, email, fname, lname;
+        int id, clearance;
 
         // constructor
-        public User(int id, String username, string password, string email, string userType) //created by login/reg form
+        public User(int id, string fname, string lname, string username, string password, string email, int clearance) //created by login/reg form
         {
+            this.fname = fname;
+            this.lname = lname;
             this.username = username;
             this.password = password;
             this.email = email;
-            this.userType = userType;
+            this.clearance = clearance;
             this.id = id;
         }
         // default constructor (makes empty object)
         public User()
         {
             id = 0;
+            fname = "";
+            lname = "";
             username = "";
             password = "";
             email = "";
-            userType = "";
+            clearance = 0;
         }
 
         //get methods
@@ -40,6 +44,14 @@ namespace TeamNateZone
         {
             return username;
         }
+        public string getFname()
+        {
+            return fname;
+        }
+        public string getLname()
+        {
+            return lname;
+        }
         public string getPassword()
         {
             return password;
@@ -50,7 +62,33 @@ namespace TeamNateZone
         }
         public string getRole()
         {
-            return userType;
+            switch (clearance)
+            {
+                case 0:
+                    {
+                        return "Client";
+                    }
+                case 1:
+                    {
+                        return "Claims Manager";
+                    }
+                case 2:
+                    {
+                        return "Finance Manager";
+                    }
+                case 3:
+                    {
+                        return "Admin";
+                    }
+                default:
+                    { 
+                        return ""; 
+                    }
+            }
+        }
+        public int getClearance()
+        {
+            return clearance;
         }
         /// set methods
         public void setUserID(int value)
@@ -61,6 +99,14 @@ namespace TeamNateZone
         {
             username = value;
         }
+        public void setFname(string value)
+        {
+            fname = value;
+        }
+        public void setLname(string value)
+        {
+            lname = value;
+        }
         public void setPassword(string value)
         {
             password = value;
@@ -69,9 +115,9 @@ namespace TeamNateZone
         {
             email = value;
         }
-        public void setUserType(string value)
+        public void setUserType(int value)
         {
-            userType = value;
+            clearance = value;
         }
     }
 }

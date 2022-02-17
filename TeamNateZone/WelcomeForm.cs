@@ -21,6 +21,10 @@ namespace TeamNateZone
         {
             InitializeComponent();
             this.user = user;
+            if(user.getClearance() == 3)
+            {
+                btnAdmin.Visible = true;
+            }
         }
 
         private void btnListClaims_Click(object sender, EventArgs e)
@@ -73,6 +77,12 @@ namespace TeamNateZone
                 pnlDropDown.Height = pnlDropDown.MinimumSize.Height;
             }
             
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            AdminConsole ac = new AdminConsole();
+            ac.Show();
         }
     }
 }
