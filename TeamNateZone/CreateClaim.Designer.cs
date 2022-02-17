@@ -151,9 +151,10 @@ namespace TeamNateZone
             // 
             // btnUpload
             // 
+            this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.Location = new System.Drawing.Point(302, 386);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 21);
+            this.btnUpload.Size = new System.Drawing.Size(75, 25);
             this.btnUpload.TabIndex = 11;
             this.btnUpload.Text = "upload files";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -161,9 +162,11 @@ namespace TeamNateZone
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(46, 387);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 20);
+            this.textBox1.Size = new System.Drawing.Size(263, 23);
             this.textBox1.TabIndex = 12;
             // 
             // openFileDialog1
