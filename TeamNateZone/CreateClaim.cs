@@ -72,7 +72,7 @@ namespace TeamNateZone
 
             MessageBox.Show("Your claim has been successfully submitted! Check your list of claims to track its status.", "Success!");
             welcomeForm = new WelcomeForm(user);
-            this.Hide();
+            this.Close();
             welcomeForm.Show();
 /*
         private Boolean isClosed;
@@ -100,6 +100,11 @@ namespace TeamNateZone
             newForm.Show();
             this.Close();
             */
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
         }
     }
 }
