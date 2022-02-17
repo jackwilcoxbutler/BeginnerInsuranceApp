@@ -397,6 +397,7 @@ namespace TeamNateZone
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RegistrationForm";
             this.Text = "Register";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RegistrationForm_KeyPress);
             this.addressBox.ResumeLayout(false);
             this.addressBox.PerformLayout();
             this.ResumeLayout(false);

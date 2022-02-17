@@ -84,5 +84,10 @@ namespace TeamNateZone
             AdminConsole ac = new AdminConsole();
             ac.Show();
         }
+
+        private void WelcomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

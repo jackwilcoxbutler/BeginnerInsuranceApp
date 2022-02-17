@@ -228,6 +228,7 @@ namespace TeamNateZone
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "WelcomeForm";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WelcomeForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).EndInit();
             this.pnlDropDown.ResumeLayout(false);
             this.ResumeLayout(false);

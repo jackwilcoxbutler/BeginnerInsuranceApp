@@ -109,11 +109,14 @@ namespace TeamNateZone
 
                 dr.Read();
 
-                if (dr.GetString(0).Equals(null))
+                try
+                {
+                    return dr.GetString(0);
+                }
+                catch (Exception e)
                 {
                     return "";
                 }
-                else return dr.GetString(0);
             }
             catch (Exception err)
             {
@@ -147,11 +150,14 @@ namespace TeamNateZone
 
                 dr.Read();
 
-                if (dr.GetString(0).Equals(null))
+                try
+                {
+                    return dr.GetString(0);
+                }
+                catch (Exception e)
                 {
                     return "";
                 }
-                else return dr.GetString(0);
             }
             catch (Exception err)
             {
@@ -243,6 +249,14 @@ namespace TeamNateZone
             LoginForm lf = (LoginForm)this.Owner;
             this.Close();
             lf.Show();
+        }
+
+        private void RegistrationForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                btnRegister_Click(sender, e);
+            }
         }
     }
 }

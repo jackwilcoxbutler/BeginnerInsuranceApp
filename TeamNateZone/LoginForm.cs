@@ -286,8 +286,6 @@ namespace TeamNateZone
 
         private void txtPassword_KeyDown(object sender, KeyPressEventArgs e)
         {
-            string enteredPW = txtPassword.Text;
-
             if (e.KeyChar == (Char)Keys.Enter)
             {
                 btnLogin_Click(sender, e);
