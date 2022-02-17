@@ -59,22 +59,26 @@ namespace TeamNateZone
             // labelDate
             // 
             this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelDate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelDate.Location = new System.Drawing.Point(43, 73);
             this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(41, 18);
+            this.labelDate.Size = new System.Drawing.Size(46, 18);
             this.labelDate.TabIndex = 2;
             this.labelDate.Text = "Date";
             // 
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
+            this.labelType.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelType.Location = new System.Drawing.Point(43, 120);
             this.labelType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(89, 18);
+            this.labelType.Size = new System.Drawing.Size(102, 18);
             this.labelType.TabIndex = 3;
             this.labelType.Text = "Claim Type";
             // 
@@ -116,16 +120,18 @@ namespace TeamNateZone
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(43, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 18);
+            this.label1.Size = new System.Drawing.Size(186, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Give us some details..";
             // 
             // detailsTextBox
             // 
-            this.detailsTextBox.Location = new System.Drawing.Point(41, 202);
+            this.detailsTextBox.Location = new System.Drawing.Point(41, 186);
             this.detailsTextBox.Name = "detailsTextBox";
             this.detailsTextBox.Size = new System.Drawing.Size(336, 179);
             this.detailsTextBox.TabIndex = 9;
@@ -145,7 +151,7 @@ namespace TeamNateZone
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(302, 420);
+            this.btnUpload.Location = new System.Drawing.Point(302, 386);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 21);
             this.btnUpload.TabIndex = 11;
@@ -155,7 +161,7 @@ namespace TeamNateZone
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 421);
+            this.textBox1.Location = new System.Drawing.Point(46, 387);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(263, 20);
             this.textBox1.TabIndex = 12;
