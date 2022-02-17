@@ -46,14 +46,14 @@ namespace TeamNateZone
             this.txtLname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.GroupBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboState = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtZip = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboState = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.addressBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,11 +182,11 @@ namespace TeamNateZone
             // 
             // txtFname
             // 
-            this.txtFname.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFname.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFname.Location = new System.Drawing.Point(144, 81);
             this.txtFname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(147, 25);
+            this.txtFname.Size = new System.Drawing.Size(147, 29);
             this.txtFname.TabIndex = 1;
             // 
             // label1
@@ -203,11 +203,11 @@ namespace TeamNateZone
             // 
             // txtLname
             // 
-            this.txtLname.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLname.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLname.Location = new System.Drawing.Point(438, 81);
             this.txtLname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(155, 25);
+            this.txtLname.Size = new System.Drawing.Size(155, 29);
             this.txtLname.TabIndex = 2;
             // 
             // label3
@@ -239,58 +239,26 @@ namespace TeamNateZone
             this.addressBox.TabStop = false;
             this.addressBox.Text = "Address";
             // 
-            // txtAddress
+            // txtZip
             // 
-            this.txtAddress.Location = new System.Drawing.Point(19, 54);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(208, 26);
-            this.txtAddress.TabIndex = 3;
+            this.txtZip.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtZip.Location = new System.Drawing.Point(32, 117);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(129, 29);
+            this.txtZip.TabIndex = 6;
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 33);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 18);
-            this.label4.TabIndex = 99;
-            this.label4.Text = "Street Address";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(244, 33);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 18);
-            this.label5.TabIndex = 99;
-            this.label5.Text = "City";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(248, 55);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(136, 26);
-            this.txtCity.TabIndex = 20;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(418, 33);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 18);
-            this.label6.TabIndex = 99;
-            this.label6.Text = "State";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.TabIndex = 99;
+            this.label7.Text = "Zip";
             // 
             // comboState
             // 
+            this.comboState.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboState.FormattingEnabled = true;
             this.comboState.Items.AddRange(new object[] {
             "AL",
@@ -345,24 +313,60 @@ namespace TeamNateZone
             "WY"});
             this.comboState.Location = new System.Drawing.Point(421, 55);
             this.comboState.Name = "comboState";
-            this.comboState.Size = new System.Drawing.Size(74, 26);
+            this.comboState.Size = new System.Drawing.Size(74, 27);
             this.comboState.TabIndex = 5;
             // 
-            // label7
+            // label6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 18);
-            this.label7.TabIndex = 99;
-            this.label7.Text = "Zip";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(418, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 18);
+            this.label6.TabIndex = 99;
+            this.label6.Text = "State";
             // 
-            // txtZip
+            // txtCity
             // 
-            this.txtZip.Location = new System.Drawing.Point(32, 117);
-            this.txtZip.Name = "txtZip";
-            this.txtZip.Size = new System.Drawing.Size(129, 26);
-            this.txtZip.TabIndex = 6;
+            this.txtCity.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(248, 55);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(136, 29);
+            this.txtCity.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(244, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 18);
+            this.label5.TabIndex = 99;
+            this.label5.Text = "City";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 33);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 18);
+            this.label4.TabIndex = 99;
+            this.label4.Text = "Street Address";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(19, 54);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(208, 29);
+            this.txtAddress.TabIndex = 3;
             // 
             // RegistrationForm
             // 
