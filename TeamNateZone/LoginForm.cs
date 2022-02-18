@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TeamNateZone
@@ -176,7 +169,7 @@ namespace TeamNateZone
 
                 cn.Open();
 
-                dr= cmd.ExecuteReader();
+                dr = cmd.ExecuteReader();
 
                 dr.Read();
 
@@ -193,65 +186,6 @@ namespace TeamNateZone
             }
         }
 
-
-<<<<<<< HEAD
-=======
-            try
-            {
-                //if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
-                if (txtUsername.Text == "" || txtPassword.Text == "") {
-                    string message = "Username or Password Blank";
-                    string title = "Login Failed";
-                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                    DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Cancel)
-                    {
-                        Application.Exit();
-                    }
-                    else
-                    {
-                        // Do something  
-                    }
-                }
-                else if (enteredPW == getAuthorizedPassword(txtUsername.Text)) {
-                    // verified user, assign info to User object (log in)
-                    user.setUserID(getUserID(txtUsername.Text));
-                    user.setUsername(txtUsername.Text);
-                    user.setFname(getFname(txtUsername.Text));
-                    user.setLname(getLname(txtUsername.Text));
-                    user.setPassword(txtPassword.Text);
-                    user.setEmail(getUserEmail(txtUsername.Text));
-                    user.setUserType(getUserPermissions(txtUsername.Text));
-
-                    this.Hide();
-                    welcomeForm = new WelcomeForm(user);
-                    welcomeForm.Owner = this; // why are we setting a form owner? 
-                    welcomeForm.Show();
-                }
-                else {
-                    string message = "Incorrect username or password";
-                    string title = "Login Failed";
-                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                    DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Cancel)
-                    {
-                        Application.Exit();
-                    }
-                    else
-                    {
-                        // Do something  
-                    }
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-            }
-            
-        }
->>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93
-
-    
 
         private void LoginForm_FormClosing(object sender, EventArgs e)
         {
@@ -270,7 +204,7 @@ namespace TeamNateZone
         {
             if (e.KeyChar == (Char)Keys.Enter)
             {
-                btnLogin_Click(sender, e);
+                btnLogin_Click_1(sender, e);
             }
         }
 
@@ -337,21 +271,21 @@ namespace TeamNateZone
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            
 
-              string message = "Do you want to cancel this login attempt?";
-              string title = "Close Window";
-              MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                
-              DialogResult result = MessageBox.Show(message, title, buttons);
-              if (result == DialogResult.Yes)
-              {
-                    Application.Exit();
-              }
-              else
-              {
-                    // Do something  
-              }
+
+            string message = "Do you want to cancel this login attempt?";
+            string title = "Close Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                // Do something  
+            }
         }
     }
 }

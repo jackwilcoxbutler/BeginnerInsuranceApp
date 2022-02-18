@@ -202,7 +202,7 @@ namespace TeamNateZone
             // 
             this.txtLname.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLname.ForeColor = System.Drawing.Color.Red;
-            this.txtLname.Location = new System.Drawing.Point(510, 216);
+            this.txtLname.Location = new System.Drawing.Point(518, 194);
             this.txtLname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(251, 50);
@@ -374,7 +374,6 @@ namespace TeamNateZone
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(272, -4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 200);
@@ -403,7 +402,6 @@ namespace TeamNateZone
             // 
             // btnRegister
             // 
-<<<<<<< HEAD
             this.btnRegister.BackColor = System.Drawing.Color.Red;
             this.btnRegister.BackgroundColor = System.Drawing.Color.Red;
             this.btnRegister.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -421,14 +419,6 @@ namespace TeamNateZone
             this.btnRegister.TextColor = System.Drawing.Color.White;
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
-=======
-            this.txtAddress.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(19, 54);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(208, 29);
-            this.txtAddress.TabIndex = 3;
-            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
->>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93
             // 
             // RegistrationForm
             // 
