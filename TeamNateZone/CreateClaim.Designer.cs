@@ -39,12 +39,15 @@ namespace TeamNateZone
             this.label1 = new System.Windows.Forms.Label();
             this.detailsTextBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(288, 423);
+            this.btnBack.Location = new System.Drawing.Point(288, 469);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(89, 30);
@@ -56,29 +59,33 @@ namespace TeamNateZone
             // labelDate
             // 
             this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelDate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelDate.Location = new System.Drawing.Point(43, 73);
             this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(41, 18);
+            this.labelDate.Size = new System.Drawing.Size(46, 18);
             this.labelDate.TabIndex = 2;
             this.labelDate.Text = "Date";
             // 
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
+            this.labelType.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelType.Location = new System.Drawing.Point(43, 120);
             this.labelType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(89, 18);
+            this.labelType.Size = new System.Drawing.Size(102, 18);
             this.labelType.TabIndex = 3;
             this.labelType.Text = "Claim Type";
             // 
             // btnFile
             // 
             this.btnFile.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFile.Location = new System.Drawing.Point(160, 424);
+            this.btnFile.Location = new System.Drawing.Point(160, 470);
             this.btnFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(124, 29);
@@ -113,16 +120,18 @@ namespace TeamNateZone
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(43, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 18);
+            this.label1.Size = new System.Drawing.Size(186, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Give us some details..";
             // 
             // detailsTextBox
             // 
-            this.detailsTextBox.Location = new System.Drawing.Point(41, 202);
+            this.detailsTextBox.Location = new System.Drawing.Point(41, 186);
             this.detailsTextBox.Name = "detailsTextBox";
             this.detailsTextBox.Size = new System.Drawing.Size(336, 179);
             this.detailsTextBox.TabIndex = 9;
@@ -140,6 +149,30 @@ namespace TeamNateZone
             this.label2.TabIndex = 10;
             this.label2.Text = "Panda Insurance";
             // 
+            // btnUpload
+            // 
+            this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Location = new System.Drawing.Point(302, 386);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 25);
+            this.btnUpload.TabIndex = 11;
+            this.btnUpload.Text = "upload files";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(46, 387);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(263, 23);
+            this.textBox1.TabIndex = 12;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // CreateClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +180,8 @@ namespace TeamNateZone
             this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(444, 523);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.detailsTextBox);
             this.Controls.Add(this.label1);
@@ -175,5 +210,8 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox detailsTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

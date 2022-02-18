@@ -190,6 +190,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon1.ico" />
+    <Content Include="Images\p.jpg" />
+    <Content Include="p.ico" />
     <Content Include="Panda Logo.jpeg" />
     <None Include="Resources\vs5.jpeg" />
     <None Include="Resources\vs51.jpeg" />

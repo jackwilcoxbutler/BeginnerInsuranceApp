@@ -78,6 +78,9 @@ C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
+<<<<<<< HEAD
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
+=======
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\bin\Debug\TeamNateZone.exe.config
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\bin\Debug\TeamNateZone.exe
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\bin\Debug\TeamNateZone.pdb
@@ -96,3 +99,4 @@ C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.Gener
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.pdb
+>>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93

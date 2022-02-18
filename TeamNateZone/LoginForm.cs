@@ -193,10 +193,9 @@ namespace TeamNateZone
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            string enteredPW = txtPassword.Text;
 
+<<<<<<< HEAD
+=======
             try
             {
                 //if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
@@ -250,26 +249,9 @@ namespace TeamNateZone
             }
             
         }
+>>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            /* this.Hide();
-             cancelLogin = new CancelLogin();
-             cancelLogin.Owner = this;
-             cancelLogin.Show();*/
-            string message = "Do you want to cancel this login attempt?";
-            string title = "Close Window";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                // Do something  
-            }
-        }
+    
 
         private void LoginForm_FormClosing(object sender, EventArgs e)
         {
@@ -291,5 +273,86 @@ namespace TeamNateZone
                 btnLogin_Click(sender, e);
             }
         }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            string enteredPW = txtPassword.Text;
+
+            try
+            {
+                //if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
+                if (txtUsername.Text == "" || txtPassword.Text == "")
+                {
+                    string message = "Username or Password Blank";
+                    string title = "Login Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        // Do something  
+                    }
+                }
+                else if (enteredPW == getAuthorizedPassword(txtUsername.Text))
+                {
+                    // verified user, assign info to User object (log in)
+                    user.setUserID(getUserID(txtUsername.Text));
+                    user.setUsername(txtUsername.Text);
+                    user.setFname(getFname(txtUsername.Text));
+                    user.setLname(getLname(txtUsername.Text));
+                    user.setPassword(txtPassword.Text);
+                    user.setEmail(getUserEmail(txtUsername.Text));
+                    user.setUserType(getUserPermissions(txtUsername.Text));
+
+                    this.Hide();
+                    welcomeForm = new WelcomeForm(user);
+                    welcomeForm.Owner = this;
+                    welcomeForm.Show();
+                }
+                else
+                {
+                    string message = "Incorrect username or password";
+                    string title = "Login Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        // Do something  
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            
+
+              string message = "Do you want to cancel this login attempt?";
+              string title = "Close Window";
+              MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                
+              DialogResult result = MessageBox.Show(message, title, buttons);
+              if (result == DialogResult.Yes)
+              {
+                    Application.Exit();
+              }
+              else
+              {
+                    // Do something  
+              }
+        }
     }
 }
+
