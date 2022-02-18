@@ -170,8 +170,84 @@ namespace TeamNateZone
             }
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            
+                        try
+                        {
+                            if (txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPassword.Text == "" ||
+                                txtEmail.Text == "")
+                            {
+                                string message = "ERROR : Required Field is blank";
+                                string title = "Registration Failed";
+                                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                                DialogResult result = MessageBox.Show(message, title, buttons);
+                                if (result == DialogResult.Cancel)
+                                {
+                                    Application.Exit();
+                                }
+                                else
+                                {
+                                    txtPassword.Clear();
+                                    txtVerifyPassword.Clear();
+                                }
+
+                            }
+                            else if (txtEmail.Text == getAlreadyDeclaredEmail(txtEmail.Text) ||
+                                     txtUsername.Text == getAlreadyDeclaredUsername(txtUsername.Text))
+                            {
+                                string message = "ERROR : Username or Email already in use. Click retry to return to login page.";
+                                string title = "Registration Failed";
+                                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                                DialogResult result = MessageBox.Show(message, title, buttons);
+                                if (result == DialogResult.Cancel)
+                                {
+                                    Application.Exit();
+                                }
+                                else
+                                {
+                                    LoginForm lf = (LoginForm) this.Owner;
+                                    this.Close();
+                                    lf.Show();
+                                }
+                            }
+                            else if (txtPassword.Text == txtVerifyPassword.Text)
+                            {
+                                string message = "Registration Successful! Logging you in...";
+                                MessageBox.Show(message);
+                                storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, comboState.SelectedItem.ToString(), txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                            }
+                            else
+                            {
+                                string message = "ERROR : Passwords do not match";
+                                string title = "Registration Failed";
+                                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                                DialogResult result = MessageBox.Show(message, title, buttons);
+                                if (result == DialogResult.Cancel)
+                                {
+                                    Application.Exit();
+                                }
+                                else
+                                {
+
+                                    txtPassword.Clear();
+                                    txtVerifyPassword.Clear();
+                                }
+                            }
+                        }
+                        catch (Exception err)
+                        {
+                            MessageBox.Show(err.Message, "Error Occurred");
+                        }
+                        User user =  new User(getUserID(txtUsername.Text), txtFname.Text, txtLname.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, 0);
+                        WelcomeForm wf = new WelcomeForm(user);
+                        this.Close();
+                        wf.Show();
+                        
+=======
             try
             {
                 if (txtPassword.Text.Equals("") || txtUsername.Text.Equals("") || txtVerifyPassword.Text.Equals("") ||
@@ -242,9 +318,10 @@ namespace TeamNateZone
             {
                 MessageBox.Show(err.Message, "Error Occurred");
             }
+>>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_1(object sender, EventArgs e)
         {
             LoginForm lf = (LoginForm)this.Owner;
             this.Close();
