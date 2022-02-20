@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace TeamNateZone
 {
@@ -33,6 +34,17 @@ namespace TeamNateZone
             password = "";
             email = "";
             clearance = 0;
+        }
+        //constructor with two parameters
+        public User(string userN, string pWord)
+        {
+            username = userN;
+            password = pWord;
+            clearance = getUserPermisions(username);
+            fname = getFname(username);
+            lname = getLname(username);
+            id = getUserID(username);
+            email = getUserEmail(username);
         }
 
         //get methods
@@ -90,7 +102,20 @@ namespace TeamNateZone
         {
             return clearance;
         }
+
         /// set methods
+        /// added simple set method to automatically set all the info to an
+        /// user directly from the table
+        public void setUserAcct(string userN, string pWord)
+        {
+            username = userN;
+            password = pWord;
+            clearance = getUserPermisions(username);
+            fname = getFname(username);
+            lname = getLname(username);
+            id = getUserID(username);
+            email = getUserEmail(username);
+        }
         public void setUserID(int value)
         {
             id = value;
@@ -118,6 +143,146 @@ namespace TeamNateZone
         public void setUserType(int value)
         {
             clearance = value;
+        }
+
+        //sql linking stuff-- clean up to get rid of random errors appearing at log in screen
+        //pulls info directly from db to return the valid info 
+        private int getUserPermisions(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT clearance FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetInt32(0);
+            }
+            catch (Exception err)
+            {
+                return 0;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private int getUserID(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetInt32(0);
+            }
+            catch (Exception err)
+            {
+                return 0;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getUserEmail(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT Email FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        private string getFname(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT fName FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getLname(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT lName FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }
