@@ -202,7 +202,7 @@ namespace TeamNateZone
             // 
             this.txtLname.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLname.ForeColor = System.Drawing.Color.Red;
-            this.txtLname.Location = new System.Drawing.Point(518, 194);
+            this.txtLname.Location = new System.Drawing.Point(518, 216);
             this.txtLname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(251, 50);
@@ -374,9 +374,11 @@ namespace TeamNateZone
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(272, -4);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(274, -15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 225);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 100;
             this.pictureBox1.TabStop = false;
             // 

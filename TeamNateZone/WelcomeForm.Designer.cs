@@ -30,98 +30,24 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.pbPanda = new System.Windows.Forms.PictureBox();
-            this.btnFileClaim = new System.Windows.Forms.Button();
-            this.btnListClaims = new System.Windows.Forms.Button();
-            this.btnManageAccount = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlDropDown = new System.Windows.Forms.Panel();
             this.btnLogout2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnMenuOpen = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).BeginInit();
+            this.btnListClaims = new CustomControls.RJControls.rndButton();
+            this.btnAdmin = new CustomControls.RJControls.rndButton();
+            this.btnManageAccount = new CustomControls.RJControls.rndButton();
+            this.btnFileClaim = new CustomControls.RJControls.rndButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlDropDown.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(218, 40);
-            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(152, 36);
-            this.welcomeLabel.TabIndex = 0;
-            this.welcomeLabel.Text = "Welcome!";
-            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pbPanda
-            // 
-            this.pbPanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPanda.Image = global::TeamNateZone.Properties.Resources.Panda_Logo;
-            this.pbPanda.Location = new System.Drawing.Point(251, 96);
-            this.pbPanda.Margin = new System.Windows.Forms.Padding(1);
-            this.pbPanda.Name = "pbPanda";
-            this.pbPanda.Size = new System.Drawing.Size(80, 80);
-            this.pbPanda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPanda.TabIndex = 7;
-            this.pbPanda.TabStop = false;
-            // 
-            // btnFileClaim
-            // 
-            this.btnFileClaim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFileClaim.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFileClaim.Location = new System.Drawing.Point(107, 204);
-            this.btnFileClaim.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFileClaim.Name = "btnFileClaim";
-            this.btnFileClaim.Size = new System.Drawing.Size(107, 79);
-            this.btnFileClaim.TabIndex = 8;
-            this.btnFileClaim.Text = "File a New Claim";
-            this.btnFileClaim.UseVisualStyleBackColor = true;
-            this.btnFileClaim.Click += new System.EventHandler(this.btnFileClaim_Click);
-            // 
-            // btnListClaims
-            // 
-            this.btnListClaims.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListClaims.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListClaims.Location = new System.Drawing.Point(239, 204);
-            this.btnListClaims.Margin = new System.Windows.Forms.Padding(2);
-            this.btnListClaims.Name = "btnListClaims";
-            this.btnListClaims.Size = new System.Drawing.Size(107, 79);
-            this.btnListClaims.TabIndex = 9;
-            this.btnListClaims.Text = "View Existing Claims";
-            this.btnListClaims.UseVisualStyleBackColor = true;
-            this.btnListClaims.Click += new System.EventHandler(this.btnListClaims_Click);
-            // 
-            // btnManageAccount
-            // 
-            this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnManageAccount.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAccount.Location = new System.Drawing.Point(369, 204);
-            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
-            this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(107, 79);
-            this.btnManageAccount.TabIndex = 10;
-            this.btnManageAccount.Text = "Manage Account";
-            this.btnManageAccount.UseVisualStyleBackColor = true;
-            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Georgia", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 29);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Panda Insurance";
             // 
             // pnlDropDown
             // 
@@ -130,22 +56,22 @@ namespace TeamNateZone
             this.pnlDropDown.Controls.Add(this.btnMenuOpen);
             this.pnlDropDown.Controls.Add(this.button1);
             this.pnlDropDown.Controls.Add(this.button2);
-            this.pnlDropDown.Location = new System.Drawing.Point(511, 10);
-            this.pnlDropDown.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlDropDown.MaximumSize = new System.Drawing.Size(52, 283);
-            this.pnlDropDown.MinimumSize = new System.Drawing.Size(52, 57);
+            this.pnlDropDown.Location = new System.Drawing.Point(1493, 13);
+            this.pnlDropDown.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlDropDown.MaximumSize = new System.Drawing.Size(104, 544);
+            this.pnlDropDown.MinimumSize = new System.Drawing.Size(104, 110);
             this.pnlDropDown.Name = "pnlDropDown";
-            this.pnlDropDown.Size = new System.Drawing.Size(52, 57);
+            this.pnlDropDown.Size = new System.Drawing.Size(104, 124);
             this.pnlDropDown.TabIndex = 13;
             // 
             // btnLogout2
             // 
             this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout2.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
-            this.btnLogout2.Location = new System.Drawing.Point(2, 228);
-            this.btnLogout2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout2.Location = new System.Drawing.Point(4, 438);
+            this.btnLogout2.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout2.Name = "btnLogout2";
-            this.btnLogout2.Size = new System.Drawing.Size(48, 52);
+            this.btnLogout2.Size = new System.Drawing.Size(96, 100);
             this.btnLogout2.TabIndex = 1;
             this.btnLogout2.UseVisualStyleBackColor = true;
             this.btnLogout2.Click += new System.EventHandler(this.btnLogOut_Click);
@@ -154,10 +80,10 @@ namespace TeamNateZone
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::TeamNateZone.Properties.Resources.settingsIcon;
-            this.button3.Location = new System.Drawing.Point(2, 173);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(4, 333);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 52);
+            this.button3.Size = new System.Drawing.Size(96, 100);
             this.button3.TabIndex = 1;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -165,10 +91,10 @@ namespace TeamNateZone
             // 
             this.btnMenuOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuOpen.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenuOpen.Location = new System.Drawing.Point(2, 2);
-            this.btnMenuOpen.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuOpen.Location = new System.Drawing.Point(-16, -10);
+            this.btnMenuOpen.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuOpen.Name = "btnMenuOpen";
-            this.btnMenuOpen.Size = new System.Drawing.Size(48, 52);
+            this.btnMenuOpen.Size = new System.Drawing.Size(142, 131);
             this.btnMenuOpen.TabIndex = 1;
             this.btnMenuOpen.UseVisualStyleBackColor = true;
             this.btnMenuOpen.Click += new System.EventHandler(this.btnMenuOpen_Click);
@@ -177,10 +103,10 @@ namespace TeamNateZone
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::TeamNateZone.Properties.Resources.homeIcon;
-            this.button1.Location = new System.Drawing.Point(2, 67);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(4, 129);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 49);
+            this.button1.Size = new System.Drawing.Size(96, 94);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -188,68 +114,191 @@ namespace TeamNateZone
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::TeamNateZone.Properties.Resources.mailIcon;
-            this.button2.Location = new System.Drawing.Point(2, 119);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(4, 229);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 52);
+            this.button2.Size = new System.Drawing.Size(96, 100);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btnListClaims
+            // 
+            this.btnListClaims.BackColor = System.Drawing.Color.White;
+            this.btnListClaims.BackgroundColor = System.Drawing.Color.White;
+            this.btnListClaims.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListClaims.BackgroundImage")));
+            this.btnListClaims.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnListClaims.BorderColor = System.Drawing.Color.Red;
+            this.btnListClaims.BorderRadius = 30;
+            this.btnListClaims.BorderSize = 5;
+            this.btnListClaims.FlatAppearance.BorderSize = 0;
+            this.btnListClaims.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListClaims.ForeColor = System.Drawing.Color.White;
+            this.btnListClaims.ImageIndex = 0;
+            this.btnListClaims.Location = new System.Drawing.Point(600, 210);
+            this.btnListClaims.Name = "btnListClaims";
+            this.btnListClaims.Size = new System.Drawing.Size(404, 583);
+            this.btnListClaims.TabIndex = 15;
+            this.btnListClaims.TextColor = System.Drawing.Color.White;
+            this.btnListClaims.UseVisualStyleBackColor = false;
+            this.btnListClaims.Click += new System.EventHandler(this.btnListClaims_Click_1);
+            // 
             // btnAdmin
             // 
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdmin.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(437, 10);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdmin.BackColor = System.Drawing.Color.White;
+            this.btnAdmin.BackgroundColor = System.Drawing.Color.White;
+            this.btnAdmin.BorderColor = System.Drawing.Color.Red;
+            this.btnAdmin.BorderRadius = 10;
+            this.btnAdmin.BorderSize = 5;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Font = new System.Drawing.Font("Mongolian Baiti", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnAdmin.Location = new System.Drawing.Point(1317, 20);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(64, 57);
-            this.btnAdmin.TabIndex = 14;
+            this.btnAdmin.Size = new System.Drawing.Size(153, 114);
+            this.btnAdmin.TabIndex = 16;
             this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Visible = false;
+            this.btnAdmin.TextColor = System.Drawing.Color.Black;
+            this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // btnManageAccount
+            // 
+            this.btnManageAccount.BackColor = System.Drawing.Color.White;
+            this.btnManageAccount.BackgroundColor = System.Drawing.Color.White;
+            this.btnManageAccount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageAccount.BackgroundImage")));
+            this.btnManageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnManageAccount.BorderColor = System.Drawing.Color.Red;
+            this.btnManageAccount.BorderRadius = 30;
+            this.btnManageAccount.BorderSize = 5;
+            this.btnManageAccount.FlatAppearance.BorderSize = 0;
+            this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageAccount.ForeColor = System.Drawing.Color.White;
+            this.btnManageAccount.ImageIndex = 0;
+            this.btnManageAccount.Location = new System.Drawing.Point(1142, 210);
+            this.btnManageAccount.Name = "btnManageAccount";
+            this.btnManageAccount.Size = new System.Drawing.Size(404, 583);
+            this.btnManageAccount.TabIndex = 17;
+            this.btnManageAccount.TextColor = System.Drawing.Color.White;
+            this.btnManageAccount.UseVisualStyleBackColor = false;
+            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
+            // 
+            // btnFileClaim
+            // 
+            this.btnFileClaim.BackColor = System.Drawing.Color.White;
+            this.btnFileClaim.BackgroundColor = System.Drawing.Color.White;
+            this.btnFileClaim.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFileClaim.BackgroundImage")));
+            this.btnFileClaim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFileClaim.BorderColor = System.Drawing.Color.Red;
+            this.btnFileClaim.BorderRadius = 30;
+            this.btnFileClaim.BorderSize = 5;
+            this.btnFileClaim.FlatAppearance.BorderSize = 0;
+            this.btnFileClaim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFileClaim.ForeColor = System.Drawing.Color.White;
+            this.btnFileClaim.ImageIndex = 0;
+            this.btnFileClaim.Location = new System.Drawing.Point(59, 208);
+            this.btnFileClaim.Name = "btnFileClaim";
+            this.btnFileClaim.Size = new System.Drawing.Size(404, 583);
+            this.btnFileClaim.TabIndex = 18;
+            this.btnFileClaim.TextColor = System.Drawing.Color.White;
+            this.btnFileClaim.UseVisualStyleBackColor = false;
+            this.btnFileClaim.Click += new System.EventHandler(this.btnFileClaim_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(242, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 793);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(431, 68);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "File a new claim";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(612, 796);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(363, 68);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "View Existing";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(700, 864);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(196, 68);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Claims";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1126, 796);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(463, 68);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Manage Account";
             // 
             // WelcomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(572, 381);
-            this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.pnlDropDown);
+            this.ClientSize = new System.Drawing.Size(1610, 1129);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnManageAccount);
-            this.Controls.Add(this.btnListClaims);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnFileClaim);
-            this.Controls.Add(this.pbPanda);
-            this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.btnManageAccount);
+            this.Controls.Add(this.btnAdmin);
+            this.Controls.Add(this.btnListClaims);
+            this.Controls.Add(this.pnlDropDown);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WelcomeForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WelcomeForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).EndInit();
             this.pnlDropDown.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label welcomeLabel;
-        private System.Windows.Forms.PictureBox pbPanda;
-        private System.Windows.Forms.Button btnFileClaim;
-        private System.Windows.Forms.Button btnListClaims;
-        private System.Windows.Forms.Button btnManageAccount;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlDropDown;
         private System.Windows.Forms.Button btnLogout2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMenuOpen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAdmin;
+        private CustomControls.RJControls.rndButton btnListClaims;
+        private CustomControls.RJControls.rndButton btnAdmin;
+        private CustomControls.RJControls.rndButton btnManageAccount;
+        private CustomControls.RJControls.rndButton btnFileClaim;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

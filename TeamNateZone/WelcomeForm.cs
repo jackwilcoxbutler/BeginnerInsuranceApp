@@ -27,13 +27,6 @@ namespace TeamNateZone
             }
         }
 
-        private void btnListClaims_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            listClaims = new claimList();
-            listClaims.Owner = this;
-            listClaims.Show();
-        }
 
         private void btnFileClaim_Click(object sender, EventArgs e)
         {
@@ -89,5 +82,14 @@ namespace TeamNateZone
         {
             Application.Exit();
         }
+
+        private void btnListClaims_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            listClaims = new claimList();
+            listClaims.Owner = this;
+            listClaims.Show();
+        }
+
     }
 }
