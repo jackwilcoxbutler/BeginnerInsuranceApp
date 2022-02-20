@@ -120,7 +120,7 @@ namespace TeamNateZone
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+                MessageBox.Show(err.Message, "Error Occurred - login");
             }
 
         }
