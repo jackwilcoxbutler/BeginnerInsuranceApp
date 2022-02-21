@@ -1,7 +1,7 @@
 ﻿
 namespace TeamNateZone
 {
-    partial class WelcomeForm
+    partial class ClientWelcomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientWelcomeForm));
             this.pnlDropDown = new System.Windows.Forms.Panel();
             this.btnLogout2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();

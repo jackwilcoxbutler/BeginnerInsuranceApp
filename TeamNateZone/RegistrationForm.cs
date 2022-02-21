@@ -240,7 +240,7 @@ namespace TeamNateZone
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
                         MessageBox.Show(message);
                         User user = new User(txtUsername.Text, txtPassword.Text);
-                        WelcomeForm wf = new WelcomeForm(user);
+                        ClientWelcomeForm wf = new ClientWelcomeForm(user);
                         this.Close();
                         wf.Show();
                     }

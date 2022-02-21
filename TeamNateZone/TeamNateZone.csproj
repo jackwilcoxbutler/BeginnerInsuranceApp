@@ -52,23 +52,11 @@
     <Compile Include="AdminConsole.Designer.cs">
       <DependentUpon>AdminConsole.cs</DependentUpon>
     </Compile>
-    <Compile Include="CancelLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CancelLogin.Designer.cs">
-      <DependentUpon>CancelLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateClaim.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateClaim.Designer.cs">
       <DependentUpon>CreateClaim.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FailedLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FailedLogin.Designer.cs">
-      <DependentUpon>FailedLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="claimList.cs">
       <SubType>Form</SubType>
@@ -115,26 +103,20 @@
       <DependentUpon>TEAM_A_UserInfo.xsd</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="WelcomeForm.cs">
+    <Compile Include="ClientWelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    <Compile Include="ClientWelcomeForm.Designer.cs">
+      <DependentUpon>ClientWelcomeForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminConsole.resx">
       <DependentUpon>AdminConsole.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CancelLogin.resx">
-      <DependentUpon>CancelLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="claimList.resx">
       <DependentUpon>claimList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateClaim.resx">
       <DependentUpon>CreateClaim.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FailedLogin.resx">
-      <DependentUpon>FailedLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -150,8 +132,8 @@
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientWelcomeForm.resx">
+      <DependentUpon>ClientWelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

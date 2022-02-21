@@ -14,7 +14,7 @@ namespace TeamNateZone
     public partial class claimList : Form
     {
         User user;
-        WelcomeForm welcomeForm;
+        ClientWelcomeForm welcomeForm;
         public claimList(User user)
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace TeamNateZone
         private void btnReturnToWelcome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            welcomeForm = new WelcomeForm(user);
+            welcomeForm = new ClientWelcomeForm(user);
             welcomeForm.Owner = this;
             welcomeForm.Show();
         }

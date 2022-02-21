@@ -54,9 +54,9 @@ namespace TeamNateZone
             this.labelDate.Location = new System.Drawing.Point(86, 140);
             this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(94, 38);
+            this.labelDate.Size = new System.Drawing.Size(114, 38);
             this.labelDate.TabIndex = 2;
-            this.labelDate.Text = "Date";
+            this.labelDate.Text = "Date :";
             // 
             // labelType
             // 
@@ -67,15 +67,15 @@ namespace TeamNateZone
             this.labelType.Location = new System.Drawing.Point(86, 231);
             this.labelType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(201, 38);
+            this.labelType.Size = new System.Drawing.Size(221, 38);
             this.labelType.TabIndex = 3;
-            this.labelType.Text = "Claim Type";
+            this.labelType.Text = "Claim Type :";
             // 
             // datetime
             // 
             this.datetime.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetime.Location = new System.Drawing.Point(290, 138);
-            this.datetime.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.datetime.Location = new System.Drawing.Point(234, 142);
+            this.datetime.Margin = new System.Windows.Forms.Padding(6);
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(460, 35);
             this.datetime.TabIndex = 6;
@@ -90,10 +90,10 @@ namespace TeamNateZone
             "Home",
             "Life",
             "Other"});
-            this.claimType.Location = new System.Drawing.Point(290, 227);
-            this.claimType.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.claimType.Location = new System.Drawing.Point(317, 236);
+            this.claimType.Margin = new System.Windows.Forms.Padding(6);
             this.claimType.Name = "claimType";
-            this.claimType.Size = new System.Drawing.Size(460, 37);
+            this.claimType.Size = new System.Drawing.Size(377, 37);
             this.claimType.TabIndex = 7;
             // 
             // label1
@@ -105,14 +105,14 @@ namespace TeamNateZone
             this.label1.Location = new System.Drawing.Point(86, 317);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(370, 38);
+            this.label1.Size = new System.Drawing.Size(368, 38);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Give us some details..";
+            this.label1.Text = "Give us some details :";
             // 
             // detailsTextBox
             // 
             this.detailsTextBox.Location = new System.Drawing.Point(82, 358);
-            this.detailsTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.detailsTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.detailsTextBox.Name = "detailsTextBox";
             this.detailsTextBox.Size = new System.Drawing.Size(668, 341);
             this.detailsTextBox.TabIndex = 9;
@@ -122,7 +122,7 @@ namespace TeamNateZone
             // 
             this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.Location = new System.Drawing.Point(604, 742);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(150, 48);
             this.btnUpload.TabIndex = 11;
@@ -134,8 +134,8 @@ namespace TeamNateZone
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(82, 749);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Location = new System.Drawing.Point(82, 747);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(522, 39);
             this.textBox1.TabIndex = 12;
@@ -148,21 +148,21 @@ namespace TeamNateZone
             // 
             this.btnFile.BackColor = System.Drawing.Color.Red;
             this.btnFile.BackgroundColor = System.Drawing.Color.Red;
-            this.btnFile.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnFile.BorderColor = System.Drawing.Color.White;
             this.btnFile.BorderRadius = 15;
             this.btnFile.BorderSize = 0;
             this.btnFile.FlatAppearance.BorderSize = 0;
             this.btnFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.ForeColor = System.Drawing.Color.White;
-            this.btnFile.Location = new System.Drawing.Point(174, 895);
+            this.btnFile.Location = new System.Drawing.Point(134, 841);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(322, 65);
             this.btnFile.TabIndex = 13;
             this.btnFile.Text = "File Claim";
             this.btnFile.TextColor = System.Drawing.Color.White;
             this.btnFile.UseVisualStyleBackColor = false;
-            this.btnFile.Click += new System.EventHandler(this.btnFile_Click_1);
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 
             // btnBack
             // 
@@ -175,21 +175,21 @@ namespace TeamNateZone
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(540, 895);
+            this.btnBack.Location = new System.Drawing.Point(521, 841);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(229, 65);
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "Back";
             this.btnBack.TextColor = System.Drawing.Color.White;
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -212,7 +212,7 @@ namespace TeamNateZone
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.labelDate);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateClaim";
             this.Text = "Make a claim";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -11,13 +11,13 @@ using System.Windows.Forms;
 namespace TeamNateZone
 {
     
-    public partial class WelcomeForm : Form
+    public partial class ClientWelcomeForm : Form
     {
         User user;
         claimList listClaims;
         CreateClaim fileClaim;
         ManageAccount manage;
-        public WelcomeForm(User user)
+        public ClientWelcomeForm(User user)
         {
             InitializeComponent();
             this.user = user;

@@ -30,8 +30,6 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnReturnToWelcome = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.claimIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,41 +42,17 @@ namespace TeamNateZone
             this.claimsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
             this.claimsTableAdapter = new TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter();
+            this.btnReturnToWelcome = new CustomControls.RJControls.rndButton();
+            this.btnExit = new CustomControls.RJControls.rndButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(1368, 758);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(232, 65);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnReturnToWelcome
-            // 
-            this.btnReturnToWelcome.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnToWelcome.Location = new System.Drawing.Point(1128, 758);
-            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnReturnToWelcome.Name = "btnReturnToWelcome";
-            this.btnReturnToWelcome.Size = new System.Drawing.Size(232, 65);
-            this.btnReturnToWelcome.TabIndex = 2;
-            this.btnReturnToWelcome.Text = "Return";
-            this.btnReturnToWelcome.UseVisualStyleBackColor = false;
-            this.btnReturnToWelcome.Click += new System.EventHandler(this.btnReturnToWelcome_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.claimIdDataGridViewTextBoxColumn,
@@ -92,7 +66,7 @@ namespace TeamNateZone
             this.dataGridView1.DataSource = this.claimsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(1600, 862);
@@ -177,16 +151,56 @@ namespace TeamNateZone
             // 
             this.claimsTableAdapter.ClearBeforeFill = true;
             // 
+            // btnReturnToWelcome
+            // 
+            this.btnReturnToWelcome.BackColor = System.Drawing.Color.Red;
+            this.btnReturnToWelcome.BackgroundColor = System.Drawing.Color.Red;
+            this.btnReturnToWelcome.BorderColor = System.Drawing.Color.White;
+            this.btnReturnToWelcome.BorderRadius = 15;
+            this.btnReturnToWelcome.BorderSize = 0;
+            this.btnReturnToWelcome.FlatAppearance.BorderSize = 0;
+            this.btnReturnToWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnToWelcome.ForeColor = System.Drawing.Color.White;
+            this.btnReturnToWelcome.Location = new System.Drawing.Point(1254, 758);
+            this.btnReturnToWelcome.Name = "btnReturnToWelcome";
+            this.btnReturnToWelcome.Size = new System.Drawing.Size(164, 60);
+            this.btnReturnToWelcome.TabIndex = 4;
+            this.btnReturnToWelcome.Text = "Return";
+            this.btnReturnToWelcome.TextColor = System.Drawing.Color.White;
+            this.btnReturnToWelcome.UseVisualStyleBackColor = false;
+            this.btnReturnToWelcome.Click += new System.EventHandler(this.btnReturnToWelcome_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundColor = System.Drawing.Color.Red;
+            this.btnExit.BorderColor = System.Drawing.Color.White;
+            this.btnExit.BorderRadius = 15;
+            this.btnExit.BorderSize = 0;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(1424, 758);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(164, 60);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.TextColor = System.Drawing.Color.White;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // claimList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1600, 862);
-            this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "claimList";
             this.Text = "List of Claims";
             this.Load += new System.EventHandler(this.claimList_Load);
@@ -198,8 +212,6 @@ namespace TeamNateZone
         }
 
         #endregion
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnReturnToWelcome;
         private System.Windows.Forms.DataGridView dataGridView1;
         private TEAM_A_Claims_Dataset tEAM_A_Claims_Dataset;
         private TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter claimsTableAdapter;
@@ -212,5 +224,7 @@ namespace TeamNateZone
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
         public System.Windows.Forms.BindingSource claimsBindingSource;
+        private CustomControls.RJControls.rndButton btnReturnToWelcome;
+        private CustomControls.RJControls.rndButton btnExit;
     }
 }

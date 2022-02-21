@@ -6,7 +6,7 @@ namespace TeamNateZone
 {
     public partial class LoginForm : Form
     {
-        WelcomeForm welcomeForm;
+        ClientWelcomeForm welcomeForm;
         RegistrationForm registrationForm;
         User user = new User(); // this is why we need default constructor :D
         public LoginForm()
@@ -98,7 +98,7 @@ namespace TeamNateZone
                     user.setUserAcct(txtUsername.Text, txtPassword.Text);
 
                     this.Hide();
-                    welcomeForm = new WelcomeForm(user);
+                    welcomeForm = new ClientWelcomeForm(user);
                     welcomeForm.Owner = this;
                     welcomeForm.Show();
                 }
