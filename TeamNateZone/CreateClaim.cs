@@ -114,5 +114,44 @@ namespace TeamNateZone
             welcomeForm.Owner = this;
             welcomeForm.Show();
         }
+
+        private void btnFile_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+
+                cmd.CommandText = "INSERT INTO Claims(UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate) VALUES (@id, @username, @email, @type, @desc, @date)";
+                cmd.Parameters.AddWithValue("@id", user.getUserID());
+                cmd.Parameters.AddWithValue("@username", user.getUsername());
+                cmd.Parameters.AddWithValue("@email", user.getEmail());
+                cmd.Parameters.AddWithValue("@type", claimType.SelectedItem.ToString()); // may not have to ToString(), will try later
+                cmd.Parameters.AddWithValue("@desc", detailsTextBox.Text);
+                cmd.Parameters.AddWithValue("@date", datetime.Value.ToString()); // again, may not need to ToString()
+
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            MessageBox.Show("Your claim has been successfully submitted! Check your list of claims to track its status.", "Success!");
+            welcomeForm = new WelcomeForm(user);
+            this.Close();
+            welcomeForm.Show();
+        }
     }
 }

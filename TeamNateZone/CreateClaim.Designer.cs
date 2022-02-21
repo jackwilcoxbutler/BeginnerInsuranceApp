@@ -162,6 +162,7 @@ namespace TeamNateZone
             this.btnFile.Text = "File Claim";
             this.btnFile.TextColor = System.Drawing.Color.White;
             this.btnFile.UseVisualStyleBackColor = false;
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click_1);
             // 
             // btnBack
             // 
