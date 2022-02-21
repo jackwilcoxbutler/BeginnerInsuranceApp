@@ -100,3 +100,21 @@ C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreC
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.pdb
 >>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
+C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb

@@ -106,5 +106,13 @@ namespace TeamNateZone
         {
             openFileDialog1.ShowDialog();
         }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            welcomeForm = new WelcomeForm(user);
+            welcomeForm.Owner = this;
+            welcomeForm.Show();
+        }
     }
 }
