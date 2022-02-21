@@ -86,7 +86,7 @@ namespace TeamNateZone
         private void btnListClaims_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            listClaims = new claimList();
+            listClaims = new claimList(user);
             listClaims.Owner = this;
             listClaims.Show();
         }
