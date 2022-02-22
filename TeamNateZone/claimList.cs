@@ -51,8 +51,6 @@ namespace TeamNateZone
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
-            
-
         }
     }
 }
