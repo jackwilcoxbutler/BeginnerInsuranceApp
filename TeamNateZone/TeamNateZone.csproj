@@ -174,7 +174,7 @@
     <Content Include="Images\Icon1.ico" />
     <Content Include="Images\p.jpg" />
     <Content Include="Images\p.ico" />
-    <Content Include="Images\Panda Logo.jpeg" />
+    <Content Include="Panda Logo.jpeg" />
     <None Include="Resources\vs5.jpeg" />
     <None Include="Resources\vs51.jpeg" />
     <None Include="Resources\vsback2.jpeg" />

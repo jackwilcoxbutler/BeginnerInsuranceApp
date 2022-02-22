@@ -47,7 +47,6 @@ namespace TeamNateZone
                 cn.Close();
             }
         }
-        //not tested yet 
         private void storeSignInInfo(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
             SqlConnection cn = new SqlConnection();
@@ -87,7 +86,6 @@ namespace TeamNateZone
             }
         }
 
-        //not tested yet 
         private string getAlreadyDeclaredEmail(string eMail)
         {
             SqlConnection cn = new SqlConnection();
@@ -156,7 +154,6 @@ namespace TeamNateZone
                 }
                 catch (Exception e)
                 {
-                   // MessageBox.Show(e.Message, "Error Occurred");
 
                     return "";
                 }

@@ -76,7 +76,6 @@ namespace TeamNateZone
 
             try
             {
-                //if (usernames.Contains(txtUsername.Text) && passwords.Contains(txtPassword.Text)){
                 if (txtUsername.Text == "" || txtPassword.Text == "")
                 {
                     string message = "Username or Password Blank";
@@ -87,14 +86,9 @@ namespace TeamNateZone
                     {
                         Application.Exit();
                     }
-                    else
-                    {
-                        // Do something  
-                    }
                 }
                 else if (enteredPW == getAuthorizedPassword(txtUsername.Text))
                 {
-                    // verified user, assign info to User object (log in)
                     user.setUserAcct(txtUsername.Text, txtPassword.Text);
 
                     this.Hide();
@@ -112,10 +106,7 @@ namespace TeamNateZone
                     {
                         Application.Exit();
                     }
-                    else
-                    {
-                        // Do something  
-                    }
+                   
                 }
             }
             catch (Exception err)
@@ -137,10 +128,6 @@ namespace TeamNateZone
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
-            }
-            else
-            {
-                // Do something  
             }
         }
     }
