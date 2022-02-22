@@ -235,7 +235,7 @@ namespace TeamNateZone
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(399, 440);
+            this.textBox5.Location = new System.Drawing.Point(399, 443);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(122, 44);
             this.textBox5.TabIndex = 24;

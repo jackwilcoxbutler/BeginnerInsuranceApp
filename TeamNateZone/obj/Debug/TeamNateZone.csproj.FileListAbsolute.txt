@@ -1,126 +1,16 @@
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
 C:\Users\nknight\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
 C:\Users\nknight\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\Henry\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
-C:\Users\Henry\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
-C:\Users\Henry\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.csprojAssemblyReference.cache
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\limeo\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
-C:\Users\limeo\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
-C:\Users\limeo\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
-C:\Users\limeo\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\infotech\Documents\GitHub\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
-<<<<<<< HEAD
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
-=======
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\bin\Debug\TeamNateZone.exe.config
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\bin\Debug\TeamNateZone.exe
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.exe
-C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.pdb
->>>>>>> fa2e9fb9bea0070d70e636fc1474fd3f91ca8b93
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CancelLogin.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.FailedLogin.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.WelcomeForm.resources
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
-C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
