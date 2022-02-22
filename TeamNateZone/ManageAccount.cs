@@ -52,5 +52,13 @@ namespace TeamNateZone
                 pnlDropDown.Height = pnlDropDown.MinimumSize.Height;
             }
         }
+
+        private void btnBackAM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            welcomeForm = new ClientWelcomeForm(user);
+            welcomeForm.Owner = this;
+            welcomeForm.Show();
+        }
     }
 }

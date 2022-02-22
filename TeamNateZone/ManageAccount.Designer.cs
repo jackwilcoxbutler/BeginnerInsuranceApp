@@ -50,6 +50,10 @@ namespace TeamNateZone
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnBackAM = new CustomControls.RJControls.rndButton();
+            this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
+            this.btnUpdateEmail = new CustomControls.RJControls.rndButton();
+            this.btnUpdateCC = new CustomControls.RJControls.rndButton();
             this.pnlDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -264,6 +268,83 @@ namespace TeamNateZone
             this.label6.TabIndex = 27;
             this.label6.Text = "EXP:";
             // 
+            // btnBackAM
+            // 
+            this.btnBackAM.BackColor = System.Drawing.Color.Red;
+            this.btnBackAM.BackgroundColor = System.Drawing.Color.Red;
+            this.btnBackAM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBackAM.BorderRadius = 15;
+            this.btnBackAM.BorderSize = 0;
+            this.btnBackAM.FlatAppearance.BorderSize = 0;
+            this.btnBackAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackAM.ForeColor = System.Drawing.Color.White;
+            this.btnBackAM.Location = new System.Drawing.Point(940, 540);
+            this.btnBackAM.Name = "btnBackAM";
+            this.btnBackAM.Size = new System.Drawing.Size(202, 57);
+            this.btnBackAM.TabIndex = 28;
+            this.btnBackAM.Text = "Back";
+            this.btnBackAM.TextColor = System.Drawing.Color.White;
+            this.btnBackAM.UseVisualStyleBackColor = false;
+            this.btnBackAM.Click += new System.EventHandler(this.btnBackAM_Click);
+            // 
+            // btnUpdatePassword
+            // 
+            this.btnUpdatePassword.BackColor = System.Drawing.Color.Red;
+            this.btnUpdatePassword.BackgroundColor = System.Drawing.Color.Red;
+            this.btnUpdatePassword.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdatePassword.BorderRadius = 15;
+            this.btnUpdatePassword.BorderSize = 0;
+            this.btnUpdatePassword.FlatAppearance.BorderSize = 0;
+            this.btnUpdatePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePassword.ForeColor = System.Drawing.Color.White;
+            this.btnUpdatePassword.Location = new System.Drawing.Point(940, 205);
+            this.btnUpdatePassword.Name = "btnUpdatePassword";
+            this.btnUpdatePassword.Size = new System.Drawing.Size(190, 59);
+            this.btnUpdatePassword.TabIndex = 29;
+            this.btnUpdatePassword.Text = "Update";
+            this.btnUpdatePassword.TextColor = System.Drawing.Color.White;
+            this.btnUpdatePassword.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdateEmail
+            // 
+            this.btnUpdateEmail.BackColor = System.Drawing.Color.Red;
+            this.btnUpdateEmail.BackgroundColor = System.Drawing.Color.Red;
+            this.btnUpdateEmail.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdateEmail.BorderRadius = 15;
+            this.btnUpdateEmail.BorderSize = 0;
+            this.btnUpdateEmail.FlatAppearance.BorderSize = 0;
+            this.btnUpdateEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEmail.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateEmail.Location = new System.Drawing.Point(940, 299);
+            this.btnUpdateEmail.Name = "btnUpdateEmail";
+            this.btnUpdateEmail.Size = new System.Drawing.Size(188, 58);
+            this.btnUpdateEmail.TabIndex = 30;
+            this.btnUpdateEmail.Text = "Update";
+            this.btnUpdateEmail.TextColor = System.Drawing.Color.White;
+            this.btnUpdateEmail.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdateCC
+            // 
+            this.btnUpdateCC.BackColor = System.Drawing.Color.Red;
+            this.btnUpdateCC.BackgroundColor = System.Drawing.Color.Red;
+            this.btnUpdateCC.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdateCC.BorderRadius = 15;
+            this.btnUpdateCC.BorderSize = 0;
+            this.btnUpdateCC.FlatAppearance.BorderSize = 0;
+            this.btnUpdateCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCC.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateCC.Location = new System.Drawing.Point(940, 385);
+            this.btnUpdateCC.Name = "btnUpdateCC";
+            this.btnUpdateCC.Size = new System.Drawing.Size(188, 59);
+            this.btnUpdateCC.TabIndex = 31;
+            this.btnUpdateCC.Text = "Update";
+            this.btnUpdateCC.TextColor = System.Drawing.Color.White;
+            this.btnUpdateCC.UseVisualStyleBackColor = false;
+            // 
             // ManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -271,6 +352,10 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1154, 609);
+            this.Controls.Add(this.btnUpdateCC);
+            this.Controls.Add(this.btnUpdateEmail);
+            this.Controls.Add(this.btnUpdatePassword);
+            this.Controls.Add(this.btnBackAM);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox6);
@@ -319,5 +404,9 @@ namespace TeamNateZone
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private CustomControls.RJControls.rndButton btnBackAM;
+        private CustomControls.RJControls.rndButton btnUpdatePassword;
+        private CustomControls.RJControls.rndButton btnUpdateEmail;
+        private CustomControls.RJControls.rndButton btnUpdateCC;
     }
 }
