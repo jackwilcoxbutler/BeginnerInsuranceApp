@@ -39,7 +39,7 @@ namespace TeamNateZone
         private void btnManageAccount_Click(object sender, EventArgs e)
         {
             this.Hide();
-            manage = new ManageAccount();
+            manage = new ManageAccount(user);
             manage.Owner = this;
             manage.Show();
         }

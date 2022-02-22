@@ -14,18 +14,13 @@ namespace TeamNateZone
     {
         User user;
         ClientWelcomeForm welcomeForm;
-        public ManageAccount()
+        public ManageAccount(User user)
         {
             InitializeComponent();
+            this.user = user; 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            welcomeForm = new ClientWelcomeForm(user);
-            welcomeForm.Owner = this;
-            welcomeForm.Show();
-        }
+        
 
         private void btnLogout2_Click(object sender, EventArgs e)
         {
