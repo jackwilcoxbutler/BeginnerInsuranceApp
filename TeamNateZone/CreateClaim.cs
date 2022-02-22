@@ -76,7 +76,7 @@ namespace TeamNateZone
             welcomeForm.Show();
         }
 
-     /*   private Boolean isClosed;
+        private Boolean isClosed;
         private void btnMenu_Click(object sender, EventArgs e)
         {
             if (pnlDropDown.Height == pnlDropDown.MinimumSize.Height)
@@ -94,6 +94,8 @@ namespace TeamNateZone
             }
         }
 
+    
+
         private void btnLogout2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Logout Successful");
@@ -101,8 +103,8 @@ namespace TeamNateZone
             newForm.Show();
             this.Close();
             
-        }*/
-
+        }
+        
         private void btnUpload_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();

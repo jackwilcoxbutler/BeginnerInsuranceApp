@@ -91,7 +91,7 @@ namespace TeamNateZone
             // 
             this.btnMenuOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuOpen.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenuOpen.Location = new System.Drawing.Point(-16, -10);
+            this.btnMenuOpen.Location = new System.Drawing.Point(-26, -7);
             this.btnMenuOpen.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuOpen.Name = "btnMenuOpen";
             this.btnMenuOpen.Size = new System.Drawing.Size(142, 131);
@@ -254,7 +254,7 @@ namespace TeamNateZone
             this.label4.TabIndex = 23;
             this.label4.Text = "Manage Account";
             // 
-            // WelcomeForm
+            // ClientWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,7 +273,7 @@ namespace TeamNateZone
             this.Controls.Add(this.pnlDropDown);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "WelcomeForm";
+            this.Name = "ClientWelcomeForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WelcomeForm_FormClosing);

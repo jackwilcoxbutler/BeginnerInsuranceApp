@@ -30,7 +30,9 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminConsole));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,13 +44,12 @@ namespace TeamNateZone
             this.signInInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tEAM_A_UserInfo = new TeamNateZone.TEAM_A_UserInfo();
             this.signInInfoTableAdapter = new TeamNateZone.TEAM_A_UserInfoTableAdapters.SignInInfoTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.pbPanda = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new CustomControls.RJControls.rndButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.signInInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,11 +68,24 @@ namespace TeamNateZone
             this.userIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.signInInfoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(24, 194);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(1606, 288);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1156, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(456, 77);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Manage Users";
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -152,64 +166,55 @@ namespace TeamNateZone
             // 
             this.signInInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(24, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(456, 77);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Manage Users";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 272);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnExit.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExit.Location = new System.Drawing.Point(1288, 521);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundColor = System.Drawing.Color.Red;
+            this.btnExit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnExit.BorderRadius = 15;
+            this.btnExit.BorderSize = 0;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(1448, 520);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(342, 94);
-            this.btnExit.TabIndex = 2;
+            this.btnExit.Size = new System.Drawing.Size(164, 78);
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
+            this.btnExit.TextColor = System.Drawing.Color.White;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // pbPanda
-            // 
-            this.pbPanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPanda.Image = global::TeamNateZone.Properties.Resources.Panda_Logo;
-            this.pbPanda.Location = new System.Drawing.Point(1470, 33);
-            this.pbPanda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbPanda.Name = "pbPanda";
-            this.pbPanda.Size = new System.Drawing.Size(160, 154);
-            this.pbPanda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPanda.TabIndex = 8;
-            this.pbPanda.TabStop = false;
             // 
             // AdminConsole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TeamNateZone.Properties.Resources.vs5;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1656, 638);
-            this.Controls.Add(this.pbPanda);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AdminConsole";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.AdminConsole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.signInInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPanda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +235,7 @@ namespace TeamNateZone
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.PictureBox pbPanda;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private CustomControls.RJControls.rndButton btnExit;
     }
 }
