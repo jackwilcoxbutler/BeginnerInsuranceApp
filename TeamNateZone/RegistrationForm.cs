@@ -17,36 +17,6 @@ namespace TeamNateZone
         {
             InitializeComponent();
         }
-        private int getUserID(string username)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-
-                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE Username = @username";
-
-                cmd.Parameters.AddWithValue("@username", username);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetInt32(0);
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-                return 0; // this may lead to erroneous results..
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
         private void storeSignInInfo(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
             SqlConnection cn = new SqlConnection();
@@ -253,7 +223,6 @@ namespace TeamNateZone
                         }
                         else
                         {
-                            //do something
                             txtPassword.Clear();
                             txtVerifyPassword.Clear();
                             comboState.ResetText();
@@ -282,14 +251,6 @@ namespace TeamNateZone
             { 
                 MessageBox.Show(err.Message, "Error Occurred");
             }
-
-           // User user = new User(txtUsername.Text, txtPassword.Text);
-           // User user =  new User(getUserID(txtUsername.Text), txtFname.Text, txtLname.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, 0); 
-           // WelcomeForm wf = new WelcomeForm(user); 
-            //this.Close(); 
-            //wf.Show();
-                        
-          
         }
 
         private void btnReturn_Click_1(object sender, EventArgs e)
@@ -305,11 +266,6 @@ namespace TeamNateZone
             {
                 btnRegister_Click_1(sender, e);
             }
-        }
-
-        private void comboState_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

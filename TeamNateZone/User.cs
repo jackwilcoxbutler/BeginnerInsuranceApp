@@ -104,6 +104,7 @@ namespace TeamNateZone
         }
 
         /// set methods
+        
         /// added simple set method to automatically set all the info to an
         /// user directly from the table
         public void setUserAcct(string userN, string pWord)
@@ -146,7 +147,7 @@ namespace TeamNateZone
         }
 
         //sql linking stuff-- clean up to get rid of random errors appearing at log in screen
-        //pulls info directly from db to return the valid info 
+        //pulls info directly from db to return the valid info -- used to auto set data directly to user based on username
         private int getUserPermisions(string userN)
         {
             SqlConnection cn = new SqlConnection();

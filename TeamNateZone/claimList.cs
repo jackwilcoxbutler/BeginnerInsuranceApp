@@ -51,8 +51,7 @@ namespace TeamNateZone
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
-            // TODO: This line of code loads data into the 'tEAM_A_Claims_Dataset.Claims' table. You can move, or remove it, as needed.
-            //this.claimsTableAdapter.Fill(this.tEAM_A_Claims_Dataset.Claims);
+            
 
         }
     }
