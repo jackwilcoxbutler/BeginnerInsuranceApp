@@ -119,3 +119,8 @@ C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.cs
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
