@@ -59,6 +59,7 @@ namespace TeamNateZone
             SqlDataAdapter data = new SqlDataAdapter("SELECT * FROM SignInInfo", db);
             DataTable dtbl = new DataTable();
             data.Fill(dtbl);
+            dataGridView1.DataSource = dtbl;
             db.Close();
             BindingSource bs = new BindingSource(dtbl, dtbl.TableName);
             bindingNavigator1.BindingSource = bs;
