@@ -91,7 +91,7 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "UPDATE SignInInfo(Email, Password, fName, lName, Street, City, State, Zip, clearance, Username) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username);";
+                cmd.CommandText = "UPDATE SignInInfo(Email, Password, fName, lName, street, city, state, zip, clearance, Username) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username)";
                 cmd.Parameters.AddWithValue("@email", email );
                 cmd.Parameters.AddWithValue("@password", password );
                 cmd.Parameters.AddWithValue("@str", street);
