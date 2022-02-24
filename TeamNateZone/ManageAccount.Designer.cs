@@ -32,9 +32,9 @@ namespace TeamNateZone
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAccount));
             this.labelTitle = new System.Windows.Forms.Label();
             this.pnlDropDown = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnLogout2 = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.btnMail = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,12 +50,10 @@ namespace TeamNateZone
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnBackAM = new CustomControls.RJControls.rndButton();
-            this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
+            this.btnBackAM = new CustomControls.RJControls.rndButton();
             this.pnlDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +86,18 @@ namespace TeamNateZone
             this.pnlDropDown.Size = new System.Drawing.Size(105, 109);
             this.pnlDropDown.TabIndex = 13;
             // 
+            // btnMenu
+            // 
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
+            this.btnMenu.Location = new System.Drawing.Point(4, 5);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(96, 100);
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // btnSettings
             // 
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,18 +120,6 @@ namespace TeamNateZone
             this.btnLogout2.TabIndex = 1;
             this.btnLogout2.UseVisualStyleBackColor = true;
             this.btnLogout2.Click += new System.EventHandler(this.btnLogout2_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenu.Location = new System.Drawing.Point(4, 5);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(96, 100);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnMainMenu
             // 
@@ -159,7 +157,7 @@ namespace TeamNateZone
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(308, 173);
+            this.textBox1.Location = new System.Drawing.Point(308, 208);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(582, 44);
             this.textBox1.TabIndex = 16;
@@ -167,7 +165,7 @@ namespace TeamNateZone
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(308, 244);
+            this.textBox2.Location = new System.Drawing.Point(308, 300);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(582, 44);
             this.textBox2.TabIndex = 17;
@@ -175,7 +173,7 @@ namespace TeamNateZone
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(308, 318);
+            this.textBox3.Location = new System.Drawing.Point(308, 405);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(582, 44);
             this.textBox3.TabIndex = 18;
@@ -185,7 +183,7 @@ namespace TeamNateZone
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(28, 173);
+            this.label1.Location = new System.Drawing.Point(28, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 37);
             this.label1.TabIndex = 19;
@@ -196,7 +194,7 @@ namespace TeamNateZone
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(28, 244);
+            this.label2.Location = new System.Drawing.Point(28, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 37);
             this.label2.TabIndex = 20;
@@ -207,7 +205,7 @@ namespace TeamNateZone
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(28, 318);
+            this.label3.Location = new System.Drawing.Point(28, 412);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 37);
             this.label3.TabIndex = 21;
@@ -218,7 +216,7 @@ namespace TeamNateZone
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(28, 390);
+            this.label4.Location = new System.Drawing.Point(28, 515);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(202, 37);
             this.label4.TabIndex = 22;
@@ -227,7 +225,7 @@ namespace TeamNateZone
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(308, 390);
+            this.textBox4.Location = new System.Drawing.Point(308, 515);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(582, 44);
             this.textBox4.TabIndex = 23;
@@ -235,7 +233,7 @@ namespace TeamNateZone
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(399, 443);
+            this.textBox5.Location = new System.Drawing.Point(401, 566);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(122, 44);
             this.textBox5.TabIndex = 24;
@@ -243,7 +241,7 @@ namespace TeamNateZone
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(626, 443);
+            this.textBox6.Location = new System.Drawing.Point(643, 573);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(122, 44);
             this.textBox6.TabIndex = 25;
@@ -253,7 +251,7 @@ namespace TeamNateZone
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(310, 443);
+            this.label5.Location = new System.Drawing.Point(312, 573);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 37);
             this.label5.TabIndex = 26;
@@ -264,11 +262,50 @@ namespace TeamNateZone
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(538, 443);
+            this.label6.Location = new System.Drawing.Point(544, 573);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 37);
             this.label6.TabIndex = 27;
             this.label6.Text = "EXP:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(28, 490);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 37);
+            this.label7.TabIndex = 30;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(28, 556);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 37);
+            this.label8.TabIndex = 32;
+            // 
+            // btnUpdatePassword
+            // 
+            this.btnUpdatePassword.BackColor = System.Drawing.Color.Red;
+            this.btnUpdatePassword.BackgroundColor = System.Drawing.Color.Red;
+            this.btnUpdatePassword.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdatePassword.BorderRadius = 15;
+            this.btnUpdatePassword.BorderSize = 0;
+            this.btnUpdatePassword.FlatAppearance.BorderSize = 0;
+            this.btnUpdatePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePassword.ForeColor = System.Drawing.Color.White;
+            this.btnUpdatePassword.Location = new System.Drawing.Point(933, 474);
+            this.btnUpdatePassword.Name = "btnUpdatePassword";
+            this.btnUpdatePassword.Size = new System.Drawing.Size(197, 59);
+            this.btnUpdatePassword.TabIndex = 29;
+            this.btnUpdatePassword.Text = "Update";
+            this.btnUpdatePassword.TextColor = System.Drawing.Color.White;
+            this.btnUpdatePassword.UseVisualStyleBackColor = false;
             // 
             // btnBackAM
             // 
@@ -290,63 +327,6 @@ namespace TeamNateZone
             this.btnBackAM.UseVisualStyleBackColor = false;
             this.btnBackAM.Click += new System.EventHandler(this.btnBackAM_Click);
             // 
-            // btnUpdatePassword
-            // 
-            this.btnUpdatePassword.BackColor = System.Drawing.Color.Red;
-            this.btnUpdatePassword.BackgroundColor = System.Drawing.Color.Red;
-            this.btnUpdatePassword.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUpdatePassword.BorderRadius = 15;
-            this.btnUpdatePassword.BorderSize = 0;
-            this.btnUpdatePassword.FlatAppearance.BorderSize = 0;
-            this.btnUpdatePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdatePassword.ForeColor = System.Drawing.Color.White;
-            this.btnUpdatePassword.Location = new System.Drawing.Point(933, 474);
-            this.btnUpdatePassword.Name = "btnUpdatePassword";
-            this.btnUpdatePassword.Size = new System.Drawing.Size(197, 59);
-            this.btnUpdatePassword.TabIndex = 29;
-            this.btnUpdatePassword.Text = "Update";
-            this.btnUpdatePassword.TextColor = System.Drawing.Color.White;
-            this.btnUpdatePassword.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(28, 490);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(236, 37);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "Ins. Company:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(308, 553);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(582, 44);
-            this.textBox7.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(28, 556);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(245, 37);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Ins. Account #:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(308, 493);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(582, 44);
-            this.textBox8.TabIndex = 33;
-            // 
             // ManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -354,9 +334,7 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1154, 631);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnUpdatePassword);
             this.Controls.Add(this.btnBackAM);
@@ -411,8 +389,6 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnBackAM;
         private CustomControls.RJControls.rndButton btnUpdatePassword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
     }
 }
