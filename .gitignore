@@ -1,3 +1,8 @@
 
 .vs/VSWorkspaceState.json
 *.cache
+*.pdb
+*.cache
+*.exe
+TeamNateZone/.vs/TeamNateZone/v16/.suo
+*.resources

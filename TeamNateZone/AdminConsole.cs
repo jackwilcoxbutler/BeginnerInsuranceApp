@@ -30,5 +30,16 @@ public partial class AdminConsole : Form
             this.Close();
         }
 
+        private void btnRegisterCM_Click(object sender, EventArgs e)
+        {
+            RegistrationForm rf = new RegistrationForm(1);
+            rf.Show();
+        }
+
+        private void btnRegisterFM_Click(object sender, EventArgs e)
+        {
+            RegistrationForm rf = new RegistrationForm(2);
+            rf.Show();
+        }
     }
 }

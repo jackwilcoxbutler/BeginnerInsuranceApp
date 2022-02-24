@@ -29,149 +29,35 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminConsole));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clearanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.signInInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tEAM_A_UserInfo = new TeamNateZone.TEAM_A_UserInfo();
-            this.signInInfoTableAdapter = new TeamNateZone.TEAM_A_UserInfoTableAdapters.SignInInfoTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new CustomControls.RJControls.rndButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.signInInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).BeginInit();
+            this.btnRegisterCM = new CustomControls.RJControls.rndButton();
+            this.btnRegisterFM = new CustomControls.RJControls.rndButton();
+            this.btnViewAll = new CustomControls.RJControls.rndButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.emailDataGridViewTextBoxColumn,
-            this.fNameDataGridViewTextBoxColumn,
-            this.lNameDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn,
-            this.clearanceDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.userIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.signInInfoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 194);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(1606, 288);
-            this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1156, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(561, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(456, 77);
+            this.label1.Size = new System.Drawing.Size(245, 38);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Manage Users";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // fNameDataGridViewTextBoxColumn
-            // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "fName";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "fName";
-            this.fNameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
-            this.fNameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // lNameDataGridViewTextBoxColumn
-            // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "lName";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "lName";
-            this.lNameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
-            this.lNameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
-            this.cityDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // clearanceDataGridViewTextBoxColumn
-            // 
-            this.clearanceDataGridViewTextBoxColumn.DataPropertyName = "clearance";
-            this.clearanceDataGridViewTextBoxColumn.HeaderText = "clearance";
-            this.clearanceDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.clearanceDataGridViewTextBoxColumn.Name = "clearanceDataGridViewTextBoxColumn";
-            this.clearanceDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIDDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // signInInfoBindingSource
-            // 
-            this.signInInfoBindingSource.DataMember = "SignInInfo";
-            this.signInInfoBindingSource.DataSource = this.tEAM_A_UserInfo;
-            // 
-            // tEAM_A_UserInfo
-            // 
-            this.tEAM_A_UserInfo.DataSetName = "TEAM_A_UserInfo";
-            this.tEAM_A_UserInfo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // signInInfoTableAdapter
-            // 
-            this.signInInfoTableAdapter.ClearBeforeFill = true;
+            this.label1.Text = "Admin Console";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 272);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -187,33 +73,94 @@ namespace TeamNateZone
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1448, 520);
+            this.btnExit.Location = new System.Drawing.Point(724, 270);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(164, 78);
+            this.btnExit.Size = new System.Drawing.Size(82, 41);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.TextColor = System.Drawing.Color.White;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnRegisterCM
+            // 
+            this.btnRegisterCM.BackColor = System.Drawing.Color.Red;
+            this.btnRegisterCM.BackgroundColor = System.Drawing.Color.Red;
+            this.btnRegisterCM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRegisterCM.BorderRadius = 15;
+            this.btnRegisterCM.BorderSize = 0;
+            this.btnRegisterCM.FlatAppearance.BorderSize = 0;
+            this.btnRegisterCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterCM.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterCM.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterCM.Location = new System.Drawing.Point(132, 136);
+            this.btnRegisterCM.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegisterCM.Name = "btnRegisterCM";
+            this.btnRegisterCM.Size = new System.Drawing.Size(150, 97);
+            this.btnRegisterCM.TabIndex = 5;
+            this.btnRegisterCM.Text = "Register New CM";
+            this.btnRegisterCM.TextColor = System.Drawing.Color.White;
+            this.btnRegisterCM.UseVisualStyleBackColor = false;
+            this.btnRegisterCM.Click += new System.EventHandler(this.btnRegisterCM_Click);
+            // 
+            // btnRegisterFM
+            // 
+            this.btnRegisterFM.BackColor = System.Drawing.Color.Red;
+            this.btnRegisterFM.BackgroundColor = System.Drawing.Color.Red;
+            this.btnRegisterFM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRegisterFM.BorderRadius = 15;
+            this.btnRegisterFM.BorderSize = 0;
+            this.btnRegisterFM.FlatAppearance.BorderSize = 0;
+            this.btnRegisterFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterFM.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterFM.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterFM.Location = new System.Drawing.Point(345, 136);
+            this.btnRegisterFM.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegisterFM.Name = "btnRegisterFM";
+            this.btnRegisterFM.Size = new System.Drawing.Size(150, 97);
+            this.btnRegisterFM.TabIndex = 6;
+            this.btnRegisterFM.Text = "Register New FM";
+            this.btnRegisterFM.TextColor = System.Drawing.Color.White;
+            this.btnRegisterFM.UseVisualStyleBackColor = false;
+            this.btnRegisterFM.Click += new System.EventHandler(this.btnRegisterFM_Click);
+            // 
+            // btnViewAll
+            // 
+            this.btnViewAll.BackColor = System.Drawing.Color.Red;
+            this.btnViewAll.BackgroundColor = System.Drawing.Color.Red;
+            this.btnViewAll.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnViewAll.BorderRadius = 15;
+            this.btnViewAll.BorderSize = 0;
+            this.btnViewAll.FlatAppearance.BorderSize = 0;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAll.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAll.ForeColor = System.Drawing.Color.White;
+            this.btnViewAll.Location = new System.Drawing.Point(549, 136);
+            this.btnViewAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(150, 97);
+            this.btnViewAll.TabIndex = 7;
+            this.btnViewAll.Text = "View All Users";
+            this.btnViewAll.TextColor = System.Drawing.Color.White;
+            this.btnViewAll.UseVisualStyleBackColor = false;
+            // 
             // AdminConsole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1656, 638);
+            this.ClientSize = new System.Drawing.Size(828, 332);
+            this.Controls.Add(this.btnViewAll);
+            this.Controls.Add(this.btnRegisterFM);
+            this.Controls.Add(this.btnRegisterCM);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AdminConsole";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.AdminConsole_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.signInInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_UserInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,21 +168,11 @@ namespace TeamNateZone
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private TEAM_A_UserInfo tEAM_A_UserInfo;
-        private System.Windows.Forms.BindingSource signInInfoBindingSource;
-        private TEAM_A_UserInfoTableAdapters.SignInInfoTableAdapter signInInfoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clearanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private CustomControls.RJControls.rndButton btnExit;
+        private CustomControls.RJControls.rndButton btnRegisterCM;
+        private CustomControls.RJControls.rndButton btnRegisterFM;
+        private CustomControls.RJControls.rndButton btnViewAll;
     }
 }

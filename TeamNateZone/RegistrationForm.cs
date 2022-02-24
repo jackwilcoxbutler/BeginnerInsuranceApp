@@ -13,9 +13,15 @@ namespace TeamNateZone
 {
     public partial class RegistrationForm : Form
     {
+        int clearance;
         public RegistrationForm()
         {
             InitializeComponent();
+        }
+        public RegistrationForm(int val)
+        {
+            InitializeComponent();
+            this.clearance = val;
         }
         private void storeSignInInfo(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
@@ -23,6 +29,43 @@ namespace TeamNateZone
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
             int clearance = 0;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+
+                cmd.CommandText = "INSERT INTO SignInInfo(Email, Password, fName, lName, Street, City, State, Zip, clearance, Username) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username);";
+                cmd.Parameters.AddWithValue("@email", eMail);
+                cmd.Parameters.AddWithValue("@password", passWord);
+                cmd.Parameters.AddWithValue("@f", first);
+                cmd.Parameters.AddWithValue("@l", last);
+                cmd.Parameters.AddWithValue("@str", address);
+                cmd.Parameters.AddWithValue("@city", city);
+                cmd.Parameters.AddWithValue("@st", state);
+                cmd.Parameters.AddWithValue("@zip5", zip);
+                cmd.Parameters.AddWithValue("@clear", clearance);
+                cmd.Parameters.AddWithValue("@username", userName);
+
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        private void storeSignInInfo(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail, int clearance)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
 
             try
             {
@@ -201,7 +244,24 @@ namespace TeamNateZone
                             stateTxt = "";
                         }
                     }
+                    try
+                    {
+                        storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, clearance);
+                        MessageBox.Show(message);
+                        User user = new User(txtUsername.Text, txtPassword.Text);
+                        this.Close();
+                    }
+                    catch(Exception err)
+                    {
+                        storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                        MessageBox.Show(message);
+                        User user = new User(txtUsername.Text, txtPassword.Text);
+                        ClientWelcomeForm wf = new ClientWelcomeForm(user);
+                        this.Close();
+                        wf.Show();
+                    }
                     //making sure that only valid state is used 
+/*
                     if (stateTxt != "")
                     {
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
@@ -228,7 +288,7 @@ namespace TeamNateZone
                             comboState.ResetText();
                         }
                     }
-                    
+*/   
                 }
                 else 
                 { 
@@ -266,6 +326,11 @@ namespace TeamNateZone
             {
                 btnRegister_Click_1(sender, e);
             }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(clearance.ToString());
         }
     }
 }
