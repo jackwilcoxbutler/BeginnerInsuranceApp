@@ -92,6 +92,11 @@
     <Compile Include="rndButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TEAM_ADataSet_Claims21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_ADataSet_Claims21.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TEAM_A_Claims_Dataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +125,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="claimList.resx">
       <DependentUpon>claimList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateClaim.resx">
       <DependentUpon>CreateClaim.cs</DependentUpon>
@@ -153,6 +159,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TEAM_ADataSet_Claims21.xsc">
+      <DependentUpon>TEAM_ADataSet_Claims21.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet_Claims21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_ADataSet_Claims21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_ADataSet_Claims21.xss">
+      <DependentUpon>TEAM_ADataSet_Claims21.xsd</DependentUpon>
+    </None>
     <None Include="TEAM_A_Claims_Dataset.xsc">
       <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>
     </None>
