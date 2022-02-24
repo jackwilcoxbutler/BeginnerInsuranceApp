@@ -160,7 +160,7 @@ namespace TeamNateZone
             this.Controls.Add(this.pictureBox1);
             this.Name = "AdminConsole";
             this.Text = "Admin";
-            this.Load += new System.EventHandler(this.AdminConsole_Load);
+//            this.Load += new System.EventHandler(this.AdminConsole_Load); this is deprecated by manual data query
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

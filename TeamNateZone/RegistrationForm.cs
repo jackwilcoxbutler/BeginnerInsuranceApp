@@ -229,29 +229,21 @@ namespace TeamNateZone
                     string message = "Registration Successful! Logging you in...";
                     //this allows User to be able to type in the state in the comboBox so they are able to Type or select
                     string stateTxt;
-                    if (comboState.Text == "")
+                    if (comboState.Items.Contains(comboState.Text))
                     {
-                        stateTxt = comboState.SelectedItem.ToString();
+                        stateTxt = comboState.Text;
                     }
                     else
                     {
-                        if (comboState.Items.Contains(comboState.Text))
-                        {
-                            stateTxt = comboState.Text;
-                        }
-                        else
-                        {
-                            stateTxt = "";
-                        }
+                        stateTxt = "";
                     }
-                    try
+                    
+                    if (clearance > 0)
                     {
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, clearance);
                         MessageBox.Show(message);
-                        User user = new User(txtUsername.Text, txtPassword.Text);
-                        this.Close();
                     }
-                    catch(Exception err)
+                    else
                     {
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
                         MessageBox.Show(message);
@@ -260,6 +252,7 @@ namespace TeamNateZone
                         this.Close();
                         wf.Show();
                     }
+                        
                     //making sure that only valid state is used 
 /*
                     if (stateTxt != "")
@@ -315,7 +308,7 @@ namespace TeamNateZone
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
-            LoginForm lf = (LoginForm)this.Owner;
+            LoginForm lf = new LoginForm();
             this.Close();
             lf.Show();
         }
