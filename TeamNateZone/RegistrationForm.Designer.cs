@@ -55,7 +55,6 @@ namespace TeamNateZone
             this.btnReturn = new CustomControls.RJControls.rndButton();
             this.btnRegister = new CustomControls.RJControls.rndButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTest = new System.Windows.Forms.Button();
             this.addressBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -423,16 +422,6 @@ namespace TeamNateZone
             this.pictureBox1.TabIndex = 100;
             this.pictureBox1.TabStop = false;
             // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(598, 107);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 52);
-            this.btnTest.TabIndex = 103;
-            this.btnTest.Text = "test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 18F);
@@ -441,7 +430,6 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(774, 729);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.pictureBox1);
@@ -498,6 +486,5 @@ namespace TeamNateZone
         private System.Windows.Forms.PictureBox pictureBox1;
         private CustomControls.RJControls.rndButton btnRegister;
         private CustomControls.RJControls.rndButton btnReturn;
-        private System.Windows.Forms.Button btnTest;
     }
 }

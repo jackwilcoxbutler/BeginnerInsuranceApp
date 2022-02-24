@@ -11,46 +11,31 @@ using System.Windows.Forms;
 
 namespace TeamNateZone
 {
-    public partial class claimList : Form
+    public partial class ViewUsers : Form
     {
-        User user;
-        ClientWelcomeForm welcomeForm;
-        public claimList(User user)
+        public ViewUsers()
         {
             InitializeComponent();
-            this.user = user;
         }
 
-        private void btnReturnToWelcome_Click(object sender, EventArgs e)
+        private void ViewUsers_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            welcomeForm = new ClientWelcomeForm(user);
-            welcomeForm.Owner = this;
-            welcomeForm.Show();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void claimList_Load(object sender, EventArgs e)
-        {
+            // TODO: This line of code loads data into the 'tEAM_A_UserInfo.SignInInfo' table. You can move, or remove it, as needed.
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
-            int account = user.getUserID();
-
             cn.ConnectionString =
                 @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
             cmd.Connection = cn;
             cn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Claims WHERE UserID = @userid", cn);
-            da.SelectCommand.Parameters.AddWithValue("userid", account);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SignInInfo", cn);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
             cn.Close();
+            BindingSource bs = new BindingSource(dtbl, dtbl.TableName);
+            bindingNavigator1.BindingSource = bs;
+
         }
     }
 }
