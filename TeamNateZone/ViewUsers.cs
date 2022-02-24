@@ -37,5 +37,30 @@ namespace TeamNateZone
             bindingNavigator1.BindingSource = bs;
 
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            RegistrationForm rf = new RegistrationForm(1);
+            rf.Show();
+            this.Close();
+        }
+
+        private void btnAddFM_Click(object sender, EventArgs e)
+        {
+            RegistrationForm rf = new RegistrationForm(2);
+            rf.Show();
+            this.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            SqlConnection db = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+            db.Open();
+            SqlDataAdapter data = new SqlDataAdapter("SELECT * FROM user_login", db);
+            DataTable tableTicket = new DataTable();
+            data.Fill(tableTicket);
+            dataGridView1.DataSource = tableTicket;
+            db.Close();
+        }
     }
 }

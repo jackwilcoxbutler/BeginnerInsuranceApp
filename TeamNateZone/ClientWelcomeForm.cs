@@ -56,19 +56,8 @@ namespace TeamNateZone
         private Boolean isClosed;
         private void btnMenuOpen_Click(object sender, EventArgs e)
         {
-            if (pnlDropDown.Height == pnlDropDown.MinimumSize.Height)
-                isClosed = true;
-            else
-                isClosed = false;
-
-            if(isClosed == true)
-            {
-                pnlDropDown.Height = pnlDropDown.MaximumSize.Height;
-            }
-            else
-            {
-                pnlDropDown.Height = pnlDropDown.MinimumSize.Height;
-            }
+            isClosed = (pnlDropDown.Height == pnlDropDown.MinimumSize.Height ? true : false);
+            pnlDropDown.Height = (isClosed ? pnlDropDown.MaximumSize.Height : pnlDropDown.MinimumSize.Height);
             
         }
 
