@@ -42,7 +42,7 @@ namespace TeamNateZone
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            string status = "None";
+            string status = "Submitted";
             try
             {
                 cn.ConnectionString =
