@@ -20,8 +20,9 @@ public partial class AdminConsole : Form
         private void AdminConsole_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tEAM_A_UserInfo.SignInInfo' table. You can move, or remove it, as needed.
-            this.signInInfoTableAdapter.Fill(this.tEAM_A_UserInfo.SignInInfo);
-
+            /* Commented out for demo purposes
+             * this.signInInfoTableAdapter.Fill(this.tEAM_A_UserInfo.SignInInfo);
+            */
         }
 
         private void btnExit_Click(object sender, EventArgs e)

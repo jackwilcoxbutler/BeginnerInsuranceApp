@@ -14,3 +14,19 @@ C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.G
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CreateClaim.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.LoginForm.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAccount.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
