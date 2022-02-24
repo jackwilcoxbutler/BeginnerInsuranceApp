@@ -91,13 +91,14 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "UPDATE SignInInfo(Email, Password, fName, lName, street, city, state, zip, clearance, Username) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username)";
+                cmd.CommandText = "UPDATE SignInInfo SET Email = @email, Password = @password, street = @str, city = @city, state = @st, zip = @zip5 WHERE UserID = @uid";
                 cmd.Parameters.AddWithValue("@email", email );
                 cmd.Parameters.AddWithValue("@password", password );
                 cmd.Parameters.AddWithValue("@str", street);
                 cmd.Parameters.AddWithValue("@city", city);
                 cmd.Parameters.AddWithValue("@st", state );
                 cmd.Parameters.AddWithValue("@zip5", zip);
+                cmd.Parameters.AddWithValue("uid", user.getUserID());
 
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -109,6 +110,7 @@ namespace TeamNateZone
             }
             finally
             {
+                MessageBox.Show("Account details updated!", "Success");
                 cn.Close();
             }
         }

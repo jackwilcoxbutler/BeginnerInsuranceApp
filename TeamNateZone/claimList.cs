@@ -45,7 +45,7 @@ namespace TeamNateZone
             cmd.Connection = cn;
             cn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * Claims WHERE UserID = @userid", cn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Claims WHERE UserID = @userid", cn);
             da.SelectCommand.Parameters.AddWithValue("userid", account);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
