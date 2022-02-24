@@ -10,11 +10,11 @@ namespace TeamNateZone
     public class User
     {
         //Data
-        String username, password, email, fname, lname;
+        String username, password, email, fname, lname, street, city, state, zip;
         int id, clearance;
 
         // constructor
-        public User(int id, string fname, string lname, string username, string password, string email, int clearance) //created by login/reg form
+        public User(int id, string fname, string lname, string username, string password, string email, int clearance, string street, string city, string state, string zip) //created by login/reg form
         {
             this.fname = fname;
             this.lname = lname;
@@ -23,6 +23,10 @@ namespace TeamNateZone
             this.email = email;
             this.clearance = clearance;
             this.id = id;
+            this.street = street;
+            this.city = street;
+            this.state = state;
+            this.zip = zip; 
         }
         // default constructor (makes empty object)
         public User()
@@ -34,6 +38,10 @@ namespace TeamNateZone
             password = "";
             email = "";
             clearance = 0;
+            street = "";
+            city = "";
+            state = "";
+            zip = "";
         }
         //constructor with two parameters
         public User(string userN, string pWord)
@@ -45,6 +53,10 @@ namespace TeamNateZone
             lname = getLname(username);
             id = getUserID(username);
             email = getUserEmail(username);
+            street = getStreet(username);
+            city = getCity(username);
+            state = getState(username);
+            zip = getZip(username); 
         }
 
         //get methods
@@ -72,6 +84,24 @@ namespace TeamNateZone
         {
             return email;
         }
+       
+        public string getStreet()
+        {
+            return street; 
+        }
+        public string getCity()
+        {
+            return city;
+        }
+        public string getState()
+        {
+            return state;
+        }
+        public string getZip()
+        {
+            return zip;
+        }
+
         public string getRole()
         {
             switch (clearance)
@@ -116,6 +146,10 @@ namespace TeamNateZone
             lname = getLname(username);
             id = getUserID(username);
             email = getUserEmail(username);
+            street = getStreet(username); 
+            city = getCity(username);
+            state = getState(username);
+            zip = getZip(username);
         }
         public void setUserID(int value)
         {
@@ -144,6 +178,22 @@ namespace TeamNateZone
         public void setUserType(int value)
         {
             clearance = value;
+        }
+        public void setStreet(string value)
+        {
+            street = value;
+        }
+        public void setCity(string value)
+        {
+            city = value;
+        }
+        public void setState(string value)
+        {
+            state = value;
+        }
+        public void setZip(string value)
+        {
+            zip = value;
         }
 
         //sql linking stuff-- clean up to get rid of random errors appearing at log in screen
@@ -270,6 +320,118 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
                 cmd.CommandText = "SELECT lName FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getStreet(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT street FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getCity(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT city FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getState(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT state FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getZip(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT zip FROM SignInInfo WHERE Username = @username";
                 cmd.Parameters.AddWithValue("@username", userN);
                 cn.Open();
                 dr = cmd.ExecuteReader();
