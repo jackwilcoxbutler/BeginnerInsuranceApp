@@ -96,5 +96,23 @@ namespace TeamNateZone
                 }
             }
         }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView1.CurrentRow.Cells[10].Value;
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+            cmd.Connection = cn;
+
+            cmd.CommandText = "UPDATE SignInInfo SET clearance=@value WHERE UserID = @uid";
+            cmd.Parameters.AddWithValue("@value", (int)dataGridView1.CurrentCell.Value);
+            cmd.Parameters.AddWithValue("@uid", id);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+            cn.Close();
+            MessageBox.Show($"You changed {id}'s clearance level to {(int)dataGridView1.CurrentCell.Value}");
+        }
     }
 }
