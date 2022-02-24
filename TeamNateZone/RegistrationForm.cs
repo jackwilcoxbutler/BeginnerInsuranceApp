@@ -241,7 +241,8 @@ namespace TeamNateZone
                     if (clearance > 0)
                     {
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, clearance);
-                        MessageBox.Show(message);
+                        MessageBox.Show("Successfully registered new user!", "Success");
+                        this.Close();
                     }
                     else
                     {
