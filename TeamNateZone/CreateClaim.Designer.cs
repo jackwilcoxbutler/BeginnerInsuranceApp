@@ -124,9 +124,9 @@ namespace TeamNateZone
             // btnUpload
             // 
             this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.Location = new System.Drawing.Point(302, 386);
+            this.btnUpload.Location = new System.Drawing.Point(302, 388);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 25);
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 11;
             this.btnUpload.Text = "upload files";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -144,12 +144,13 @@ namespace TeamNateZone
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.InitialDirectory = "Pictures";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +162,7 @@ namespace TeamNateZone
             this.btnMenu.BackColor = System.Drawing.Color.White;
             this.btnMenu.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(52, 58);
             this.btnMenu.TabIndex = 16;
@@ -176,7 +177,7 @@ namespace TeamNateZone
             this.pnlDropDown.Controls.Add(this.button1);
             this.pnlDropDown.Controls.Add(this.button2);
             this.pnlDropDown.Location = new System.Drawing.Point(376, 7);
-            this.pnlDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDropDown.MaximumSize = new System.Drawing.Size(52, 283);
             this.pnlDropDown.MinimumSize = new System.Drawing.Size(52, 57);
             this.pnlDropDown.Name = "pnlDropDown";
@@ -188,7 +189,7 @@ namespace TeamNateZone
             this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout2.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
             this.btnLogout2.Location = new System.Drawing.Point(2, 228);
-            this.btnLogout2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout2.Name = "btnLogout2";
             this.btnLogout2.Size = new System.Drawing.Size(48, 52);
             this.btnLogout2.TabIndex = 1;
@@ -200,7 +201,7 @@ namespace TeamNateZone
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::TeamNateZone.Properties.Resources.settingsIcon;
             this.button3.Location = new System.Drawing.Point(2, 173);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(48, 52);
             this.button3.TabIndex = 1;
@@ -211,7 +212,7 @@ namespace TeamNateZone
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::TeamNateZone.Properties.Resources.homeIcon;
             this.button1.Location = new System.Drawing.Point(2, 67);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 49);
             this.button1.TabIndex = 1;
@@ -222,7 +223,7 @@ namespace TeamNateZone
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::TeamNateZone.Properties.Resources.mailIcon;
             this.button2.Location = new System.Drawing.Point(2, 119);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(48, 52);
             this.button2.TabIndex = 1;
@@ -240,7 +241,7 @@ namespace TeamNateZone
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(260, 437);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(114, 34);
             this.btnBack.TabIndex = 14;
@@ -261,7 +262,7 @@ namespace TeamNateZone
             this.btnFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.ForeColor = System.Drawing.Color.White;
             this.btnFile.Location = new System.Drawing.Point(67, 437);
-            this.btnFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(161, 34);
             this.btnFile.TabIndex = 13;
@@ -290,7 +291,7 @@ namespace TeamNateZone
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.pnlDropDown);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateClaim";
             this.Text = "Make a claim";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
