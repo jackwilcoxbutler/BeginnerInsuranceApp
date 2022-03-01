@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Security;
+
 
 namespace TeamNateZone
 {
@@ -108,7 +111,25 @@ namespace TeamNateZone
         
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //Image img = Image.FromFile(openFileDialog1.FileName);
+                try
+                {
+                    var filePath = openFileDialog1.FileName;
+                    using (Stream str = openFileDialog1.OpenFile())
+                    {
+                        // store str object in database
+                        // OR
+                        // store file path using relational schema
+                    }
+                }
+                catch (SecurityException ex)
+                {
+                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
+                    $"Details:\n\n{ex.StackTrace}");
+                }
+            }
         }
 
         
