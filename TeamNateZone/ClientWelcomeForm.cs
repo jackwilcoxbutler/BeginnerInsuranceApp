@@ -49,8 +49,7 @@ namespace TeamNateZone
             MessageBox.Show("Logout Successful");
             LoginForm lf = new LoginForm();
             lf.Show();
-            this.Close();
-            
+            this.Hide();
         }
 
         private Boolean isClosed;
