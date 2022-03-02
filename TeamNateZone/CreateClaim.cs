@@ -18,6 +18,7 @@ namespace TeamNateZone
     {
         User user;
         ClientWelcomeForm welcomeForm;
+        List<Stream> imgList;
         public CreateClaim(User user)
         {
             InitializeComponent();
@@ -117,11 +118,22 @@ namespace TeamNateZone
                 try
                 {
                     var filePath = openFileDialog1.FileName;
-                    using (Stream str = openFileDialog1.OpenFile())
+                    using (Stream content = openFileDialog1.OpenFile())
                     {
                         // store str object in database
-                        // OR
-                        // store file path using relational schema
+                        //StreamReader reader = new StreamReader(content);
+                        SqlConnection cn = new SqlConnection();
+                        SqlCommand cmd = new SqlCommand();
+
+                        cn.ConnectionString = @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                        cmd.Connection = cn;
+
+                        cmd.CommandText = "INSERT INTO ClaimMedia(UID,content) VALUES (@ui,@img)";
+                        cmd.Parameters.AddWithValue("@ui", user.getUserID());
+                        cmd.Parameters.AddWithValue("@img", content);
+
+                        cn.Open();
+                        cmd.ExecuteNonQuery();
                     }
                 }
                 catch (SecurityException ex)

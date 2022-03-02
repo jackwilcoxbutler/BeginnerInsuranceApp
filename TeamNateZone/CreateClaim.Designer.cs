@@ -85,7 +85,7 @@ namespace TeamNateZone
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(232, 21);
             this.datetime.TabIndex = 6;
-            this.datetime.Value = new System.DateTime(2022, 3, 1, 11, 52, 28, 0);
+            this.datetime.Value = new System.DateTime(2022, 3, 2, 0, 0, 0, 0);
             // 
             // claimType
             // 
