@@ -18,11 +18,12 @@ namespace TeamNateZone
     {
         User user;
         ClientWelcomeForm welcomeForm;
-        List<Stream> imgList;
+        //List<Stream> imgList;
         public CreateClaim(User user)
         {
             InitializeComponent();
             this.user = user;
+            datetime.Value = DateTime.Now;
         }
         /* commenting out until we determine if the datetime box deprecates this
 

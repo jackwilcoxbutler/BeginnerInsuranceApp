@@ -85,7 +85,8 @@ namespace TeamNateZone
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(232, 23);
             this.datetime.TabIndex = 6;
-            this.datetime.Value = new System.DateTime(2022, 3, 2, 0, 0, 0, 0);
+            this.datetime.TabStop = false;
+            this.datetime.Value = new System.DateTime(2022, 3, 3, 0, 0, 0, 0);
             // 
             // claimType
             // 
@@ -123,9 +124,10 @@ namespace TeamNateZone
             // 
             // btnUpload
             // 
-            this.btnUpload.BackColor = System.Drawing.Color.LightYellow;
+            this.btnUpload.BackColor = System.Drawing.Color.OliveDrab;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.Location = new System.Drawing.Point(302, 388);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
@@ -136,6 +138,7 @@ namespace TeamNateZone
             // 
             // textBox1
             // 
+            this.textBox1.AllowDrop = true;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(41, 388);
