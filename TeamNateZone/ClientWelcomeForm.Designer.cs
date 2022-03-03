@@ -31,16 +31,16 @@ namespace TeamNateZone
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientWelcomeForm));
             this.pnlDropDown = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenuOpen = new System.Windows.Forms.Button();
             this.btnLogout2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFileClaim = new CustomControls.RJControls.rndButton();
             this.btnManageAccount = new CustomControls.RJControls.rndButton();
             this.btnAdmin = new CustomControls.RJControls.rndButton();
@@ -63,61 +63,6 @@ namespace TeamNateZone
             this.pnlDropDown.Name = "pnlDropDown";
             this.pnlDropDown.Size = new System.Drawing.Size(52, 64);
             this.pnlDropDown.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 412);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 35);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "File a new claim";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(306, 414);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 35);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "View Existing";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(350, 449);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 35);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Claims";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(563, 414);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 35);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Manage Account";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
             // 
             // btnMenuOpen
             // 
@@ -176,13 +121,68 @@ namespace TeamNateZone
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 412);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 35);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "File a new claim";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(306, 414);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 35);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "View Existing";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(350, 449);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 35);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Claims";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(563, 414);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(236, 35);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Manage Account";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnFileClaim
             // 
             this.btnFileClaim.BackColor = System.Drawing.Color.White;
             this.btnFileClaim.BackgroundColor = System.Drawing.Color.White;
             this.btnFileClaim.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFileClaim.BackgroundImage")));
             this.btnFileClaim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFileClaim.BorderColor = System.Drawing.Color.Red;
+            this.btnFileClaim.BorderColor = System.Drawing.Color.YellowGreen;
             this.btnFileClaim.BorderRadius = 30;
             this.btnFileClaim.BorderSize = 5;
             this.btnFileClaim.FlatAppearance.BorderSize = 0;
@@ -204,7 +204,7 @@ namespace TeamNateZone
             this.btnManageAccount.BackgroundColor = System.Drawing.Color.White;
             this.btnManageAccount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageAccount.BackgroundImage")));
             this.btnManageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnManageAccount.BorderColor = System.Drawing.Color.Red;
+            this.btnManageAccount.BorderColor = System.Drawing.Color.YellowGreen;
             this.btnManageAccount.BorderRadius = 30;
             this.btnManageAccount.BorderSize = 5;
             this.btnManageAccount.FlatAppearance.BorderSize = 0;
@@ -224,7 +224,7 @@ namespace TeamNateZone
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.White;
             this.btnAdmin.BackgroundColor = System.Drawing.Color.White;
-            this.btnAdmin.BorderColor = System.Drawing.Color.Red;
+            this.btnAdmin.BorderColor = System.Drawing.Color.YellowGreen;
             this.btnAdmin.BorderRadius = 10;
             this.btnAdmin.BorderSize = 5;
             this.btnAdmin.FlatAppearance.BorderSize = 0;
@@ -248,7 +248,7 @@ namespace TeamNateZone
             this.btnListClaims.BackgroundColor = System.Drawing.Color.White;
             this.btnListClaims.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListClaims.BackgroundImage")));
             this.btnListClaims.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnListClaims.BorderColor = System.Drawing.Color.Red;
+            this.btnListClaims.BorderColor = System.Drawing.Color.YellowGreen;
             this.btnListClaims.BorderRadius = 30;
             this.btnListClaims.BorderSize = 5;
             this.btnListClaims.FlatAppearance.BorderSize = 0;
@@ -277,10 +277,10 @@ namespace TeamNateZone
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnFileClaim);
-            this.Controls.Add(this.btnManageAccount);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnListClaims);
             this.Controls.Add(this.pnlDropDown);
+            this.Controls.Add(this.btnManageAccount);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "ClientWelcomeForm";

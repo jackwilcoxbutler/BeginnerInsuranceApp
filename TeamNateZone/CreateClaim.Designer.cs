@@ -56,12 +56,12 @@ namespace TeamNateZone
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
-            this.labelDate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.ForeColor = System.Drawing.Color.Red;
+            this.labelDate.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.Color.YellowGreen;
             this.labelDate.Location = new System.Drawing.Point(43, 73);
             this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(56, 18);
+            this.labelDate.Size = new System.Drawing.Size(53, 19);
             this.labelDate.TabIndex = 2;
             this.labelDate.Text = "Date :";
             // 
@@ -69,21 +69,21 @@ namespace TeamNateZone
             // 
             this.labelType.AutoSize = true;
             this.labelType.BackColor = System.Drawing.Color.Transparent;
-            this.labelType.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelType.ForeColor = System.Drawing.Color.Red;
+            this.labelType.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.ForeColor = System.Drawing.Color.YellowGreen;
             this.labelType.Location = new System.Drawing.Point(43, 120);
             this.labelType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(112, 18);
+            this.labelType.Size = new System.Drawing.Size(102, 19);
             this.labelType.TabIndex = 3;
             this.labelType.Text = "Claim Type :";
             // 
             // datetime
             // 
-            this.datetime.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetime.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datetime.Location = new System.Drawing.Point(117, 74);
             this.datetime.Name = "datetime";
-            this.datetime.Size = new System.Drawing.Size(232, 21);
+            this.datetime.Size = new System.Drawing.Size(232, 23);
             this.datetime.TabIndex = 6;
             this.datetime.Value = new System.DateTime(2022, 3, 2, 0, 0, 0, 0);
             // 
@@ -105,11 +105,11 @@ namespace TeamNateZone
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.YellowGreen;
             this.label1.Location = new System.Drawing.Point(43, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 18);
+            this.label1.Size = new System.Drawing.Size(172, 19);
             this.label1.TabIndex = 8;
             this.label1.Text = "Give us some details :";
             // 
@@ -123,13 +123,15 @@ namespace TeamNateZone
             // 
             // btnUpload
             // 
+            this.btnUpload.BackColor = System.Drawing.Color.LightYellow;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.Location = new System.Drawing.Point(302, 388);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 11;
             this.btnUpload.Text = "upload files";
-            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // textBox1
@@ -232,8 +234,8 @@ namespace TeamNateZone
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.Red;
-            this.btnBack.BackgroundColor = System.Drawing.Color.Red;
+            this.btnBack.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnBack.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnBack.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnBack.BorderRadius = 15;
             this.btnBack.BorderSize = 0;
@@ -253,8 +255,8 @@ namespace TeamNateZone
             // 
             // btnFile
             // 
-            this.btnFile.BackColor = System.Drawing.Color.Red;
-            this.btnFile.BackgroundColor = System.Drawing.Color.Red;
+            this.btnFile.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnFile.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnFile.BorderColor = System.Drawing.Color.White;
             this.btnFile.BorderRadius = 15;
             this.btnFile.BorderSize = 0;
@@ -284,13 +286,13 @@ namespace TeamNateZone
             this.Controls.Add(this.btnFile);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.detailsTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.claimType);
             this.Controls.Add(this.datetime);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.pnlDropDown);
+            this.Controls.Add(this.detailsTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateClaim";
