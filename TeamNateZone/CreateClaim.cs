@@ -18,7 +18,7 @@ namespace TeamNateZone
     {
         User user;
         ClientWelcomeForm welcomeForm;
-        //List<Stream> imgList;
+        List<Stream> images = new List<Stream>();
         public CreateClaim(User user)
         {
             InitializeComponent();
@@ -67,6 +67,13 @@ namespace TeamNateZone
                 cn.Open();
                 dr = cmd.ExecuteReader();
                 dr.Read();
+                cn.Close();
+                // restart connection for media upload
+                foreach (Stream image in images)
+                {
+                    SqlCommand statement = new SqlCommand($"INSERT INTO ClaimMedia(UID,content) VALUES ({user.getUserID()},{image})", cn);
+                }
+               
             }
             catch (Exception err)
             {
@@ -118,7 +125,12 @@ namespace TeamNateZone
                 //Image img = Image.FromFile(openFileDialog1.FileName);
                 try
                 {
-                    var filePath = openFileDialog1.FileName;
+                    // hold in local memory until user actually files claim
+                    Stream image = openFileDialog1.OpenFile();
+                    images.Add(image);
+                    txtFileUpload.Text = openFileDialog1.FileName;
+                    //var filePath = openFileDialog1.FileName;
+                    /*
                     using (Stream content = openFileDialog1.OpenFile())
                     {
                         // store str object in database
@@ -136,6 +148,8 @@ namespace TeamNateZone
                         cn.Open();
                         cmd.ExecuteNonQuery();
                     }
+                    */
+                    MessageBox.Show("Uploaded image!", "Success");
                 }
                 catch (SecurityException ex)
                 {

@@ -37,7 +37,7 @@ namespace TeamNateZone
             this.label1 = new System.Windows.Forms.Label();
             this.detailsTextBox = new System.Windows.Forms.RichTextBox();
             this.btnUpload = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFileUpload = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -136,15 +136,15 @@ namespace TeamNateZone
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // textBox1
+            // txtFileUpload
             // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(41, 388);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 23);
-            this.textBox1.TabIndex = 12;
+            this.txtFileUpload.AllowDrop = true;
+            this.txtFileUpload.Enabled = false;
+            this.txtFileUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFileUpload.Location = new System.Drawing.Point(41, 388);
+            this.txtFileUpload.Name = "txtFileUpload";
+            this.txtFileUpload.Size = new System.Drawing.Size(263, 23);
+            this.txtFileUpload.TabIndex = 12;
             // 
             // openFileDialog1
             // 
@@ -287,7 +287,7 @@ namespace TeamNateZone
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFile);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFileUpload);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.claimType);
@@ -315,7 +315,7 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox detailsTextBox;
         private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFileUpload;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private CustomControls.RJControls.rndButton btnFile;
         private CustomControls.RJControls.rndButton btnBack;
