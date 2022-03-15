@@ -45,8 +45,8 @@ namespace TeamNateZone
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbCC = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbCVV = new System.Windows.Forms.TextBox();
+            this.tbCCExp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -229,32 +229,32 @@ namespace TeamNateZone
             this.tbCC.Size = new System.Drawing.Size(672, 44);
             this.tbCC.TabIndex = 23;
             // 
-            // textBox5
+            // tbCVV
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(325, 566);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 44);
-            this.textBox5.TabIndex = 24;
+            this.tbCVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCVV.Location = new System.Drawing.Point(325, 566);
+            this.tbCVV.Name = "tbCVV";
+            this.tbCVV.Size = new System.Drawing.Size(198, 44);
+            this.tbCVV.TabIndex = 24;
             // 
-            // textBox6
+            // tbCCExp
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(634, 573);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(153, 44);
-            this.textBox6.TabIndex = 25;
+            this.tbCCExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCCExp.Location = new System.Drawing.Point(634, 573);
+            this.tbCCExp.Name = "tbCCExp";
+            this.tbCCExp.Size = new System.Drawing.Size(153, 44);
+            this.tbCCExp.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label5.Location = new System.Drawing.Point(239, 569);
+            this.label5.Location = new System.Drawing.Point(234, 569);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 37);
+            this.label5.Size = new System.Drawing.Size(97, 37);
             this.label5.TabIndex = 26;
-            this.label5.Text = "PIN:";
+            this.label5.Text = "CVV:";
             // 
             // label6
             // 
@@ -435,8 +435,8 @@ namespace TeamNateZone
             this.Controls.Add(this.btnBackAM);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbCCExp);
+            this.Controls.Add(this.tbCVV);
             this.Controls.Add(this.tbCC);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -475,8 +475,8 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbCC;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbCVV;
+        private System.Windows.Forms.TextBox tbCCExp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.rndButton btnBackAM;

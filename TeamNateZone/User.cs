@@ -10,11 +10,11 @@ namespace TeamNateZone
     public class User
     {
         //Data
-        String username, password, email, fname, lname, street, city, state, zip;
+        String username, password, email, fname, lname, street, city, state, zip, cc, ccexp, cvv;
         int id, clearance;
 
         // constructor
-        public User(int id, string fname, string lname, string username, string password, string email, int clearance, string street, string city, string state, string zip) //created by login/reg form
+        public User(int id, string fname, string lname, string username, string password, string email, int clearance, string street, string city, string state, string zip, string cc, string cvv, string ccexp) //created by login/reg form
         {
             this.fname = fname;
             this.lname = lname;
@@ -26,7 +26,10 @@ namespace TeamNateZone
             this.street = street;
             this.city = street;
             this.state = state;
-            this.zip = zip; 
+            this.zip = zip;
+            this.cc = cc;
+            this.cvv = cvv;
+            this.ccexp = ccexp; 
         }
         // default constructor (makes empty object)
         public User()
@@ -42,6 +45,9 @@ namespace TeamNateZone
             city = "";
             state = "";
             zip = "";
+            cc = "";
+            cvv = "";
+            ccexp = "";
         }
         //constructor with two parameters
         public User(string userN, string pWord)
@@ -56,7 +62,10 @@ namespace TeamNateZone
             street = getStreet(username);
             city = getCity(username);
             state = getState(username);
-            zip = getZip(username); 
+            zip = getZip(username);
+            cc = getCC(username);
+            cvv = getCVV(username);
+            ccexp = getCCExp(username);
         }
 
         //get methods
@@ -100,6 +109,21 @@ namespace TeamNateZone
         public string getZip()
         {
             return zip;
+        }
+
+        public string getCC()
+        {
+            return cc; 
+        }
+
+        public string getCVV()
+        {
+            return cvv; 
+        }
+
+        public string getCCExp()
+        {
+            return ccexp;
         }
 
         public string getRole()
@@ -150,6 +174,9 @@ namespace TeamNateZone
             city = getCity(username);
             state = getState(username);
             zip = getZip(username);
+            cc = getCC(username);
+            ccexp = getCCExp(username);
+            cvv = getCVV(username);
         }
         public void setUserID(int value)
         {
@@ -194,6 +221,21 @@ namespace TeamNateZone
         public void setZip(string value)
         {
             zip = value;
+        }
+
+        public void setCC(string value)
+        {
+            cc = value; 
+        }
+
+        public void setCCExp(string value)
+        {
+            ccexp = value; 
+        }
+
+        public void setCVV(string value)
+        {
+            cvv = value; 
         }
 
         //sql linking stuff-- clean up to get rid of random errors appearing at log in screen
@@ -432,6 +474,90 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
                 cmd.CommandText = "SELECT zip FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getCC(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT CreditNumber FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getCVV(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT CVV FROM SignInInfo WHERE Username = @username";
+                cmd.Parameters.AddWithValue("@username", userN);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private string getCCExp(string userN)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT CCExpiration FROM SignInInfo WHERE Username = @username";
                 cmd.Parameters.AddWithValue("@username", userN);
                 cn.Open();
                 dr = cmd.ExecuteReader();

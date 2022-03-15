@@ -27,6 +27,9 @@ namespace TeamNateZone
             tbCity.Text = user.getCity();
             tbState.Text = user.getState();
             tbZip.Text = user.getZip();
+            tbCC.Text = user.getCC();
+            tbCVV.Text = user.getCVV();
+            tbCCExp.Text = user.getCCExp();
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)
@@ -72,6 +75,9 @@ namespace TeamNateZone
             user.setCity(tbCity.Text);
             user.setState(tbState.Text);
             user.setZip(tbZip.Text);
+            user.setCC(tbCC.Text);
+            user.setCCExp(tbCCExp.Text);
+            user.setCVV(tbCVV.Text);
 
             string email = tbEmail.Text;
             string password = tbPassword.Text;
@@ -79,6 +85,9 @@ namespace TeamNateZone
             string city = tbCity.Text;
             string state = tbState.Text;
             string zip = tbZip.Text;
+            string cc = tbCC.Text;
+            string cvv = tbCVV.Text;
+            string ccexp = tbCCExp.Text; 
 
             //Updates the information in the SignInInfo Table in the Database 
             SqlConnection cn = new SqlConnection();
@@ -91,7 +100,7 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "UPDATE SignInInfo SET Email = @email, Password = @password, street = @str, city = @city, state = @st, zip = @zip5 WHERE UserID = @uid";
+                cmd.CommandText = "UPDATE SignInInfo SET Email = @email, Password = @password, street = @str, city = @city, state = @st, zip = @zip5, CreditNumber = @cc, CVV = @cvv, CCExpiration = @ccexp WHERE UserID = @uid";
                 cmd.Parameters.AddWithValue("@email", email );
                 cmd.Parameters.AddWithValue("@password", password );
                 cmd.Parameters.AddWithValue("@str", street);
@@ -99,6 +108,10 @@ namespace TeamNateZone
                 cmd.Parameters.AddWithValue("@st", state );
                 cmd.Parameters.AddWithValue("@zip5", zip);
                 cmd.Parameters.AddWithValue("uid", user.getUserID());
+                cmd.Parameters.AddWithValue("@cc", cc);
+                cmd.Parameters.AddWithValue("@ccexp", ccexp);
+                cmd.Parameters.AddWithValue("@cvv", cvv);
+
 
                 cn.Open();
                 dr = cmd.ExecuteReader();
