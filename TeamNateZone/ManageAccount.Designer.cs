@@ -69,7 +69,7 @@ namespace TeamNateZone
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Red;
+            this.labelTitle.BackColor = System.Drawing.Color.YellowGreen;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
             this.labelTitle.Location = new System.Drawing.Point(175, 19);
@@ -181,7 +181,7 @@ namespace TeamNateZone
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.YellowGreen;
             this.label1.Location = new System.Drawing.Point(28, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 37);
@@ -192,7 +192,7 @@ namespace TeamNateZone
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.YellowGreen;
             this.label2.Location = new System.Drawing.Point(28, 287);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 37);
@@ -203,7 +203,7 @@ namespace TeamNateZone
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.YellowGreen;
             this.label3.Location = new System.Drawing.Point(28, 371);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 37);
@@ -214,7 +214,7 @@ namespace TeamNateZone
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ForeColor = System.Drawing.Color.YellowGreen;
             this.label4.Location = new System.Drawing.Point(28, 515);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(202, 37);
@@ -249,7 +249,7 @@ namespace TeamNateZone
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.ForeColor = System.Drawing.Color.YellowGreen;
             this.label5.Location = new System.Drawing.Point(239, 569);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 37);
@@ -260,7 +260,7 @@ namespace TeamNateZone
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.ForeColor = System.Drawing.Color.YellowGreen;
             this.label6.Location = new System.Drawing.Point(534, 576);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 37);
@@ -299,7 +299,7 @@ namespace TeamNateZone
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.ForeColor = System.Drawing.Color.YellowGreen;
             this.label9.Location = new System.Drawing.Point(239, 371);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 37);
@@ -310,7 +310,7 @@ namespace TeamNateZone
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.ForeColor = System.Drawing.Color.YellowGreen;
             this.label10.Location = new System.Drawing.Point(239, 435);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 37);
@@ -339,7 +339,7 @@ namespace TeamNateZone
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.ForeColor = System.Drawing.Color.YellowGreen;
             this.label12.Location = new System.Drawing.Point(534, 439);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 37);
@@ -358,7 +358,7 @@ namespace TeamNateZone
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.ForeColor = System.Drawing.Color.YellowGreen;
             this.label13.Location = new System.Drawing.Point(712, 435);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 37);
@@ -375,8 +375,8 @@ namespace TeamNateZone
             // 
             // btnUpdatePassword
             // 
-            this.btnUpdatePassword.BackColor = System.Drawing.Color.Red;
-            this.btnUpdatePassword.BackgroundColor = System.Drawing.Color.Red;
+            this.btnUpdatePassword.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnUpdatePassword.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnUpdatePassword.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnUpdatePassword.BorderRadius = 15;
             this.btnUpdatePassword.BorderSize = 0;
@@ -395,8 +395,8 @@ namespace TeamNateZone
             // 
             // btnBackAM
             // 
-            this.btnBackAM.BackColor = System.Drawing.Color.Red;
-            this.btnBackAM.BackgroundColor = System.Drawing.Color.Red;
+            this.btnBackAM.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnBackAM.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnBackAM.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnBackAM.BorderRadius = 15;
             this.btnBackAM.BorderSize = 0;
