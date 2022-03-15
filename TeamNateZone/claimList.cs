@@ -66,6 +66,7 @@ namespace TeamNateZone
             cn.Open();
             dr = cmd.ExecuteReader();
             dr.Read();
+            dr.Read(); // advance to second image (panda)
             Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
             testPictureBox.Image = img;
             testPictureBox.Visible = true;

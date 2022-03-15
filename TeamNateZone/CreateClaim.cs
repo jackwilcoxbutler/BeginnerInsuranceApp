@@ -25,15 +25,6 @@ namespace TeamNateZone
             this.user = user;
             datetime.Value = DateTime.Now;
         }
-        /* commenting out until we determine if the datetime box deprecates this
-
-        private void txtDate_TextChanged(object sender, EventArgs e)
-        {
-            DateTime thisDay = DateTime.Today;
-            txtDate.ReadOnly = true;
-            txtDate.Text = thisDay.ToShortDateString();
-        }
-        */
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
