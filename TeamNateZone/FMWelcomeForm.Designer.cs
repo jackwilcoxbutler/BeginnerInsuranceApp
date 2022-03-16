@@ -35,17 +35,17 @@ namespace TeamNateZone
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDropDown = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnViewClientList = new CustomControls.RJControls.rndButton();
-            this.btnViewMessages = new CustomControls.RJControls.rndButton();
             this.btnMenuOpen = new System.Windows.Forms.Button();
             this.btnLogout2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnViewClientList = new CustomControls.RJControls.rndButton();
+            this.btnViewMessages = new CustomControls.RJControls.rndButton();
             this.btnManageAccount = new CustomControls.RJControls.rndButton();
             this.btnManageFinances = new CustomControls.RJControls.rndButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -108,61 +108,6 @@ namespace TeamNateZone
             this.pnlDropDown.Size = new System.Drawing.Size(104, 122);
             this.pnlDropDown.TabIndex = 24;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-47, -38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnViewClientList
-            // 
-            this.btnViewClientList.BackColor = System.Drawing.Color.White;
-            this.btnViewClientList.BackgroundColor = System.Drawing.Color.White;
-            this.btnViewClientList.BackgroundImage = global::TeamNateZone.Properties.Resources.clipBoard;
-            this.btnViewClientList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnViewClientList.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnViewClientList.BorderRadius = 30;
-            this.btnViewClientList.BorderSize = 5;
-            this.btnViewClientList.FlatAppearance.BorderSize = 0;
-            this.btnViewClientList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewClientList.ForeColor = System.Drawing.Color.White;
-            this.btnViewClientList.ImageIndex = 0;
-            this.btnViewClientList.Location = new System.Drawing.Point(13, 186);
-            this.btnViewClientList.Margin = new System.Windows.Forms.Padding(4);
-            this.btnViewClientList.Name = "btnViewClient";
-            this.btnViewClientList.Size = new System.Drawing.Size(354, 503);
-            this.btnViewClientList.TabIndex = 27;
-            this.btnViewClientList.TextColor = System.Drawing.Color.White;
-            this.btnViewClientList.UseVisualStyleBackColor = false;
-            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClient_Click);
-            // 
-            // btnViewMessages
-            // 
-            this.btnViewMessages.BackColor = System.Drawing.Color.White;
-            this.btnViewMessages.BackgroundColor = System.Drawing.Color.White;
-            this.btnViewMessages.BackgroundImage = global::TeamNateZone.Properties.Resources.message;
-            this.btnViewMessages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnViewMessages.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnViewMessages.BorderRadius = 30;
-            this.btnViewMessages.BorderSize = 5;
-            this.btnViewMessages.FlatAppearance.BorderSize = 0;
-            this.btnViewMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewMessages.ForeColor = System.Drawing.Color.White;
-            this.btnViewMessages.ImageIndex = 0;
-            this.btnViewMessages.Location = new System.Drawing.Point(411, 184);
-            this.btnViewMessages.Margin = new System.Windows.Forms.Padding(4);
-            this.btnViewMessages.Name = "btnViewMessages";
-            this.btnViewMessages.Size = new System.Drawing.Size(376, 506);
-            this.btnViewMessages.TabIndex = 25;
-            this.btnViewMessages.TextColor = System.Drawing.Color.White;
-            this.btnViewMessages.UseVisualStyleBackColor = false;
-            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
-            // 
             // btnMenuOpen
             // 
             this.btnMenuOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -217,6 +162,50 @@ namespace TeamNateZone
             this.button2.Size = new System.Drawing.Size(96, 100);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnViewClientList
+            // 
+            this.btnViewClientList.BackColor = System.Drawing.Color.White;
+            this.btnViewClientList.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewClientList.BackgroundImage = global::TeamNateZone.Properties.Resources.clipBoard;
+            this.btnViewClientList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnViewClientList.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewClientList.BorderRadius = 30;
+            this.btnViewClientList.BorderSize = 5;
+            this.btnViewClientList.FlatAppearance.BorderSize = 0;
+            this.btnViewClientList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewClientList.ForeColor = System.Drawing.Color.White;
+            this.btnViewClientList.ImageIndex = 0;
+            this.btnViewClientList.Location = new System.Drawing.Point(13, 186);
+            this.btnViewClientList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewClientList.Name = "btnViewClientList";
+            this.btnViewClientList.Size = new System.Drawing.Size(354, 503);
+            this.btnViewClientList.TabIndex = 27;
+            this.btnViewClientList.TextColor = System.Drawing.Color.White;
+            this.btnViewClientList.UseVisualStyleBackColor = false;
+            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClient_Click);
+            // 
+            // btnViewMessages
+            // 
+            this.btnViewMessages.BackColor = System.Drawing.Color.White;
+            this.btnViewMessages.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewMessages.BackgroundImage = global::TeamNateZone.Properties.Resources.message;
+            this.btnViewMessages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewMessages.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewMessages.BorderRadius = 30;
+            this.btnViewMessages.BorderSize = 5;
+            this.btnViewMessages.FlatAppearance.BorderSize = 0;
+            this.btnViewMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewMessages.ForeColor = System.Drawing.Color.White;
+            this.btnViewMessages.ImageIndex = 0;
+            this.btnViewMessages.Location = new System.Drawing.Point(411, 184);
+            this.btnViewMessages.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewMessages.Name = "btnViewMessages";
+            this.btnViewMessages.Size = new System.Drawing.Size(376, 506);
+            this.btnViewMessages.TabIndex = 25;
+            this.btnViewMessages.TextColor = System.Drawing.Color.White;
+            this.btnViewMessages.UseVisualStyleBackColor = false;
+            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
             // 
             // btnManageAccount
             // 
@@ -273,24 +262,35 @@ namespace TeamNateZone
             this.label5.TabIndex = 34;
             this.label5.Text = "Manage Finances";
             // 
-            // FMWelcomeScreen
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 153);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FMWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1954, 938);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnManageFinances);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.pnlDropDown);
             this.Controls.Add(this.btnManageAccount);
-            this.Name = "FMWelcomeScreen";
+            this.Name = "FMWelcomeForm";
             this.Text = "FMWelcomeScreen";
             this.pnlDropDown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -305,7 +305,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private CustomControls.RJControls.rndButton btnViewClientList;
         private CustomControls.RJControls.rndButton btnViewMessages;
         private System.Windows.Forms.Panel pnlDropDown;
@@ -317,5 +316,6 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnManageAccount;
         private CustomControls.RJControls.rndButton btnManageFinances;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
