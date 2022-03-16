@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TeamNateZone.AdminConsole" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAABAgAACAAAACACAAAABBAAAAAIBAEAA=</HashCode>
+      <FileName>AdminConsole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.claimList" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQAKAGGCAAAARACACJABQSADgABEABAQAAAUAAAQE=</HashCode>
+      <FileName>claimList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.ClientWelcomeForm" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAwCAgBJAAAAGIAQAiSCC4AAAAAIAgCABAEQA=</HashCode>
+      <FileName>ClientWelcomeForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.CMWelcomeForm" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIyCAAAJAAAAGABQAiQCA4AAAAAAAgCABAEQA=</HashCode>
+      <FileName>CMWelcomeForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.CreateClaim" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAAAACACAAABAQBACAQMEiUAI4AABCAAAoQEhAAQA=</HashCode>
+      <FileName>CreateClaim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.FMWelcomeForm" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIgQAAQCAIAJAAAACABAAiACA4AAAAAAAgAABAARA=</HashCode>
+      <FileName>FMWelcomeForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.LoginForm" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAEEGAACAAADFAAACABEECAAAgAAABABAAAgBgAQA=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.ManageAccount" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8ABAAAEAKCAAABhABACEAAAiYCAkAAAQAACkQEBEAQA=</HashCode>
+      <FileName>ManageAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.Program" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.RegistrationForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAiAAAQAACBAABCBAACDQCQCAgCAgIAgAhAAAARAAFg=</HashCode>
+      <FileName>RegistrationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_A_Claims_Dataset" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="TeamNateZone.TEAM_A_Claims_Dataset.ClaimsRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="TeamNateZone.TEAM_A_Claims_Dataset.ClaimsDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="TeamNateZone.TEAM_A_Claims_Dataset.ClaimsRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="TeamNateZone.TEAM_A_Claims_Dataset.ClaimsRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABICAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_A_UserInfo" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAwAAAAJABQAAQAAAAAgCQBgAgAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_ADataSet_Claims2" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABICAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.User" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QRgREAEAAQiDBAioAgAIGIEQAgAAAgAEgEAIAgBBsqw=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.ViewUsers" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAQAIEAiCAQDAMAIECEMAASBAgAIAACCAEAAAACAAA=</HashCode>
+      <FileName>ViewUsers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAgAAQAABAQABABEBAAAQAAAJKBAAAAAAAAAKA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomControls.RJControls.rndButton" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIgAAACIAAAAAIAgIgAABCCAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>rndButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAOAAgEAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_A_UserInfoTableAdapters.SignInInfoTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_A_UserInfoTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMABgAAACgAAAAAQBAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_ADataSet_Claims2TableAdapters.ClaimsTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamNateZone.TEAM_ADataSet_Claims2TableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAOAAgEAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
