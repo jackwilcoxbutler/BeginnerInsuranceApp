@@ -52,6 +52,12 @@
     <Compile Include="AdminConsole.Designer.cs">
       <DependentUpon>AdminConsole.cs</DependentUpon>
     </Compile>
+    <Compile Include="CMWelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMWelcomeForm.Designer.cs">
+      <DependentUpon>CMWelcomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateClaim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
       <DependentUpon>claimList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CMWelcomeForm.resx">
+      <DependentUpon>CMWelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateClaim.resx">
       <DependentUpon>CreateClaim.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +210,9 @@
     <Content Include="Images\p.jpg" />
     <Content Include="Images\p.ico" />
     <Content Include="Panda Logo.jpeg" />
+    <Content Include="Resources\account.png" />
+    <Content Include="Resources\clipBoard.jpeg" />
+    <Content Include="Resources\message.png" />
     <None Include="Resources\vs5.jpeg" />
     <None Include="Resources\vs51.jpeg" />
     <None Include="Resources\vsback2.jpeg" />
