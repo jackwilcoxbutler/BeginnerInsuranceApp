@@ -20,6 +20,13 @@ namespace TeamNateZone
             this.user = user;
 
         }
+        private Boolean isClosed;
+        private void btnMenuOpen_Click(object sender, EventArgs e)
+        {
+            isClosed = (pnlDropDown.Height == pnlDropDown.MinimumSize.Height ? true : false);
+            pnlDropDown.Height = (isClosed ? pnlDropDown.MaximumSize.Height : pnlDropDown.MinimumSize.Height);
+
+        }
         private void btnViewClient_Click(object sender, EventArgs e)
         {
 
