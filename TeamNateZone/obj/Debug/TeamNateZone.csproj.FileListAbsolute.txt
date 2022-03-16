@@ -65,3 +65,5 @@ C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreC
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcomeForm.resources
