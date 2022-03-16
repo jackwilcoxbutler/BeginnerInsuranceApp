@@ -80,9 +80,10 @@ namespace TeamNateZone
             this.dataGridView1.DataSource = this.claimsBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 689);
             this.dataGridView1.TabIndex = 3;
             // 
             // claimIdDataGridViewTextBoxColumn
@@ -154,19 +155,25 @@ namespace TeamNateZone
             // 
             this.EstimatedEndDate.DataPropertyName = "EstimatedEndDate";
             this.EstimatedEndDate.HeaderText = "EstimatedEndDate";
+            this.EstimatedEndDate.MinimumWidth = 8;
             this.EstimatedEndDate.Name = "EstimatedEndDate";
+            this.EstimatedEndDate.Width = 150;
             // 
             // Status
             // 
             this.Status.DataPropertyName = "Status";
             this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 8;
             this.Status.Name = "Status";
+            this.Status.Width = 150;
             // 
             // LastUpdate
             // 
             this.LastUpdate.DataPropertyName = "LastUpdate";
             this.LastUpdate.HeaderText = "LastUpdate";
+            this.LastUpdate.MinimumWidth = 8;
             this.LastUpdate.Name = "LastUpdate";
+            this.LastUpdate.Width = 150;
             // 
             // claimsBindingSource1
             // 
@@ -194,8 +201,8 @@ namespace TeamNateZone
             // 
             // btnReturnToWelcome
             // 
-            this.btnReturnToWelcome.BackColor = System.Drawing.Color.Red;
-            this.btnReturnToWelcome.BackgroundColor = System.Drawing.Color.Red;
+            this.btnReturnToWelcome.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnReturnToWelcome.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnReturnToWelcome.BorderColor = System.Drawing.Color.White;
             this.btnReturnToWelcome.BorderRadius = 15;
             this.btnReturnToWelcome.BorderSize = 0;
@@ -203,10 +210,9 @@ namespace TeamNateZone
             this.btnReturnToWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnToWelcome.ForeColor = System.Drawing.Color.White;
-            this.btnReturnToWelcome.Location = new System.Drawing.Point(627, 394);
-            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturnToWelcome.Location = new System.Drawing.Point(940, 606);
             this.btnReturnToWelcome.Name = "btnReturnToWelcome";
-            this.btnReturnToWelcome.Size = new System.Drawing.Size(82, 31);
+            this.btnReturnToWelcome.Size = new System.Drawing.Size(123, 48);
             this.btnReturnToWelcome.TabIndex = 4;
             this.btnReturnToWelcome.Text = "Return";
             this.btnReturnToWelcome.TextColor = System.Drawing.Color.White;
@@ -215,8 +221,8 @@ namespace TeamNateZone
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.BackgroundColor = System.Drawing.Color.Red;
+            this.btnExit.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnExit.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnExit.BorderColor = System.Drawing.Color.White;
             this.btnExit.BorderRadius = 15;
             this.btnExit.BorderSize = 0;
@@ -224,10 +230,9 @@ namespace TeamNateZone
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(712, 394);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(1068, 606);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(82, 31);
+            this.btnExit.Size = new System.Drawing.Size(123, 48);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.TextColor = System.Drawing.Color.White;
@@ -240,8 +245,8 @@ namespace TeamNateZone
             // 
             // btnView
             // 
-            this.btnView.BackColor = System.Drawing.Color.Red;
-            this.btnView.BackgroundColor = System.Drawing.Color.Red;
+            this.btnView.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnView.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnView.BorderColor = System.Drawing.Color.White;
             this.btnView.BorderRadius = 15;
             this.btnView.BorderSize = 0;
@@ -249,10 +254,9 @@ namespace TeamNateZone
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(480, 394);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2);
+            this.btnView.Location = new System.Drawing.Point(720, 606);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(105, 31);
+            this.btnView.Size = new System.Drawing.Size(158, 48);
             this.btnView.TabIndex = 6;
             this.btnView.Text = "View Image";
             this.btnView.TextColor = System.Drawing.Color.White;
@@ -262,9 +266,10 @@ namespace TeamNateZone
             // testPictureBox
             // 
             this.testPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.testPictureBox.Location = new System.Drawing.Point(447, 262);
+            this.testPictureBox.Location = new System.Drawing.Point(670, 403);
+            this.testPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.testPictureBox.Name = "testPictureBox";
-            this.testPictureBox.Size = new System.Drawing.Size(173, 127);
+            this.testPictureBox.Size = new System.Drawing.Size(260, 195);
             this.testPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.testPictureBox.TabIndex = 7;
             this.testPictureBox.TabStop = false;
@@ -273,15 +278,16 @@ namespace TeamNateZone
             // 
             // claimList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 448);
+            this.ClientSize = new System.Drawing.Size(1200, 689);
             this.Controls.Add(this.testPictureBox);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "claimList";
             this.Text = "List of Claims";
             this.Load += new System.EventHandler(this.claimList_Load);

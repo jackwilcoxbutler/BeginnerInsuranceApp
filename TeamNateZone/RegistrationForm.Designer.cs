@@ -64,11 +64,11 @@ namespace TeamNateZone
             this.labelUsername.AutoSize = true;
             this.labelUsername.BackColor = System.Drawing.Color.Transparent;
             this.labelUsername.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.ForeColor = System.Drawing.Color.Red;
+            this.labelUsername.ForeColor = System.Drawing.Color.YellowGreen;
             this.labelUsername.Location = new System.Drawing.Point(3, 514);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(106, 18);
+            this.labelUsername.Size = new System.Drawing.Size(161, 29);
             this.labelUsername.TabIndex = 99;
             this.labelUsername.Text = "Username : ";
             this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -78,11 +78,11 @@ namespace TeamNateZone
             this.labelPassword.AutoSize = true;
             this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.ForeColor = System.Drawing.Color.Red;
+            this.labelPassword.ForeColor = System.Drawing.Color.YellowGreen;
             this.labelPassword.Location = new System.Drawing.Point(418, 449);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(97, 18);
+            this.labelPassword.Size = new System.Drawing.Size(147, 29);
             this.labelPassword.TabIndex = 99;
             this.labelPassword.Text = "Password :";
             this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -92,11 +92,11 @@ namespace TeamNateZone
             this.labelVerify.AutoSize = true;
             this.labelVerify.BackColor = System.Drawing.Color.Transparent;
             this.labelVerify.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVerify.ForeColor = System.Drawing.Color.Red;
+            this.labelVerify.ForeColor = System.Drawing.Color.YellowGreen;
             this.labelVerify.Location = new System.Drawing.Point(362, 514);
             this.labelVerify.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVerify.Name = "labelVerify";
-            this.labelVerify.Size = new System.Drawing.Size(151, 18);
+            this.labelVerify.Size = new System.Drawing.Size(227, 29);
             this.labelVerify.TabIndex = 99;
             this.labelVerify.Text = "Verify Password :";
             this.labelVerify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,7 +108,7 @@ namespace TeamNateZone
             this.txtUsername.Location = new System.Drawing.Point(116, 512);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(238, 25);
+            this.txtUsername.Size = new System.Drawing.Size(238, 34);
             this.txtUsername.TabIndex = 8;
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
@@ -119,7 +119,7 @@ namespace TeamNateZone
             this.txtVerifyPassword.Location = new System.Drawing.Point(518, 512);
             this.txtVerifyPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
-            this.txtVerifyPassword.Size = new System.Drawing.Size(243, 25);
+            this.txtVerifyPassword.Size = new System.Drawing.Size(243, 34);
             this.txtVerifyPassword.TabIndex = 10;
             this.txtVerifyPassword.UseSystemPasswordChar = true;
             this.txtVerifyPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
@@ -131,7 +131,7 @@ namespace TeamNateZone
             this.txtPassword.Location = new System.Drawing.Point(518, 447);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(243, 25);
+            this.txtPassword.Size = new System.Drawing.Size(243, 34);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
@@ -141,11 +141,11 @@ namespace TeamNateZone
             this.labelEmail.AutoSize = true;
             this.labelEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelEmail.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.Color.Red;
+            this.labelEmail.ForeColor = System.Drawing.Color.YellowGreen;
             this.labelEmail.Location = new System.Drawing.Point(25, 449);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(71, 18);
+            this.labelEmail.Size = new System.Drawing.Size(105, 29);
             this.labelEmail.TabIndex = 99;
             this.labelEmail.Text = "Email : ";
             this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,20 +157,20 @@ namespace TeamNateZone
             this.txtEmail.Location = new System.Drawing.Point(98, 447);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(305, 25);
+            this.txtEmail.Size = new System.Drawing.Size(305, 34);
             this.txtEmail.TabIndex = 7;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Red;
+            this.label2.BackColor = System.Drawing.Color.YellowGreen;
             this.label2.Font = new System.Drawing.Font("Georgia", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(22, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 29);
+            this.label2.Size = new System.Drawing.Size(341, 41);
             this.label2.TabIndex = 12;
             this.label2.Text = "Panda Insurance";
             // 
@@ -181,7 +181,7 @@ namespace TeamNateZone
             this.txtFname.Location = new System.Drawing.Point(146, 216);
             this.txtFname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(248, 29);
+            this.txtFname.Size = new System.Drawing.Size(248, 39);
             this.txtFname.TabIndex = 1;
             this.txtFname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
@@ -190,11 +190,11 @@ namespace TeamNateZone
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.YellowGreen;
             this.label1.Location = new System.Drawing.Point(34, 222);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 18);
+            this.label1.Size = new System.Drawing.Size(158, 29);
             this.label1.TabIndex = 99;
             this.label1.Text = "First Name:";
             // 
@@ -205,7 +205,7 @@ namespace TeamNateZone
             this.txtLname.Location = new System.Drawing.Point(518, 216);
             this.txtLname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(251, 29);
+            this.txtLname.Size = new System.Drawing.Size(251, 39);
             this.txtLname.TabIndex = 2;
             this.txtLname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
@@ -214,11 +214,11 @@ namespace TeamNateZone
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.YellowGreen;
             this.label3.Location = new System.Drawing.Point(402, 222);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 18);
+            this.label3.Size = new System.Drawing.Size(152, 29);
             this.label3.TabIndex = 99;
             this.label3.Text = "Last Name:";
             // 
@@ -232,7 +232,7 @@ namespace TeamNateZone
             this.addressBox.Controls.Add(this.comboState);
             this.addressBox.Controls.Add(this.txtAddress);
             this.addressBox.Controls.Add(this.txtCity);
-            this.addressBox.ForeColor = System.Drawing.Color.Red;
+            this.addressBox.ForeColor = System.Drawing.Color.YellowGreen;
             this.addressBox.Location = new System.Drawing.Point(32, 274);
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(729, 146);
@@ -245,7 +245,7 @@ namespace TeamNateZone
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(527, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.Size = new System.Drawing.Size(54, 29);
             this.label7.TabIndex = 99;
             this.label7.Text = "Zip";
             // 
@@ -257,7 +257,7 @@ namespace TeamNateZone
             this.label4.Location = new System.Drawing.Point(18, 28);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 18);
+            this.label4.Size = new System.Drawing.Size(195, 29);
             this.label4.TabIndex = 99;
             this.label4.Text = "Street Address";
             // 
@@ -266,7 +266,7 @@ namespace TeamNateZone
             this.txtZip.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtZip.Location = new System.Drawing.Point(534, 69);
             this.txtZip.Name = "txtZip";
-            this.txtZip.Size = new System.Drawing.Size(129, 29);
+            this.txtZip.Size = new System.Drawing.Size(129, 39);
             this.txtZip.TabIndex = 6;
             this.txtZip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
@@ -278,7 +278,7 @@ namespace TeamNateZone
             this.label5.Location = new System.Drawing.Point(289, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 18);
+            this.label5.Size = new System.Drawing.Size(61, 29);
             this.label5.TabIndex = 99;
             this.label5.Text = "City";
             // 
@@ -290,7 +290,7 @@ namespace TeamNateZone
             this.label6.Location = new System.Drawing.Point(431, 28);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 18);
+            this.label6.Size = new System.Drawing.Size(77, 29);
             this.label6.TabIndex = 99;
             this.label6.Text = "State";
             // 
@@ -351,7 +351,7 @@ namespace TeamNateZone
             "WY"});
             this.comboState.Location = new System.Drawing.Point(438, 71);
             this.comboState.Name = "comboState";
-            this.comboState.Size = new System.Drawing.Size(90, 27);
+            this.comboState.Size = new System.Drawing.Size(90, 36);
             this.comboState.TabIndex = 5;
             this.comboState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
@@ -360,7 +360,7 @@ namespace TeamNateZone
             this.txtAddress.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(25, 69);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(265, 29);
+            this.txtAddress.Size = new System.Drawing.Size(265, 39);
             this.txtAddress.TabIndex = 3;
             // 
             // txtCity
@@ -368,14 +368,14 @@ namespace TeamNateZone
             this.txtCity.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(296, 69);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(136, 29);
+            this.txtCity.Size = new System.Drawing.Size(136, 39);
             this.txtCity.TabIndex = 20;
             this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.Red;
-            this.btnReturn.BackgroundColor = System.Drawing.Color.Red;
+            this.btnReturn.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnReturn.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnReturn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnReturn.BorderRadius = 20;
             this.btnReturn.BorderSize = 3;
@@ -394,8 +394,8 @@ namespace TeamNateZone
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.Red;
-            this.btnRegister.BackgroundColor = System.Drawing.Color.Red;
+            this.btnRegister.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnRegister.BackgroundColor = System.Drawing.Color.YellowGreen;
             this.btnRegister.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnRegister.BorderRadius = 20;
             this.btnRegister.BorderSize = 3;
@@ -424,7 +424,7 @@ namespace TeamNateZone
             // 
             // RegistrationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
