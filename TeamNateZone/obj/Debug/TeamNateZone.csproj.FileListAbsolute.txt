@@ -86,3 +86,4 @@ C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CMWelcomeForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcomeForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcomeForm.resources
