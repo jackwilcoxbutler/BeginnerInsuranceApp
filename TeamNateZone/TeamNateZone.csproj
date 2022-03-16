@@ -224,6 +224,7 @@
     <Content Include="Resources\account.png" />
     <Content Include="Resources\clipBoard.jpeg" />
     <Content Include="Resources\message.png" />
+    <Content Include="Resources\updatedPandaIcon.png" />
     <None Include="Resources\vs5.jpeg" />
     <None Include="Resources\vs51.jpeg" />
     <None Include="Resources\vsback2.jpeg" />
