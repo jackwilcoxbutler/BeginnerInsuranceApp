@@ -70,6 +70,12 @@
     <Compile Include="claimList.Designer.cs">
       <DependentUpon>claimList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMWelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMWelcomeForm.Designer.cs">
+      <DependentUpon>FMWelcomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateClaim.resx">
       <DependentUpon>CreateClaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMWelcomeForm.resx">
+      <DependentUpon>FMWelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

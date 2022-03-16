@@ -25,7 +25,7 @@ namespace TeamNateZone
 
             MessageBox.Show("Client View still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
         }
-        private void btnMessages_Click(object sender, EventArgs e)
+        private void btnViewMessages_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Messages still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
 
