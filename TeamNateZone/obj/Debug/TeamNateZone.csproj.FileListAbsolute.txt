@@ -106,3 +106,5 @@ C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.cs
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CMWelcomeForm.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcomeForm.resources

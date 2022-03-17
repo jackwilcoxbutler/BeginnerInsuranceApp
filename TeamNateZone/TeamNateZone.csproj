@@ -52,6 +52,7 @@
     <Compile Include="AdminConsole.Designer.cs">
       <DependentUpon>AdminConsole.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsClaim.cs" />
     <Compile Include="CMWelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
