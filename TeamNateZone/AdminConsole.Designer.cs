@@ -45,10 +45,9 @@ namespace TeamNateZone
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1123, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(749, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(490, 77);
+            this.label1.Size = new System.Drawing.Size(304, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Admin Console";
             // 
@@ -63,10 +62,9 @@ namespace TeamNateZone
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1448, 519);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(965, 332);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(164, 79);
+            this.btnExit.Size = new System.Drawing.Size(109, 51);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.TextColor = System.Drawing.Color.White;
@@ -84,10 +82,9 @@ namespace TeamNateZone
             this.btnRegisterCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterCM.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterCM.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterCM.Location = new System.Drawing.Point(264, 261);
-            this.btnRegisterCM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegisterCM.Location = new System.Drawing.Point(176, 167);
             this.btnRegisterCM.Name = "btnRegisterCM";
-            this.btnRegisterCM.Size = new System.Drawing.Size(300, 186);
+            this.btnRegisterCM.Size = new System.Drawing.Size(200, 119);
             this.btnRegisterCM.TabIndex = 5;
             this.btnRegisterCM.Text = "Register New CM";
             this.btnRegisterCM.TextColor = System.Drawing.Color.White;
@@ -105,10 +102,9 @@ namespace TeamNateZone
             this.btnRegisterFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterFM.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterFM.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterFM.Location = new System.Drawing.Point(691, 261);
-            this.btnRegisterFM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegisterFM.Location = new System.Drawing.Point(461, 167);
             this.btnRegisterFM.Name = "btnRegisterFM";
-            this.btnRegisterFM.Size = new System.Drawing.Size(300, 186);
+            this.btnRegisterFM.Size = new System.Drawing.Size(200, 119);
             this.btnRegisterFM.TabIndex = 6;
             this.btnRegisterFM.Text = "Register New FM";
             this.btnRegisterFM.TextColor = System.Drawing.Color.White;
@@ -126,10 +122,9 @@ namespace TeamNateZone
             this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAll.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAll.ForeColor = System.Drawing.Color.White;
-            this.btnViewAll.Location = new System.Drawing.Point(1099, 261);
-            this.btnViewAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewAll.Location = new System.Drawing.Point(733, 167);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(300, 186);
+            this.btnViewAll.Size = new System.Drawing.Size(200, 119);
             this.btnViewAll.TabIndex = 7;
             this.btnViewAll.Text = "View All Users";
             this.btnViewAll.TextColor = System.Drawing.Color.White;
@@ -140,21 +135,21 @@ namespace TeamNateZone
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 54);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(99, 93);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // AdminConsole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1656, 639);
+            this.ClientSize = new System.Drawing.Size(1104, 409);
             this.Controls.Add(this.btnViewAll);
             this.Controls.Add(this.btnRegisterFM);
             this.Controls.Add(this.btnRegisterCM);
@@ -163,8 +158,9 @@ namespace TeamNateZone
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AdminConsole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
