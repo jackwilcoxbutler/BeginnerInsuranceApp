@@ -15,6 +15,8 @@ namespace TeamNateZone
     {
         User user;
         ClientWelcomeForm welcomeForm;
+        CMWelcomeForm cmwelcomeForm;
+        FMWelcomeForm fmwelcomeForm;
         public ManageAccount(User user)
         {
             InitializeComponent();
@@ -61,9 +63,35 @@ namespace TeamNateZone
         private void btnBackAM_Click(object sender, EventArgs e)
         {
             this.Hide();
-            welcomeForm = new ClientWelcomeForm(user);
-            welcomeForm.Owner = this;
-            welcomeForm.Show();
+
+            if (user.getRole() == "Client")
+            {
+                welcomeForm = new ClientWelcomeForm(user);
+                welcomeForm.Owner = this;
+                welcomeForm.Show();
+            }
+            else if(user.getRole() == "Claims Manager")
+            {
+                cmwelcomeForm = new CMWelcomeForm(user);
+                cmwelcomeForm.Owner = this;
+                cmwelcomeForm.Show();
+            }
+            else if (user.getRole() == "Finance Manager")
+            {
+                fmwelcomeForm = new FMWelcomeForm(user);
+                fmwelcomeForm.Owner = this;
+                fmwelcomeForm.Show();
+            }
+            else if (user.getRole() == "Admin")
+            {
+                welcomeForm = new ClientWelcomeForm(user);
+                welcomeForm.Owner = this;
+                welcomeForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error Occurred");
+            }
         }
 
         private void btnUpdatePassword_Click(object sender, EventArgs e)

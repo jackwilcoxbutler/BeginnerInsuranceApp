@@ -127,3 +127,5 @@ C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.cs
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CMViewUsers.resources
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimList.resources

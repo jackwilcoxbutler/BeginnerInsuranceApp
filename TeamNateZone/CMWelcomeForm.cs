@@ -14,6 +14,7 @@ namespace TeamNateZone
     public partial class CMWelcomeForm : Form
     {
         User user;
+        AllClaimList AlllistClaims;
         ManageAccount manage;
         public CMWelcomeForm(User user)
         {
@@ -24,8 +25,8 @@ namespace TeamNateZone
 
         private void btnViewClientList_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Client List still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
-            //this.Hide();
+            CMViewUsers v = new CMViewUsers();
+            v.Show();
         }
 
         private void btnManageAccount_Click(object sender, EventArgs e)
@@ -68,5 +69,12 @@ namespace TeamNateZone
             //this.Hide();
         }
 
+        private void rndButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AlllistClaims = new AllClaimList(user);
+            AlllistClaims.Owner = this;
+            AlllistClaims.Show();
+        }
     }
 }

@@ -31,11 +31,11 @@ namespace TeamNateZone
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CMWelcomeForm));
             this.pnlDropDown = new System.Windows.Forms.Panel();
-            this.btnMenuOpen = new System.Windows.Forms.Button();
             this.btnLogout2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnMenuOpen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,34 +44,24 @@ namespace TeamNateZone
             this.btnViewClientList = new CustomControls.RJControls.rndButton();
             this.btnViewMessages = new CustomControls.RJControls.rndButton();
             this.btnManageAccount = new CustomControls.RJControls.rndButton();
+            this.btnViewAllClaims = new CustomControls.RJControls.rndButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDropDown
             // 
-            this.pnlDropDown.Controls.Add(this.btnMenuOpen);
             this.pnlDropDown.Controls.Add(this.btnLogout2);
             this.pnlDropDown.Controls.Add(this.button3);
             this.pnlDropDown.Controls.Add(this.button1);
             this.pnlDropDown.Controls.Add(this.button2);
-            this.pnlDropDown.Location = new System.Drawing.Point(995, 9);
+            this.pnlDropDown.Location = new System.Drawing.Point(1205, 4);
             this.pnlDropDown.MaximumSize = new System.Drawing.Size(69, 348);
             this.pnlDropDown.MinimumSize = new System.Drawing.Size(69, 70);
             this.pnlDropDown.Name = "pnlDropDown";
-            this.pnlDropDown.Size = new System.Drawing.Size(69, 78);
+            this.pnlDropDown.Size = new System.Drawing.Size(69, 84);
             this.pnlDropDown.TabIndex = 13;
-            // 
-            // btnMenuOpen
-            // 
-            this.btnMenuOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuOpen.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenuOpen.Location = new System.Drawing.Point(-18, -5);
-            this.btnMenuOpen.Name = "btnMenuOpen";
-            this.btnMenuOpen.Size = new System.Drawing.Size(94, 84);
-            this.btnMenuOpen.TabIndex = 1;
-            this.btnMenuOpen.UseVisualStyleBackColor = true;
-            this.btnMenuOpen.Click += new System.EventHandler(this.btnMenuOpen_Click);
             // 
             // btnLogout2
             // 
@@ -108,17 +98,30 @@ namespace TeamNateZone
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::TeamNateZone.Properties.Resources.mailIcon;
-            this.button2.Location = new System.Drawing.Point(3, 147);
+            this.button2.Location = new System.Drawing.Point(2, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(64, 64);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btnMenuOpen
+            // 
+            this.btnMenuOpen.AutoSize = true;
+            this.btnMenuOpen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMenuOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuOpen.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
+            this.btnMenuOpen.Location = new System.Drawing.Point(1203, 13);
+            this.btnMenuOpen.Name = "btnMenuOpen";
+            this.btnMenuOpen.Size = new System.Drawing.Size(68, 68);
+            this.btnMenuOpen.TabIndex = 1;
+            this.btnMenuOpen.UseVisualStyleBackColor = true;
+            this.btnMenuOpen.Click += new System.EventHandler(this.btnMenuOpen_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 507);
+            this.label1.Location = new System.Drawing.Point(42, 511);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 45);
             this.label1.TabIndex = 20;
@@ -128,7 +131,7 @@ namespace TeamNateZone
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(408, 509);
+            this.label2.Location = new System.Drawing.Point(635, 511);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(268, 45);
             this.label2.TabIndex = 21;
@@ -147,7 +150,7 @@ namespace TeamNateZone
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(750, 509);
+            this.label4.Location = new System.Drawing.Point(934, 509);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(298, 45);
             this.label4.TabIndex = 23;
@@ -176,7 +179,7 @@ namespace TeamNateZone
             this.btnViewClientList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewClientList.ForeColor = System.Drawing.Color.White;
             this.btnViewClientList.ImageIndex = 0;
-            this.btnViewClientList.Location = new System.Drawing.Point(40, 133);
+            this.btnViewClientList.Location = new System.Drawing.Point(40, 139);
             this.btnViewClientList.Name = "btnViewClientList";
             this.btnViewClientList.Size = new System.Drawing.Size(269, 372);
             this.btnViewClientList.TabIndex = 18;
@@ -197,7 +200,7 @@ namespace TeamNateZone
             this.btnViewMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewMessages.ForeColor = System.Drawing.Color.White;
             this.btnViewMessages.ImageIndex = 0;
-            this.btnViewMessages.Location = new System.Drawing.Point(400, 134);
+            this.btnViewMessages.Location = new System.Drawing.Point(634, 136);
             this.btnViewMessages.Name = "btnViewMessages";
             this.btnViewMessages.Size = new System.Drawing.Size(269, 372);
             this.btnViewMessages.TabIndex = 15;
@@ -218,13 +221,44 @@ namespace TeamNateZone
             this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageAccount.ForeColor = System.Drawing.Color.White;
             this.btnManageAccount.ImageIndex = 0;
-            this.btnManageAccount.Location = new System.Drawing.Point(761, 134);
+            this.btnManageAccount.Location = new System.Drawing.Point(942, 134);
             this.btnManageAccount.Name = "btnManageAccount";
             this.btnManageAccount.Size = new System.Drawing.Size(269, 372);
             this.btnManageAccount.TabIndex = 17;
             this.btnManageAccount.TextColor = System.Drawing.Color.White;
             this.btnManageAccount.UseVisualStyleBackColor = false;
             this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
+            // 
+            // btnViewAllClaims
+            // 
+            this.btnViewAllClaims.BackColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.BackgroundImage = global::TeamNateZone.Properties.Resources.clipBoard;
+            this.btnViewAllClaims.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnViewAllClaims.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewAllClaims.BorderRadius = 30;
+            this.btnViewAllClaims.BorderSize = 5;
+            this.btnViewAllClaims.FlatAppearance.BorderSize = 0;
+            this.btnViewAllClaims.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllClaims.ForeColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.ImageIndex = 0;
+            this.btnViewAllClaims.Location = new System.Drawing.Point(335, 136);
+            this.btnViewAllClaims.Name = "btnViewAllClaims";
+            this.btnViewAllClaims.Size = new System.Drawing.Size(269, 372);
+            this.btnViewAllClaims.TabIndex = 24;
+            this.btnViewAllClaims.TextColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.UseVisualStyleBackColor = false;
+            this.btnViewAllClaims.Click += new System.EventHandler(this.rndButton1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(336, 511);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(268, 45);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "View All Claims";
             // 
             // CMWelcomeForm
             // 
@@ -233,7 +267,10 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1074, 675);
+            this.ClientSize = new System.Drawing.Size(1304, 675);
+            this.Controls.Add(this.btnMenuOpen);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnViewAllClaims);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -272,5 +309,7 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private CustomControls.RJControls.rndButton btnViewAllClaims;
+        private System.Windows.Forms.Label label5;
     }
 }
