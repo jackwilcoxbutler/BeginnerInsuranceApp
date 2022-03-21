@@ -111,7 +111,6 @@ C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcom
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
-C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminConsole.resources
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.claimList.resources
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CMWelcomeForm.resources
@@ -127,5 +126,6 @@ C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.cs
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.CMViewUsers.resources
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimList.resources
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources

@@ -54,7 +54,7 @@ namespace TeamNateZone
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(537, 454);
+            this.label4.Location = new System.Drawing.Point(561, 454);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(298, 45);
             this.label4.TabIndex = 32;
@@ -73,7 +73,7 @@ namespace TeamNateZone
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 454);
+            this.label2.Location = new System.Drawing.Point(296, 454);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(268, 45);
             this.label2.TabIndex = 30;
@@ -83,7 +83,7 @@ namespace TeamNateZone
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-15, 454);
+            this.label1.Location = new System.Drawing.Point(14, 454);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 45);
             this.label1.TabIndex = 29;
@@ -96,7 +96,7 @@ namespace TeamNateZone
             this.pnlDropDown.Controls.Add(this.button3);
             this.pnlDropDown.Controls.Add(this.button1);
             this.pnlDropDown.Controls.Add(this.button2);
-            this.pnlDropDown.Location = new System.Drawing.Point(963, -14);
+            this.pnlDropDown.Location = new System.Drawing.Point(1171, 12);
             this.pnlDropDown.MaximumSize = new System.Drawing.Size(69, 348);
             this.pnlDropDown.MinimumSize = new System.Drawing.Size(69, 70);
             this.pnlDropDown.Name = "pnlDropDown";
@@ -166,7 +166,7 @@ namespace TeamNateZone
             this.btnViewClientList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewClientList.ForeColor = System.Drawing.Color.White;
             this.btnViewClientList.ImageIndex = 0;
-            this.btnViewClientList.Location = new System.Drawing.Point(9, 119);
+            this.btnViewClientList.Location = new System.Drawing.Point(34, 112);
             this.btnViewClientList.Name = "btnViewClientList";
             this.btnViewClientList.Size = new System.Drawing.Size(236, 322);
             this.btnViewClientList.TabIndex = 27;
@@ -187,7 +187,7 @@ namespace TeamNateZone
             this.btnViewMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewMessages.ForeColor = System.Drawing.Color.White;
             this.btnViewMessages.ImageIndex = 0;
-            this.btnViewMessages.Location = new System.Drawing.Point(274, 118);
+            this.btnViewMessages.Location = new System.Drawing.Point(304, 117);
             this.btnViewMessages.Name = "btnViewMessages";
             this.btnViewMessages.Size = new System.Drawing.Size(251, 324);
             this.btnViewMessages.TabIndex = 25;
@@ -208,7 +208,7 @@ namespace TeamNateZone
             this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageAccount.ForeColor = System.Drawing.Color.White;
             this.btnManageAccount.ImageIndex = 0;
-            this.btnManageAccount.Location = new System.Drawing.Point(553, 114);
+            this.btnManageAccount.Location = new System.Drawing.Point(591, 117);
             this.btnManageAccount.Name = "btnManageAccount";
             this.btnManageAccount.Size = new System.Drawing.Size(259, 327);
             this.btnManageAccount.TabIndex = 26;
@@ -229,7 +229,7 @@ namespace TeamNateZone
             this.btnManageFinances.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageFinances.ForeColor = System.Drawing.Color.White;
             this.btnManageFinances.ImageIndex = 0;
-            this.btnManageFinances.Location = new System.Drawing.Point(834, 111);
+            this.btnManageFinances.Location = new System.Drawing.Point(889, 119);
             this.btnManageFinances.Name = "btnManageFinances";
             this.btnManageFinances.Size = new System.Drawing.Size(259, 333);
             this.btnManageFinances.TabIndex = 33;
@@ -241,7 +241,7 @@ namespace TeamNateZone
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(845, 454);
+            this.label5.Location = new System.Drawing.Point(866, 454);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(303, 45);
             this.label5.TabIndex = 34;
@@ -275,7 +275,7 @@ namespace TeamNateZone
             this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.pnlDropDown);
             this.Controls.Add(this.btnManageAccount);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FMWelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMWelcomeScreen";

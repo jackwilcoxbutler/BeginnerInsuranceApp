@@ -22,8 +22,8 @@ namespace TeamNateZone
         }
         private void btnViewClient_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Client View still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
+           FMCMViewUsers v = new FMCMViewUsers(user);
+           v.Show();           
         }
         private void btnViewMessages_Click(object sender, EventArgs e)
         {
