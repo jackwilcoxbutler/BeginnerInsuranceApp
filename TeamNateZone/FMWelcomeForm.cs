@@ -44,5 +44,12 @@ namespace TeamNateZone
         {
             MessageBox.Show("Financial Management still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
+        }
     }
 }

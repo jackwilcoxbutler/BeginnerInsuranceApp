@@ -30,92 +30,19 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CMWelcomeForm));
-            this.pnlDropDown = new System.Windows.Forms.Panel();
-            this.btnLogout2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnMenuOpen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnViewAllClaims = new CustomControls.RJControls.rndButton();
             this.btnViewClientList = new CustomControls.RJControls.rndButton();
             this.btnViewMessages = new CustomControls.RJControls.rndButton();
             this.btnManageAccount = new CustomControls.RJControls.rndButton();
-            this.btnViewAllClaims = new CustomControls.RJControls.rndButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pnlDropDown.SuspendLayout();
+            this.btnlogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlDropDown
-            // 
-            this.pnlDropDown.Controls.Add(this.btnLogout2);
-            this.pnlDropDown.Controls.Add(this.button3);
-            this.pnlDropDown.Controls.Add(this.button1);
-            this.pnlDropDown.Controls.Add(this.button2);
-            this.pnlDropDown.Location = new System.Drawing.Point(1205, 4);
-            this.pnlDropDown.MaximumSize = new System.Drawing.Size(69, 348);
-            this.pnlDropDown.MinimumSize = new System.Drawing.Size(69, 70);
-            this.pnlDropDown.Name = "pnlDropDown";
-            this.pnlDropDown.Size = new System.Drawing.Size(69, 84);
-            this.pnlDropDown.TabIndex = 13;
-            // 
-            // btnLogout2
-            // 
-            this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout2.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
-            this.btnLogout2.Location = new System.Drawing.Point(3, 281);
-            this.btnLogout2.Name = "btnLogout2";
-            this.btnLogout2.Size = new System.Drawing.Size(64, 64);
-            this.btnLogout2.TabIndex = 1;
-            this.btnLogout2.UseVisualStyleBackColor = true;
-            this.btnLogout2.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::TeamNateZone.Properties.Resources.settingsIcon;
-            this.button3.Location = new System.Drawing.Point(3, 212);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 64);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::TeamNateZone.Properties.Resources.homeIcon;
-            this.button1.Location = new System.Drawing.Point(3, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 60);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::TeamNateZone.Properties.Resources.mailIcon;
-            this.button2.Location = new System.Drawing.Point(2, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 64);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnMenuOpen
-            // 
-            this.btnMenuOpen.AutoSize = true;
-            this.btnMenuOpen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMenuOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuOpen.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenuOpen.Location = new System.Drawing.Point(1203, 13);
-            this.btnMenuOpen.Name = "btnMenuOpen";
-            this.btnMenuOpen.Size = new System.Drawing.Size(68, 68);
-            this.btnMenuOpen.TabIndex = 1;
-            this.btnMenuOpen.UseVisualStyleBackColor = true;
-            this.btnMenuOpen.Click += new System.EventHandler(this.btnMenuOpen_Click);
             // 
             // label1
             // 
@@ -159,12 +86,43 @@ namespace TeamNateZone
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(50, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(135, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(336, 511);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(268, 45);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "View All Claims";
+            // 
+            // btnViewAllClaims
+            // 
+            this.btnViewAllClaims.BackColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.BackgroundImage = global::TeamNateZone.Properties.Resources.clipBoard;
+            this.btnViewAllClaims.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnViewAllClaims.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewAllClaims.BorderRadius = 30;
+            this.btnViewAllClaims.BorderSize = 5;
+            this.btnViewAllClaims.FlatAppearance.BorderSize = 0;
+            this.btnViewAllClaims.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllClaims.ForeColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.ImageIndex = 0;
+            this.btnViewAllClaims.Location = new System.Drawing.Point(335, 136);
+            this.btnViewAllClaims.Name = "btnViewAllClaims";
+            this.btnViewAllClaims.Size = new System.Drawing.Size(269, 372);
+            this.btnViewAllClaims.TabIndex = 24;
+            this.btnViewAllClaims.TextColor = System.Drawing.Color.White;
+            this.btnViewAllClaims.UseVisualStyleBackColor = false;
+            this.btnViewAllClaims.Click += new System.EventHandler(this.rndButton1_Click);
             // 
             // btnViewClientList
             // 
@@ -229,36 +187,16 @@ namespace TeamNateZone
             this.btnManageAccount.UseVisualStyleBackColor = false;
             this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
             // 
-            // btnViewAllClaims
+            // btnlogout
             // 
-            this.btnViewAllClaims.BackColor = System.Drawing.Color.White;
-            this.btnViewAllClaims.BackgroundColor = System.Drawing.Color.White;
-            this.btnViewAllClaims.BackgroundImage = global::TeamNateZone.Properties.Resources.clipBoard;
-            this.btnViewAllClaims.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnViewAllClaims.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnViewAllClaims.BorderRadius = 30;
-            this.btnViewAllClaims.BorderSize = 5;
-            this.btnViewAllClaims.FlatAppearance.BorderSize = 0;
-            this.btnViewAllClaims.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAllClaims.ForeColor = System.Drawing.Color.White;
-            this.btnViewAllClaims.ImageIndex = 0;
-            this.btnViewAllClaims.Location = new System.Drawing.Point(335, 136);
-            this.btnViewAllClaims.Name = "btnViewAllClaims";
-            this.btnViewAllClaims.Size = new System.Drawing.Size(269, 372);
-            this.btnViewAllClaims.TabIndex = 24;
-            this.btnViewAllClaims.TextColor = System.Drawing.Color.White;
-            this.btnViewAllClaims.UseVisualStyleBackColor = false;
-            this.btnViewAllClaims.Click += new System.EventHandler(this.rndButton1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(336, 511);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(268, 45);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "View All Claims";
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
+            this.btnlogout.Location = new System.Drawing.Point(1109, 12);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(86, 86);
+            this.btnlogout.TabIndex = 26;
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // CMWelcomeForm
             // 
@@ -267,8 +205,8 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1304, 675);
-            this.Controls.Add(this.btnMenuOpen);
+            this.ClientSize = new System.Drawing.Size(1252, 675);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnViewAllClaims);
             this.Controls.Add(this.label4);
@@ -278,7 +216,6 @@ namespace TeamNateZone
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.btnViewMessages);
-            this.Controls.Add(this.pnlDropDown);
             this.Controls.Add(this.btnManageAccount);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -287,7 +224,6 @@ namespace TeamNateZone
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WelcomeForm_FormClosing);
-            this.pnlDropDown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,12 +231,6 @@ namespace TeamNateZone
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlDropDown;
-        private System.Windows.Forms.Button btnLogout2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnMenuOpen;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private CustomControls.RJControls.rndButton btnViewMessages;
         private CustomControls.RJControls.rndButton btnManageAccount;
         private CustomControls.RJControls.rndButton btnViewClientList;
@@ -311,5 +241,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label4;
         private CustomControls.RJControls.rndButton btnViewAllClaims;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnlogout;
     }
 }

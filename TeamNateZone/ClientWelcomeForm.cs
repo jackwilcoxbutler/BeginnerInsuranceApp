@@ -51,14 +51,6 @@ namespace TeamNateZone
             this.Hide();
         }
 
-        private Boolean isClosed;
-        private void btnMenuOpen_Click(object sender, EventArgs e)
-        {
-            isClosed = (pnlDropDown.Height == pnlDropDown.MinimumSize.Height ? true : false);
-            pnlDropDown.Height = (isClosed ? pnlDropDown.MaximumSize.Height : pnlDropDown.MinimumSize.Height);
-            
-        }
-
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             AdminConsole ac = new AdminConsole();
@@ -78,5 +70,11 @@ namespace TeamNateZone
             listClaims.Show();
         }
 
+        private void btnlogout_Click_1(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
+        }
     }
 }
