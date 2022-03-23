@@ -95,6 +95,18 @@
     <Compile Include="ManageAccount.Designer.cs">
       <DependentUpon>ManageAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMessage.Designer.cs">
+      <DependentUpon>NewMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -110,6 +122,11 @@
     </Compile>
     <Compile Include="rndButton.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEAM_ADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_ADataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="TEAM_ADataSet_Claims21.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,6 +188,12 @@
     <EmbeddedResource Include="ManageAccount.resx">
       <DependentUpon>ManageAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMessage.resx">
+      <DependentUpon>NewMessage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -199,6 +222,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TEAM_ADataSet.xsc">
+      <DependentUpon>TEAM_ADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_ADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_ADataSet.xss">
+      <DependentUpon>TEAM_ADataSet.xsd</DependentUpon>
+    </None>
     <None Include="TEAM_ADataSet_Claims21.xsc">
       <DependentUpon>TEAM_ADataSet_Claims21.xsd</DependentUpon>
     </None>

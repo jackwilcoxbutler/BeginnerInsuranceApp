@@ -68,7 +68,7 @@ namespace TeamNateZone
         private void MessageForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tEAM_ADataSet1.message' table. You can move, or remove it, as needed.
-           // this.messageTableAdapter.Fill(this.tEAM_ADataSet1.message);
+            // this.messageTableAdapter.Fill(this.tEAM_ADataSet1.message);
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             int account = user.getUserID();
@@ -94,7 +94,7 @@ namespace TeamNateZone
             this.Hide();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //this will open another form with the full message display
             MessageBox.Show("Messages still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
