@@ -36,14 +36,14 @@ namespace TeamNateZone
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnlogout = new System.Windows.Forms.Button();
-            this.btnBack = new CustomControls.RJControls.rndButton();
-            this.btnNewMessage = new CustomControls.RJControls.rndButton();
             this.messageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tEAM_ADataSet = new TeamNateZone.TEAM_ADataSet();
             this.messageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tEAM_ADataSet = new TeamNateZone.TEAM_ADataSet();
             this.messageTableAdapter = new TeamNateZone.TEAM_ADataSetTableAdapters.messageTableAdapter();
-            this.senderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new CustomControls.RJControls.rndButton();
+            this.btnNewMessage = new CustomControls.RJControls.rndButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
@@ -52,8 +52,8 @@ namespace TeamNateZone
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.messageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.messageBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tEAM_A_Claims_Dataset
@@ -97,6 +97,45 @@ namespace TeamNateZone
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
+            // messageBindingSource
+            // 
+            this.messageBindingSource.DataMember = "message";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView1.DataSource = this.messageBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 147);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(775, 291);
+            this.dataGridView1.TabIndex = 35;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // messageBindingSource1
+            // 
+            this.messageBindingSource1.DataMember = "message";
+            this.messageBindingSource1.DataSource = this.tEAM_ADataSet;
+            // 
+            // tEAM_ADataSet
+            // 
+            this.tEAM_ADataSet.DataSetName = "TEAM_ADataSet";
+            this.tEAM_ADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // messageTableAdapter
+            // 
+            this.messageTableAdapter.ClearBeforeFill = true;
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.YellowGreen;
@@ -139,52 +178,13 @@ namespace TeamNateZone
             this.btnNewMessage.UseVisualStyleBackColor = false;
             this.btnNewMessage.Click += new System.EventHandler(this.btnNewMessage_Click);
             // 
-            // messageBindingSource
+            // Column1
             // 
-            this.messageBindingSource.DataMember = "message";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.senderDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView1.DataSource = this.messageBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 291);
-            this.dataGridView1.TabIndex = 35;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // tEAM_ADataSet
-            // 
-            this.tEAM_ADataSet.DataSetName = "TEAM_ADataSet";
-            this.tEAM_ADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // messageBindingSource1
-            // 
-            this.messageBindingSource1.DataMember = "message";
-            this.messageBindingSource1.DataSource = this.tEAM_ADataSet;
-            // 
-            // messageTableAdapter
-            // 
-            this.messageTableAdapter.ClearBeforeFill = true;
-            // 
-            // senderDataGridViewTextBoxColumn
-            // 
-            this.senderDataGridViewTextBoxColumn.DataPropertyName = "sender";
-            this.senderDataGridViewTextBoxColumn.HeaderText = "From";
-            this.senderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.senderDataGridViewTextBoxColumn.Name = "senderDataGridViewTextBoxColumn";
-            this.senderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Column1.DataPropertyName = "sender";
+            this.Column1.HeaderText = "From:";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -197,7 +197,7 @@ namespace TeamNateZone
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "date";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Date:";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Date Received:";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -225,8 +225,8 @@ namespace TeamNateZone
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.messageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.messageBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,7 +251,7 @@ namespace TeamNateZone
         private TEAM_ADataSet tEAM_ADataSet;
         private System.Windows.Forms.BindingSource messageBindingSource1;
         private TEAM_ADataSetTableAdapters.messageTableAdapter messageTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }

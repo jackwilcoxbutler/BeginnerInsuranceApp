@@ -63,6 +63,7 @@ namespace TeamNateZone
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -80,7 +81,7 @@ namespace TeamNateZone
             this.dataGridView1.DataSource = this.claimsBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(1067, 551);
@@ -93,7 +94,6 @@ namespace TeamNateZone
             this.claimIdDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimIdDataGridViewTextBoxColumn.Name = "claimIdDataGridViewTextBoxColumn";
             this.claimIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claimIdDataGridViewTextBoxColumn.Width = 200;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -101,7 +101,6 @@ namespace TeamNateZone
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
             this.userIDDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.Width = 200;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
@@ -109,7 +108,6 @@ namespace TeamNateZone
             this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
             this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.Width = 200;
             // 
             // userEmailDataGridViewTextBoxColumn
             // 
@@ -117,7 +115,6 @@ namespace TeamNateZone
             this.userEmailDataGridViewTextBoxColumn.HeaderText = "UserEmail";
             this.userEmailDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
-            this.userEmailDataGridViewTextBoxColumn.Width = 200;
             // 
             // claimTypeDataGridViewTextBoxColumn
             // 
@@ -125,7 +122,6 @@ namespace TeamNateZone
             this.claimTypeDataGridViewTextBoxColumn.HeaderText = "Claim_Type";
             this.claimTypeDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimTypeDataGridViewTextBoxColumn.Name = "claimTypeDataGridViewTextBoxColumn";
-            this.claimTypeDataGridViewTextBoxColumn.Width = 200;
             // 
             // claimDescriptionDataGridViewTextBoxColumn
             // 
@@ -133,7 +129,6 @@ namespace TeamNateZone
             this.claimDescriptionDataGridViewTextBoxColumn.HeaderText = "Claim_Description";
             this.claimDescriptionDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimDescriptionDataGridViewTextBoxColumn.Name = "claimDescriptionDataGridViewTextBoxColumn";
-            this.claimDescriptionDataGridViewTextBoxColumn.Width = 200;
             // 
             // startDateDataGridViewTextBoxColumn
             // 
@@ -141,7 +136,6 @@ namespace TeamNateZone
             this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
             this.startDateDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 200;
             // 
             // endDateDataGridViewTextBoxColumn
             // 
@@ -149,7 +143,6 @@ namespace TeamNateZone
             this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
             this.endDateDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.Width = 200;
             // 
             // EstimatedEndDate
             // 
@@ -157,7 +150,6 @@ namespace TeamNateZone
             this.EstimatedEndDate.HeaderText = "EstimatedEndDate";
             this.EstimatedEndDate.MinimumWidth = 8;
             this.EstimatedEndDate.Name = "EstimatedEndDate";
-            this.EstimatedEndDate.Width = 150;
             // 
             // Status
             // 
@@ -165,7 +157,6 @@ namespace TeamNateZone
             this.Status.HeaderText = "Status";
             this.Status.MinimumWidth = 8;
             this.Status.Name = "Status";
-            this.Status.Width = 150;
             // 
             // LastUpdate
             // 
@@ -173,7 +164,6 @@ namespace TeamNateZone
             this.LastUpdate.HeaderText = "LastUpdate";
             this.LastUpdate.MinimumWidth = 8;
             this.LastUpdate.Name = "LastUpdate";
-            this.LastUpdate.Width = 150;
             // 
             // claimsBindingSource1
             // 
@@ -270,7 +260,7 @@ namespace TeamNateZone
             // 
             this.testPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.testPictureBox.Location = new System.Drawing.Point(596, 322);
-            this.testPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.testPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.testPictureBox.Name = "testPictureBox";
             this.testPictureBox.Size = new System.Drawing.Size(231, 156);
             this.testPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -291,7 +281,7 @@ namespace TeamNateZone
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "claimList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List of Claims";

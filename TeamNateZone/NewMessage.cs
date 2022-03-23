@@ -135,6 +135,7 @@ namespace TeamNateZone
                      
                     }
                 }
+                // the logic is broken here im not sure how to fix it 
                 else if(txtReciever.Text != getAlreadyDeclaredUsername(txtReciever.Text))
                 {
                    string date;

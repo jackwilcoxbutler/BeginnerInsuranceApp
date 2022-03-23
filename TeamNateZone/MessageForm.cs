@@ -71,15 +71,15 @@ namespace TeamNateZone
             // this.messageTableAdapter.Fill(this.tEAM_ADataSet1.message);
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
-            int account = user.getUserID();
+            string account = user.getUsername();
 
             cn.ConnectionString =
                 @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
             cmd.Connection = cn;
             cn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message", cn);
-            // da.SelectCommand.Parameters.AddWithValue("userid", account);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver", cn);
+            da.SelectCommand.Parameters.AddWithValue("receiver", account);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
