@@ -129,3 +129,5 @@ C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.pd
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimList.resources
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.AssemblyReference.cache
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.MessageForm.resources
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage.resources

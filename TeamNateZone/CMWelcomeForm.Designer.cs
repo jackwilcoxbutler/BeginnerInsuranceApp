@@ -164,7 +164,7 @@ namespace TeamNateZone
             this.btnViewMessages.TabIndex = 15;
             this.btnViewMessages.TextColor = System.Drawing.Color.White;
             this.btnViewMessages.UseVisualStyleBackColor = false;
-            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click_1);
+            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
             // 
             // btnManageAccount
             // 

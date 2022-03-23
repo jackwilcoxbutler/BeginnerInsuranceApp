@@ -16,6 +16,7 @@ namespace TeamNateZone
         User user;
         AllClaimList AlllistClaims;
         ManageAccount manage;
+        MessageForm message;
         public CMWelcomeForm(User user)
         {
             InitializeComponent();
@@ -42,10 +43,12 @@ namespace TeamNateZone
             Application.Exit();
         }
 
-        private void btnViewMessages_Click_1(object sender, EventArgs e)
+        private void btnViewMessages_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Messaging system still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
-            //this.Hide();
+            this.Hide();
+            message = new MessageForm(user);
+            message.Owner = this;
+            message.Show();
         }
 
         private void rndButton1_Click(object sender, EventArgs e)

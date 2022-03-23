@@ -13,7 +13,7 @@ namespace TeamNateZone
     public partial class FMWelcomeForm : Form
     {
         User user;
-
+        MessageForm message;
         public FMWelcomeForm(User user)
         {
             InitializeComponent();
@@ -27,8 +27,10 @@ namespace TeamNateZone
         }
         private void btnViewMessages_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Messages still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
-
+            this.Hide();
+            message = new MessageForm(user);
+            message.Owner = this;
+            message.Show();
         }
 
         private void btnManageAccount_Click(object sender, EventArgs e)
@@ -50,6 +52,11 @@ namespace TeamNateZone
             LoginForm lf = new LoginForm();
             lf.Show();
             this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,6 +17,7 @@ namespace TeamNateZone
         claimList listClaims;
         CreateClaim fileClaim;
         ManageAccount manage;
+        MessageForm message;
         public ClientWelcomeForm(User user)
         {
             InitializeComponent();
@@ -75,6 +76,14 @@ namespace TeamNateZone
             LoginForm lf = new LoginForm();
             lf.Show();
             this.Hide();
+        }
+
+        private void btnViewMessages_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            message = new MessageForm(user);
+            message.Owner = this;
+            message.Show();
         }
     }
 }
