@@ -48,10 +48,11 @@ namespace TeamNateZone
             this.messageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBack = new CustomControls.RJControls.rndButton();
             this.btnNewMessage = new CustomControls.RJControls.rndButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.message = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.message = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtRefresh = new CustomControls.RJControls.rndButton();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAMAClaimsDatasetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -209,6 +210,7 @@ namespace TeamNateZone
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -220,6 +222,7 @@ namespace TeamNateZone
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // message
             // 
@@ -231,6 +234,7 @@ namespace TeamNateZone
             this.message.Name = "message";
             this.message.ReadOnly = true;
             this.message.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.message.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -240,6 +244,28 @@ namespace TeamNateZone
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // txtRefresh
+            // 
+            this.txtRefresh.BackColor = System.Drawing.Color.YellowGreen;
+            this.txtRefresh.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.txtRefresh.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.txtRefresh.BorderRadius = 15;
+            this.txtRefresh.BorderSize = 0;
+            this.txtRefresh.FlatAppearance.BorderSize = 0;
+            this.txtRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRefresh.ForeColor = System.Drawing.Color.White;
+            this.txtRefresh.Location = new System.Drawing.Point(746, 103);
+            this.txtRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRefresh.Name = "txtRefresh";
+            this.txtRefresh.Size = new System.Drawing.Size(145, 39);
+            this.txtRefresh.TabIndex = 36;
+            this.txtRefresh.Text = "Refresh";
+            this.txtRefresh.TextColor = System.Drawing.Color.White;
+            this.txtRefresh.UseVisualStyleBackColor = false;
+            this.txtRefresh.Click += new System.EventHandler(this.txtRefresh_Click);
             // 
             // MessageForm
             // 
@@ -248,6 +274,7 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1048, 575);
+            this.Controls.Add(this.txtRefresh);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnlogout);
@@ -290,9 +317,10 @@ namespace TeamNateZone
         private TEAM_ADataSet tEAM_ADataSet;
         private System.Windows.Forms.BindingSource messageBindingSource1;
         private TEAM_ADataSetTableAdapters.messageTableAdapter messageTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn message;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewButtonColumn message;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn1;
+        private CustomControls.RJControls.rndButton txtRefresh;
     }
 }

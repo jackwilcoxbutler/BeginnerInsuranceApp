@@ -108,5 +108,24 @@ namespace TeamNateZone
             View.Show();
             this.Hide();
         }
+
+        private void txtRefresh_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            string account = user.getUsername();
+
+            cn.ConnectionString =
+                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+            cmd.Connection = cn;
+            cn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver ORDER BY date DESC", cn);
+            da.SelectCommand.Parameters.AddWithValue("receiver", account);
+            DataTable dtbl = new DataTable();
+            da.Fill(dtbl);
+            dataGridView1.DataSource = dtbl;
+            cn.Close();
+        }
     }
 }
