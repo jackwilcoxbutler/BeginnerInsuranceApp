@@ -68,8 +68,6 @@ namespace TeamNateZone
 
         private void MessageForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tEAM_ADataSet1.message' table. You can move, or remove it, as needed.
-            // this.messageTableAdapter.Fill(this.tEAM_ADataSet1.message);
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             string account = user.getUsername();
