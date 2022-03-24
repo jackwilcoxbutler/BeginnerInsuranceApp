@@ -43,7 +43,18 @@ namespace TeamNateZone
         {
             NewMessage Newmess;
             string Subreply = "RE: " + txtSubject.Text;
-            Newmess = new NewMessage(user, txtFrom.Text, Subreply);
+            Newmess = new NewMessage(user, txtFrom.Text, Subreply, null);
+            Newmess.Owner = this;
+            Newmess.Show();
+            this.Hide();
+        }
+
+        private void btnForward_Click(object sender, EventArgs e)
+        {
+            NewMessage Newmess;
+            string Subreply = "Fw: " + txtSubject.Text;
+            string Sentmessage = "From: " + txtFrom.Text +" To: " + user.getUsername() + System.Environment.NewLine + txtMessage.Text;
+            Newmess = new NewMessage(user, null, Subreply, Sentmessage);
             Newmess.Owner = this;
             Newmess.Show();
             this.Hide();

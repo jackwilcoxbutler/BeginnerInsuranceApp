@@ -89,7 +89,7 @@ namespace TeamNateZone
 
         private void btnNewMessage_Click(object sender, EventArgs e)
         {
-            Newmess = new NewMessage(user, "", "");
+            Newmess = new NewMessage(user, null, null, null) ;
             Newmess.Owner = this;
             Newmess.Show();
             this.Hide();
@@ -98,7 +98,6 @@ namespace TeamNateZone
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //this will open another form with the full message display
-            //MessageBox.Show("Messages still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
             string subject = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].FormattedValue.ToString();
             string message = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].FormattedValue.ToString();
             string from = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].FormattedValue.ToString();

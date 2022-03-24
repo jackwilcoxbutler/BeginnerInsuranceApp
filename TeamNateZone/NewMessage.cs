@@ -16,12 +16,13 @@ namespace TeamNateZone
         User user;
         MessageForm message;
         
-        public NewMessage(User user, string to, string subreply)
+        public NewMessage(User user, string to, string subreply, string Sentmessage)
         {
             InitializeComponent();
             this.user = user;
             txtReciever.Text = to;
             txtSubject.Text = subreply;
+            txtMessage.Text = Sentmessage;
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -61,7 +62,6 @@ namespace TeamNateZone
                 }
                 catch (Exception e)
                 {
-
                     return "";
                 }
             }

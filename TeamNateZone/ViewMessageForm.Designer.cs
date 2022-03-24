@@ -39,6 +39,7 @@ namespace TeamNateZone
             this.label5 = new System.Windows.Forms.Label();
             this.btnSend = new CustomControls.RJControls.rndButton();
             this.btnBack = new CustomControls.RJControls.rndButton();
+            this.btnForward = new CustomControls.RJControls.rndButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,12 +166,34 @@ namespace TeamNateZone
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnForward
+            // 
+            this.btnForward.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnForward.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.btnForward.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnForward.BorderRadius = 15;
+            this.btnForward.BorderSize = 0;
+            this.btnForward.FlatAppearance.BorderSize = 0;
+            this.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForward.ForeColor = System.Drawing.Color.White;
+            this.btnForward.Location = new System.Drawing.Point(546, 133);
+            this.btnForward.Margin = new System.Windows.Forms.Padding(2);
+            this.btnForward.Name = "btnForward";
+            this.btnForward.Size = new System.Drawing.Size(141, 39);
+            this.btnForward.TabIndex = 44;
+            this.btnForward.Text = "Forward";
+            this.btnForward.TextColor = System.Drawing.Color.White;
+            this.btnForward.UseVisualStyleBackColor = false;
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
+            // 
             // ViewMessageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 568);
+            this.Controls.Add(this.btnForward);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSubject);
@@ -202,5 +225,6 @@ namespace TeamNateZone
         private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.rndButton btnSend;
+        private CustomControls.RJControls.rndButton btnForward;
     }
 }
