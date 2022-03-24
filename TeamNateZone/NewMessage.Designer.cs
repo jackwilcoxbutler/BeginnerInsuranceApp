@@ -164,12 +164,9 @@ namespace TeamNateZone
             // 
             // txtReciever
             // 
-            this.txtReciever.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReciever.ForeColor = System.Drawing.Color.Red;
-            this.txtReciever.Location = new System.Drawing.Point(45, 209);
-            this.txtReciever.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtReciever.Location = new System.Drawing.Point(45, 215);
             this.txtReciever.Name = "txtReciever";
-            this.txtReciever.Size = new System.Drawing.Size(248, 34);
+            this.txtReciever.Size = new System.Drawing.Size(294, 22);
             this.txtReciever.TabIndex = 37;
             // 
             // NewMessage
@@ -190,6 +187,7 @@ namespace TeamNateZone
             this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.label1);
             this.Name = "NewMessage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Message";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

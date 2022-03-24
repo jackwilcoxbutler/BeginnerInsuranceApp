@@ -18,6 +18,7 @@ namespace TeamNateZone
         CMWelcomeForm cmwelcomeForm;
         FMWelcomeForm fmwelcomeForm;
         NewMessage Newmess;
+        ViewMessageForm View;
         public MessageForm(User user)
         {
             InitializeComponent();
@@ -78,7 +79,7 @@ namespace TeamNateZone
             cmd.Connection = cn;
             cn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver", cn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver ORDER BY date DESC", cn);
             da.SelectCommand.Parameters.AddWithValue("receiver", account);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
@@ -88,7 +89,7 @@ namespace TeamNateZone
 
         private void btnNewMessage_Click(object sender, EventArgs e)
         {
-            Newmess = new NewMessage(user);
+            Newmess = new NewMessage(user, "", "");
             Newmess.Owner = this;
             Newmess.Show();
             this.Hide();
@@ -97,7 +98,15 @@ namespace TeamNateZone
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //this will open another form with the full message display
-            MessageBox.Show("Messages still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
+            //MessageBox.Show("Messages still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
+            string subject = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].FormattedValue.ToString();
+            string message = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].FormattedValue.ToString();
+            string from = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].FormattedValue.ToString();
+
+            View = new ViewMessageForm(user, subject, message, from);
+            View.Owner = this;
+            View.Show();
+            this.Hide();
         }
     }
 }

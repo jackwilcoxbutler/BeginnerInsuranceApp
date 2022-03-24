@@ -16,10 +16,12 @@ namespace TeamNateZone
         User user;
         MessageForm message;
         
-        public NewMessage(User user)
+        public NewMessage(User user, string to, string subreply)
         {
             InitializeComponent();
             this.user = user;
+            txtReciever.Text = to;
+            txtSubject.Text = subreply;
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace TeamNateZone
             }
         }
 
-        private void storeMessage(string sender, string reveiver, string message, string date, string subject)
+        private void storeMessage(string sender, string reveiver, string message, DateTime date, string subject)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -91,12 +93,12 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "INSERT INTO message(sender, reveiver, message, date, subject) VALUES (@s, @r, @mess, @date, @sub);";
+                cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject) VALUES (@s, @r, @mess, @date, @sub);";
                 cmd.Parameters.AddWithValue("@s", sender);
                 cmd.Parameters.AddWithValue("@r", reveiver);
                 cmd.Parameters.AddWithValue("@mess", message);
                 cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@sUB", subject);
+                cmd.Parameters.AddWithValue("@sub", subject);
                 
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -115,32 +117,27 @@ namespace TeamNateZone
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(txtReciever.Text);
-            Console.WriteLine(getAlreadyDeclaredUsername(txtReciever.Text));
             try
             {
                 if (txtReciever.Text == "" || txtSubject.Text == "")
                 {
                     string message = "ERROR : Required Field is blank";
                     string title = "Message send Failed";
-                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                    DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Cancel)
-                    {
-                        // change to return to message screen
-                        Application.Exit();
-                    }
-                    else
-                    {
-                     
-                    }
+                    DialogResult result = MessageBox.Show(message, title);
                 }
                 // the logic is broken here im not sure how to fix it 
                 else if(txtReciever.Text != getAlreadyDeclaredUsername(txtReciever.Text))
                 {
-                   string date;
-                   date = DateTime.Now.ToString("M/d/yyyy");
-                   storeMessage(user.getUsername(), txtReciever.Text, txtMessage.Text, date , txtMessage.Text);
+                   string message = "Message Sent Succsefully!";
+                   string title = "Message Sent";
+                   DialogResult result = MessageBox.Show(message, title);
+                   DateTime date;
+                   date = DateTime.Now;
+                   storeMessage(user.getUsername(), txtReciever.Text, txtMessage.Text, date , txtSubject.Text);
+
+                    txtReciever.Clear();
+                    txtMessage.Clear();
+                    txtSubject.Clear();
                 }
                 else
                 {
