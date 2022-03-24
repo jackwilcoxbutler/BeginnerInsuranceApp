@@ -49,15 +49,10 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-
                 cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @username";
-
                 cmd.Parameters.AddWithValue("@username", userName);
-
                 cn.Open();
-
                 dr = cmd.ExecuteReader();
-
                 dr.Read();
 
                 try
@@ -125,8 +120,8 @@ namespace TeamNateZone
                     string title = "Message send Failed";
                     DialogResult result = MessageBox.Show(message, title);
                 }
-                // the logic is broken here im not sure how to fix it 
-                else if(txtReciever.Text != getAlreadyDeclaredUsername(txtReciever.Text))
+                // Add in a if that makes sure the user you are sending a message is real
+                else 
                 {
                    string message = "Message Sent Succsefully!";
                    string title = "Message Sent";
@@ -138,22 +133,6 @@ namespace TeamNateZone
                     txtReciever.Clear();
                     txtMessage.Clear();
                     txtSubject.Clear();
-                }
-                else
-                {
-                    string message = "ERROR : User not Found.";
-                    string title = "Message send Failed";
-                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                    DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Cancel)
-                    {
-                        // change to return to message screen
-                        Application.Exit();
-                    }
-                    else
-                    {
-                        txtReciever.Clear();
-                    }
                 }
                 
             }
