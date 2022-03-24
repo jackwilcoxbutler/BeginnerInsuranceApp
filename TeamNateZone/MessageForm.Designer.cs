@@ -30,11 +30,8 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
             this.tEAMAClaimsDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
@@ -48,11 +45,14 @@ namespace TeamNateZone
             this.messageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBack = new CustomControls.RJControls.rndButton();
             this.btnNewMessage = new CustomControls.RJControls.rndButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.message = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtRefresh = new CustomControls.RJControls.rndButton();
+            this.btnSent = new CustomControls.RJControls.rndButton();
+            this.btnInbox = new CustomControls.RJControls.rndButton();
+            this.sender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reveiver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.message = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAMAClaimsDatasetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,26 +91,27 @@ namespace TeamNateZone
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.dataGridViewTextBoxColumn2,
+            this.sender,
+            this.reveiver,
+            this.Subject,
             this.message,
-            this.dataGridViewTextBoxColumn1});
+            this.date});
             this.dataGridView1.DataSource = this.messageBindingSource1;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 147);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -199,53 +200,6 @@ namespace TeamNateZone
             this.btnNewMessage.UseVisualStyleBackColor = false;
             this.btnNewMessage.Click += new System.EventHandler(this.btnNewMessage_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "sender";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.HeaderText = "From:";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Subject";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Subject:";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // message
-            // 
-            this.message.DataPropertyName = "message";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.message.DefaultCellStyle = dataGridViewCellStyle3;
-            this.message.HeaderText = "Message Preview:";
-            this.message.MinimumWidth = 6;
-            this.message.Name = "message";
-            this.message.ReadOnly = true;
-            this.message.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.message.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "date";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Date Received:";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // txtRefresh
             // 
             this.txtRefresh.BackColor = System.Drawing.Color.YellowGreen;
@@ -267,6 +221,88 @@ namespace TeamNateZone
             this.txtRefresh.UseVisualStyleBackColor = false;
             this.txtRefresh.Click += new System.EventHandler(this.txtRefresh_Click);
             // 
+            // btnSent
+            // 
+            this.btnSent.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnSent.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.btnSent.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSent.BorderRadius = 15;
+            this.btnSent.BorderSize = 0;
+            this.btnSent.FlatAppearance.BorderSize = 0;
+            this.btnSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSent.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSent.ForeColor = System.Drawing.Color.White;
+            this.btnSent.Location = new System.Drawing.Point(583, 103);
+            this.btnSent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSent.Name = "btnSent";
+            this.btnSent.Size = new System.Drawing.Size(145, 39);
+            this.btnSent.TabIndex = 37;
+            this.btnSent.Text = "Sent";
+            this.btnSent.TextColor = System.Drawing.Color.White;
+            this.btnSent.UseVisualStyleBackColor = false;
+            this.btnSent.Click += new System.EventHandler(this.btnSent_Click);
+            // 
+            // btnInbox
+            // 
+            this.btnInbox.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnInbox.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.btnInbox.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnInbox.BorderRadius = 15;
+            this.btnInbox.BorderSize = 0;
+            this.btnInbox.FlatAppearance.BorderSize = 0;
+            this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInbox.ForeColor = System.Drawing.Color.White;
+            this.btnInbox.Location = new System.Drawing.Point(419, 103);
+            this.btnInbox.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInbox.Name = "btnInbox";
+            this.btnInbox.Size = new System.Drawing.Size(145, 39);
+            this.btnInbox.TabIndex = 38;
+            this.btnInbox.Text = "Inbox";
+            this.btnInbox.TextColor = System.Drawing.Color.White;
+            this.btnInbox.UseVisualStyleBackColor = false;
+            this.btnInbox.Click += new System.EventHandler(this.btnInbox_Click);
+            // 
+            // sender
+            // 
+            this.sender.DataPropertyName = "sender";
+            this.sender.HeaderText = "From:";
+            this.sender.MinimumWidth = 6;
+            this.sender.Name = "sender";
+            this.sender.ReadOnly = true;
+            // 
+            // reveiver
+            // 
+            this.reveiver.DataPropertyName = "receiver";
+            this.reveiver.HeaderText = "To:";
+            this.reveiver.MinimumWidth = 6;
+            this.reveiver.Name = "reveiver";
+            this.reveiver.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.DataPropertyName = "Subject";
+            this.Subject.HeaderText = "Subject:";
+            this.Subject.MinimumWidth = 6;
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // message
+            // 
+            this.message.DataPropertyName = "message";
+            this.message.HeaderText = "Message Preview";
+            this.message.MinimumWidth = 6;
+            this.message.Name = "message";
+            this.message.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "date";
+            this.date.HeaderText = "Date Received";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            // 
             // MessageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,6 +310,8 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1048, 575);
+            this.Controls.Add(this.btnInbox);
+            this.Controls.Add(this.btnSent);
             this.Controls.Add(this.txtRefresh);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBack);
@@ -317,10 +355,13 @@ namespace TeamNateZone
         private TEAM_ADataSet tEAM_ADataSet;
         private System.Windows.Forms.BindingSource messageBindingSource1;
         private TEAM_ADataSetTableAdapters.messageTableAdapter messageTableAdapter;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewButtonColumn message;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn1;
         private CustomControls.RJControls.rndButton txtRefresh;
+        private CustomControls.RJControls.rndButton btnSent;
+        private CustomControls.RJControls.rndButton btnInbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reveiver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn message;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }

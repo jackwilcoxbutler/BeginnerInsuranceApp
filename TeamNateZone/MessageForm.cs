@@ -96,8 +96,8 @@ namespace TeamNateZone
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //this will open another form with the full message display
-            string subject = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].FormattedValue.ToString();
-            string message = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].FormattedValue.ToString();
+            string subject = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].FormattedValue.ToString();
+            string message = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].FormattedValue.ToString();
             string from = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].FormattedValue.ToString();
 
             View = new ViewMessageForm(user, subject, message, from);
@@ -107,6 +107,44 @@ namespace TeamNateZone
         }
 
         private void txtRefresh_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            string account = user.getUsername();
+
+            cn.ConnectionString =
+                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+            cmd.Connection = cn;
+            cn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver ORDER BY date DESC", cn);
+            da.SelectCommand.Parameters.AddWithValue("receiver", account);
+            DataTable dtbl = new DataTable();
+            da.Fill(dtbl);
+            dataGridView1.DataSource = dtbl;
+            cn.Close();
+        }
+
+        private void btnSent_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            string account = user.getUsername();
+
+            cn.ConnectionString =
+                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+            cmd.Connection = cn;
+            cn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE sender = @sender ORDER BY date DESC", cn);
+            da.SelectCommand.Parameters.AddWithValue("sender", account);
+            DataTable dtbl = new DataTable();
+            da.Fill(dtbl);
+            dataGridView1.DataSource = dtbl;
+            cn.Close();
+        }
+
+        private void btnInbox_Click(object sender, EventArgs e)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
