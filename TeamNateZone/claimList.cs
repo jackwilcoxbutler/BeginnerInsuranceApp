@@ -70,6 +70,38 @@ namespace TeamNateZone
             Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
             testPictureBox.Image = img;
             testPictureBox.Visible = true;
+
+            SaveFileDialog dialog = new SaveFileDialog();
+
+        }
+
+        private void rndImageDownload_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cn.ConnectionString =
+                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+            cmd.Connection = cn;
+            cmd.CommandText = "SELECT content FROM ClaimMedia WHERE UID=@uid";
+            cmd.Parameters.AddWithValue("@uid", user.getUserID());
+            cn.Open();
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            //            dr.Read(); // advance to second image (panda)
+            Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
+            testPictureBox.Image = img;
+
+            SaveFileDialog dialog = new SaveFileDialog();
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                int width = Convert.ToInt32(img.Width);
+                int height = Convert.ToInt32(img.Height);
+                Bitmap bmp = new Bitmap(img, width, height);
+                bmp.Save(dialog.FileName + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+
         }
     }
 }
