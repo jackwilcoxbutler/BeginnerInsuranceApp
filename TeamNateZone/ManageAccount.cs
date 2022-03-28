@@ -32,6 +32,8 @@ namespace TeamNateZone
             tbCC.Text = user.getCC();
             tbCVV.Text = user.getCVV();
             tbCCExp.Text = user.getCCExp();
+
+            btnUpdatePassword.Visible = false;
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)
@@ -144,6 +146,18 @@ namespace TeamNateZone
                 cn.Open();
                 dr = cmd.ExecuteReader();
                 dr.Read();
+
+                tbAddress.ReadOnly = true;
+                tbPassword.ReadOnly = true;
+                tbEmail.ReadOnly = true;
+                tbCity.ReadOnly = true;
+                tbState.ReadOnly = true;
+                tbZip.ReadOnly = true;
+                tbCC.ReadOnly = true;
+                tbCVV.ReadOnly = true;
+                tbCCExp.ReadOnly = true;
+
+                btnUpdatePassword.Visible = false;
             }
             catch (Exception err)
             {
@@ -156,5 +170,19 @@ namespace TeamNateZone
             }
         }
 
+        private void rndButton1_Click(object sender, EventArgs e)
+        {
+            tbAddress.ReadOnly = false;
+            tbPassword.ReadOnly = false;
+            tbEmail.ReadOnly = false;
+            tbCity.ReadOnly = false;
+            tbState.ReadOnly = false;
+            tbZip.ReadOnly = false;
+            tbCC.ReadOnly = false;
+            tbCVV.ReadOnly = false;
+            tbCCExp.ReadOnly = false;
+
+            btnUpdatePassword.Visible = true;
+        }
     }
 }

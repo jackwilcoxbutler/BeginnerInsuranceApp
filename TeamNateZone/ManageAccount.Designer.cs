@@ -32,12 +32,6 @@ namespace TeamNateZone
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAccount));
             this.labelTitle = new System.Windows.Forms.Label();
             this.pnlDropDown = new System.Windows.Forms.Panel();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnLogout2 = new System.Windows.Forms.Button();
-            this.btnMainMenu = new System.Windows.Forms.Button();
-            this.btnMail = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +54,13 @@ namespace TeamNateZone
             this.tbState = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbZip = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnLogout2 = new System.Windows.Forms.Button();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnMail = new System.Windows.Forms.Button();
+            this.rndButton1 = new CustomControls.RJControls.rndButton();
             this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
             this.btnBackAM = new CustomControls.RJControls.rndButton();
             this.pnlDropDown.SuspendLayout();
@@ -92,75 +93,13 @@ namespace TeamNateZone
             this.pnlDropDown.Size = new System.Drawing.Size(70, 70);
             this.pnlDropDown.TabIndex = 13;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
-            this.btnMenu.Location = new System.Drawing.Point(3, 3);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(64, 64);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(3, 211);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(64, 64);
-            this.btnSettings.TabIndex = 1;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout2
-            // 
-            this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout2.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
-            this.btnLogout2.Location = new System.Drawing.Point(3, 277);
-            this.btnLogout2.Name = "btnLogout2";
-            this.btnLogout2.Size = new System.Drawing.Size(64, 64);
-            this.btnLogout2.TabIndex = 1;
-            this.btnLogout2.UseVisualStyleBackColor = true;
-            this.btnLogout2.Click += new System.EventHandler(this.btnLogout2_Click);
-            // 
-            // btnMainMenu
-            // 
-            this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainMenu.Image = global::TeamNateZone.Properties.Resources.homeIcon;
-            this.btnMainMenu.Location = new System.Drawing.Point(3, 82);
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(64, 60);
-            this.btnMainMenu.TabIndex = 1;
-            this.btnMainMenu.UseVisualStyleBackColor = true;
-            // 
-            // btnMail
-            // 
-            this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMail.Image = global::TeamNateZone.Properties.Resources.mailIcon;
-            this.btnMail.Location = new System.Drawing.Point(3, 144);
-            this.btnMail.Name = "btnMail";
-            this.btnMail.Size = new System.Drawing.Size(64, 64);
-            this.btnMail.TabIndex = 1;
-            this.btnMail.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(164, 179);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
+            this.tbEmail.ReadOnly = true;
             this.tbEmail.Size = new System.Drawing.Size(449, 30);
             this.tbEmail.TabIndex = 17;
             // 
@@ -168,8 +107,9 @@ namespace TeamNateZone
             // 
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddress.Location = new System.Drawing.Point(241, 233);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbAddress.Name = "tbAddress";
+            this.tbAddress.ReadOnly = true;
             this.tbAddress.Size = new System.Drawing.Size(372, 30);
             this.tbAddress.TabIndex = 18;
             // 
@@ -225,8 +165,9 @@ namespace TeamNateZone
             // 
             this.tbCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCC.Location = new System.Drawing.Point(164, 330);
-            this.tbCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCC.Margin = new System.Windows.Forms.Padding(2);
             this.tbCC.Name = "tbCC";
+            this.tbCC.ReadOnly = true;
             this.tbCC.Size = new System.Drawing.Size(449, 30);
             this.tbCC.TabIndex = 23;
             // 
@@ -234,8 +175,9 @@ namespace TeamNateZone
             // 
             this.tbCVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCVV.Location = new System.Drawing.Point(217, 362);
-            this.tbCVV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCVV.Margin = new System.Windows.Forms.Padding(2);
             this.tbCVV.Name = "tbCVV";
+            this.tbCVV.ReadOnly = true;
             this.tbCVV.Size = new System.Drawing.Size(133, 30);
             this.tbCVV.TabIndex = 24;
             // 
@@ -243,8 +185,9 @@ namespace TeamNateZone
             // 
             this.tbCCExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCCExp.Location = new System.Drawing.Point(423, 367);
-            this.tbCCExp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCCExp.Margin = new System.Windows.Forms.Padding(2);
             this.tbCCExp.Name = "tbCCExp";
+            this.tbCCExp.ReadOnly = true;
             this.tbCCExp.Size = new System.Drawing.Size(103, 30);
             this.tbCCExp.TabIndex = 25;
             // 
@@ -298,8 +241,9 @@ namespace TeamNateZone
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(164, 133);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.ReadOnly = true;
             this.tbPassword.Size = new System.Drawing.Size(449, 30);
             this.tbPassword.TabIndex = 33;
             // 
@@ -342,8 +286,9 @@ namespace TeamNateZone
             // 
             this.tbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCity.Location = new System.Drawing.Point(217, 276);
-            this.tbCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCity.Margin = new System.Windows.Forms.Padding(2);
             this.tbCity.Name = "tbCity";
+            this.tbCity.ReadOnly = true;
             this.tbCity.Size = new System.Drawing.Size(133, 30);
             this.tbCity.TabIndex = 37;
             // 
@@ -363,8 +308,9 @@ namespace TeamNateZone
             // 
             this.tbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbState.Location = new System.Drawing.Point(423, 276);
-            this.tbState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbState.Margin = new System.Windows.Forms.Padding(2);
             this.tbState.Name = "tbState";
+            this.tbState.ReadOnly = true;
             this.tbState.Size = new System.Drawing.Size(49, 30);
             this.tbState.TabIndex = 39;
             // 
@@ -384,10 +330,95 @@ namespace TeamNateZone
             // 
             this.tbZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbZip.Location = new System.Drawing.Point(529, 276);
-            this.tbZip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZip.Margin = new System.Windows.Forms.Padding(2);
             this.tbZip.Name = "tbZip";
+            this.tbZip.ReadOnly = true;
             this.tbZip.Size = new System.Drawing.Size(85, 30);
             this.tbZip.TabIndex = 41;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Image = global::TeamNateZone.Properties.Resources.menuImageIcon;
+            this.btnMenu.Location = new System.Drawing.Point(3, 3);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(64, 64);
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.Location = new System.Drawing.Point(3, 211);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(64, 64);
+            this.btnSettings.TabIndex = 1;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout2
+            // 
+            this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout2.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
+            this.btnLogout2.Location = new System.Drawing.Point(3, 277);
+            this.btnLogout2.Name = "btnLogout2";
+            this.btnLogout2.Size = new System.Drawing.Size(64, 64);
+            this.btnLogout2.TabIndex = 1;
+            this.btnLogout2.UseVisualStyleBackColor = true;
+            this.btnLogout2.Click += new System.EventHandler(this.btnLogout2_Click);
+            // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainMenu.Image = global::TeamNateZone.Properties.Resources.homeIcon;
+            this.btnMainMenu.Location = new System.Drawing.Point(3, 82);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(64, 60);
+            this.btnMainMenu.TabIndex = 1;
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            // 
+            // btnMail
+            // 
+            this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMail.Image = global::TeamNateZone.Properties.Resources.mailIcon;
+            this.btnMail.Location = new System.Drawing.Point(3, 144);
+            this.btnMail.Name = "btnMail";
+            this.btnMail.Size = new System.Drawing.Size(64, 64);
+            this.btnMail.TabIndex = 1;
+            this.btnMail.UseVisualStyleBackColor = true;
+            // 
+            // rndButton1
+            // 
+            this.rndButton1.BackColor = System.Drawing.Color.YellowGreen;
+            this.rndButton1.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.rndButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rndButton1.BorderRadius = 15;
+            this.rndButton1.BorderSize = 0;
+            this.rndButton1.FlatAppearance.BorderSize = 0;
+            this.rndButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rndButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rndButton1.ForeColor = System.Drawing.Color.White;
+            this.rndButton1.Location = new System.Drawing.Point(622, 312);
+            this.rndButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.rndButton1.Name = "rndButton1";
+            this.rndButton1.Size = new System.Drawing.Size(136, 38);
+            this.rndButton1.TabIndex = 42;
+            this.rndButton1.Text = "Edit";
+            this.rndButton1.TextColor = System.Drawing.Color.White;
+            this.rndButton1.UseVisualStyleBackColor = false;
+            this.rndButton1.Click += new System.EventHandler(this.rndButton1_Click);
             // 
             // btnUpdatePassword
             // 
@@ -400,10 +431,10 @@ namespace TeamNateZone
             this.btnUpdatePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePassword.ForeColor = System.Drawing.Color.White;
-            this.btnUpdatePassword.Location = new System.Drawing.Point(622, 303);
-            this.btnUpdatePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdatePassword.Location = new System.Drawing.Point(622, 265);
+            this.btnUpdatePassword.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdatePassword.Name = "btnUpdatePassword";
-            this.btnUpdatePassword.Size = new System.Drawing.Size(131, 38);
+            this.btnUpdatePassword.Size = new System.Drawing.Size(136, 38);
             this.btnUpdatePassword.TabIndex = 29;
             this.btnUpdatePassword.Text = "Update";
             this.btnUpdatePassword.TextColor = System.Drawing.Color.White;
@@ -422,9 +453,9 @@ namespace TeamNateZone
             this.btnBackAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackAM.ForeColor = System.Drawing.Color.White;
             this.btnBackAM.Location = new System.Drawing.Point(622, 354);
-            this.btnBackAM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBackAM.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackAM.Name = "btnBackAM";
-            this.btnBackAM.Size = new System.Drawing.Size(135, 36);
+            this.btnBackAM.Size = new System.Drawing.Size(136, 36);
             this.btnBackAM.TabIndex = 28;
             this.btnBackAM.Text = "Back";
             this.btnBackAM.TextColor = System.Drawing.Color.White;
@@ -439,6 +470,7 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(769, 404);
+            this.Controls.Add(this.rndButton1);
             this.Controls.Add(this.tbZip);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.tbState);
@@ -511,5 +543,6 @@ namespace TeamNateZone
         private System.Windows.Forms.TextBox tbState;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbZip;
+        private CustomControls.RJControls.rndButton rndButton1;
     }
 }

@@ -40,42 +40,6 @@ namespace TeamNateZone
             message.Show();
         }
 
-        private string getAlreadyDeclaredUsername(string userName)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userName);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-
-                try
-                {
-                    return dr.GetString(0);
-                }
-                catch (Exception e)
-                {
-                    return "";
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
         private void storeMessage(string sender, string reveiver, string message, DateTime date, string subject)
         {
             SqlConnection cn = new SqlConnection();

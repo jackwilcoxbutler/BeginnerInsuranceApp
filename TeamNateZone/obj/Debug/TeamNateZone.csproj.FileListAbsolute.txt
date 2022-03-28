@@ -162,3 +162,4 @@ C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewM
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
+C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
