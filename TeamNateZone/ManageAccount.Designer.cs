@@ -37,7 +37,7 @@ namespace TeamNateZone
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbCC = new System.Windows.Forms.TextBox();
+            this.tbCC14 = new System.Windows.Forms.TextBox();
             this.tbCVV = new System.Windows.Forms.TextBox();
             this.tbCCExp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,6 +65,10 @@ namespace TeamNateZone
             this.btnEdit = new CustomControls.RJControls.rndButton();
             this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
             this.btnBackAM = new CustomControls.RJControls.rndButton();
+            this.tbCC24 = new System.Windows.Forms.TextBox();
+            this.tbCC34 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,15 +152,17 @@ namespace TeamNateZone
             this.label4.TabIndex = 22;
             this.label4.Text = "Credit Card:";
             // 
-            // tbCC
+            // tbCC14
             // 
-            this.tbCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCC.Location = new System.Drawing.Point(164, 501);
-            this.tbCC.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCC.Name = "tbCC";
-            this.tbCC.ReadOnly = true;
-            this.tbCC.Size = new System.Drawing.Size(449, 30);
-            this.tbCC.TabIndex = 23;
+            this.tbCC14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCC14.Location = new System.Drawing.Point(164, 501);
+            this.tbCC14.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCC14.MaxLength = 4;
+            this.tbCC14.Name = "tbCC14";
+            this.tbCC14.PasswordChar = '•';
+            this.tbCC14.ReadOnly = true;
+            this.tbCC14.Size = new System.Drawing.Size(79, 30);
+            this.tbCC14.TabIndex = 23;
             // 
             // tbCVV
             // 
@@ -344,9 +350,9 @@ namespace TeamNateZone
             this.lbVerify.Location = new System.Drawing.Point(19, 362);
             this.lbVerify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbVerify.Name = "lbVerify";
-            this.lbVerify.Size = new System.Drawing.Size(181, 25);
+            this.lbVerify.Size = new System.Drawing.Size(175, 25);
             this.lbVerify.TabIndex = 43;
-            this.lbVerify.Text = "Verify Password: ";
+            this.lbVerify.Text = "Verify Password:";
             // 
             // label15
             // 
@@ -498,6 +504,49 @@ namespace TeamNateZone
             this.btnBackAM.UseVisualStyleBackColor = false;
             this.btnBackAM.Click += new System.EventHandler(this.btnBackAM_Click);
             // 
+            // tbCC24
+            // 
+            this.tbCC24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCC24.Location = new System.Drawing.Point(280, 503);
+            this.tbCC24.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCC24.MaxLength = 4;
+            this.tbCC24.Name = "tbCC24";
+            this.tbCC24.PasswordChar = '•';
+            this.tbCC24.ReadOnly = true;
+            this.tbCC24.Size = new System.Drawing.Size(79, 30);
+            this.tbCC24.TabIndex = 51;
+            // 
+            // tbCC34
+            // 
+            this.tbCC34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCC34.Location = new System.Drawing.Point(393, 501);
+            this.tbCC34.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCC34.MaxLength = 4;
+            this.tbCC34.Name = "tbCC34";
+            this.tbCC34.ReadOnly = true;
+            this.tbCC34.Size = new System.Drawing.Size(79, 30);
+            this.tbCC34.TabIndex = 52;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(255, 503);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(20, 25);
+            this.label14.TabIndex = 53;
+            this.label14.Text = "-";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(367, 503);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(20, 25);
+            this.label16.TabIndex = 54;
+            this.label16.Text = "-";
+            // 
             // ManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -506,6 +555,10 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(769, 595);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.tbCC34);
+            this.Controls.Add(this.tbCC24);
             this.Controls.Add(this.btnStopView);
             this.Controls.Add(this.btnStartView);
             this.Controls.Add(this.btnCancel);
@@ -532,7 +585,7 @@ namespace TeamNateZone
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbCCExp);
             this.Controls.Add(this.tbCVV);
-            this.Controls.Add(this.tbCC);
+            this.Controls.Add(this.tbCC14);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -561,7 +614,7 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbCC;
+        private System.Windows.Forms.TextBox tbCC14;
         private System.Windows.Forms.TextBox tbCVV;
         private System.Windows.Forms.TextBox tbCCExp;
         private System.Windows.Forms.Label label5;
@@ -588,5 +641,9 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnCancel;
         private System.Windows.Forms.Button btnStartView;
         private System.Windows.Forms.Button btnStopView;
+        private System.Windows.Forms.TextBox tbCC24;
+        private System.Windows.Forms.TextBox tbCC34;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
     }
 }

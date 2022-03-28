@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace TeamNateZone
 {
@@ -31,7 +32,17 @@ namespace TeamNateZone
             tbCity.Text = user.getCity();
             tbState.Text = user.getState();
             tbZip.Text = user.getZip();
-            tbCC.Text = user.getCC();
+            String s = user.getCC();
+           
+            if(!String.IsNullOrWhiteSpace(s))
+            {
+            //}
+            //else 
+            //{ 
+                tbCC14.Text = user.getCC().Substring(0, 4);
+                tbCC24.Text = user.getCC().Substring(4, 4);
+                tbCC34.Text = user.getCC().Substring(8, 4);
+            }
             tbCVV.Text = user.getCVV();
             tbCCExp.Text = user.getCCExp();
 
@@ -94,7 +105,7 @@ namespace TeamNateZone
             user.setCity(tbCity.Text);
             user.setState(tbState.Text);
             user.setZip(tbZip.Text);
-            user.setCC(tbCC.Text);
+            user.setCC(tbCC14.Text + tbCC24.Text + tbCC34.Text);
             user.setCCExp(tbCCExp.Text);
             user.setCVV(tbCVV.Text);
 
@@ -104,7 +115,7 @@ namespace TeamNateZone
             string city = tbCity.Text;
             string state = tbState.Text;
             string zip = tbZip.Text;
-            string cc = tbCC.Text;
+            string cc = tbCC14.Text + tbCC24.Text + tbCC34.Text;
             string cvv = tbCVV.Text;
             string ccexp = tbCCExp.Text; 
 
@@ -112,7 +123,7 @@ namespace TeamNateZone
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            if (txtVerify == tbPassword)
+            if (txtVerify.Text == tbPassword.Text)
             {
                 try
                 {
@@ -120,6 +131,7 @@ namespace TeamNateZone
                         @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                     cmd.Connection = cn;
 
+                    
                     cmd.CommandText = "UPDATE SignInInfo SET Email = @email, Password = @password, street = @str, city = @city, state = @st, zip = @zip5, CreditNumber = @cc, CVV = @cvv, CCExpiration = @ccexp WHERE UserID = @uid";
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@password", password);
@@ -143,7 +155,9 @@ namespace TeamNateZone
                     tbCity.ReadOnly = true;
                     tbState.ReadOnly = true;
                     tbZip.ReadOnly = true;
-                    tbCC.ReadOnly = true;
+                    tbCC14.ReadOnly = true;
+                    tbCC24.ReadOnly = true;
+                    tbCC34.ReadOnly = true;
                     tbCVV.ReadOnly = true;
                     tbCCExp.ReadOnly = true;
 
@@ -176,7 +190,9 @@ namespace TeamNateZone
             tbCity.ReadOnly = false;
             tbState.ReadOnly = false;
             tbZip.ReadOnly = false;
-            tbCC.ReadOnly = false;
+            tbCC14.ReadOnly = false;
+            tbCC24.ReadOnly = false;
+            tbCC34.ReadOnly = false;
             tbCVV.ReadOnly = false;
             tbCCExp.ReadOnly = false;
 
@@ -197,7 +213,14 @@ namespace TeamNateZone
             tbCity.Text = user.getCity();
             tbState.Text = user.getState();
             tbZip.Text = user.getZip();
-            tbCC.Text = user.getCC();
+            if (String.IsNullOrEmpty(Regex.Replace(user.getCC(), @"\s+", " ")))
+            {}
+            else
+            {
+                tbCC14.Text = user.getCC().Substring(0, 4);
+                tbCC24.Text = user.getCC().Substring(4, 4);
+                tbCC34.Text = user.getCC().Substring(8, 4);
+            }
             tbCVV.Text = user.getCVV();
             tbCCExp.Text = user.getCCExp();
 
