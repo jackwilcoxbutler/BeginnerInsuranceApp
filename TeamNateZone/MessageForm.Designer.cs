@@ -290,7 +290,7 @@ namespace TeamNateZone
             // message
             // 
             this.message.DataPropertyName = "message";
-            this.message.HeaderText = "Message Preview";
+            this.message.HeaderText = "Message Preview: ";
             this.message.MinimumWidth = 6;
             this.message.Name = "message";
             this.message.ReadOnly = true;
@@ -298,7 +298,7 @@ namespace TeamNateZone
             // date
             // 
             this.date.DataPropertyName = "date";
-            this.date.HeaderText = "Date Received";
+            this.date.HeaderText = "Date Received: ";
             this.date.MinimumWidth = 6;
             this.date.Name = "date";
             this.date.ReadOnly = true;
@@ -349,8 +349,6 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnBack;
         //private TEAM_ADataSet1 tEAM_ADataSet1;
         private System.Windows.Forms.BindingSource messageBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private TEAM_ADataSet tEAM_ADataSet;
         private System.Windows.Forms.BindingSource messageBindingSource1;
