@@ -14,6 +14,8 @@ namespace TeamNateZone
     {
         User user;
         MessageForm message;
+        FMManageFinance claimView;
+
         public FMWelcomeForm(User user)
         {
             InitializeComponent();
@@ -44,7 +46,10 @@ namespace TeamNateZone
 
         private void btnManageFinances_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Financial Management still in progress. Come back Later!", "Form not ready", MessageBoxButtons.OK);
+            claimView = new FMManageFinance();
+            claimView.Owner = this;
+            claimView.Show();
+            this.Hide();
         }
 
         private void btnlogout_Click(object sender, EventArgs e)

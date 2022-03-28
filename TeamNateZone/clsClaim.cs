@@ -437,7 +437,39 @@ namespace TeamNateZone
             return true;
         }
 
+        public bool estimateAmt(int amt)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cn.ConnectionString =
+                        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
 
+                cmd.CommandText = "UPDATE Claims(EstimatedAmount)" +
+                                   "SET EstimatedAmount = @amt where ClaimID = @claimID";
+                cmd.Parameters.AddWithValue("@claimId", claimID);
+                cmd.Parameters.AddWithValue("@amt", amt);
+
+
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                cn.Close();
+            }
+            catch (Exception err)
+            {
+                return false;
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return true;
+        }
 
     }
 }
