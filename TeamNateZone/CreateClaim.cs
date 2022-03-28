@@ -17,6 +17,7 @@ namespace TeamNateZone
     public partial class CreateClaim : Form
     {
         User user;
+        Claim claim;
         ClientWelcomeForm welcomeForm;
         List<Stream> images = new List<Stream>();
         public CreateClaim(User user)
@@ -64,7 +65,7 @@ namespace TeamNateZone
                 {
                     SqlCommand statement = new SqlCommand($"INSERT INTO ClaimMedia(UID,content) VALUES ({user.getUserID()},{image})", cn);
                 }
-               
+
             }
             catch (Exception err)
             {
@@ -79,7 +80,19 @@ namespace TeamNateZone
             welcomeForm = new ClientWelcomeForm(user);
             this.Close();
             welcomeForm.Show();
-        }
+
+
+        //    claim = new Claim(user.getUserID(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value);
+        //    if (claim.fileClaim(user))
+        //    {
+        //        MessageBox.Show("Your claim has been successfully submitted! Check your list of claims to track its status.", "Success!");
+
+            //        welcomeForm = new ClientWelcomeForm(user);
+            //        this.Close();
+            //        welcomeForm.Show();
+            //    }
+            //WORKS JUST NEED TO ADD IMAGE HANDLING
+    }
 
         private Boolean isClosed;
         private void btnMenu_Click(object sender, EventArgs e)

@@ -156,3 +156,8 @@ C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.Gen
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimList.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.MessageForm.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources

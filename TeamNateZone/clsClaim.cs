@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
+using System.IO;
 
 namespace TeamNateZone
 {
@@ -28,7 +29,7 @@ namespace TeamNateZone
         DateTime lastUpdate { get; set; }
 
         //Constructor 
-        public Claim(int claimID, int userID, int cmID,int fmID, string claimType, string claimDesc, string claimStatus, 
+        public Claim( int userID, int cmID,int fmID, string claimType, string claimDesc, string claimStatus, 
                      string paymentStatus, DateTime startDate, DateTime endDate, DateTime estEndDate, DateTime lastUpdate) //created by claim form
         {
             this.claimID = claimID;
@@ -45,6 +46,13 @@ namespace TeamNateZone
             this.lastUpdate = lastUpdate;
         }
 
+        public Claim(int userID, string claimType,string claimDesc, DateTime startDate)
+        {
+            this.userID = userID;
+            this.claimType = claimType;
+            this.claimDesc = claimDesc;
+            this.startDate = startDate;
+        }
         //Need a default constructor 
         
         //Need a constructor that takes in parameters 
@@ -389,6 +397,47 @@ namespace TeamNateZone
                 cn.Close();
             }
         }
+
+        public bool fileClaim(User user)
+        {
+                SqlConnection cn = new SqlConnection();
+                SqlCommand cmd = new SqlCommand();
+                SqlDataReader dr;
+                string status = "Submitted";
+                try { 
+                    cn.ConnectionString =
+                        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                    cmd.Connection = cn;
+
+                    cmd.CommandText = "INSERT INTO Claims(UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, Status) VALUES (@id, @username, @email, @type, @desc, @date, @stat)";
+                    cmd.Parameters.AddWithValue("@id", userID);
+                    cmd.Parameters.AddWithValue("@username", user.getUsername());
+                    cmd.Parameters.AddWithValue("@email", user.getEmail());
+                    cmd.Parameters.AddWithValue("@type", claimType); // may not have to ToString(), will try later
+                    cmd.Parameters.AddWithValue("@desc", claimDesc);
+                    cmd.Parameters.AddWithValue("@date", startDate); // again, may not need to ToString()
+                    cmd.Parameters.AddWithValue("@stat", status);
+
+                    cn.Open();
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
+                    cn.Close();
+
+           
+            }
+            catch (Exception err)
+                {
+                    return false;
+                    MessageBox.Show(err.Message, "Error Occurred");
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            return true;
+        }
+
+
 
     }
 }
