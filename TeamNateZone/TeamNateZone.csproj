@@ -312,6 +312,9 @@
     <Content Include="Resources\account.png" />
     <Content Include="Resources\clipBoard.jpeg" />
     <Content Include="Resources\message.png" />
+    <None Include="Resources\startView.png" />
+    <None Include="Resources\StopView.png" />
+    <None Include="Resources\StopView1.png" />
     <Content Include="Resources\updatedPandaIcon.png" />
     <None Include="Resources\updatedPandaIcon1.png" />
     <None Include="Resources\vs5.jpeg" />

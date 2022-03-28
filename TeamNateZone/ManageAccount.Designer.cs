@@ -53,12 +53,14 @@ namespace TeamNateZone
             this.tbState = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbZip = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtVerify = new System.Windows.Forms.TextBox();
             this.lbVerify = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tbUserName = new System.Windows.Forms.TextBox();
+            this.btnStopView = new System.Windows.Forms.Button();
+            this.btnStartView = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new CustomControls.RJControls.rndButton();
             this.btnEdit = new CustomControls.RJControls.rndButton();
             this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
@@ -324,17 +326,6 @@ namespace TeamNateZone
             this.tbZip.Size = new System.Drawing.Size(85, 30);
             this.tbZip.TabIndex = 41;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtVerify
             // 
             this.txtVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -379,6 +370,28 @@ namespace TeamNateZone
             this.tbUserName.Size = new System.Drawing.Size(449, 30);
             this.tbUserName.TabIndex = 45;
             // 
+            // btnStopView
+            // 
+            this.btnStopView.BackgroundImage = global::TeamNateZone.Properties.Resources.StopView1;
+            this.btnStopView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStopView.Location = new System.Drawing.Point(622, 352);
+            this.btnStopView.Name = "btnStopView";
+            this.btnStopView.Size = new System.Drawing.Size(69, 35);
+            this.btnStopView.TabIndex = 50;
+            this.btnStopView.UseVisualStyleBackColor = true;
+            this.btnStopView.Click += new System.EventHandler(this.btnStopView_Click);
+            // 
+            // btnStartView
+            // 
+            this.btnStartView.BackgroundImage = global::TeamNateZone.Properties.Resources.startView;
+            this.btnStartView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStartView.Location = new System.Drawing.Point(622, 305);
+            this.btnStartView.Name = "btnStartView";
+            this.btnStartView.Size = new System.Drawing.Size(61, 30);
+            this.btnStartView.TabIndex = 49;
+            this.btnStartView.UseVisualStyleBackColor = true;
+            this.btnStartView.Click += new System.EventHandler(this.btnStartView_Click);
+            // 
             // btnlogout
             // 
             this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -389,6 +402,17 @@ namespace TeamNateZone
             this.btnlogout.TabIndex = 47;
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCancel
             // 
@@ -482,6 +506,8 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(769, 595);
+            this.Controls.Add(this.btnStopView);
+            this.Controls.Add(this.btnStartView);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.label15);
@@ -560,5 +586,7 @@ namespace TeamNateZone
         private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Button btnlogout;
         private CustomControls.RJControls.rndButton btnCancel;
+        private System.Windows.Forms.Button btnStartView;
+        private System.Windows.Forms.Button btnStopView;
     }
 }

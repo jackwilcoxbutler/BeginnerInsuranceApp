@@ -39,6 +39,9 @@ namespace TeamNateZone
             lbVerify.Visible = false;
             txtVerify.Visible = false;
             btnCancel.Visible = false;
+            btnStartView.Visible = false;
+            btnStopView.Visible = false;
+
         }
         private void btnlogout_Click(object sender, EventArgs e)
         {
@@ -182,6 +185,7 @@ namespace TeamNateZone
             txtVerify.Visible = true;
             btnEdit.Visible = false;
             btnCancel.Visible = true;
+            btnStartView.Visible = true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -201,6 +205,27 @@ namespace TeamNateZone
             lbVerify.Visible = false;
             txtVerify.Visible = false;
             btnCancel.Visible = false;
+            btnStartView.Visible = false;
+            btnStopView.Visible = false;
+            btnEdit.Visible = true;
+
+        }
+
+        private void btnStartView_Click(object sender, EventArgs e)
+        {
+            txtVerify.PasswordChar = '\0';
+            tbPassword.PasswordChar = '\0';
+            btnStartView.Visible = false;
+            btnStopView.Visible = true;
+
+        }
+
+        private void btnStopView_Click(object sender, EventArgs e)
+        {
+            txtVerify.PasswordChar = '•';
+            tbPassword.PasswordChar = '•';
+            btnStartView.Visible = true;
+            btnStopView.Visible = false;
         }
     }
 }
