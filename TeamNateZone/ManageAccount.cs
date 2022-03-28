@@ -17,12 +17,14 @@ namespace TeamNateZone
         ClientWelcomeForm welcomeForm;
         CMWelcomeForm cmwelcomeForm;
         FMWelcomeForm fmwelcomeForm;
+        
         public ManageAccount(User user)
         {
             InitializeComponent();
             this.user = user;
 
             //Initialize the display of the user info in the management screen. 
+            tbUserName.Text = user.getUsername();
             tbPassword.Text = user.getPassword();
             tbEmail.Text = user.getEmail();
             tbAddress.Text = user.getStreet();
@@ -34,33 +36,17 @@ namespace TeamNateZone
             tbCCExp.Text = user.getCCExp();
 
             btnUpdatePassword.Visible = false;
+            lbVerify.Visible = false;
+            txtVerify.Visible = false;
+            btnCancel.Visible = false;
         }
-
-        private void btnLogout2_Click(object sender, EventArgs e)
+        private void btnlogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Logout Successful");
-            var newForm = new LoginForm();
-            newForm.Show();
-            this.Close();
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
         }
 
-        private Boolean isClosed;
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            if (pnlDropDown.Height == pnlDropDown.MinimumSize.Height)
-                isClosed = true;
-            else
-                isClosed = false;
-
-            if (isClosed == true)
-            {
-                pnlDropDown.Height = pnlDropDown.MaximumSize.Height;
-            }
-            else
-            {
-                pnlDropDown.Height = pnlDropDown.MinimumSize.Height;
-            }
-        }
 
         private void btnBackAM_Click(object sender, EventArgs e)
         {
@@ -123,54 +109,63 @@ namespace TeamNateZone
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-
-            try
+            if (txtVerify == tbPassword)
             {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
+                try
+                {
+                    cn.ConnectionString =
+                        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                    cmd.Connection = cn;
 
-                cmd.CommandText = "UPDATE SignInInfo SET Email = @email, Password = @password, street = @str, city = @city, state = @st, zip = @zip5, CreditNumber = @cc, CVV = @cvv, CCExpiration = @ccexp WHERE UserID = @uid";
-                cmd.Parameters.AddWithValue("@email", email );
-                cmd.Parameters.AddWithValue("@password", password );
-                cmd.Parameters.AddWithValue("@str", street);
-                cmd.Parameters.AddWithValue("@city", city);
-                cmd.Parameters.AddWithValue("@st", state );
-                cmd.Parameters.AddWithValue("@zip5", zip);
-                cmd.Parameters.AddWithValue("uid", user.getUserID());
-                cmd.Parameters.AddWithValue("@cc", cc);
-                cmd.Parameters.AddWithValue("@ccexp", ccexp);
-                cmd.Parameters.AddWithValue("@cvv", cvv);
+                    cmd.CommandText = "UPDATE SignInInfo SET Email = @email, Password = @password, street = @str, city = @city, state = @st, zip = @zip5, CreditNumber = @cc, CVV = @cvv, CCExpiration = @ccexp WHERE UserID = @uid";
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@str", street);
+                    cmd.Parameters.AddWithValue("@city", city);
+                    cmd.Parameters.AddWithValue("@st", state);
+                    cmd.Parameters.AddWithValue("@zip5", zip);
+                    cmd.Parameters.AddWithValue("uid", user.getUserID());
+                    cmd.Parameters.AddWithValue("@cc", cc);
+                    cmd.Parameters.AddWithValue("@ccexp", ccexp);
+                    cmd.Parameters.AddWithValue("@cvv", cvv);
 
 
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
+                    cn.Open();
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
 
-                tbAddress.ReadOnly = true;
-                tbPassword.ReadOnly = true;
-                tbEmail.ReadOnly = true;
-                tbCity.ReadOnly = true;
-                tbState.ReadOnly = true;
-                tbZip.ReadOnly = true;
-                tbCC.ReadOnly = true;
-                tbCVV.ReadOnly = true;
-                tbCCExp.ReadOnly = true;
+                    tbAddress.ReadOnly = true;
+                    tbPassword.ReadOnly = true;
+                    tbEmail.ReadOnly = true;
+                    tbCity.ReadOnly = true;
+                    tbState.ReadOnly = true;
+                    tbZip.ReadOnly = true;
+                    tbCC.ReadOnly = true;
+                    tbCVV.ReadOnly = true;
+                    tbCCExp.ReadOnly = true;
 
-                btnUpdatePassword.Visible = false;
+                    btnUpdatePassword.Visible = false;
+                    lbVerify.Visible = false;
+                    txtVerify.Visible = false;
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                }
+                finally
+                {
+                    MessageBox.Show("Account details updated!", "Success");
+                    cn.Close();
+                }
             }
-            catch (Exception err)
+            else
             {
-                MessageBox.Show(err.Message, "Error Occurred");
-            }
-            finally
-            {
-                MessageBox.Show("Account details updated!", "Success");
+                MessageBox.Show("Passwords do not match", "Try again");
                 cn.Close();
             }
         }
 
-        private void rndButton1_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             tbAddress.ReadOnly = false;
             tbPassword.ReadOnly = false;
@@ -183,6 +178,29 @@ namespace TeamNateZone
             tbCCExp.ReadOnly = false;
 
             btnUpdatePassword.Visible = true;
+            lbVerify.Visible = true;
+            txtVerify.Visible = true;
+            btnEdit.Visible = false;
+            btnCancel.Visible = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            tbUserName.Text = user.getUsername();
+            tbPassword.Text = user.getPassword();
+            tbEmail.Text = user.getEmail();
+            tbAddress.Text = user.getStreet();
+            tbCity.Text = user.getCity();
+            tbState.Text = user.getState();
+            tbZip.Text = user.getZip();
+            tbCC.Text = user.getCC();
+            tbCVV.Text = user.getCVV();
+            tbCCExp.Text = user.getCCExp();
+
+            btnUpdatePassword.Visible = false;
+            lbVerify.Visible = false;
+            txtVerify.Visible = false;
+            btnCancel.Visible = false;
         }
     }
 }
