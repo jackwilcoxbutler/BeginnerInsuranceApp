@@ -162,8 +162,7 @@ namespace TeamNateZone
                     tbCCExp.ReadOnly = true;
 
                     btnUpdatePassword.Visible = false;
-                    lbVerify.Visible = false;
-                    txtVerify.Visible = false;
+                    
                 }
                 catch (Exception err)
                 {
