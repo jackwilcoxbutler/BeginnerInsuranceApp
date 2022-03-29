@@ -84,9 +84,9 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @r";
+                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @receiver";
 
-                cmd.Parameters.AddWithValue("@r", receiver);
+                cmd.Parameters.AddWithValue("@receiver", receiver);
 
                 cn.Open();
 
@@ -101,8 +101,9 @@ namespace TeamNateZone
                 catch (Exception e)
                 {
 
-                    return "";
+                    return ""; 
                 }
+               
             }
             catch (Exception err)
             {
@@ -117,6 +118,11 @@ namespace TeamNateZone
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+
+            string recieverStore = txtReciever.Text;
+            string recieverHelp = getExistingReceiver(txtReciever.Text);
+            bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
+
             try
             {
                 if (txtReciever.Text == "" || txtSubject.Text == "" || txtMessage.Text == "")
@@ -126,7 +132,7 @@ namespace TeamNateZone
                     DialogResult result = MessageBox.Show(message, title);
                 }
 
-                if (txtReciever.Text == getExistingReceiver(txtReciever.Text))
+                if (resultbool == true)
                 {
                     string message = "Message Sent Succsefully!";
                     string title = "Message Sent";
