@@ -11,46 +11,12 @@ namespace TeamNateZone
         FMWelcomeForm fmWelcomeForm;
         CMWelcomeForm cmWelcomeForm;
         User user = new User(); // this is why we need default constructor :D
+        dbHandler db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
         public LoginForm()
         {
             InitializeComponent();
         }
-        private String getAuthorizedPassword(string userName)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-
-                cmd.CommandText = "SELECT Password FROM SignInInfo WHERE Username = @username OR Email = @username";
-
-                cmd.Parameters.AddWithValue("@username", userName);
-
-                cn.Open();
-
-                dr = cmd.ExecuteReader();
-
-                dr.Read();
-
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-
+        
         private void LoginForm_FormClosing(object sender, EventArgs e)
         {
             Application.Exit();
@@ -89,10 +55,9 @@ namespace TeamNateZone
                         Application.Exit();
                     }
                 }
-                else if (enteredPW == getAuthorizedPassword(txtUsername.Text))
+                else if (enteredPW == db.check_password(txtUsername.Text))
                 {
-                    user.setUserAcct(txtUsername.Text, txtPassword.Text);
-
+                    user = db.get_user_information(txtUsername.Text);
                     this.Hide();
                     if (user.getClearance() == 0 ||  user.getClearance() == 3)//needs to be changed when new welcome forms are built
                     {

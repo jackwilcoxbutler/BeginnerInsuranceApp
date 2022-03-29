@@ -13,6 +13,12 @@ namespace TeamNateZone
     
     public partial class ClientWelcomeForm : Form
     {
+        struct clearances {
+            public const int CLI = 0;
+            public const int CM = 1;
+            public const int FM = 2;
+            public const int ADM = 3;
+        }
         User user;
         claimList listClaims;
         CreateClaim fileClaim;
@@ -22,8 +28,9 @@ namespace TeamNateZone
         {
             InitializeComponent();
             this.user = user;
-            if(user.getClearance() == 3)
+            if(user.getClearance() == clearances.ADM)
             {
+                
                 btnAdmin.Visible = true;
             }
         }

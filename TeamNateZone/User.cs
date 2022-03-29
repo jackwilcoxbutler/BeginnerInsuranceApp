@@ -10,11 +10,10 @@ namespace TeamNateZone
     public class User
     {
         //Data
-        String username, password, email, fname, lname, street, city, state, zip, cc, ccexp, cvv;
+        String username, password, email, fname, lname, street, city, state, zip;
         int id, clearance;
-
         // constructor
-        public User(int id, string fname, string lname, string username, string password, string email, int clearance, string street, string city, string state, string zip, string cc, string cvv, string ccexp) //created by login/reg form
+        public User(int id, string email, string password, string fname, string lname, string street, string city, string state, string zip, int clearance, string username) //created by login/reg form
         {
             this.fname = fname;
             this.lname = lname;
@@ -27,9 +26,6 @@ namespace TeamNateZone
             this.city = street;
             this.state = state;
             this.zip = zip;
-            this.cc = cc;
-            this.cvv = cvv;
-            this.ccexp = ccexp; 
         }
         // default constructor (makes empty object)
         public User()
@@ -45,29 +41,7 @@ namespace TeamNateZone
             city = "";
             state = "";
             zip = "";
-            cc = "";
-            cvv = "";
-            ccexp = "";
         }
-        //constructor with two parameters
-        public User(string userN, string pWord)
-        {
-            username = userN;
-            password = pWord;
-            clearance = getUserPermisions(username);
-            fname = getFname(username);
-            lname = getLname(username);
-            id = getUserID(username);
-            email = getUserEmail(username);
-            street = getStreet(username);
-            city = getCity(username);
-            state = getState(username);
-            zip = getZip(username);
-            cc = getCC(username);
-            cvv = getCVV(username);
-            ccexp = getCCExp(username);
-        }
-
         //get methods
         public int getUserID()
         {
@@ -110,22 +84,6 @@ namespace TeamNateZone
         {
             return zip;
         }
-
-        public string getCC()
-        {
-            return cc; 
-        }
-
-        public string getCVV()
-        {
-            return cvv; 
-        }
-
-        public string getCCExp()
-        {
-            return ccexp;
-        }
-
         public string getRole()
         {
             switch (clearance)
@@ -159,29 +117,6 @@ namespace TeamNateZone
 
         /// set methods
         
-        /// added simple set method to automatically set all the info to an
-        /// user directly from the table
-        public void setUserAcct(string userN, string pWord)
-        {
-            username = userN;
-            password = pWord;
-            clearance = getUserPermisions(username);
-            fname = getFname(username);
-            lname = getLname(username);
-            id = getUserID(username);
-            email = getUserEmail(username);
-            street = getStreet(username); 
-            city = getCity(username);
-            state = getState(username);
-            zip = getZip(username);
-            cc = getCC(username);
-            ccexp = getCCExp(username);
-            cvv = getCVV(username);
-        }
-        public void setUserID(int value)
-        {
-            id = value;
-        }
         public void setUsername(string value)
         {
             username = value;
@@ -202,7 +137,7 @@ namespace TeamNateZone
         {
             email = value;
         }
-        public void setUserType(int value)
+        public void setClearance(int value)
         {
             clearance = value;
         }
@@ -221,357 +156,6 @@ namespace TeamNateZone
         public void setZip(string value)
         {
             zip = value;
-        }
-
-        public void setCC(string value)
-        {
-            cc = value; 
-        }
-
-        public void setCCExp(string value)
-        {
-            ccexp = value; 
-        }
-
-        public void setCVV(string value)
-        {
-            cvv = value; 
-        }
-
-        //sql linking stuff-- clean up to get rid of random errors appearing at log in screen
-        //pulls info directly from db to return the valid info -- used to auto set data directly to user based on username
-        private int getUserPermisions(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT clearance FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetInt32(0);
-            }
-            catch (Exception err)
-            {
-                return 0;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private int getUserID(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetInt32(0);
-            }
-            catch (Exception err)
-            {
-                return 0;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getUserEmail(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT Email FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        private string getFname(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT fName FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getLname(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT lName FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getStreet(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT street FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getCity(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT city FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getState(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT state FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getZip(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT zip FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getCC(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT CreditNumber FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getCVV(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT CVV FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private string getCCExp(string userN)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT CCExpiration FROM SignInInfo WHERE Username = @username";
-                cmd.Parameters.AddWithValue("@username", userN);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
         }
     }
 }

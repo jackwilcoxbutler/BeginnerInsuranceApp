@@ -13,6 +13,11 @@ namespace TeamNateZone
 {
     public partial class ViewUsers : Form
     {
+        struct clearanceLevel{
+            public int CM = 1;
+            public int FM = 2;
+            public int AD = 3;
+        }
         public ViewUsers()
         {
             InitializeComponent();
@@ -22,10 +27,8 @@ namespace TeamNateZone
         {
             // TODO: This line of code loads data into the 'tEAM_A_UserInfo.SignInInfo' table. You can move, or remove it, as needed.
             SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
             cn.ConnectionString =
                 @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cmd.Connection = cn;
             cn.Open();
 
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SignInInfo", cn);
@@ -35,25 +38,26 @@ namespace TeamNateZone
             cn.Close();
             BindingSource bs = new BindingSource(dtbl, dtbl.TableName);
             bindingNavigator1.BindingSource = bs;
-
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            RegistrationForm rf = new RegistrationForm(1);
+            RegistrationForm rf = new RegistrationForm(clearanceLevel.CM);
             rf.Show();
             this.Close();
         }
 
         private void btnAddFM_Click(object sender, EventArgs e)
         {
-            RegistrationForm rf = new RegistrationForm(2);
+            RegistrationForm rf = new RegistrationForm(clearanceLevel.FM);
             rf.Show();
             this.Close();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            ViewUsers_Load(sender,e);
+            /*
             SqlConnection db = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
             db.Open();
             SqlDataAdapter data = new SqlDataAdapter("SELECT * FROM SignInInfo", db);
@@ -63,6 +67,7 @@ namespace TeamNateZone
             db.Close();
             BindingSource bs = new BindingSource(dtbl, dtbl.TableName);
             bindingNavigator1.BindingSource = bs;
+            */
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -82,7 +87,7 @@ namespace TeamNateZone
                     BindingSource bs = new BindingSource(dtbl, dtbl.TableName);
                     bindingNavigator1.BindingSource = bs;
                 }
-                catch(Exception err)
+                catch(Exception err) // should try to query for last name if first name query returned nothing, thus throwing an InvalidAttemptToReadWhenNoDataIsPresent error
                 {
                     SqlConnection cn = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
                     cn.Open();
@@ -97,7 +102,6 @@ namespace TeamNateZone
                 }
             }
         }
-
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGridView1.CurrentRow.Cells[10].Value;
