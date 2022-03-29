@@ -12,14 +12,15 @@ namespace TeamNateZone
         private string cnString;
         private SqlConnection connection;
         public SqlDataReader dr;
-        /// <constructor>
+// <constructor>
         public dbHandler(string cnString)
         {
             this.cnString = cnString;
             this.connection = new SqlConnection(cnString);
         }
-        /// </constructor>
-        /// <methods>
+// </constructor>
+
+// <private methods>
         private String getAuthorizedPassword(string userName)
         {
             SqlCommand cmd = new SqlCommand();
@@ -295,8 +296,8 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
-
-
+// </private methods>
+// <public methods>
         public String check_password(string username)
         {
             return getAuthorizedPassword(username);
@@ -329,6 +330,6 @@ namespace TeamNateZone
         {
             fileClaim(userID, username, email, type, description, startdate, lastupdate);
         }
-        /// </methods>
+        // </public methods>
     }
 }
