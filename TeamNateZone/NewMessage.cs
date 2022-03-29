@@ -15,7 +15,7 @@ namespace TeamNateZone
     {
         User user;
         MessageForm message;
-        
+
         public NewMessage(User user, string to, string subreply, string Sentmessage)
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace TeamNateZone
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            
+
             try
             {
                 cn.ConnectionString =
@@ -58,7 +58,7 @@ namespace TeamNateZone
                 cmd.Parameters.AddWithValue("@mess", message);
                 cmd.Parameters.AddWithValue("@date", date);
                 cmd.Parameters.AddWithValue("@sub", subject);
-                
+
                 cn.Open();
                 dr = cmd.ExecuteReader();
                 dr.Read();
@@ -72,33 +72,84 @@ namespace TeamNateZone
                 cn.Close();
             }
         }
+    
+        private string getExistingReceiver(string receiver)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
 
+                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @r";
+
+                cmd.Parameters.AddWithValue("@r", receiver);
+
+                cn.Open();
+
+                dr = cmd.ExecuteReader();
+
+                dr.Read();
+
+                try
+                {
+                    return dr.GetString(0);
+                }
+                catch (Exception e)
+                {
+
+                    return "";
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtReciever.Text == "" || txtSubject.Text == "")
+                if (txtReciever.Text == "" || txtSubject.Text == "" || txtMessage.Text == "")
                 {
                     string message = "ERROR : Required Field is blank";
                     string title = "Message send Failed";
                     DialogResult result = MessageBox.Show(message, title);
                 }
-                // Add in a if that makes sure the user you are sending a message is real
-                else 
+
+                if (txtReciever.Text == getExistingReceiver(txtReciever.Text))
                 {
-                   string message = "Message Sent Succsefully!";
-                   string title = "Message Sent";
-                   DialogResult result = MessageBox.Show(message, title);
-                   DateTime date;
-                   date = DateTime.Now;
-                   storeMessage(user.getUsername(), txtReciever.Text, txtMessage.Text, date , txtSubject.Text);
+                    string message = "Message Sent Succsefully!";
+                    string title = "Message Sent";
+                    DialogResult result = MessageBox.Show(message, title);
+                    DateTime date;
+                    date = DateTime.Now;
+                    storeMessage(user.getUsername(), txtReciever.Text, txtMessage.Text, date, txtSubject.Text);
 
                     txtReciever.Clear();
                     txtMessage.Clear();
                     txtSubject.Clear();
                 }
-                
+                else
+                {
+                    string message = "ERROR : System User Does Not Exist!. Click retry to reenter User's Name.";
+                    string title = "Selected User Failed";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                } 
             }
             catch (Exception err)
             {

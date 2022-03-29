@@ -13,16 +13,19 @@ namespace TeamNateZone
 {
     public partial class RegistrationForm : Form
     {
-        int clearance;
+        int clearance; 
+
         public RegistrationForm()
         {
             InitializeComponent();
+
         }
         public RegistrationForm(int val)
         {
             InitializeComponent();
             this.clearance = val;
         }
+
         private void storeSignInInfo(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
             SqlConnection cn = new SqlConnection();
@@ -238,13 +241,19 @@ namespace TeamNateZone
                         stateTxt = "";
                     }
                     
-                    if (clearance > 0)
+                    if (clearance == 1)
                     {
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, clearance);
-                        MessageBox.Show("Successfully registered new user!", "Success");
+                        MessageBox.Show("Successfully registered a new Claim Manager!", "Success");
                         this.Close();
                     }
-                    else
+                    else if (clearance == 2)
+                    {
+                        storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text, clearance);
+                        MessageBox.Show("Successfully registered a new Financial Manager!", "Success");
+                        this.Close();
+                    }
+                    else if (clearance == 0)
                     {
                         storeSignInInfo(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
                         MessageBox.Show(message);
