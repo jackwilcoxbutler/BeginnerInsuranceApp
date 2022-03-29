@@ -39,12 +39,15 @@ namespace TeamNateZone
         private async void btnFile_Click(object sender, EventArgs e)
         {
             db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString());
-
+            cn.Open();
             // this will be the functionality for uploading media to the database from the upcoming View Profile form //
-            // foreach (Stream image in images)
-            // {
-            //     SqlCommand statement = new SqlCommand($"INSERT INTO ClaimMedia(UID,content) VALUES ({user.getUserID()},{image})", cn);
-            // }
+             foreach (Stream image in images)
+             {
+                SqlCommand statement = new SqlCommand($"INSERT INTO ClaimMedia(UID,content) VALUES ({user.getUserID()},{image})", cn);
+                statement.ExecuteNonQueryAsync();
+
+             }
+             cn.Close();
             MessageBox.Show("Your claim has been successfully submitted! Check your list of claims to track its status.", "Success!");
             welcomeForm = new ClientWelcomeForm(user);
             this.Close();
