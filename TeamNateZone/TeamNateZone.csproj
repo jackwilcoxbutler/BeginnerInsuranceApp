@@ -77,6 +77,7 @@
     <Compile Include="claimList.Designer.cs">
       <DependentUpon>claimList.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbHandler.cs" />
     <Compile Include="FMFinanceManageDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="FMManageFinance.Designer.cs">
       <DependentUpon>FMManageFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWelcomeForm.Designer.cs">
+      <DependentUpon>AdminWelcomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FMWelcomeForm.cs">
       <SubType>Form</SubType>
@@ -198,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMManageFinance.resx">
       <DependentUpon>FMManageFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminWelcomeForm.resx">
+      <DependentUpon>AdminWelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMWelcomeForm.resx">
       <DependentUpon>FMWelcomeForm.cs</DependentUpon>

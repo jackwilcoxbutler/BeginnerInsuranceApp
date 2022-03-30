@@ -169,3 +169,10 @@ C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.MessageF
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimList.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.MessageForm.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources

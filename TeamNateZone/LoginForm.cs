@@ -10,13 +10,14 @@ namespace TeamNateZone
         RegistrationForm registrationForm;
         FMWelcomeForm fmWelcomeForm;
         CMWelcomeForm cmWelcomeForm;
+        AdminWelcomeForm adminWelcomeForm;
         User user = new User(); // this is why we need default constructor :D
         dbHandler db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
         public LoginForm()
         {
             InitializeComponent();
         }
-        
+
         private void LoginForm_FormClosing(object sender, EventArgs e)
         {
             Application.Exit();
@@ -59,23 +60,29 @@ namespace TeamNateZone
                 {
                     user = db.get_user_information(txtUsername.Text);
                     this.Hide();
-                    if (user.getClearance() == 0 ||  user.getClearance() == 3)//needs to be changed when new welcome forms are built
+                    if (user.getClearance() == 0)
                     {
                         clientWelcomeForm = new ClientWelcomeForm(user);
                         clientWelcomeForm.Owner = this;
                         clientWelcomeForm.Show();
                     }
-                    else if(user.getClearance() == 1)
+                    else if (user.getClearance() == 1)
                     {
                         cmWelcomeForm = new CMWelcomeForm(user);
                         cmWelcomeForm.Owner = this;
                         cmWelcomeForm.Show();
                     }
-                    else if(user.getClearance() == 2)
+                    else if (user.getClearance() == 2)
                     {
                         fmWelcomeForm = new FMWelcomeForm(user);
                         fmWelcomeForm.Owner = this;
                         fmWelcomeForm.Show();
+                    }
+                    else if (user.getClearance() == 3)
+                    {
+                        adminWelcomeForm = new AdminWelcomeForm(user);
+                        adminWelcomeForm.Owner = this;
+                        adminWelcomeForm.Show();
                     }
                 }
                 else
@@ -88,7 +95,7 @@ namespace TeamNateZone
                     {
                         Application.Exit();
                     }
-                   
+
                 }
             }
             catch (Exception err)
@@ -114,4 +121,3 @@ namespace TeamNateZone
         }
     }
 }
-
