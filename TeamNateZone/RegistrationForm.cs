@@ -18,6 +18,8 @@ namespace TeamNateZone
             public const int CM = 1;
             public const int FM = 2;
             public const int ADMIN  = 3;
+
+
         }
         int clearance;
         dbHandler db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
@@ -30,6 +32,18 @@ namespace TeamNateZone
         {
             InitializeComponent();
             this.clearance = val;
+            if(clearance == 1)
+            {
+                lblUserType.Text = "Register A New Claims Manager";
+            }
+            if(clearance == 2)
+            {
+                lblUserType.Text = "Register A New Financial Manager";
+            }
+            else
+            {
+                lblUserType.Text = "";
+            }
         }
 
 
