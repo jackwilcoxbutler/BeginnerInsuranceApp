@@ -4,19 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace TeamNateZone
 {
     public class dbHandler
     {
-        private string cnString;
-        private SqlConnection connection;
+        public SqlConnection connection;
         public SqlDataReader dr;
 // <constructor>
         public dbHandler(string cnString)
         {
-            this.cnString = cnString;
-            this.connection = new SqlConnection(cnString);
+            //error handling
+            try
+            {
+
+                connection = new SqlConnection(); //create an instance of a new SqlConnection
+
+                connection.ConnectionString = cnString; //set the connection string for the SqlConnection
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Something went wrong with the DB connection");
+            }
         }
 // </constructor>
 
@@ -198,7 +209,7 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
-        private async User getUserAcct(string userName)
+        private /*async*/ User getUserAcct(string userName)
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
@@ -302,11 +313,11 @@ namespace TeamNateZone
         {
             return getAuthorizedPassword(username);
         }
-        public get_email(string email)
+        public string get_email(string email)
         {
             return getEmail(email);
         }
-        public get_username(string username)
+        public string get_username(string username)
         {
             return getUsername(username);
         }
