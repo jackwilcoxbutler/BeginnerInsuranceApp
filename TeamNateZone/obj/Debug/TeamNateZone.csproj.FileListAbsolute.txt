@@ -176,3 +176,4 @@ C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources

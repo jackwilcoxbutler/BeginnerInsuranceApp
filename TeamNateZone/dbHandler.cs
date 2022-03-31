@@ -337,7 +337,7 @@ namespace TeamNateZone
         {
             updateUserProfile(userID, email, password, street, city, state, zip);
         }
-        public void file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, string status)
+        public void file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate)
         {
             fileClaim(userID, username, email, type, description, startdate, lastupdate);
         }

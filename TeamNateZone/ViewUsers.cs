@@ -13,11 +13,11 @@ namespace TeamNateZone
 {
     public partial class ViewUsers : Form
     {
-        struct clearanceLevel{
+        /*struct clearanceLevel{
             public int CM = 1;
             public int FM = 2;
             public int AD = 3;
-        }
+        }*/
         public ViewUsers()
         {
             InitializeComponent();
@@ -42,14 +42,14 @@ namespace TeamNateZone
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            RegistrationForm rf = new RegistrationForm(clearanceLevel.CM);
+            RegistrationForm rf = new RegistrationForm(1);//clearanceLevel.CM removed for Demo
             rf.Show();
             this.Close();
         }
 
         private void btnAddFM_Click(object sender, EventArgs e)
         {
-            RegistrationForm rf = new RegistrationForm(clearanceLevel.FM);
+            RegistrationForm rf = new RegistrationForm(2);//clearanceLevel.FM removed for Demo
             rf.Show();
             this.Close();
         }

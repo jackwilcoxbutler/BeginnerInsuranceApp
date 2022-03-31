@@ -28,6 +28,7 @@ namespace TeamNateZone
             this.zip = zip;
         }
         // default constructor (makes empty object)
+      
         public User()
         {
             id = 0;

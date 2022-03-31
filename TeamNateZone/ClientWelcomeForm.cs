@@ -18,6 +18,8 @@ namespace TeamNateZone
             public const int CM = 1;
             public const int FM = 2;
             public const int ADM = 3;
+
+
         }
         User user;
         claimList listClaims;
@@ -28,7 +30,7 @@ namespace TeamNateZone
         {
             InitializeComponent();
             this.user = user;
-            if(user.getClearance() == clearances.ADM)
+            if(user.getClearance() == 3 /*clearances.ADM*/)
             {
                 
                 btnAdmin.Visible = true;

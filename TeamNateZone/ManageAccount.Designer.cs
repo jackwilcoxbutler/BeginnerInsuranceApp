@@ -385,7 +385,7 @@ namespace TeamNateZone
             this.btnStopView.Size = new System.Drawing.Size(69, 35);
             this.btnStopView.TabIndex = 50;
             this.btnStopView.UseVisualStyleBackColor = true;
-            this.btnStopView.Click += new System.EventHandler(this.btnStopView_Click);
+           // this.btnStopView.Click += new System.EventHandler(this.btnStopView_Click);
             // 
             // btnStartView
             // 
@@ -396,7 +396,7 @@ namespace TeamNateZone
             this.btnStartView.Size = new System.Drawing.Size(61, 30);
             this.btnStartView.TabIndex = 49;
             this.btnStartView.UseVisualStyleBackColor = true;
-            this.btnStartView.Click += new System.EventHandler(this.btnStartView_Click);
+           // this.btnStartView.Click += new System.EventHandler(this.btnStartView_Click);
             // 
             // btnlogout
             // 
@@ -439,7 +439,7 @@ namespace TeamNateZone
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+           // this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEdit
             // 
@@ -460,7 +460,7 @@ namespace TeamNateZone
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextColor = System.Drawing.Color.White;
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+           // this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // btnUpdatePassword
             // 
