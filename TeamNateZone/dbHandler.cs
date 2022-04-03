@@ -228,7 +228,18 @@ namespace TeamNateZone
 
                 dr.Read();
 
-                User user = new User(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6), dr.GetString(7),dr.GetString(8), dr.GetInt32(9), dr.GetString(10));
+                User user = new User(
+                    dr.GetInt32(10), // user ID
+                    dr.GetString(0), // email
+                    dr.GetString(1), // password
+                    dr.GetString(2), // First Name
+                    dr.GetString(3), // Last Name
+                    dr.GetString(4), // Street
+                    dr.GetString(5), // City
+                    dr.GetString(6), // State
+                    dr.GetString(7), // Zip
+                    dr.GetInt32(8),  // Clearance
+                    dr.GetString(9)); // UserName
 
                 return user;
             }
