@@ -119,35 +119,66 @@ namespace TeamNateZone
         private void btnSend_Click(object sender, EventArgs e)
         {
 
-            string recieverStore = txtReciever.Text;
-            string recieverHelp = getExistingReceiver(txtReciever.Text);
-            bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
+            int i = 0;
+            string recievever = txtReciever.Text;
+            string[] subs = recievever.Split(' ', '\t');
+            //// foreach (var sub in subs)
+            ////  {
+            //Console.WriteLine($"Substring: {sub}");
+            //string recieverStore = sub;
+            //string recieverHelp = getExistingReceiver(sub);
+            //bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
 
             try
             {
-                if (txtReciever.Text == "" || txtSubject.Text == "" || txtMessage.Text == "")
+               if (txtReciever.Text == "" || txtSubject.Text == "" || txtMessage.Text == "")
+                    {
+                        string message = "ERROR : Required Field is blank";
+                        string title = "Message send Failed";
+                        DialogResult result = MessageBox.Show(message, title);
+                    }
+
+                int numsubs = 0; //loop help
+                int numCorrectUN = 0; //loop help
+                foreach (var sub in subs)
                 {
-                    string message = "ERROR : Required Field is blank";
-                    string title = "Message send Failed";
-                    DialogResult result = MessageBox.Show(message, title);
+                    //Console.WriteLine($"Substring: {sub}");
+                    string recieverStore = sub;
+                    string recieverHelp = getExistingReceiver(sub);
+                    bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
+                    numsubs++;
+                    if (resultbool == true)
+                    {
+                        numCorrectUN++;
+                    }
                 }
 
-                if (resultbool == true)
+                if (numCorrectUN == numsubs)
                 {
-                    string message = "Message Sent Succsefully!";
-                    string title = "Message Sent";
-                    DialogResult result = MessageBox.Show(message, title);
-                    DateTime date;
-                    date = DateTime.Now;
-                    storeMessage(user.getUsername(), txtReciever.Text, txtMessage.Text, date, txtSubject.Text);
+                    foreach (var sub in subs)
+                    {
+                        //Console.WriteLine($"Substring: {sub}");
+                        string recieverStore = sub;
+                        string recieverHelp = getExistingReceiver(sub);
+                        bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
 
+                        if (resultbool == true)
+                        {
+                            DateTime date;
+                            date = DateTime.Now;
+                            storeMessage(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text);
+                        }
+                    }
+                    string Message = "Message Sent Succsefully!";
+                    string Title = "Message Sent";
+                    DialogResult Result = MessageBox.Show(Message, Title);
                     txtReciever.Clear();
                     txtMessage.Clear();
                     txtSubject.Clear();
                 }
                 else
                 {
-                    string message = "ERROR : System User Does Not Exist!. Click retry to reenter User's Name.";
+                    string message = "ERROR : System one or more Users Does Not Exist!. Click retry to reenter User's Name.";
                     string title = "Selected User Failed";
                     MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
                     DialogResult result = MessageBox.Show(message, title, buttons);
@@ -155,13 +186,15 @@ namespace TeamNateZone
                     {
                         Application.Exit();
                     }
-                } 
+                }
+
+                
+
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+               MessageBox.Show(err.Message, "Error Occurred");
             }
-
         }
     }
 }
