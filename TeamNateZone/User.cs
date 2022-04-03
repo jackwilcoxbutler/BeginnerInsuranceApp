@@ -23,7 +23,7 @@ namespace TeamNateZone
             this.clearance = clearance;
             this.id = id;
             this.street = street;
-            this.city = street;
+            this.city = city;
             this.state = state;
             this.zip = zip;
         }

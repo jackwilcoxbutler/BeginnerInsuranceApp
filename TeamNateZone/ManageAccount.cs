@@ -101,17 +101,129 @@ namespace TeamNateZone
 
         private void btnUpdatePassword_Click(object sender, EventArgs e)
         {
-            db.update_user_profile(user.getUserID(), tbEmail.Text, tbPassword.Text, tbAddress.Text, tbCity.Text, tbState.Text, tbZip.Text);
-            // the following line will not work until the database is updated to include the new Payment table.
-            // db.update_payment_info(user.getUserID(), tbCC.Text, tbCVV.Text, tbCCExp.Text);
+            if (txtVerify.Text == tbPassword.Text)
+            {
+                db.update_user_profile(user.getUserID(), tbEmail.Text, tbPassword.Text, tbAddress.Text, tbCity.Text, tbState.Text, tbZip.Text);
+                // the following line will not work until the database is updated to include the new Payment table.
+                // db.update_payment_info(user.getUserID(), tbCC.Text, tbCVV.Text, tbCCExp.Text);
 
-            // Updates the information for the user locally. Avoid using `user = db.get_user_profile(user.getUsername())` to get the updated information due to potential synchronization issues.
-            user.setPassword(tbPassword.Text);
-            user.setEmail(tbEmail.Text);
-            user.setStreet(tbAddress.Text);
-            user.setCity(tbCity.Text);
-            user.setState(tbState.Text);
-            user.setZip(tbZip.Text);
+                // Updates the information for the user locally. Avoid using `user = db.get_user_profile(user.getUsername())` to get the updated information due to potential synchronization issues.
+                user.setPassword(tbPassword.Text);
+                user.setEmail(tbEmail.Text);
+                user.setStreet(tbAddress.Text);
+                user.setCity(tbCity.Text);
+                user.setState(tbState.Text);
+                user.setZip(tbZip.Text);
+
+                tbAddress.ReadOnly = true;
+                tbPassword.ReadOnly = true;
+                tbEmail.ReadOnly = true;
+                tbCity.ReadOnly = true;
+                tbState.ReadOnly = true;
+                tbZip.ReadOnly = true;
+                tbCC14.ReadOnly = true;
+                tbCC24.ReadOnly = true;
+                tbCC34.ReadOnly = true;
+                tbCVV.ReadOnly = true;
+                tbCCExp.ReadOnly = true;
+                
+                txtVerify.Clear();
+                btnEdit.Visible= true;
+                btnCancel.Visible = false;
+                btnUpdatePassword.Visible = false;
+                lbVerify.Visible = false;
+                txtVerify.Visible = false;
+                btnStartView.Visible = false;
+                btnStopView.Visible = false;
+                tbPassword.PasswordChar = '•';
+
+                MessageBox.Show("Account details updated!", "Success");
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match", "Try again");
+                //cn.Close();
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            tbAddress.ReadOnly = false;
+            tbPassword.ReadOnly = false;
+            tbEmail.ReadOnly = false;
+            tbCity.ReadOnly = false;
+            tbState.ReadOnly = false;
+            tbZip.ReadOnly = false;
+            tbCC14.ReadOnly = false;
+            tbCC24.ReadOnly = false;
+            tbCC34.ReadOnly = false;
+            tbCVV.ReadOnly = false;
+            tbCCExp.ReadOnly = false;
+
+            btnUpdatePassword.Visible = true;
+            lbVerify.Visible = true;
+            txtVerify.Visible = true;
+            btnEdit.Visible = false;
+            btnCancel.Visible = true;
+            btnStartView.Visible = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            tbUserName.Text = user.getUsername();
+            tbPassword.Text = user.getPassword();
+            tbEmail.Text = user.getEmail();
+            tbAddress.Text = user.getStreet();
+            tbCity.Text = user.getCity();
+            tbState.Text = user.getState();
+            tbZip.Text = user.getZip();
+            
+            //if (String.IsNullOrEmpty(Regex.Replace(user.getCC(), @"\s+", " ")))
+            //{ }
+            //else
+            //{
+            //    tbCC14.Text = user.getCC().Substring(0, 4);
+            //    tbCC24.Text = user.getCC().Substring(4, 4);
+            //    tbCC34.Text = user.getCC().Substring(8, 4);
+            //}
+            //tbCVV.Text = user.getCVV();
+            //tbCCExp.Text = user.getCCExp();
+
+            btnUpdatePassword.Visible = false;
+            lbVerify.Visible = false;
+            txtVerify.Visible = false;
+            btnCancel.Visible = false;
+            btnStartView.Visible = false;
+            btnStopView.Visible = false;
+            btnEdit.Visible = true;
+
+            tbAddress.ReadOnly = true;
+            tbPassword.ReadOnly = true;
+            tbEmail.ReadOnly = true;
+            tbCity.ReadOnly = true;
+            tbState.ReadOnly = true;
+            tbZip.ReadOnly = true;
+            tbCC14.ReadOnly = true;
+            tbCC24.ReadOnly = true;
+            tbCC34.ReadOnly = true;
+            tbCVV.ReadOnly = true;
+            tbCCExp.ReadOnly = true;
+        }
+
+        private void btnStartView_Click(object sender, EventArgs e)
+        {
+            txtVerify.PasswordChar = '\0';
+            tbPassword.PasswordChar = '\0';
+            btnStartView.Visible = false;
+            btnStopView.Visible = true;
+        }
+
+        private void btnStopView_Click(object sender, EventArgs e)
+        {
+            txtVerify.PasswordChar = '•';
+            tbPassword.PasswordChar = '•';
+            btnStartView.Visible = true;
+            btnStopView.Visible = false;
         }
     }
 }
