@@ -36,12 +36,12 @@ namespace TeamNateZone
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFileClaim = new CustomControls.RJControls.rndButton();
-            this.btnAdmin = new CustomControls.RJControls.rndButton();
             this.btnListClaims = new CustomControls.RJControls.rndButton();
             this.btnManageAccount = new CustomControls.RJControls.rndButton();
             this.btnlogout = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnViewMessages = new CustomControls.RJControls.rndButton();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,27 +115,6 @@ namespace TeamNateZone
             this.btnFileClaim.TextColor = System.Drawing.Color.White;
             this.btnFileClaim.UseVisualStyleBackColor = false;
             this.btnFileClaim.Click += new System.EventHandler(this.btnFileClaim_Click);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.BackColor = System.Drawing.Color.White;
-            this.btnAdmin.BackgroundColor = System.Drawing.Color.White;
-            this.btnAdmin.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnAdmin.BorderRadius = 10;
-            this.btnAdmin.BorderSize = 5;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Mongolian Baiti", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin.Location = new System.Drawing.Point(995, 30);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(101, 72);
-            this.btnAdmin.TabIndex = 16;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.TextColor = System.Drawing.Color.Black;
-            this.btnAdmin.UseVisualStyleBackColor = false;
-            this.btnAdmin.Visible = false;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnListClaims
             // 
@@ -221,6 +200,18 @@ namespace TeamNateZone
             this.btnViewMessages.UseVisualStyleBackColor = false;
             this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(176, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(195, 48);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Welcome";
+            // 
             // ClientWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,6 +220,7 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 675);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.btnlogout);
@@ -238,7 +230,6 @@ namespace TeamNateZone
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnFileClaim);
-            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnListClaims);
             this.Controls.Add(this.btnManageAccount);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -256,7 +247,6 @@ namespace TeamNateZone
 
         #endregion
         private CustomControls.RJControls.rndButton btnListClaims;
-        private CustomControls.RJControls.rndButton btnAdmin;
         private CustomControls.RJControls.rndButton btnManageAccount;
         private CustomControls.RJControls.rndButton btnFileClaim;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -267,5 +257,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.rndButton btnViewMessages;
+        private System.Windows.Forms.Label label7;
     }
 }

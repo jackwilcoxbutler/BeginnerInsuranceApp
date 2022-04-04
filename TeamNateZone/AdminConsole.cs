@@ -41,11 +41,5 @@ public partial class AdminConsole : Form
             RegistrationForm rf = new RegistrationForm(2);
             rf.Show();
         }
-
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            ViewUsers v = new ViewUsers();
-            v.Show();
-        }
     }
 }

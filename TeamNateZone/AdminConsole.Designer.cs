@@ -34,7 +34,6 @@ namespace TeamNateZone
             this.btnExit = new CustomControls.RJControls.rndButton();
             this.btnRegisterCM = new CustomControls.RJControls.rndButton();
             this.btnRegisterFM = new CustomControls.RJControls.rndButton();
-            this.btnViewAll = new CustomControls.RJControls.rndButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +81,7 @@ namespace TeamNateZone
             this.btnRegisterCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterCM.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterCM.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterCM.Location = new System.Drawing.Point(176, 167);
+            this.btnRegisterCM.Location = new System.Drawing.Point(297, 158);
             this.btnRegisterCM.Name = "btnRegisterCM";
             this.btnRegisterCM.Size = new System.Drawing.Size(200, 119);
             this.btnRegisterCM.TabIndex = 5;
@@ -102,7 +101,7 @@ namespace TeamNateZone
             this.btnRegisterFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterFM.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterFM.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterFM.Location = new System.Drawing.Point(461, 167);
+            this.btnRegisterFM.Location = new System.Drawing.Point(582, 158);
             this.btnRegisterFM.Name = "btnRegisterFM";
             this.btnRegisterFM.Size = new System.Drawing.Size(200, 119);
             this.btnRegisterFM.TabIndex = 6;
@@ -110,26 +109,6 @@ namespace TeamNateZone
             this.btnRegisterFM.TextColor = System.Drawing.Color.White;
             this.btnRegisterFM.UseVisualStyleBackColor = false;
             this.btnRegisterFM.Click += new System.EventHandler(this.btnRegisterFM_Click);
-            // 
-            // btnViewAll
-            // 
-            this.btnViewAll.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnViewAll.BackgroundColor = System.Drawing.Color.YellowGreen;
-            this.btnViewAll.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnViewAll.BorderRadius = 15;
-            this.btnViewAll.BorderSize = 0;
-            this.btnViewAll.FlatAppearance.BorderSize = 0;
-            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAll.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.ForeColor = System.Drawing.Color.White;
-            this.btnViewAll.Location = new System.Drawing.Point(733, 167);
-            this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(200, 119);
-            this.btnViewAll.TabIndex = 7;
-            this.btnViewAll.Text = "View All Users";
-            this.btnViewAll.TextColor = System.Drawing.Color.White;
-            this.btnViewAll.UseVisualStyleBackColor = false;
-            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
             // pictureBox1
             // 
@@ -150,7 +129,6 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1104, 409);
-            this.Controls.Add(this.btnViewAll);
             this.Controls.Add(this.btnRegisterFM);
             this.Controls.Add(this.btnRegisterCM);
             this.Controls.Add(this.btnExit);
@@ -174,6 +152,5 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnExit;
         private CustomControls.RJControls.rndButton btnRegisterCM;
         private CustomControls.RJControls.rndButton btnRegisterFM;
-        private CustomControls.RJControls.rndButton btnViewAll;
     }
 }

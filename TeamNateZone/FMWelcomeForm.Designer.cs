@@ -41,6 +41,7 @@ namespace TeamNateZone
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogout = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,6 +129,7 @@ namespace TeamNateZone
             // 
             // btnManageAccount
             // 
+            this.btnManageAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnManageAccount.BackColor = System.Drawing.Color.White;
             this.btnManageAccount.BackgroundColor = System.Drawing.Color.White;
             this.btnManageAccount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageAccount.BackgroundImage")));
@@ -199,6 +201,18 @@ namespace TeamNateZone
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(130, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(529, 48);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Welcome Finance Manager";
+            // 
             // FMWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,6 +220,7 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 543);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -220,7 +235,7 @@ namespace TeamNateZone
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FMWelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FMWelcomeScreen";
+            this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,5 +255,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnlogout;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -24,10 +24,8 @@ namespace TeamNateZone
         }
         private void btnViewClient_Click(object sender, EventArgs e)
         {
-            // We may want to update this part of this form; 
-            // I'm not sure what differs between FM/CM view users and what we would want for the admin
-           FMCMViewUsers v = new FMCMViewUsers(user);
-           v.Show();           
+            ViewUsers v = new ViewUsers();
+            v.Show();
         }
         private void btnViewMessages_Click(object sender, EventArgs e)
         {

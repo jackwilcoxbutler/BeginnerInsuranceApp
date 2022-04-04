@@ -19,6 +19,7 @@ namespace TeamNateZone
         FMWelcomeForm fmwelcomeForm;
         NewMessage Newmess;
         ViewMessageForm View;
+        AdminWelcomeForm AdminwelcomeForm;
         public MessageForm(User user)
         {
             InitializeComponent();
@@ -49,9 +50,9 @@ namespace TeamNateZone
             }
             else if (user.getRole() == "Admin")
             {
-                welcomeForm = new ClientWelcomeForm(user);
-                welcomeForm.Owner = this;
-                welcomeForm.Show();
+                AdminwelcomeForm = new AdminWelcomeForm(user);
+                AdminwelcomeForm.Owner = this;
+                AdminwelcomeForm.Show();
             }
             else
             {

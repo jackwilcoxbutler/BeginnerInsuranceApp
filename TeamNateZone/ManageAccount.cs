@@ -18,6 +18,7 @@ namespace TeamNateZone
         ClientWelcomeForm welcomeForm;
         CMWelcomeForm cmwelcomeForm;
         FMWelcomeForm fmwelcomeForm;
+        AdminWelcomeForm AdminwelcomeForm;
 
         dbHandler db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
 
@@ -89,9 +90,9 @@ namespace TeamNateZone
             }
             else if (user.getRole() == "Admin")
             {
-                welcomeForm = new ClientWelcomeForm(user);
-                welcomeForm.Owner = this;
-                welcomeForm.Show();
+                AdminwelcomeForm = new AdminWelcomeForm(user);
+                AdminwelcomeForm.Owner = this;
+                AdminwelcomeForm.Show();
             }
             else
             {
