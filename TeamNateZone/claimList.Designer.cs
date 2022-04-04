@@ -48,7 +48,6 @@ namespace TeamNateZone
             this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
             this.claimsTableAdapter = new TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter();
             this.btnReturnToWelcome = new CustomControls.RJControls.rndButton();
-            this.btnExit = new CustomControls.RJControls.rndButton();
             this.claimsTableAdapter1 = new TeamNateZone.TEAM_ADataSet_Claims2TableAdapters.ClaimsTableAdapter();
             this.btnView = new CustomControls.RJControls.rndButton();
             this.testPictureBox = new System.Windows.Forms.PictureBox();
@@ -82,9 +81,10 @@ namespace TeamNateZone
             this.dataGridView1.DataSource = this.claimsBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(1067, 551);
             this.dataGridView1.TabIndex = 3;
             // 
             // claimIdDataGridViewTextBoxColumn
@@ -200,36 +200,15 @@ namespace TeamNateZone
             this.btnReturnToWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnToWelcome.ForeColor = System.Drawing.Color.White;
-            this.btnReturnToWelcome.Location = new System.Drawing.Point(627, 394);
-            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturnToWelcome.Location = new System.Drawing.Point(934, 485);
+            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturnToWelcome.Name = "btnReturnToWelcome";
-            this.btnReturnToWelcome.Size = new System.Drawing.Size(82, 31);
+            this.btnReturnToWelcome.Size = new System.Drawing.Size(109, 38);
             this.btnReturnToWelcome.TabIndex = 4;
             this.btnReturnToWelcome.Text = "Return";
             this.btnReturnToWelcome.TextColor = System.Drawing.Color.White;
             this.btnReturnToWelcome.UseVisualStyleBackColor = false;
             this.btnReturnToWelcome.Click += new System.EventHandler(this.btnReturnToWelcome_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnExit.BackgroundColor = System.Drawing.Color.YellowGreen;
-            this.btnExit.BorderColor = System.Drawing.Color.White;
-            this.btnExit.BorderRadius = 15;
-            this.btnExit.BorderSize = 0;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(712, 394);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(82, 31);
-            this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "Exit";
-            this.btnExit.TextColor = System.Drawing.Color.White;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // claimsTableAdapter1
             // 
@@ -246,10 +225,10 @@ namespace TeamNateZone
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(480, 394);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnView.Location = new System.Drawing.Point(741, 484);
+            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(105, 31);
+            this.btnView.Size = new System.Drawing.Size(140, 38);
             this.btnView.TabIndex = 6;
             this.btnView.Text = "View Image";
             this.btnView.TextColor = System.Drawing.Color.White;
@@ -259,9 +238,10 @@ namespace TeamNateZone
             // testPictureBox
             // 
             this.testPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.testPictureBox.Location = new System.Drawing.Point(447, 262);
+            this.testPictureBox.Location = new System.Drawing.Point(596, 322);
+            this.testPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.testPictureBox.Name = "testPictureBox";
-            this.testPictureBox.Size = new System.Drawing.Size(173, 127);
+            this.testPictureBox.Size = new System.Drawing.Size(231, 156);
             this.testPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.testPictureBox.TabIndex = 7;
             this.testPictureBox.TabStop = false;
@@ -279,10 +259,10 @@ namespace TeamNateZone
             this.rndImageDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rndImageDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndImageDownload.ForeColor = System.Drawing.Color.White;
-            this.rndImageDownload.Location = new System.Drawing.Point(358, 394);
-            this.rndImageDownload.Margin = new System.Windows.Forms.Padding(2);
+            this.rndImageDownload.Location = new System.Drawing.Point(559, 485);
+            this.rndImageDownload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rndImageDownload.Name = "rndImageDownload";
-            this.rndImageDownload.Size = new System.Drawing.Size(105, 31);
+            this.rndImageDownload.Size = new System.Drawing.Size(140, 38);
             this.rndImageDownload.TabIndex = 8;
             this.rndImageDownload.Text = "Download";
             this.rndImageDownload.TextColor = System.Drawing.Color.White;
@@ -291,17 +271,17 @@ namespace TeamNateZone
             // 
             // claimList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 448);
+            this.ClientSize = new System.Drawing.Size(1067, 551);
             this.Controls.Add(this.rndImageDownload);
             this.Controls.Add(this.testPictureBox);
             this.Controls.Add(this.btnView);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "claimList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List of Claims";
@@ -322,7 +302,6 @@ namespace TeamNateZone
         private TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter claimsTableAdapter;
         public System.Windows.Forms.BindingSource claimsBindingSource;
         private CustomControls.RJControls.rndButton btnReturnToWelcome;
-        private CustomControls.RJControls.rndButton btnExit;
         private TEAM_ADataSet_Claims2 tEAM_ADataSet_Claims2;
         private System.Windows.Forms.BindingSource claimsBindingSource1;
         private TEAM_ADataSet_Claims2TableAdapters.ClaimsTableAdapter claimsTableAdapter1;
