@@ -101,6 +101,16 @@
     <Compile Include="FMWelcomeForm.Designer.cs">
       <DependentUpon>FMWelcomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TEAM_ADataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_ADataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TEAM_ADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_ADataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +286,28 @@
     </None>
     <None Include="TEAM_ADataSet.xss">
       <DependentUpon>TEAM_ADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet11.xsc">
+      <DependentUpon>TEAM_ADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_ADataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_ADataSet11.xss">
+      <DependentUpon>TEAM_ADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet2.xsc">
+      <DependentUpon>TEAM_ADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_ADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_ADataSet2.xss">
+      <DependentUpon>TEAM_ADataSet2.xsd</DependentUpon>
     </None>
     <None Include="TEAM_ADataSet_Claims21.xsc">
       <DependentUpon>TEAM_ADataSet_Claims21.xsd</DependentUpon>
