@@ -52,12 +52,13 @@ namespace TeamNateZone
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
 
-                cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject) VALUES (@s, @r, @mess, @date, @sub);";
+                cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject, readorunread ) VALUES (@s, @r, @mess, @date, @sub, @re);";
                 cmd.Parameters.AddWithValue("@s", sender);
                 cmd.Parameters.AddWithValue("@r", reveiver);
                 cmd.Parameters.AddWithValue("@mess", message);
                 cmd.Parameters.AddWithValue("@date", date);
                 cmd.Parameters.AddWithValue("@sub", subject);
+                cmd.Parameters.AddWithValue("@re", " • ");
 
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -122,13 +123,7 @@ namespace TeamNateZone
             int i = 0;
             string recievever = txtReciever.Text;
             string[] subs = recievever.Split(' ', '\t');
-            //// foreach (var sub in subs)
-            ////  {
-            //Console.WriteLine($"Substring: {sub}");
-            //string recieverStore = sub;
-            //string recieverHelp = getExistingReceiver(sub);
-            //bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
-
+            
             try
             {
                if (txtReciever.Text == "" || txtSubject.Text == "" || txtMessage.Text == "")
@@ -142,7 +137,6 @@ namespace TeamNateZone
                 int numCorrectUN = 0; //loop help
                 foreach (var sub in subs)
                 {
-                    //Console.WriteLine($"Substring: {sub}");
                     string recieverStore = sub;
                     string recieverHelp = getExistingReceiver(sub);
                     bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
@@ -157,7 +151,6 @@ namespace TeamNateZone
                 {
                     foreach (var sub in subs)
                     {
-                        //Console.WriteLine($"Substring: {sub}");
                         string recieverStore = sub;
                         string recieverHelp = getExistingReceiver(sub);
                         bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string

@@ -34,7 +34,8 @@ namespace TeamNateZone
 
             if (user.getRole() == "Claims Manager")
             {
-                da = new SqlDataAdapter("SELECT Email, Username, fName FirstName, lName LastName, street AS Street, city AS City, state AS State, zip AS ZipCode FROM SignInInfo WHERE clearance = 0", cn);
+                // might wnat to change to only count the ones with a active status
+                da = new SqlDataAdapter("SELECT SignInInfo.Email, SignInInfo.Username, SignInInfo.fName FirstName, SignInInfo.lName LastName, SignInInfo.street AS Street, SignInInfo.city AS City, SignInInfo.state AS State, SignInInfo.zip AS ZipCode, Cl.Active_Claims FROM SignInInfo INNER JOIN (SELECT UserID, count(*) as Active_Claims FROM Claims GROUP BY UserID) AS Cl ON SignInInfo.UserID=Cl.UserID WHERE clearance = 0", cn);
                 DataTable dtbl = new DataTable();
                 da.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
@@ -44,7 +45,8 @@ namespace TeamNateZone
             }
             else if (user.getRole() == "Finance Manager")
             {
-                da = new SqlDataAdapter("SELECT Email, Username, fName FirstName, lName LastName, street AS Street, city AS City, state AS State, zip AS ZipCode, CreditNumber AS CardNumber, CVV, CCExpiration AS CardExperation FROM SignInInfo WHERE clearance = 0", cn);
+                // might wnat to change to only count the ones with a active status
+                da = new SqlDataAdapter("SELECT SignInInfo.Email, SignInInfo.Username, SignInInfo.fName FirstName, SignInInfo.lName LastName, SignInInfo.street AS Street, SignInInfo.city AS City, SignInInfo.state AS State, SignInInfo.zip AS ZipCode, SignInInfo.CreditNumber AS CardNumber, SignInInfo.CVV, SignInInfo.CCExpiration AS CardExperation, Cl.Active_Claims FROM SignInInfo INNER JOIN (SELECT UserID, count(*) as Active_Claims FROM Claims GROUP BY UserID) AS Cl ON SignInInfo.UserID=Cl.UserID WHERE clearance = 0", cn);
                 DataTable dtbl = new DataTable();
                 da.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
