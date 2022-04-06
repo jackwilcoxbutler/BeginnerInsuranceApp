@@ -16,6 +16,7 @@ namespace TeamNateZone
         int newSortColumn;
         ListSortDirection newColumnDirection = ListSortDirection.Ascending;
         User user;
+
         public FMManageFinance()
         {
             InitializeComponent();

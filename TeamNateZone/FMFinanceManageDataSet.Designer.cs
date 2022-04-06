@@ -1054,8 +1054,8 @@ SELECT ClaimId, Username, StartDate, Status, PaymentStatus, Claim_Type, Claim_De
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT ClaimId, Username, StartDate, Status, PaymentStatus, Claim_Type, Claim_Des" +
-                "cription, EstimatedAmount FROM dbo.Claims\r\nORDER BY Status DESC";
+            this._commandCollection[1].CommandText = "SELECT ClaimId, Claim_Description, Claim_Type, EstimatedAmount, PaymentStatus, St" +
+                "artDate, Status, Username FROM Claims ORDER BY Status DESC";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

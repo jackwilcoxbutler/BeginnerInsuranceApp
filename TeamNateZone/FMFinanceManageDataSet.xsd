@@ -78,8 +78,7 @@ SELECT ClaimId, Username, StartDate, Status, PaymentStatus, Claim_Type, Claim_De
               <DbSource ConnectionRef="TEAM_A_ConnectionString (Settings)" DbObjectName="TEAM_A.dbo.Claims" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ClaimId, Username, StartDate, Status, PaymentStatus, Claim_Type, Claim_Description, EstimatedAmount FROM dbo.Claims
-ORDER BY Status DESC</CommandText>
+                    <CommandText>SELECT ClaimId, Claim_Description, Claim_Type, EstimatedAmount, PaymentStatus, StartDate, Status, Username FROM Claims ORDER BY Status DESC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -94,7 +93,7 @@ ORDER BY Status DESC</CommandText>
   <xs:element name="FMFinanceManageDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FMFinanceManageDataSet" msprop:Generator_UserDSName="FMFinanceManageDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Claims" msprop:Generator_TableClassName="ClaimsDataTable" msprop:Generator_TableVarName="tableClaims" msprop:Generator_TablePropName="Claims" msprop:Generator_RowDeletingName="ClaimsRowDeleting" msprop:Generator_RowChangingName="ClaimsRowChanging" msprop:Generator_RowEvHandlerName="ClaimsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClaimsRowDeleted" msprop:Generator_UserTableName="Claims" msprop:Generator_RowChangedName="ClaimsRowChanged" msprop:Generator_RowEvArgName="ClaimsRowChangeEvent" msprop:Generator_RowClassName="ClaimsRow">
+        <xs:element name="Claims" msprop:Generator_TableClassName="ClaimsDataTable" msprop:Generator_TableVarName="tableClaims" msprop:Generator_RowChangedName="ClaimsRowChanged" msprop:Generator_TablePropName="Claims" msprop:Generator_RowDeletingName="ClaimsRowDeleting" msprop:Generator_RowChangingName="ClaimsRowChanging" msprop:Generator_RowEvHandlerName="ClaimsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClaimsRowDeleted" msprop:Generator_RowClassName="ClaimsRow" msprop:Generator_UserTableName="Claims" msprop:Generator_RowEvArgName="ClaimsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ClaimId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnClaimId" msprop:Generator_ColumnPropNameInRow="ClaimId" msprop:Generator_ColumnPropNameInTable="ClaimIdColumn" msprop:Generator_UserColumnName="ClaimId" type="xs:int" />

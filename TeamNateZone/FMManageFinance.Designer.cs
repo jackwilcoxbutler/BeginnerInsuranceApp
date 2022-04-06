@@ -30,63 +30,47 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.FmView = new System.Windows.Forms.DataGridView();
-            this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
-            this.tEAMAClaimsDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtAmt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.claimsTableAdapter = new TeamNateZone.FMFinanceManageDataSetTableAdapters.ClaimsTableAdapter();
+            this.fMFinanceManageDataSet = new TeamNateZone.FMFinanceManageDataSet();
+            this.claimsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRefreshTable = new CustomControls.RJControls.rndButton();
             this.btnGoBack = new CustomControls.RJControls.rndButton();
             this.btnMakeEstimate = new CustomControls.RJControls.rndButton();
-            this.claimIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claimTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claimDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estimatedAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claimsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fMFinanceManageDataSet = new TeamNateZone.FMFinanceManageDataSet();
-            this.claimsTableAdapter = new TeamNateZone.FMFinanceManageDataSetTableAdapters.ClaimsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.FmView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAMAClaimsDatasetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFinanceManageDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // FmView
             // 
-            this.FmView.AutoGenerateColumns = false;
+            this.FmView.AllowUserToAddRows = false;
+            this.FmView.AllowUserToDeleteRows = false;
+            this.FmView.AllowUserToOrderColumns = true;
+            this.FmView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.FmView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.FmView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FmView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FmView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.FmView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FmView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.claimIdDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.claimTypeDataGridViewTextBoxColumn,
-            this.claimDescriptionDataGridViewTextBoxColumn,
-            this.startDateDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.paymentStatusDataGridViewTextBoxColumn,
-            this.estimatedAmountDataGridViewTextBoxColumn});
-            this.FmView.DataSource = this.claimsBindingSource;
             this.FmView.Location = new System.Drawing.Point(-3, 12);
             this.FmView.Name = "FmView";
-            this.FmView.RowHeadersWidth = 82;
+            this.FmView.ReadOnly = true;
+            this.FmView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.FmView.RowTemplate.Height = 33;
             this.FmView.Size = new System.Drawing.Size(1675, 554);
             this.FmView.TabIndex = 0;
             this.FmView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_ColumnHeaderMouseClick);
-            // 
-            // tEAM_A_Claims_Dataset
-            // 
-            this.tEAM_A_Claims_Dataset.DataSetName = "TEAM_A_Claims_Dataset";
-            this.tEAM_A_Claims_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tEAMAClaimsDatasetBindingSource
-            // 
-            this.tEAMAClaimsDatasetBindingSource.DataSource = this.tEAM_A_Claims_Dataset;
-            this.tEAMAClaimsDatasetBindingSource.Position = 0;
             // 
             // txtAmt
             // 
@@ -106,6 +90,19 @@ namespace TeamNateZone
             this.label1.Size = new System.Drawing.Size(166, 42);
             this.label1.TabIndex = 3;
             this.label1.Text = "Amount :";
+            // 
+            // claimsTableAdapter
+            // 
+            this.claimsTableAdapter.ClearBeforeFill = true;
+            // 
+            // fMFinanceManageDataSet
+            // 
+            this.fMFinanceManageDataSet.DataSetName = "FMFinanceManageDataSet";
+            this.fMFinanceManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // claimsBindingSource
+            // 
+            this.claimsBindingSource.DataMember = "Claims";
             // 
             // btnRefreshTable
             // 
@@ -163,89 +160,12 @@ namespace TeamNateZone
             this.btnMakeEstimate.UseVisualStyleBackColor = false;
             this.btnMakeEstimate.Click += new System.EventHandler(this.btnMakeEstimate_Click);
             // 
-            // claimIdDataGridViewTextBoxColumn
-            // 
-            this.claimIdDataGridViewTextBoxColumn.DataPropertyName = "ClaimId";
-            this.claimIdDataGridViewTextBoxColumn.HeaderText = "ClaimId";
-            this.claimIdDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.claimIdDataGridViewTextBoxColumn.Name = "claimIdDataGridViewTextBoxColumn";
-            this.claimIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claimIdDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // claimTypeDataGridViewTextBoxColumn
-            // 
-            this.claimTypeDataGridViewTextBoxColumn.DataPropertyName = "Claim_Type";
-            this.claimTypeDataGridViewTextBoxColumn.HeaderText = "Claim_Type";
-            this.claimTypeDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.claimTypeDataGridViewTextBoxColumn.Name = "claimTypeDataGridViewTextBoxColumn";
-            this.claimTypeDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // claimDescriptionDataGridViewTextBoxColumn
-            // 
-            this.claimDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Claim_Description";
-            this.claimDescriptionDataGridViewTextBoxColumn.HeaderText = "Claim_Description";
-            this.claimDescriptionDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.claimDescriptionDataGridViewTextBoxColumn.Name = "claimDescriptionDataGridViewTextBoxColumn";
-            this.claimDescriptionDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // paymentStatusDataGridViewTextBoxColumn
-            // 
-            this.paymentStatusDataGridViewTextBoxColumn.DataPropertyName = "PaymentStatus";
-            this.paymentStatusDataGridViewTextBoxColumn.HeaderText = "PaymentStatus";
-            this.paymentStatusDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.paymentStatusDataGridViewTextBoxColumn.Name = "paymentStatusDataGridViewTextBoxColumn";
-            this.paymentStatusDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // estimatedAmountDataGridViewTextBoxColumn
-            // 
-            this.estimatedAmountDataGridViewTextBoxColumn.DataPropertyName = "EstimatedAmount";
-            this.estimatedAmountDataGridViewTextBoxColumn.HeaderText = "EstimatedAmount";
-            this.estimatedAmountDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.estimatedAmountDataGridViewTextBoxColumn.Name = "estimatedAmountDataGridViewTextBoxColumn";
-            this.estimatedAmountDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // claimsBindingSource
-            // 
-            this.claimsBindingSource.DataMember = "Claims";
-            this.claimsBindingSource.DataSource = this.fMFinanceManageDataSet;
-            // 
-            // fMFinanceManageDataSet
-            // 
-            this.fMFinanceManageDataSet.DataSetName = "FMFinanceManageDataSet";
-            this.fMFinanceManageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // claimsTableAdapter
-            // 
-            this.claimsTableAdapter.ClearBeforeFill = true;
-            // 
             // FMManageFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1692, 768);
             this.Controls.Add(this.btnRefreshTable);
             this.Controls.Add(this.btnGoBack);
@@ -257,10 +177,8 @@ namespace TeamNateZone
             this.Text = "FMManageFinance";
             this.Load += new System.EventHandler(this.FMManageFinance_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FmView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tEAMAClaimsDatasetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFinanceManageDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,23 +187,13 @@ namespace TeamNateZone
         #endregion
 
         private System.Windows.Forms.DataGridView FmView;
-        private System.Windows.Forms.BindingSource tEAMAClaimsDatasetBindingSource;
-        private TEAM_A_Claims_Dataset tEAM_A_Claims_Dataset;
-        private FMFinanceManageDataSet fMFinanceManageDataSet;
-        private System.Windows.Forms.BindingSource claimsBindingSource;
         private FMFinanceManageDataSetTableAdapters.ClaimsTableAdapter claimsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claimIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claimTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claimDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estimatedAmountDataGridViewTextBoxColumn;
         private CustomControls.RJControls.rndButton btnMakeEstimate;
         private System.Windows.Forms.TextBox txtAmt;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.rndButton btnGoBack;
         private CustomControls.RJControls.rndButton btnRefreshTable;
+        private FMFinanceManageDataSet fMFinanceManageDataSet;
+        private System.Windows.Forms.BindingSource claimsBindingSource;
     }
 }
