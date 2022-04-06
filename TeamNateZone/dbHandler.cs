@@ -32,6 +32,39 @@ namespace TeamNateZone
 // </constructor>
 
 // <private methods>
+        private bool updateClaim(int amt,int claimID)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "UPDATE Claims" +
+                                   " SET EstimatedAmount = @amt, Status = 'Estimated',PaymentStatus = 'Pending', LastUpdate = @lastUpdate where ClaimID = @claimID";
+                cmd.Parameters.AddWithValue("@claimId", claimID);
+                cmd.Parameters.AddWithValue("@amt", amt);
+                cmd.Parameters.AddWithValue("@lastUpdate", DateTime.Now.ToString("M/d/yyyy"));
+
+
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return true;
+        }
+    
         private String getAuthorizedPassword(string userName)
         {
             SqlCommand cmd = new SqlCommand();
@@ -63,6 +96,7 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+
         private string getEmail(string email)
         {
             SqlCommand cmd = new SqlCommand();
@@ -318,6 +352,10 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+
+    
+
+
 // </private methods>
 // <public methods>
         public String check_password(string username)
@@ -351,6 +389,15 @@ namespace TeamNateZone
         public void file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate)
         {
             fileClaim(userID, username, email, type, description, startdate, lastupdate);
+        }
+
+        public bool update_Claim(int amt, int claimID)
+        {
+            if (updateClaim(amt, claimID))
+            {
+                return true;
+            }
+            return false;
         }
         // </public methods>
     }

@@ -16,7 +16,7 @@ namespace TeamNateZone
 
         //Data
         int userID { get; set; }
-        int claimID { get; set; }
+        public int claimID { get; set; }
         int cmID { get; set; }
         int fmID { get; set; }
         string claimType { get; set; }
@@ -27,6 +27,8 @@ namespace TeamNateZone
         DateTime endDate { get; set; }
         DateTime estEndDate { get; set; }
         DateTime lastUpdate { get; set; }
+
+        dbHandler db;
 
         //Constructor 
         public Claim( int userID, int cmID,int fmID, string claimType, string claimDesc, string claimStatus, 
@@ -44,6 +46,8 @@ namespace TeamNateZone
             this.endDate= endDate;
             this.estEndDate= estEndDate;
             this.lastUpdate = lastUpdate;
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+
         }
 
         public Claim(int userID, string claimType,string claimDesc, DateTime startDate)
@@ -52,9 +56,11 @@ namespace TeamNateZone
             this.claimType = claimType;
             this.claimDesc = claimDesc;
             this.startDate = startDate;
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+
         }
         //Need a default constructor 
-        
+
         //Need a constructor that takes in parameters 
         public Claim(int claimID)
         {
@@ -70,6 +76,8 @@ namespace TeamNateZone
             endDate = getEndDate(claimID);
             estEndDate = getEstEndDate(claimID);
             lastUpdate = getLastUpdate(claimID);
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+
         }
 
         /*set methods
@@ -437,38 +445,13 @@ namespace TeamNateZone
             return true;
         }
 
-        public bool estimateAmt(int amt)
+        public bool estimateAmt(int amt,int claimID)
         {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            try
+            if (db.update_Claim(amt, claimID))
             {
-                cn.ConnectionString =
-                        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-
-                cmd.CommandText = "UPDATE Claims(EstimatedAmount)" +
-                                   "SET EstimatedAmount = @amt where ClaimID = @claimID";
-                cmd.Parameters.AddWithValue("@claimId", claimID);
-                cmd.Parameters.AddWithValue("@amt", amt);
-
-
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                cn.Close();
+                return true;
             }
-            catch (Exception err)
-            {
-                return false;
-                MessageBox.Show(err.Message, "Error Occurred");
-            }
-            finally
-            {
-                cn.Close();
-            }
-            return true;
+            return false;
         }
 
     }
