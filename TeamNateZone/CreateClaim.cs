@@ -38,6 +38,7 @@ namespace TeamNateZone
 
         private /*async*/ void btnFile_Click(object sender, EventArgs e)
         {
+          
             db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString());
 
             SqlConnection cn = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");

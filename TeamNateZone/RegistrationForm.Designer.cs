@@ -265,6 +265,7 @@ namespace TeamNateZone
             // 
             this.txtZip.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtZip.Location = new System.Drawing.Point(534, 69);
+            this.txtZip.MaxLength = 5;
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(129, 50);
             this.txtZip.TabIndex = 6;
