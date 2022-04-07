@@ -82,7 +82,7 @@ namespace TeamNateZone
             // 
             this.datetime.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datetime.Location = new System.Drawing.Point(234, 142);
-            this.datetime.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.datetime.Margin = new System.Windows.Forms.Padding(6);
             this.datetime.MaxDate = new System.DateTime(2069, 12, 28, 0, 0, 0, 0);
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(460, 39);
@@ -92,6 +92,7 @@ namespace TeamNateZone
             // 
             // claimType
             // 
+            this.claimType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.claimType.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claimType.FormattingEnabled = true;
             this.claimType.Items.AddRange(new object[] {
@@ -100,7 +101,7 @@ namespace TeamNateZone
             "Life",
             "Other"});
             this.claimType.Location = new System.Drawing.Point(316, 238);
-            this.claimType.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.claimType.Margin = new System.Windows.Forms.Padding(6);
             this.claimType.Name = "claimType";
             this.claimType.Size = new System.Drawing.Size(376, 37);
             this.claimType.TabIndex = 7;
@@ -121,7 +122,7 @@ namespace TeamNateZone
             // detailsTextBox
             // 
             this.detailsTextBox.Location = new System.Drawing.Point(82, 358);
-            this.detailsTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.detailsTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.detailsTextBox.Name = "detailsTextBox";
             this.detailsTextBox.Size = new System.Drawing.Size(668, 342);
             this.detailsTextBox.TabIndex = 9;
@@ -134,7 +135,7 @@ namespace TeamNateZone
             this.btnUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.Location = new System.Drawing.Point(604, 745);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(150, 44);
             this.btnUpload.TabIndex = 11;
@@ -148,7 +149,7 @@ namespace TeamNateZone
             this.txtFileUpload.Enabled = false;
             this.txtFileUpload.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFileUpload.Location = new System.Drawing.Point(82, 745);
-            this.txtFileUpload.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFileUpload.Margin = new System.Windows.Forms.Padding(6);
             this.txtFileUpload.Name = "txtFileUpload";
             this.txtFileUpload.Size = new System.Drawing.Size(522, 39);
             this.txtFileUpload.TabIndex = 12;
