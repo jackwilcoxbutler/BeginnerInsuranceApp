@@ -154,7 +154,7 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1051, 511);
+            this.ClientSize = new System.Drawing.Size(1080, 511);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnRegisterFM);
             this.Controls.Add(this.btnRegisterCM);
