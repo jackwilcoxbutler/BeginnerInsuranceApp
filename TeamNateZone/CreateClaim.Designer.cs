@@ -83,6 +83,7 @@ namespace TeamNateZone
             this.datetime.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datetime.Location = new System.Drawing.Point(234, 142);
             this.datetime.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.datetime.MaxDate = new System.DateTime(2069, 12, 28, 0, 0, 0, 0);
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(460, 39);
             this.datetime.TabIndex = 6;
@@ -91,7 +92,6 @@ namespace TeamNateZone
             // 
             // claimType
             // 
-            this.claimType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.claimType.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claimType.FormattingEnabled = true;
             this.claimType.Items.AddRange(new object[] {
