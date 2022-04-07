@@ -182,9 +182,10 @@ namespace TeamNateZone
             // 
             // btnViewMessages
             // 
+            this.btnViewMessages.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnViewMessages.BackColor = System.Drawing.Color.White;
             this.btnViewMessages.BackgroundColor = System.Drawing.Color.White;
-            this.btnViewMessages.BackgroundImage = global::TeamNateZone.Properties.Resources.message;
+            this.btnViewMessages.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewMessages.BackgroundImage")));
             this.btnViewMessages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnViewMessages.BorderColor = System.Drawing.Color.YellowGreen;
             this.btnViewMessages.BorderRadius = 30;
