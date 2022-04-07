@@ -12,6 +12,7 @@ namespace TeamNateZone
 {
 public partial class AdminConsole : Form
     {
+        AdminWelcomeForm form;
         public AdminConsole()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ public partial class AdminConsole : Form
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.Owner.Show();
             this.Close();
         }
 
