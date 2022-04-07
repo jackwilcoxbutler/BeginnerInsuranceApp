@@ -43,5 +43,12 @@ public partial class AdminConsole : Form
             RegistrationForm rf = new RegistrationForm(2);
             rf.Show();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
+        }
     }
 }
