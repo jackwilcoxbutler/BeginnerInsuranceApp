@@ -426,9 +426,11 @@ namespace TeamNateZone
             // lblUserType
             // 
             this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(559, 22);
+            this.lblUserType.Font = new System.Drawing.Font("Georgia", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.ForeColor = System.Drawing.Color.YellowGreen;
+            this.lblUserType.Location = new System.Drawing.Point(511, 9);
             this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(0, 38);
+            this.lblUserType.Size = new System.Drawing.Size(0, 31);
             this.lblUserType.TabIndex = 104;
             // 
             // RegistrationForm

@@ -32,11 +32,12 @@ namespace TeamNateZone
         {
             InitializeComponent();
             this.clearance = val;
+
             if(clearance == 1)
             {
                 lblUserType.Text = "Register A New Claims Manager";
             }
-            if(clearance == 2)
+            else if(clearance == 2)
             {
                 lblUserType.Text = "Register A New Financial Manager";
             }
