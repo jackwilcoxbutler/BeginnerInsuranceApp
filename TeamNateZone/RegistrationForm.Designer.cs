@@ -388,7 +388,7 @@ namespace TeamNateZone
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(337, 58);
             this.btnReturn.TabIndex = 102;
-            this.btnReturn.Text = "Return to Login";
+            this.btnReturn.Text = "Go Back";
             this.btnReturn.TextColor = System.Drawing.Color.White;
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click_1);

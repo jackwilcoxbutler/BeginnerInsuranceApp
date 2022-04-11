@@ -57,17 +57,9 @@ namespace TeamNateZone
                 {
                     string message = "ERROR : Required Field is blank";
                     string title = "Registration Failed";
-                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
                     DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Cancel)
-                    {
-                        Application.Exit();
-                    }
-                    else
-                    {
-                        txtPassword.Clear();
-                        txtVerifyPassword.Clear();
-                    }
+                    return;
 
                 }
                 else if (txtEmail.Text == db.get_email(txtEmail.Text) ||
@@ -142,6 +134,12 @@ namespace TeamNateZone
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
+            if(clearance == 1|| clearance == 2)
+            {
+                this.Owner.Show();
+                this.Close();
+                return;
+            }
             LoginForm lf = new LoginForm();
             this.Close();
             lf.Show();

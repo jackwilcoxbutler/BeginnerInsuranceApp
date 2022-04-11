@@ -38,11 +38,17 @@ namespace TeamNateZone
 
         private /*async*/ void btnFile_Click(object sender, EventArgs e)
         {
-            if(datetime.Value > DateTime.Today)
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+            if (datetime.Value > DateTime.Today.AddDays(1))
             {
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show("Can't file a claim with a date in the future. Try again.","invalid data", buttons);
                 datetime.ResetText();
+                return;
+            }
+            else if(detailsTextBox.Text == "" || claimType.SelectedItem == null)
+            {
+                MessageBox.Show("Please enter a description and claim type", "invalid data", buttons);
                 return;
             }
             db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString());

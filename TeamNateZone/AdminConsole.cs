@@ -35,12 +35,14 @@ public partial class AdminConsole : Form
         private void btnRegisterCM_Click(object sender, EventArgs e)
         {
             RegistrationForm rf = new RegistrationForm(1);
+            rf.Owner = this;
             rf.Show();
         }
 
         private void btnRegisterFM_Click(object sender, EventArgs e)
         {
             RegistrationForm rf = new RegistrationForm(2);
+            rf.Owner = this;
             rf.Show();
         }
 
