@@ -38,6 +38,19 @@ namespace TeamNateZone
             cn.Close();
             BindingSource bs = new BindingSource(dtbl, dtbl.TableName);
             bindingNavigator1.BindingSource = bs;
+
+            dataGridView1.Columns["Email"].ReadOnly = true;
+            dataGridView1.Columns["Password"].ReadOnly = true;
+            dataGridView1.Columns["fName"].ReadOnly = true;
+            dataGridView1.Columns["lName"].ReadOnly = true;
+            dataGridView1.Columns["street"].ReadOnly = true;
+            dataGridView1.Columns["city"].ReadOnly = true;
+            dataGridView1.Columns["state"].ReadOnly = true;
+            dataGridView1.Columns["zip"].ReadOnly = true;
+            dataGridView1.Columns["Username"].ReadOnly = true;
+            dataGridView1.Columns["CVV"].ReadOnly = true;
+            dataGridView1.Columns["CCExpiration"].ReadOnly = true;
+
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
