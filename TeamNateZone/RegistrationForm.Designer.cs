@@ -104,7 +104,7 @@ namespace TeamNateZone
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.Red;
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.Location = new System.Drawing.Point(116, 512);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsername.Name = "txtUsername";
@@ -115,7 +115,7 @@ namespace TeamNateZone
             // txtVerifyPassword
             // 
             this.txtVerifyPassword.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerifyPassword.ForeColor = System.Drawing.Color.Red;
+            this.txtVerifyPassword.ForeColor = System.Drawing.Color.Black;
             this.txtVerifyPassword.Location = new System.Drawing.Point(518, 512);
             this.txtVerifyPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
@@ -127,7 +127,7 @@ namespace TeamNateZone
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.Red;
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.Location = new System.Drawing.Point(518, 447);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
@@ -153,7 +153,7 @@ namespace TeamNateZone
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Red;
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(98, 447);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEmail.Name = "txtEmail";
@@ -177,7 +177,7 @@ namespace TeamNateZone
             // txtFname
             // 
             this.txtFname.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFname.ForeColor = System.Drawing.Color.Red;
+            this.txtFname.ForeColor = System.Drawing.Color.Black;
             this.txtFname.Location = new System.Drawing.Point(146, 216);
             this.txtFname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFname.Name = "txtFname";
@@ -201,7 +201,7 @@ namespace TeamNateZone
             // txtLname
             // 
             this.txtLname.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLname.ForeColor = System.Drawing.Color.Red;
+            this.txtLname.ForeColor = System.Drawing.Color.Black;
             this.txtLname.Location = new System.Drawing.Point(518, 216);
             this.txtLname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLname.Name = "txtLname";
