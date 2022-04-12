@@ -53,7 +53,7 @@ namespace TeamNateZone
             try
             {
                 if (txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPassword.Text == "" ||
-                                txtEmail.Text == "")
+                                txtEmail.Text == "" || txtFname.Text == "" || txtLname.Text == "")
                 {
                     string message = "ERROR : Required Field is blank";
                     string title = "Registration Failed";

@@ -238,7 +238,7 @@ namespace TeamNateZone
             this.addressBox.Size = new System.Drawing.Size(729, 146);
             this.addressBox.TabIndex = 99;
             this.addressBox.TabStop = false;
-            this.addressBox.Text = "Address";
+            this.addressBox.Text = "Address (optional)";
             // 
             // label7
             // 
