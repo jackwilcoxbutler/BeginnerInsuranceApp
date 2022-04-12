@@ -105,11 +105,13 @@ namespace TeamNateZone
         private void btnSent_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.get_outBox(user);
+            btnRefresh.Visible = false;
         }
 
         private void btnInbox_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.get_inbox(user);
+             btnRefresh.Visible = true;
         }
     }
 }
