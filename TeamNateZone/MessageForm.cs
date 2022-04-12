@@ -20,10 +20,13 @@ namespace TeamNateZone
         NewMessage Newmess;
         ViewMessageForm View;
         AdminWelcomeForm AdminwelcomeForm;
+        dbHandler db;
+
         public MessageForm(User user)
         {
             InitializeComponent();
             this.user = user;
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
             dataGridView1.Columns[5].DefaultCellStyle.Format = "M/d/yyyy h:mm:ss tt";
         }
 
@@ -70,22 +73,7 @@ namespace TeamNateZone
 
         private void MessageForm_Load(object sender, EventArgs e)
         {
-            
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            string account = user.getUsername();
-
-            cn.ConnectionString =
-                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cmd.Connection = cn;
-            cn.Open();
-
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver ORDER BY date DESC", cn);
-            da.SelectCommand.Parameters.AddWithValue("receiver", account);
-            DataTable dtbl = new DataTable();
-            da.Fill(dtbl);
-            dataGridView1.DataSource = dtbl;
-            cn.Close();
+            dataGridView1.DataSource = db.get_inbox(user);
         }
 
         private void btnNewMessage_Click(object sender, EventArgs e)
@@ -111,59 +99,17 @@ namespace TeamNateZone
 
         private void txtRefresh_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            string account = user.getUsername();
-
-            cn.ConnectionString =
-                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cmd.Connection = cn;
-            cn.Open();
-
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver ORDER BY date DESC", cn);
-            da.SelectCommand.Parameters.AddWithValue("receiver", account);
-            DataTable dtbl = new DataTable();
-            da.Fill(dtbl);
-            dataGridView1.DataSource = dtbl;
-            cn.Close();
+            dataGridView1.DataSource = db.get_inbox(user);
         }
 
         private void btnSent_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            string account = user.getUsername();
-
-            cn.ConnectionString =
-                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cmd.Connection = cn;
-            cn.Open();
-
-            SqlDataAdapter da = new SqlDataAdapter("SELECT sender, receiver, message, date, subject FROM message WHERE sender = @sender ORDER BY date DESC", cn);
-            da.SelectCommand.Parameters.AddWithValue("sender", account);
-            DataTable dtbl = new DataTable();
-            da.Fill(dtbl);
-            dataGridView1.DataSource = dtbl;
-            cn.Close();
+            dataGridView1.DataSource = db.get_outBox(user);
         }
 
         private void btnInbox_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            string account = user.getUsername();
-
-            cn.ConnectionString =
-                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cmd.Connection = cn;
-            cn.Open();
-
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM message WHERE receiver = @receiver ORDER BY date DESC", cn);
-            da.SelectCommand.Parameters.AddWithValue("receiver", account);
-            DataTable dtbl = new DataTable();
-            da.Fill(dtbl);
-            dataGridView1.DataSource = dtbl;
-            cn.Close();
+            dataGridView1.DataSource = db.get_inbox(user);
         }
     }
 }

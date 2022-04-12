@@ -15,6 +15,7 @@ namespace TeamNateZone
     {
         User user;
         MessageForm message;
+        dbHandler db;
 
         public NewMessage(User user, string to, string subreply, string Sentmessage)
         {
@@ -23,6 +24,7 @@ namespace TeamNateZone
             txtReciever.Text = to;
             txtSubject.Text = subreply;
             txtMessage.Text = Sentmessage;
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -38,83 +40,6 @@ namespace TeamNateZone
             message = new MessageForm(user);
             message.Owner = this;
             message.Show();
-        }
-
-        private void storeMessage(string sender, string reveiver, string message, DateTime date, string subject)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-
-                cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject, readorunread ) VALUES (@s, @r, @mess, @date, @sub, @re);";
-                cmd.Parameters.AddWithValue("@s", sender);
-                cmd.Parameters.AddWithValue("@r", reveiver);
-                cmd.Parameters.AddWithValue("@mess", message);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@sub", subject);
-                cmd.Parameters.AddWithValue("@re", " • ");
-
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-    
-        private string getExistingReceiver(string receiver)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-
-                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE Username = @receiver";
-
-                cmd.Parameters.AddWithValue("@receiver", receiver);
-
-                cn.Open();
-
-                dr = cmd.ExecuteReader();
-
-                dr.Read();
-
-                try
-                {
-                    return dr.GetString(0);
-                }
-                catch (Exception e)
-                {
-
-                    return ""; 
-                }
-               
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -138,7 +63,8 @@ namespace TeamNateZone
                 foreach (var sub in subs)
                 {
                     string recieverStore = sub;
-                    string recieverHelp = getExistingReceiver(sub);
+                    Console.WriteLine(sub);
+                    string recieverHelp = db.getExistingReceiver(sub);
                     bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
                     numsubs++;
                     if (resultbool == true)
@@ -152,14 +78,14 @@ namespace TeamNateZone
                     foreach (var sub in subs)
                     {
                         string recieverStore = sub;
-                        string recieverHelp = getExistingReceiver(sub);
+                        string recieverHelp = db.getExistingReceiver(sub);
                         bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
 
                         if (resultbool == true)
                         {
                             DateTime date;
                             date = DateTime.Now;
-                            storeMessage(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text);
+                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text);
                         }
                     }
                     string Message = "Message Sent Succsefully!";
@@ -180,9 +106,6 @@ namespace TeamNateZone
                         Application.Exit();
                     }
                 }
-
-                
-
             }
             catch (Exception err)
             {
