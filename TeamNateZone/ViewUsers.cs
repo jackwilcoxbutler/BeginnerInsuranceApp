@@ -48,8 +48,10 @@ namespace TeamNateZone
             dataGridView1.Columns["state"].ReadOnly = true;
             dataGridView1.Columns["zip"].ReadOnly = true;
             dataGridView1.Columns["Username"].ReadOnly = true;
-            dataGridView1.Columns["CVV"].ReadOnly = true;
-            dataGridView1.Columns["CCExpiration"].ReadOnly = true;
+
+            //This is part of a futur implementatio of payment info
+            dataGridView1.Columns["CVV"].ReadOnly = false;
+            dataGridView1.Columns["CCExpiration"].ReadOnly = false;
 
         }
 

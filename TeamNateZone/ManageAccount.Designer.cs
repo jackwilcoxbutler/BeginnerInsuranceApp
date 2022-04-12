@@ -36,12 +36,6 @@ namespace TeamNateZone
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbCC14 = new System.Windows.Forms.TextBox();
-            this.tbCVV = new System.Windows.Forms.TextBox();
-            this.tbCCExp = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
@@ -65,10 +59,6 @@ namespace TeamNateZone
             this.btnEdit = new CustomControls.RJControls.rndButton();
             this.btnUpdatePassword = new CustomControls.RJControls.rndButton();
             this.btnBackAM = new CustomControls.RJControls.rndButton();
-            this.tbCC24 = new System.Windows.Forms.TextBox();
-            this.tbCC34 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,70 +125,6 @@ namespace TeamNateZone
             this.label3.Size = new System.Drawing.Size(152, 37);
             this.label3.TabIndex = 21;
             this.label3.Text = "Address:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label4.Location = new System.Drawing.Point(28, 783);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 37);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Credit Card:";
-            // 
-            // tbCC14
-            // 
-            this.tbCC14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCC14.Location = new System.Drawing.Point(246, 783);
-            this.tbCC14.MaxLength = 4;
-            this.tbCC14.Name = "tbCC14";
-            this.tbCC14.PasswordChar = '•';
-            this.tbCC14.ReadOnly = true;
-            this.tbCC14.Size = new System.Drawing.Size(116, 44);
-            this.tbCC14.TabIndex = 23;
-            // 
-            // tbCVV
-            // 
-            this.tbCVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCVV.Location = new System.Drawing.Point(326, 833);
-            this.tbCVV.MaxLength = 3;
-            this.tbCVV.Name = "tbCVV";
-            this.tbCVV.PasswordChar = '•';
-            this.tbCVV.ReadOnly = true;
-            this.tbCVV.Size = new System.Drawing.Size(198, 44);
-            this.tbCVV.TabIndex = 24;
-            // 
-            // tbCCExp
-            // 
-            this.tbCCExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCCExp.Location = new System.Drawing.Point(634, 841);
-            this.tbCCExp.Name = "tbCCExp";
-            this.tbCCExp.ReadOnly = true;
-            this.tbCCExp.Size = new System.Drawing.Size(152, 44);
-            this.tbCCExp.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label5.Location = new System.Drawing.Point(234, 836);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 37);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "CVV:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label6.Location = new System.Drawing.Point(534, 844);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 37);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "EXP:";
             // 
             // label7
             // 
@@ -430,7 +356,7 @@ namespace TeamNateZone
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(933, 783);
+            this.btnEdit.Location = new System.Drawing.Point(714, 770);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(204, 59);
             this.btnEdit.TabIndex = 42;
@@ -470,7 +396,7 @@ namespace TeamNateZone
             this.btnBackAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackAM.ForeColor = System.Drawing.Color.White;
-            this.btnBackAM.Location = new System.Drawing.Point(933, 848);
+            this.btnBackAM.Location = new System.Drawing.Point(931, 770);
             this.btnBackAM.Name = "btnBackAM";
             this.btnBackAM.Size = new System.Drawing.Size(204, 56);
             this.btnBackAM.TabIndex = 28;
@@ -479,49 +405,6 @@ namespace TeamNateZone
             this.btnBackAM.UseVisualStyleBackColor = false;
             this.btnBackAM.Click += new System.EventHandler(this.btnBackAM_Click);
             // 
-            // tbCC24
-            // 
-            this.tbCC24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCC24.Location = new System.Drawing.Point(420, 786);
-            this.tbCC24.MaxLength = 4;
-            this.tbCC24.Name = "tbCC24";
-            this.tbCC24.PasswordChar = '•';
-            this.tbCC24.ReadOnly = true;
-            this.tbCC24.Size = new System.Drawing.Size(116, 44);
-            this.tbCC24.TabIndex = 51;
-            // 
-            // tbCC34
-            // 
-            this.tbCC34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCC34.Location = new System.Drawing.Point(590, 783);
-            this.tbCC34.MaxLength = 4;
-            this.tbCC34.Name = "tbCC34";
-            this.tbCC34.ReadOnly = true;
-            this.tbCC34.Size = new System.Drawing.Size(116, 44);
-            this.tbCC34.TabIndex = 52;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(382, 786);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 37);
-            this.label14.TabIndex = 53;
-            this.label14.Text = "-";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(550, 786);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 37);
-            this.label16.TabIndex = 54;
-            this.label16.Text = "-";
-            // 
             // ManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -529,11 +412,7 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1154, 930);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.tbCC34);
-            this.Controls.Add(this.tbCC24);
+            this.ClientSize = new System.Drawing.Size(1154, 858);
             this.Controls.Add(this.btnStopView);
             this.Controls.Add(this.btnStartView);
             this.Controls.Add(this.btnCancel);
@@ -556,12 +435,6 @@ namespace TeamNateZone
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnUpdatePassword);
             this.Controls.Add(this.btnBackAM);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbCCExp);
-            this.Controls.Add(this.tbCVV);
-            this.Controls.Add(this.tbCC14);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -588,12 +461,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbCC14;
-        private System.Windows.Forms.TextBox tbCVV;
-        private System.Windows.Forms.TextBox tbCCExp;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.rndButton btnBackAM;
         private CustomControls.RJControls.rndButton btnUpdatePassword;
         private System.Windows.Forms.Label label7;
@@ -616,9 +483,5 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnCancel;
         private System.Windows.Forms.Button btnStartView;
         private System.Windows.Forms.Button btnStopView;
-        private System.Windows.Forms.TextBox tbCC24;
-        private System.Windows.Forms.TextBox tbCC34;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
     }
 }

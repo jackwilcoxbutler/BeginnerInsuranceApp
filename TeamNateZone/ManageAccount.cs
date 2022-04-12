@@ -122,11 +122,13 @@ namespace TeamNateZone
                 tbCity.ReadOnly = true;
                 tbState.ReadOnly = true;
                 tbZip.ReadOnly = true;
-                tbCC14.ReadOnly = true;
-                tbCC24.ReadOnly = true;
-                tbCC34.ReadOnly = true;
-                tbCVV.ReadOnly = true;
-                tbCCExp.ReadOnly = true;
+
+                //Plan to make this a future release in the future. 
+                //tbCC14.ReadOnly = true;
+                //tbCC24.ReadOnly = true;
+                //tbCC34.ReadOnly = true;
+                //tbCVV.ReadOnly = true;
+               // tbCCExp.ReadOnly = true;
                 
                 txtVerify.Clear();
                 btnEdit.Visible= true;
@@ -155,11 +157,13 @@ namespace TeamNateZone
             tbCity.ReadOnly = false;
             tbState.ReadOnly = false;
             tbZip.ReadOnly = false;
-            tbCC14.ReadOnly = false;
-            tbCC24.ReadOnly = false;
-            tbCC34.ReadOnly = false;
-            tbCVV.ReadOnly = false;
-            tbCCExp.ReadOnly = false;
+
+            //Part of Future release on credit card info
+            //tbCC14.ReadOnly = false;
+            //tbCC24.ReadOnly = false;
+            //tbCC34.ReadOnly = false;
+            //tbCVV.ReadOnly = false;
+            //tbCCExp.ReadOnly = false;
 
             btnUpdatePassword.Visible = true;
             lbVerify.Visible = true;
@@ -204,11 +208,13 @@ namespace TeamNateZone
             tbCity.ReadOnly = true;
             tbState.ReadOnly = true;
             tbZip.ReadOnly = true;
-            tbCC14.ReadOnly = true;
-            tbCC24.ReadOnly = true;
-            tbCC34.ReadOnly = true;
-            tbCVV.ReadOnly = true;
-            tbCCExp.ReadOnly = true;
+
+            //Plan to make this a future release topic
+            //tbCC14.ReadOnly = true;
+            //tbCC24.ReadOnly = true;
+            //tbCC34.ReadOnly = true;
+            //tbCVV.ReadOnly = true;
+            //tbCCExp.ReadOnly = true;
         }
 
         private void btnStartView_Click(object sender, EventArgs e)
