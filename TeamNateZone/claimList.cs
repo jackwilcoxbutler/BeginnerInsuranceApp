@@ -48,18 +48,25 @@ namespace TeamNateZone
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            cn.ConnectionString =
-                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cmd.Connection = cn;
-            cmd.CommandText = "SELECT content FROM ClaimMedia WHERE UID=@uid";
-            cmd.Parameters.AddWithValue("@uid", user.getUserID());
-            cn.Open();
-            dr = cmd.ExecuteReader();
-            dr.Read();
-//            dr.Read(); // advance to second image (panda)
-            Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
-            testPictureBox.Image = img;
-            testPictureBox.Visible = true;
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT content FROM ClaimMedia WHERE UID=@uid";
+                cmd.Parameters.AddWithValue("@uid", user.getUserID());
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                //            dr.Read(); // advance to second image (panda)
+                Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
+                testPictureBox.Image = img;
+                testPictureBox.Visible = true;
+            }
+            catch(Exception err) 
+            {
+                lblStatus.Text = "No Image available to view";
+            }
 
             SaveFileDialog dialog = new SaveFileDialog();
 
