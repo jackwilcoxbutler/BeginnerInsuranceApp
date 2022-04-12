@@ -64,7 +64,9 @@ namespace TeamNateZone
         {
             NewMessage Newmess;
             string Subreply = "RE: " + txtSubject.Text;
-            Newmess = new NewMessage(user, txtFrom.Text, Subreply, null);
+            string fromhelp = txtFrom.Text;
+            string fromreply = fromhelp.Trim();
+            Newmess = new NewMessage(user, fromreply, Subreply, null);
             Newmess.Owner = this;
             Newmess.Show();
             this.Hide();
