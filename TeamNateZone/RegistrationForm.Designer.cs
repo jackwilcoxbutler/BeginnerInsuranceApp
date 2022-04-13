@@ -236,7 +236,7 @@ namespace TeamNateZone
             this.addressBox.Location = new System.Drawing.Point(32, 274);
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(729, 146);
-            this.addressBox.TabIndex = 99;
+            this.addressBox.TabIndex = 3;
             this.addressBox.TabStop = false;
             this.addressBox.Text = "Address (optional)";
             // 
@@ -370,7 +370,7 @@ namespace TeamNateZone
             this.txtCity.Location = new System.Drawing.Point(296, 69);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(136, 50);
-            this.txtCity.TabIndex = 20;
+            this.txtCity.TabIndex = 4;
             this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyPassword_KeyPress);
             // 
             // btnReturn

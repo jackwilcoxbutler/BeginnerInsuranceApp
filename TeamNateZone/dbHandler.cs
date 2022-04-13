@@ -68,6 +68,10 @@ namespace TeamNateZone
     
         private String getAuthorizedPassword(string userName)
         {
+            if(getUsername(userName) == "")
+            {
+                return null;
+            }
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
@@ -82,6 +86,11 @@ namespace TeamNateZone
                 connection.Open();
 
                 dr = cmd.ExecuteReader();
+
+                if (dr == null)
+                {
+                    return null;
+                }
 
                 dr.Read();
 
