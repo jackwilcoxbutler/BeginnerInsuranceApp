@@ -187,12 +187,12 @@ namespace TeamNateZone
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-
+            DateTime today = DateTime.Today;
             try
             {
                 cmd.Connection = connection;
 
-                cmd.CommandText = "INSERT INTO SignInInfo (Email, Password, fName, lName, Street, City, State, Zip, clearance, Username) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username);";
+                cmd.CommandText = "INSERT INTO SignInInfo (Email, Password, fName, lName, Street, City, State, Zip, clearance, Username, DateRegistered) VALUES (@email, @password, @f, @l, @str, @city, @st, @zip5, @clear, @username, @today);";
 
                 cmd.Parameters.AddWithValue("@f", first);
                 cmd.Parameters.AddWithValue("@l", last);
@@ -204,6 +204,7 @@ namespace TeamNateZone
                 cmd.Parameters.AddWithValue("@password", passWord);
                 cmd.Parameters.AddWithValue("@email", eMail);
                 cmd.Parameters.AddWithValue("@clear", 0);
+                cmd.Parameters.AddWithValue("@today", today);
 
                 connection.Open();
 
