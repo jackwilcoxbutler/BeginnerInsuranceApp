@@ -87,10 +87,10 @@ namespace TeamNateZone
             // tbAddress
             // 
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.Location = new System.Drawing.Point(362, 631);
+            this.tbAddress.Location = new System.Drawing.Point(396, 631);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.ReadOnly = true;
-            this.tbAddress.Size = new System.Drawing.Size(556, 44);
+            this.tbAddress.Size = new System.Drawing.Size(522, 44);
             this.tbAddress.TabIndex = 18;
             // 
             // label1
@@ -118,11 +118,11 @@ namespace TeamNateZone
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label3.Location = new System.Drawing.Point(28, 638);
+            this.label3.Location = new System.Drawing.Point(24, 631);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 37);
+            this.label3.Size = new System.Drawing.Size(201, 51);
             this.label3.TabIndex = 21;
             this.label3.Text = "Address:";
             // 
@@ -149,11 +149,11 @@ namespace TeamNateZone
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(308, 477);
+            this.tbPassword.Location = new System.Drawing.Point(324, 477);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '•';
             this.tbPassword.ReadOnly = true;
-            this.tbPassword.Size = new System.Drawing.Size(610, 44);
+            this.tbPassword.Size = new System.Drawing.Size(594, 44);
             this.tbPassword.TabIndex = 33;
             // 
             // label9
@@ -191,10 +191,10 @@ namespace TeamNateZone
             // tbCity
             // 
             this.tbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCity.Location = new System.Drawing.Point(326, 698);
+            this.tbCity.Location = new System.Drawing.Point(342, 698);
             this.tbCity.Name = "tbCity";
             this.tbCity.ReadOnly = true;
-            this.tbCity.Size = new System.Drawing.Size(198, 44);
+            this.tbCity.Size = new System.Drawing.Size(186, 44);
             this.tbCity.TabIndex = 37;
             // 
             // label12
@@ -211,7 +211,7 @@ namespace TeamNateZone
             // tbState
             // 
             this.tbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbState.Location = new System.Drawing.Point(634, 698);
+            this.tbState.Location = new System.Drawing.Point(644, 698);
             this.tbState.MaxLength = 2;
             this.tbState.Name = "tbState";
             this.tbState.ReadOnly = true;
@@ -223,7 +223,7 @@ namespace TeamNateZone
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label13.Location = new System.Drawing.Point(712, 702);
+            this.label13.Location = new System.Drawing.Point(722, 701);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 37);
             this.label13.TabIndex = 40;
@@ -232,20 +232,20 @@ namespace TeamNateZone
             // tbZip
             // 
             this.tbZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbZip.Location = new System.Drawing.Point(794, 698);
+            this.tbZip.Location = new System.Drawing.Point(803, 698);
             this.tbZip.MaxLength = 5;
             this.tbZip.Name = "tbZip";
             this.tbZip.ReadOnly = true;
-            this.tbZip.Size = new System.Drawing.Size(126, 44);
+            this.tbZip.Size = new System.Drawing.Size(115, 44);
             this.tbZip.TabIndex = 41;
             // 
             // txtVerify
             // 
             this.txtVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerify.Location = new System.Drawing.Point(308, 558);
+            this.txtVerify.Location = new System.Drawing.Point(324, 558);
             this.txtVerify.Name = "txtVerify";
             this.txtVerify.PasswordChar = '•';
-            this.txtVerify.Size = new System.Drawing.Size(610, 44);
+            this.txtVerify.Size = new System.Drawing.Size(594, 44);
             this.txtVerify.TabIndex = 44;
             // 
             // lbVerify
