@@ -45,6 +45,13 @@ namespace TeamNateZone
 
         private void btnView_Click(object sender, EventArgs e)
         {
+            int indexOfClaimCell = dataGridView1.CurrentCell.RowIndex;
+            //indexOfClaimCell--;
+            
+            while (dataGridView1.Rows[indexOfClaimCell].Cells[0].FormattedValue.ToString() != enterClaimIDTxt.Text)
+            {
+                indexOfClaimCell++;
+            }
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
@@ -57,11 +64,25 @@ namespace TeamNateZone
                 cmd.Parameters.AddWithValue("@uid", user.getUserID());
                 cn.Open();
                 dr = cmd.ExecuteReader();
-                dr.Read();
+                //dr.Read();
                 //            dr.Read(); // advance to second image (panda)
-                Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
-                testPictureBox.Image = img;
-                testPictureBox.Visible = true;
+                //check to see if they typed in a correct claim ID
+                if (indexOfClaimCell <= dataGridView1.RowCount)
+                {
+                    //loop through to the proper claim in the datagrindtable to find corrisponding submitted images
+                    for (int i = 0; i < indexOfClaimCell; i++)
+                    {
+                        dr.Read();
+                    }
+                    Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
+                    testPictureBox.Image = img;
+                    testPictureBox.Visible = true;
+                }
+                
+                
+                //Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
+                //testPictureBox.Image = img;
+                //testPictureBox.Visible = true;
             }
             catch(Exception err) 
             {
