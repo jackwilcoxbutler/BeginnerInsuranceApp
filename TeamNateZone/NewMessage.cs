@@ -23,6 +23,7 @@ namespace TeamNateZone
         string extention;
         string fileName;
         string path;
+        int Attachment = 0;
 
         public NewMessage(User user, string to, string subreply, string Sentmessage)
         {
@@ -98,7 +99,7 @@ namespace TeamNateZone
                         {
                             DateTime date;
                             date = DateTime.Now;
-                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text, Databytes, extention, fileName) ;
+                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text, Databytes, extention, fileName, Attachment) ;
                         }
                     }
                     string Message = "Message Sent Succsefully!";
@@ -138,6 +139,7 @@ namespace TeamNateZone
                     extention = path.Substring(path.LastIndexOf('.'));
                     fileName = Path.GetFileName(path);
                     extention = path.Substring(path.LastIndexOf('.'));
+                    Attachment = 1;
                     MessageBox.Show("Uploaded File!", "Success");
                 }
                 catch (SecurityException ex)

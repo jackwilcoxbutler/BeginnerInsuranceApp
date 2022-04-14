@@ -386,7 +386,7 @@ namespace TeamNateZone
             da.Fill(dtbl);
             return dtbl;
         }
-        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName)
+        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName, int Attachment)
         {
 
             SqlCommand cmd = new SqlCommand();
@@ -396,7 +396,7 @@ namespace TeamNateZone
                 cmd.Connection = connection;
                 if (fileStream != null)
                 {
-                    cmd.CommandText = "INSERT INTO message VALUES (@s, @r, @mess, @date, @sub, @re, @file, @fileName, @fileExtention)";
+                    cmd.CommandText = "INSERT INTO message VALUES (@s, @r, @mess, @date, @sub, @re, @file, @fileName, @fileExtention, @Attachment)";
                     cmd.Parameters.AddWithValue("@s", sender);
                     cmd.Parameters.AddWithValue("@r", reveiver);
                     cmd.Parameters.AddWithValue("@mess", message);
@@ -406,6 +406,7 @@ namespace TeamNateZone
                     cmd.Parameters.AddWithValue("@file", fileStream);
                     cmd.Parameters.AddWithValue("@fileName", fileName);
                     cmd.Parameters.AddWithValue("@fileExtention", extention);
+                    cmd.Parameters.AddWithValue("@Attachment", Attachment);
 
                     connection.Open();
 
@@ -413,14 +414,15 @@ namespace TeamNateZone
                 }
                 else
                 {
-                    cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject, readorunread ) VALUES (@s, @r, @mess, @date, @sub, @re);";
+                    cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject, readorunread, Attachment) VALUES (@s, @r, @mess, @date, @sub, @re, @Attachment);";
                     cmd.Parameters.AddWithValue("@s", sender);
                     cmd.Parameters.AddWithValue("@r", reveiver);
                     cmd.Parameters.AddWithValue("@mess", message);
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@sub", subject);
                     cmd.Parameters.AddWithValue("@re", " • ");
-                    
+                    cmd.Parameters.AddWithValue("@Attachment", Attachment);
+
                     connection.Open();
 
                     dr = cmd.ExecuteReader();
@@ -605,6 +607,49 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+        private int attachment(string sender, string receiver, string subject, string message)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT Attachment FROM message WHERE sender = @sender AND receiver = @receiver AND Subject = @subject AND message = @message";
+
+                cmd.Parameters.AddWithValue("@sender", sender);
+                cmd.Parameters.AddWithValue("@receiver", receiver);
+                cmd.Parameters.AddWithValue("@subject", subject);
+                cmd.Parameters.AddWithValue("@message", message);
+
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                try
+                {
+
+                    return dr.GetInt32(0);
+
+                }
+                catch (Exception err)
+                {
+
+                    return 0;
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         // </private methods>
         // <public methods>
         public String check_password(string username)
@@ -659,9 +704,9 @@ namespace TeamNateZone
         {
             return accessExistingReceiver(Revciever);
         }
-        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName)
+        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName, int Attachment)
         {
-            sendmessage(sender, reveiver, message, date, subject, fileStream, extention, fileName);
+            sendmessage(sender, reveiver, message, date, subject, fileStream, extention, fileName, Attachment);
         }
         public string get_filename(string sender, string receiver, string subject, string message)
         {
@@ -674,6 +719,10 @@ namespace TeamNateZone
         public string get_fileType(string sender, string receiver, string subject, string message)
         {
             return accessfiletype(sender, receiver, subject, message);
+        }
+        public int get_attachment(string sender, string receiver, string subject, string message)
+        {
+            return attachment(sender, receiver, subject, message);
         }
         // </public methods>
     }

@@ -98,31 +98,38 @@ namespace TeamNateZone
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-            
-            string fileName = db.get_filename(From, To, Subject, Message);           
-            fileName = fileName.Trim();
-            saveFileDialog1.FileName = fileName;
-            saveFileDialog1.DefaultExt = db.get_fileType(From, To, Subject, Message);
+            if (db.get_attachment(From, To, Subject, Message) == 1) 
+            { 
+                string fileName = db.get_filename(From, To, Subject, Message);
 
-
-            if (!string.IsNullOrEmpty(fileName))
-            {
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                if (!string.IsNullOrEmpty(fileName))
                 {
+                    fileName = fileName.Trim();
+                    saveFileDialog1.FileName = fileName;
+                    saveFileDialog1.DefaultExt = db.get_fileType(From, To, Subject, Message);
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
 
-                    byte[] fileContent = db.get_file(From, To, Subject, Message, fileName);
-                    File.WriteAllBytes(fileName, fileContent);
+                        byte[] fileContent = db.get_file(From, To, Subject, Message, fileName);
+                        File.WriteAllBytes(fileName, fileContent);
+                    }
+                }
+                else
+                {
+                    string message = "No Attachemt to download";
+                    string title = "Download Attachemnt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+
                 }
             }
             else
             {
                 string message = "No Attachemt to download";
                 string title = "Download Attachemnt";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
                 DialogResult result = MessageBox.Show(message, title, buttons);
-                
             }
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
