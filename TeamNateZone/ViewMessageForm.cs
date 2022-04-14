@@ -20,13 +20,13 @@ namespace TeamNateZone
         string Subject;
         string Message;
         string From;
-        string to;
+        string To;
 
-        public ViewMessageForm(User user, string subject, string message, string from)
+        public ViewMessageForm(User user, string subject, string message, string from, string to)
         {
             InitializeComponent();
             this.user = user;
-            to = user.getUsername();
+            To = to;
             txtFrom.Text = from;
             From = from;
             txtMessage.Text = message;
@@ -98,14 +98,21 @@ namespace TeamNateZone
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-            string fileName = db.get_filename(From, to, Subject, Message);
-            fileName = fileName.Trim();
             
-            if (string.IsNullOrEmpty(fileName))
+            string fileName = db.get_filename(From, To, Subject, Message);           
+            fileName = fileName.Trim();
+            saveFileDialog1.FileName = fileName;
+            saveFileDialog1.DefaultExt = db.get_fileType(From, To, Subject, Message);
+
+
+            if (!string.IsNullOrEmpty(fileName))
             {
-                Console.WriteLine(fileName);
-                byte[] fileContent = db.get_file(From, to, Subject, Message, fileName);
-               // File.WriteAllBytes(fileName, fileContent);
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    byte[] fileContent = db.get_file(From, To, Subject, Message, fileName);
+                    File.WriteAllBytes(fileName, fileContent);
+                }
             }
             else
             {

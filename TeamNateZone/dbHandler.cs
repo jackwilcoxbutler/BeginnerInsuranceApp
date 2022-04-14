@@ -493,10 +493,13 @@ namespace TeamNateZone
                 connection.Open();
                 dr = cmd.ExecuteReader();
                 dr.Read();
-
+                Console.WriteLine(dr.GetString(0));
+                Console.WriteLine("in db handler get file name");
                 try
                 {
+                    
                     return dr.GetString(0);
+
                 }
                 catch (Exception err)
                 {
@@ -546,6 +549,49 @@ namespace TeamNateZone
                 {
 
                     return null;
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        private string accessfiletype(string sender, string receiver, string subject, string message)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT FileContentType FROM message WHERE sender = @sender AND receiver = @receiver AND Subject = @subject AND message = @message";
+
+                cmd.Parameters.AddWithValue("@sender", sender);
+                cmd.Parameters.AddWithValue("@receiver", receiver);
+                cmd.Parameters.AddWithValue("@subject", subject);
+                cmd.Parameters.AddWithValue("@message", message);
+
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                try
+                {
+
+                    return dr.GetString(0);
+
+                }
+                catch (Exception err)
+                {
+
+                    return "";
                 }
 
             }
@@ -624,6 +670,10 @@ namespace TeamNateZone
         public byte[] get_file(string sender, string receiver, string subject, string message, string fileName)
         {
             return accessfile(sender, receiver, subject, message, fileName);
+        }
+        public string get_fileType(string sender, string receiver, string subject, string message)
+        {
+            return accessfiletype(sender, receiver, subject, message);
         }
         // </public methods>
     }

@@ -90,8 +90,9 @@ namespace TeamNateZone
             string subject = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].FormattedValue.ToString();
             string message = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].FormattedValue.ToString();
             string from = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].FormattedValue.ToString();
+            string to = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].FormattedValue.ToString();
            
-            View = new ViewMessageForm(user, subject, message, from);
+            View = new ViewMessageForm(user, subject, message, from, to);
             View.Owner = this;
             View.Show();
             this.Hide();
