@@ -136,7 +136,7 @@ namespace TeamNateZone
                     path = openFileDialog1.FileName;
                     txtUpload.Text = path;
                     extention = path.Substring(path.LastIndexOf('.'));
-                    fileName = path.Substring(0, path.IndexOf('.'));
+                    fileName = Path.GetFileName(path);
                     extention = path.Substring(path.LastIndexOf('.'));
                     MessageBox.Show("Uploaded File!", "Success");
                 }

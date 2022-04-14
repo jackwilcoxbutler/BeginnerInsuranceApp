@@ -473,7 +473,92 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+        private string accessfilename(string sender, string receiver, string subject, string message)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
 
+                cmd.CommandText = "SELECT FileName FROM message WHERE sender = @sender AND receiver = @receiver AND Subject = @subject AND message = @message";
+
+                cmd.Parameters.AddWithValue("@sender", sender);
+                cmd.Parameters.AddWithValue("@receiver", receiver);
+                cmd.Parameters.AddWithValue("@subject", subject);
+                cmd.Parameters.AddWithValue("@message", message);
+                
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                try
+                {
+                    return dr.GetString(0);
+                }
+                catch (Exception err)
+                {
+
+                    return "";
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        private byte[] accessfile(string sender, string receiver, string subject, string message, string Filename)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT FileData FROM message WHERE sender = @sender AND receiver = @receiver AND Subject = @subject AND message = @message";
+
+                cmd.Parameters.AddWithValue("@sender", sender);
+                cmd.Parameters.AddWithValue("@receiver", receiver);
+                cmd.Parameters.AddWithValue("@subject", subject);
+                cmd.Parameters.AddWithValue("@message", message);
+                //cmd.Parameters.AddWithValue("@Name", Filename);
+
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                try
+                {
+                    byte[] byteArray = (byte[])dr[0];
+                    return byteArray;
+                }
+                catch (Exception err)
+                {
+
+                    return null;
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         // </private methods>
         // <public methods>
         public String check_password(string username)
@@ -531,6 +616,14 @@ namespace TeamNateZone
         public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName)
         {
             sendmessage(sender, reveiver, message, date, subject, fileStream, extention, fileName);
+        }
+        public string get_filename(string sender, string receiver, string subject, string message)
+        {
+            return accessfilename(sender, receiver, subject, message);
+        }
+        public byte[] get_file(string sender, string receiver, string subject, string message, string fileName)
+        {
+            return accessfile(sender, receiver, subject, message, fileName);
         }
         // </public methods>
     }

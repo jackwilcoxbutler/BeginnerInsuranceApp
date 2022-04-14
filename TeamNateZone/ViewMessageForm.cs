@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +16,26 @@ namespace TeamNateZone
     {
         User user;
         MessageForm message;
+        dbHandler db;
+        string Subject;
+        string Message;
+        string From;
+        string to;
+
         public ViewMessageForm(User user, string subject, string message, string from)
         {
             InitializeComponent();
             this.user = user;
+            to = user.getUsername();
             txtFrom.Text = from;
+            From = from;
             txtMessage.Text = message;
+            Message = message;
             txtSubject.Text = subject;
+            Subject = subject;
             string blank = "  ";
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+
 
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -85,7 +98,24 @@ namespace TeamNateZone
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-
+            string fileName = db.get_filename(From, to, Subject, Message);
+            fileName = fileName.Trim();
+            
+            if (string.IsNullOrEmpty(fileName))
+            {
+                Console.WriteLine(fileName);
+                byte[] fileContent = db.get_file(From, to, Subject, Message, fileName);
+               // File.WriteAllBytes(fileName, fileContent);
+            }
+            else
+            {
+                string message = "No Attachemt to download";
+                string title = "Download Attachemnt";
+                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
