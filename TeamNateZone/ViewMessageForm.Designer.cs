@@ -40,6 +40,7 @@ namespace TeamNateZone
             this.btnSend = new CustomControls.RJControls.rndButton();
             this.btnBack = new CustomControls.RJControls.rndButton();
             this.btnForward = new CustomControls.RJControls.rndButton();
+            this.btnDownload = new CustomControls.RJControls.rndButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,12 +188,34 @@ namespace TeamNateZone
             this.btnForward.UseVisualStyleBackColor = false;
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
+            // btnDownload
+            // 
+            this.btnDownload.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnDownload.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.btnDownload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDownload.BorderRadius = 15;
+            this.btnDownload.BorderSize = 0;
+            this.btnDownload.FlatAppearance.BorderSize = 0;
+            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownload.ForeColor = System.Drawing.Color.White;
+            this.btnDownload.Location = new System.Drawing.Point(49, 392);
+            this.btnDownload.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(233, 121);
+            this.btnDownload.TabIndex = 45;
+            this.btnDownload.Text = "Download Attachment";
+            this.btnDownload.TextColor = System.Drawing.Color.White;
+            this.btnDownload.UseVisualStyleBackColor = false;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
+            // 
             // ViewMessageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 568);
+            this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.btnForward);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.label5);
@@ -226,5 +249,6 @@ namespace TeamNateZone
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.rndButton btnSend;
         private CustomControls.RJControls.rndButton btnForward;
+        private CustomControls.RJControls.rndButton btnDownload;
     }
 }

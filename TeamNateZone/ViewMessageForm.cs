@@ -82,5 +82,10 @@ namespace TeamNateZone
             Newmess.Show();
             this.Hide();
         }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
