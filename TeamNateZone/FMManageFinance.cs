@@ -64,6 +64,10 @@ namespace TeamNateZone
                 }
                 
             }
+            else
+            {
+                MessageBox.Show("Please select a claim.", "Error");
+            }
 
         }
         private void FMManageFinance_Load(object sender, EventArgs e)
