@@ -386,7 +386,7 @@ namespace TeamNateZone
             da.Fill(dtbl);
             return dtbl;
         }
-        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention)
+        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName)
         {
 
             SqlCommand cmd = new SqlCommand();
@@ -404,7 +404,7 @@ namespace TeamNateZone
                     cmd.Parameters.AddWithValue("@sub", subject);
                     cmd.Parameters.AddWithValue("@re", " • ");
                     cmd.Parameters.AddWithValue("@file", fileStream);
-                    //cmd.Parameters.AddWithValue("@fileName", "");
+                    cmd.Parameters.AddWithValue("@fileName", fileName);
                     cmd.Parameters.AddWithValue("@fileExtention", extention);
 
                     connection.Open();
@@ -528,9 +528,9 @@ namespace TeamNateZone
         {
             return accessExistingReceiver(Revciever);
         }
-        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention)
+        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention, string fileName)
         {
-            sendmessage(sender, reveiver, message, date, subject, fileStream, extention);
+            sendmessage(sender, reveiver, message, date, subject, fileStream, extention, fileName);
         }
         // </public methods>
     }
