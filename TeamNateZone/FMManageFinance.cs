@@ -125,5 +125,13 @@ namespace TeamNateZone
             }
 
         }
+
+        private void FmView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (FmView.SelectedRows.Count == 1)
+            {
+                txtAmt.Text = "Please make claim estimate";
+            }
+        }
     }
 }

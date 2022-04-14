@@ -63,21 +63,24 @@ namespace TeamNateZone
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.FmView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.FmView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FmView.Location = new System.Drawing.Point(-3, 12);
+            this.FmView.Location = new System.Drawing.Point(-2, 10);
+            this.FmView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FmView.Name = "FmView";
             this.FmView.ReadOnly = true;
             this.FmView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.FmView.RowTemplate.Height = 33;
-            this.FmView.Size = new System.Drawing.Size(1675, 554);
+            this.FmView.Size = new System.Drawing.Size(1256, 443);
             this.FmView.TabIndex = 0;
             this.FmView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_ColumnHeaderMouseClick);
+            this.FmView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_RowHeaderMouseClick);
             // 
             // txtAmt
             // 
             this.txtAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmt.Location = new System.Drawing.Point(223, 651);
+            this.txtAmt.Location = new System.Drawing.Point(167, 521);
+            this.txtAmt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAmt.Name = "txtAmt";
-            this.txtAmt.Size = new System.Drawing.Size(670, 49);
+            this.txtAmt.Size = new System.Drawing.Size(504, 39);
             this.txtAmt.TabIndex = 2;
             this.txtAmt.Text = "Please select a Claim";
             // 
@@ -85,9 +88,10 @@ namespace TeamNateZone
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 654);
+            this.label1.Location = new System.Drawing.Point(38, 523);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 42);
+            this.label1.Size = new System.Drawing.Size(128, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Amount :";
             // 
@@ -114,9 +118,10 @@ namespace TeamNateZone
             this.btnRefreshTable.FlatAppearance.BorderSize = 0;
             this.btnRefreshTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshTable.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshTable.Location = new System.Drawing.Point(1200, 630);
+            this.btnRefreshTable.Location = new System.Drawing.Point(900, 504);
+            this.btnRefreshTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefreshTable.Name = "btnRefreshTable";
-            this.btnRefreshTable.Size = new System.Drawing.Size(212, 72);
+            this.btnRefreshTable.Size = new System.Drawing.Size(159, 58);
             this.btnRefreshTable.TabIndex = 5;
             this.btnRefreshTable.Text = "Refresh Table";
             this.btnRefreshTable.TextColor = System.Drawing.Color.White;
@@ -132,9 +137,10 @@ namespace TeamNateZone
             this.btnGoBack.FlatAppearance.BorderSize = 0;
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBack.ForeColor = System.Drawing.Color.White;
-            this.btnGoBack.Location = new System.Drawing.Point(1444, 630);
+            this.btnGoBack.Location = new System.Drawing.Point(1083, 504);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(212, 72);
+            this.btnGoBack.Size = new System.Drawing.Size(159, 58);
             this.btnGoBack.TabIndex = 4;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.TextColor = System.Drawing.Color.White;
@@ -151,9 +157,10 @@ namespace TeamNateZone
             this.btnMakeEstimate.FlatAppearance.BorderSize = 0;
             this.btnMakeEstimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeEstimate.ForeColor = System.Drawing.Color.White;
-            this.btnMakeEstimate.Location = new System.Drawing.Point(953, 630);
+            this.btnMakeEstimate.Location = new System.Drawing.Point(715, 504);
+            this.btnMakeEstimate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMakeEstimate.Name = "btnMakeEstimate";
-            this.btnMakeEstimate.Size = new System.Drawing.Size(212, 72);
+            this.btnMakeEstimate.Size = new System.Drawing.Size(159, 58);
             this.btnMakeEstimate.TabIndex = 1;
             this.btnMakeEstimate.Text = "Make Estimate";
             this.btnMakeEstimate.TextColor = System.Drawing.Color.White;
@@ -162,17 +169,18 @@ namespace TeamNateZone
             // 
             // FMManageFinance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1692, 768);
+            this.ClientSize = new System.Drawing.Size(1269, 614);
             this.Controls.Add(this.btnRefreshTable);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAmt);
             this.Controls.Add(this.btnMakeEstimate);
             this.Controls.Add(this.FmView);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FMManageFinance";
             this.Text = "FMManageFinance";
             this.Load += new System.EventHandler(this.FMManageFinance_Load);
