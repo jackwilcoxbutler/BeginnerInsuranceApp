@@ -21,7 +21,7 @@ namespace TeamNateZone
         Stream fileStream;
         byte[] Databytes;
         string extention;
-        string FileName;
+        string fileName;
         string path;
 
         public NewMessage(User user, string to, string subreply, string Sentmessage)
@@ -98,7 +98,7 @@ namespace TeamNateZone
                         {
                             DateTime date;
                             date = DateTime.Now;
-                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text, Databytes, extention);
+                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text, Databytes, extention, fileName) ;
                         }
                     }
                     string Message = "Message Sent Succsefully!";
@@ -136,7 +136,7 @@ namespace TeamNateZone
                     path = openFileDialog1.FileName;
                     txtUpload.Text = path;
                     extention = path.Substring(path.LastIndexOf('.'));
-                    FileName = path.Substring(0, path.IndexOf('.'));
+                    fileName = path.Substring(0, path.IndexOf('.'));
                     extention = path.Substring(path.LastIndexOf('.'));
                     MessageBox.Show("Uploaded File!", "Success");
                 }
