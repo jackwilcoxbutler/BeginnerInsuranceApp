@@ -32,7 +32,7 @@ namespace TeamNateZone
                 @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
             cn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Username,fName,lName,street,city,state,zip,clearance,UserID FROM SignInInfo where clearance = 0 or clearance = 1 or clearance = 2 order by DateRegistered desc", cn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Username,fName,lName,Email,street,city,state,zip,clearance,UserID FROM SignInInfo where clearance = 0 or clearance = 1 or clearance = 2 order by DateRegistered desc", cn);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
             dataGridView1.DataSource = dtbl;
@@ -41,7 +41,6 @@ namespace TeamNateZone
             bindingNavigator1.BindingSource = bs;
 
             dataGridView1.Columns["Email"].ReadOnly = true;
-            dataGridView1.Columns["Password"].ReadOnly = true;
             dataGridView1.Columns["fName"].ReadOnly = true;
             dataGridView1.Columns["lName"].ReadOnly = true;
             dataGridView1.Columns["street"].ReadOnly = true;
@@ -50,9 +49,6 @@ namespace TeamNateZone
             dataGridView1.Columns["zip"].ReadOnly = true;
             dataGridView1.Columns["Username"].ReadOnly = true;
 
-            //This is part of a futur implementatio of payment info
-            dataGridView1.Columns["CVV"].ReadOnly = false;
-            dataGridView1.Columns["CCExpiration"].ReadOnly = false;
 
         }
 

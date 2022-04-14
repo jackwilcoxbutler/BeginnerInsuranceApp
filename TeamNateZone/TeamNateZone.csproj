@@ -186,11 +186,11 @@
     <Compile Include="ClientWelcomeForm.Designer.cs">
       <DependentUpon>ClientWelcomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMCMViewUsers.cs">
+    <Compile Include="ViewUsersWithActiveClaims.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FMCMViewUsers.Designer.cs">
-      <DependentUpon>FMCMViewUsers.cs</DependentUpon>
+    <Compile Include="ViewUsersWithActiveClaims.Designer.cs">
+      <DependentUpon>ViewUsersWithActiveClaims.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminViewUsers.cs">
       <SubType>Form</SubType>
@@ -247,8 +247,8 @@
     <EmbeddedResource Include="ClientWelcomeForm.resx">
       <DependentUpon>ClientWelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FMCMViewUsers.resx">
-      <DependentUpon>FMCMViewUsers.cs</DependentUpon>
+    <EmbeddedResource Include="ViewUsersWithActiveClaims.resx">
+      <DependentUpon>ViewUsersWithActiveClaims.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewMessageForm.resx">
       <DependentUpon>ViewMessageForm.cs</DependentUpon>

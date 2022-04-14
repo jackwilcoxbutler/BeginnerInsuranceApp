@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace TeamNateZone
 {
-    public partial class FMCMViewUsers : Form
+    public partial class ViewUsersWithActiveClaims : Form
     {
         User user;
-        public FMCMViewUsers(User user)
+        public ViewUsersWithActiveClaims(User user)
         {
             InitializeComponent();
             this.user = user;
