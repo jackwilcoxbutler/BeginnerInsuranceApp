@@ -24,7 +24,7 @@ namespace TeamNateZone
         }
         private void btnViewClient_Click(object sender, EventArgs e)
         {
-            ViewUsers v = new ViewUsers();
+            AdminViewUsers v = new AdminViewUsers();
             v.Owner = this;
             v.Show();
         }

@@ -85,7 +85,6 @@ C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.CMWelcomeForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcomeForm.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMWelcomeForm.resources
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
 C:\Users\Henry\source\repos\cmakdad\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
@@ -231,3 +230,4 @@ C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.csproj
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources

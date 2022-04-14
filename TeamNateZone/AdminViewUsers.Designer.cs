@@ -1,7 +1,7 @@
 ﻿
 namespace TeamNateZone
 {
-    partial class ViewUsers
+    partial class AdminViewUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUsers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminViewUsers));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnAddCM = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
