@@ -43,14 +43,26 @@ namespace TeamNateZone
             if (FmView.SelectedRows.Count == 1)
             {
                 Claim temp = new Claim((int)FmView.SelectedRows[0].Cells[0].Value);
-                int amt = int.Parse(txtAmt.Text);
-                if (temp.estimateAmt(amt,temp.claimID))
+                int outputvalue = 0;
+                bool isNumber = false;
+                isNumber = int.TryParse(txtAmt.Text, out outputvalue);
+                if (isNumber)
                 {
-                    MessageBox.Show("Amount added sucessfully");
-                    LoadTable();
-                    return;
+                    int amt = int.Parse(txtAmt.Text);
+
+                    if (temp.estimateAmt(amt, temp.claimID))
+                    {
+                        MessageBox.Show("Amount added sucessfully");
+                        LoadTable();
+                        return;
+                    }
+                    txtAmt.Text = "DB Connection Failed Try Again";
                 }
-                txtAmt.Text = "DB Connection Failed Try Again";
+                else
+                {
+                    MessageBox.Show("Please enter an integer value!"+ System.Environment.NewLine + "No commas or special characters.", "Error");
+                }
+                
             }
 
         }
