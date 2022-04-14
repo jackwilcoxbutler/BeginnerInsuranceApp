@@ -24,7 +24,7 @@ namespace TeamNateZone
         }
         private void btnViewClient_Click(object sender, EventArgs e)
         {
-           FMCMViewUsers v = new FMCMViewUsers(user);
+           ViewUsersWithActiveClaims v = new ViewUsersWithActiveClaims(user);
            v.Show();           
         }
         private void btnViewMessages_Click(object sender, EventArgs e)
