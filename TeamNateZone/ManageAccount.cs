@@ -140,7 +140,7 @@ namespace TeamNateZone
                 btnStopView.Visible = false;
                 tbPassword.PasswordChar = '•';
 
-                MessageBox.Show("Account details updated!", "Success");
+                MessageBox.Show("New Password Has Been Set!", "Success");
             }
             else
             {

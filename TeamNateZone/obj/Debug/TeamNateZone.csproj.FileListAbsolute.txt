@@ -64,7 +64,6 @@ C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.Gener
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\dbakr\Documents\GitHub\TeamNateZone\obj\Debug\TeamNateZone.pdb
-C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe.config
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.exe
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\bin\Debug\TeamNateZone.pdb
@@ -231,3 +230,4 @@ C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.csproj
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources

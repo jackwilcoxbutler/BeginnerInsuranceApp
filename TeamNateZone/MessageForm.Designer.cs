@@ -30,7 +30,7 @@ namespace TeamNateZone
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
             this.tEAMAClaimsDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
@@ -87,9 +87,10 @@ namespace TeamNateZone
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(169, 12);
+            this.label5.Location = new System.Drawing.Point(254, 19);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(318, 44);
+            this.label5.Size = new System.Drawing.Size(511, 70);
             this.label5.TabIndex = 32;
             this.label5.Text = "Messaging Center";
             // 
@@ -111,9 +112,10 @@ namespace TeamNateZone
             // 
             this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogout.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
-            this.btnlogout.Location = new System.Drawing.Point(950, 12);
+            this.btnlogout.Location = new System.Drawing.Point(1425, 19);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(86, 86);
+            this.btnlogout.Size = new System.Drawing.Size(129, 134);
             this.btnlogout.TabIndex = 33;
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
@@ -121,9 +123,10 @@ namespace TeamNateZone
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 129);
+            this.pictureBox1.Size = new System.Drawing.Size(202, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -161,12 +164,13 @@ namespace TeamNateZone
             this.messageDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.messageBindingSource3;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 164);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 231);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1024, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(1536, 565);
             this.dataGridView1.TabIndex = 39;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -174,9 +178,9 @@ namespace TeamNateZone
             // readorunread
             // 
             this.readorunread.DataPropertyName = "readorunread";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readorunread.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readorunread.DefaultCellStyle = dataGridViewCellStyle2;
             this.readorunread.FillWeight = 30F;
             this.readorunread.HeaderText = "";
             this.readorunread.MinimumWidth = 6;
@@ -249,10 +253,9 @@ namespace TeamNateZone
             this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInbox.ForeColor = System.Drawing.Color.White;
-            this.btnInbox.Location = new System.Drawing.Point(419, 103);
-            this.btnInbox.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInbox.Location = new System.Drawing.Point(613, 121);
             this.btnInbox.Name = "btnInbox";
-            this.btnInbox.Size = new System.Drawing.Size(145, 39);
+            this.btnInbox.Size = new System.Drawing.Size(229, 70);
             this.btnInbox.TabIndex = 38;
             this.btnInbox.Text = "Inbox";
             this.btnInbox.TextColor = System.Drawing.Color.White;
@@ -270,10 +273,9 @@ namespace TeamNateZone
             this.btnSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSent.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSent.ForeColor = System.Drawing.Color.White;
-            this.btnSent.Location = new System.Drawing.Point(583, 103);
-            this.btnSent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSent.Location = new System.Drawing.Point(872, 121);
             this.btnSent.Name = "btnSent";
-            this.btnSent.Size = new System.Drawing.Size(145, 39);
+            this.btnSent.Size = new System.Drawing.Size(221, 70);
             this.btnSent.TabIndex = 37;
             this.btnSent.Text = "Sent";
             this.btnSent.TextColor = System.Drawing.Color.White;
@@ -291,10 +293,9 @@ namespace TeamNateZone
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(746, 103);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Location = new System.Drawing.Point(1125, 121);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(145, 39);
+            this.btnRefresh.Size = new System.Drawing.Size(224, 70);
             this.btnRefresh.TabIndex = 36;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.TextColor = System.Drawing.Color.White;
@@ -312,10 +313,9 @@ namespace TeamNateZone
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(911, 103);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(1361, 813);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(125, 39);
+            this.btnBack.Size = new System.Drawing.Size(188, 61);
             this.btnBack.TabIndex = 34;
             this.btnBack.Text = "Back";
             this.btnBack.TextColor = System.Drawing.Color.White;
@@ -333,10 +333,9 @@ namespace TeamNateZone
             this.btnNewMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewMessage.ForeColor = System.Drawing.Color.White;
-            this.btnNewMessage.Location = new System.Drawing.Point(177, 96);
-            this.btnNewMessage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNewMessage.Location = new System.Drawing.Point(266, 121);
             this.btnNewMessage.Name = "btnNewMessage";
-            this.btnNewMessage.Size = new System.Drawing.Size(212, 45);
+            this.btnNewMessage.Size = new System.Drawing.Size(318, 70);
             this.btnNewMessage.TabIndex = 29;
             this.btnNewMessage.Text = "New Message";
             this.btnNewMessage.TextColor = System.Drawing.Color.White;
@@ -345,11 +344,11 @@ namespace TeamNateZone
             // 
             // MessageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1048, 575);
+            this.ClientSize = new System.Drawing.Size(1572, 916);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnInbox);
             this.Controls.Add(this.btnSent);
@@ -359,6 +358,7 @@ namespace TeamNateZone
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNewMessage);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inbox";
