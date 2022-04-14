@@ -20,6 +20,9 @@ namespace TeamNateZone
         dbHandler db;
         Stream fileStream;
         byte[] Databytes;
+        string extention;
+        string FileName;
+        string path;
 
         public NewMessage(User user, string to, string subreply, string Sentmessage)
         {
@@ -74,7 +77,6 @@ namespace TeamNateZone
                 foreach (var sub in subs)
                 {
                     string recieverStore = sub;
-                    Console.WriteLine(sub);
                     string recieverHelp = db.getExistingReceiver(sub);
                     bool resultbool = recieverStore.Equals(recieverHelp.Trim()); //We need to trim the string
                     numsubs++;
@@ -96,7 +98,7 @@ namespace TeamNateZone
                         {
                             DateTime date;
                             date = DateTime.Now;
-                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text, Databytes);
+                            db.send_message(user.getUsername(), sub, txtMessage.Text, date, txtSubject.Text, Databytes, extention);
                         }
                     }
                     string Message = "Message Sent Succsefully!";
@@ -130,9 +132,12 @@ namespace TeamNateZone
             {
                 try
                 {
-                    // hold in local memory until user actually files claim
                     fileStream = openFileDialog1.OpenFile();
-                    txtUpload.Text = openFileDialog1.FileName;
+                    path = openFileDialog1.FileName;
+                    txtUpload.Text = path;
+                    extention = path.Substring(path.LastIndexOf('.'));
+                    FileName = path.Substring(0, path.IndexOf('.'));
+                    extention = path.Substring(path.LastIndexOf('.'));
                     MessageBox.Show("Uploaded File!", "Success");
                 }
                 catch (SecurityException ex)

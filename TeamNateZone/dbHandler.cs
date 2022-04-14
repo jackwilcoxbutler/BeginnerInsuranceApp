@@ -386,18 +386,17 @@ namespace TeamNateZone
             da.Fill(dtbl);
             return dtbl;
         }
-        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream)
+        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention)
         {
 
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            Console.WriteLine(fileStream);
             try
             {
                 cmd.Connection = connection;
                 if (fileStream != null)
                 {
-                    cmd.CommandText = "INSERT INTO message VALUES (@s, @r, @mess, @date, @sub, @re, @file)";
+                    cmd.CommandText = "INSERT INTO message VALUES (@s, @r, @mess, @date, @sub, @re, @file, @fileName, @fileExtention)";
                     cmd.Parameters.AddWithValue("@s", sender);
                     cmd.Parameters.AddWithValue("@r", reveiver);
                     cmd.Parameters.AddWithValue("@mess", message);
@@ -405,6 +404,8 @@ namespace TeamNateZone
                     cmd.Parameters.AddWithValue("@sub", subject);
                     cmd.Parameters.AddWithValue("@re", " • ");
                     cmd.Parameters.AddWithValue("@file", fileStream);
+                    //cmd.Parameters.AddWithValue("@fileName", "");
+                    cmd.Parameters.AddWithValue("@fileExtention", extention);
 
                     connection.Open();
 
@@ -527,9 +528,9 @@ namespace TeamNateZone
         {
             return accessExistingReceiver(Revciever);
         }
-        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream)
+        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream, string extention)
         {
-            sendmessage(sender, reveiver, message, date, subject, fileStream);
+            sendmessage(sender, reveiver, message, date, subject, fileStream, extention);
         }
         // </public methods>
     }
