@@ -40,6 +40,9 @@ namespace TeamNateZone
             this.btnSend = new CustomControls.RJControls.rndButton();
             this.btnBack = new CustomControls.RJControls.rndButton();
             this.txtReciever = new System.Windows.Forms.TextBox();
+            this.btnUpload = new CustomControls.RJControls.rndButton();
+            this.txtUpload = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,18 +76,18 @@ namespace TeamNateZone
             // txtMessage
             // 
             this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMessage.Location = new System.Drawing.Point(45, 286);
+            this.txtMessage.Location = new System.Drawing.Point(45, 394);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMessage.Size = new System.Drawing.Size(705, 152);
+            this.txtMessage.Size = new System.Drawing.Size(705, 228);
             this.txtMessage.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 253);
+            this.label3.Location = new System.Drawing.Point(41, 348);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 24);
             this.label3.TabIndex = 5;
@@ -170,22 +173,52 @@ namespace TeamNateZone
             this.txtReciever.Size = new System.Drawing.Size(294, 22);
             this.txtReciever.TabIndex = 37;
             // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnUpload.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.btnUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpload.BorderRadius = 15;
+            this.btnUpload.BorderSize = 0;
+            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.Location = new System.Drawing.Point(446, 269);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(304, 39);
+            this.btnUpload.TabIndex = 38;
+            this.btnUpload.Text = "Upload Attachment";
+            this.btnUpload.TextColor = System.Drawing.Color.White;
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // txtUpload
+            // 
+            this.txtUpload.Location = new System.Drawing.Point(45, 283);
+            this.txtUpload.Name = "txtUpload";
+            this.txtUpload.Size = new System.Drawing.Size(371, 22);
+            this.txtUpload.TabIndex = 39;
+            // 
             // NewMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 685);
             this.Controls.Add(this.txtReciever);
+            this.Controls.Add(this.txtSubject);
+            this.Controls.Add(this.txtMessage);
+            this.Controls.Add(this.txtUpload);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.label1);
             this.Name = "NewMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -209,5 +242,8 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnBack;
         private CustomControls.RJControls.rndButton btnSend;
         private System.Windows.Forms.TextBox txtReciever;
+        private CustomControls.RJControls.rndButton btnUpload;
+        private System.Windows.Forms.TextBox txtUpload;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

@@ -386,27 +386,44 @@ namespace TeamNateZone
             da.Fill(dtbl);
             return dtbl;
         }
-        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject)
+        private void sendmessage(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream)
         {
-            
+
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
-            
+            Console.WriteLine(fileStream);
             try
             {
                 cmd.Connection = connection;
+                if (fileStream != null)
+                {
+                    cmd.CommandText = "INSERT INTO message VALUES (@s, @r, @mess, @date, @sub, @re, @file)";
+                    cmd.Parameters.AddWithValue("@s", sender);
+                    cmd.Parameters.AddWithValue("@r", reveiver);
+                    cmd.Parameters.AddWithValue("@mess", message);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@sub", subject);
+                    cmd.Parameters.AddWithValue("@re", " • ");
+                    cmd.Parameters.AddWithValue("@file", fileStream);
 
-                cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject, readorunread ) VALUES (@s, @r, @mess, @date, @sub, @re);";
-                cmd.Parameters.AddWithValue("@s", sender);
-                cmd.Parameters.AddWithValue("@r", reveiver);
-                cmd.Parameters.AddWithValue("@mess", message);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@sub", subject);
-                cmd.Parameters.AddWithValue("@re", " • ");
+                    connection.Open();
 
-                connection.Open();
+                    dr = cmd.ExecuteReader();
+                }
+                else
+                {
+                    cmd.CommandText = "INSERT INTO message(sender, receiver, message, date, subject, readorunread ) VALUES (@s, @r, @mess, @date, @sub, @re);";
+                    cmd.Parameters.AddWithValue("@s", sender);
+                    cmd.Parameters.AddWithValue("@r", reveiver);
+                    cmd.Parameters.AddWithValue("@mess", message);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@sub", subject);
+                    cmd.Parameters.AddWithValue("@re", " • ");
+                    
+                    connection.Open();
 
-                dr = cmd.ExecuteReader();
+                    dr = cmd.ExecuteReader();
+                }
             }
             catch (Exception err)
             {
@@ -510,9 +527,9 @@ namespace TeamNateZone
         {
             return accessExistingReceiver(Revciever);
         }
-        public void send_message(string sender, string reveiver, string message, DateTime date, string subject)
+        public void send_message(string sender, string reveiver, string message, DateTime date, string subject, byte[] fileStream)
         {
-            sendmessage(sender, reveiver, message, date, subject);
+            sendmessage(sender, reveiver, message, date, subject, fileStream);
         }
         // </public methods>
     }
