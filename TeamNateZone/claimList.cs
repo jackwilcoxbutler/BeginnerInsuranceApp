@@ -49,63 +49,61 @@ namespace TeamNateZone
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            //int indexOfClaimCell = dataGridView1.CurrentCell.RowIndex;
-            ////indexOfClaimCell--;
+            if (!int.TryParse(enterClaimIDTxt.Text.Trim(), out int result))
+            {
+                lblStatus.Text = "Please enter a Numerical Value";
+                return;
+            }
 
-            //while (dataGridView1.Rows[indexOfClaimCell].Cells[0].FormattedValue.ToString() != enterClaimIDTxt.Text)
-            //{
-            //    indexOfClaimCell++;
-            //}
-            //SqlConnection cn = new SqlConnection();
-            //SqlCommand cmd = new SqlCommand();
-            //SqlDataReader dr;
-            //try
-            //{
-            //    cn.ConnectionString =
-            //        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            //    cmd.Connection = cn;
-            //    cmd.CommandText = "SELECT content FROM ClaimMedia WHERE UID=@uid";
-            //    cmd.Parameters.AddWithValue("@uid", user.getUserID());
-            //    cn.Open();
-            //    dr = cmd.ExecuteReader();
-            //    //dr.Read();
-            //    //            dr.Read(); // advance to second image (panda)
-            //    //check to see if they typed in a correct claim ID
-            //    if (indexOfClaimCell <= dataGridView1.RowCount)
-            //    {
-            //        //loop through to the proper claim in the datagrindtable to find corrisponding submitted images
-            //        for (int i = 0; i < indexOfClaimCell; i++)
-            //        {
-            //            dr.Read();
-            //        }
-            //        Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
-            //        testPictureBox.Image = img;
-            //        testPictureBox.Visible = true;
-            //    }
+            string ClaimID = enterClaimIDTxt.Text;
+            int ClaimUser = db.get_userFromClaim(ClaimID);
+            Console.WriteLine(db.get_fileType_Claim(ClaimID));
+            if (user.getUserID() != ClaimUser)
+            {
+                lblStatus.Text = "Please enter a valid Claim ID";
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(enterClaimIDTxt.Text))
+            {
+                lblStatus.Text = "Please enter a Claim ID to View Image";
+            }
+            else if (db.get_fileType_Claim(ClaimID) == ".jpg" || db.get_fileType_Claim(ClaimID) == ".png")
+            {
+                byte[] fileData = db.get_file_claims(ClaimID);
 
+                Stream stream = new MemoryStream(fileData);
 
-            //    //Image img = System.Drawing.Bitmap.FromStream(dr.GetStream(0));
-            //    //testPictureBox.Image = img;
-            //    //testPictureBox.Visible = true;
-            //}
-            //catch(Exception err) 
-            //{
-            //    lblStatus.Text = "No Image available to view";
-            //}
-            //finally
-            //{
-            //    cn.Close();
-            //}
-            //SaveFileDialog dialog = new SaveFileDialog();
-            lblStatus.Text = "work in progess. Come back later";
+                Image img = System.Drawing.Bitmap.FromStream(stream);
+                testPictureBox.BackgroundImage = img;
+                testPictureBox.Visible = true;
+            }
+            else
+            {
+                lblStatus.Text = " The File you are trying to view is not in the correct format to view \n You can download the file using the dowload button";
+            }
+            
+            
         }
 
         private void rndImageDownload_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(enterClaimIDTxt.Text.Trim(), out int result))
+            {
+                lblStatus.Text = "Please enter a Numerical Value";
+                return;
+            }
+
             string ClaimID = enterClaimIDTxt.Text;
             string fileName = db.get_filename_claim(ClaimID);
 
-            if (!string.IsNullOrEmpty(fileName))
+            int ClaimUser = db.get_userFromClaim(ClaimID);
+            if (user.getUserID() != ClaimUser)
+            {
+                lblStatus.Text = "Please enter a valid Claim ID";
+                return;
+            }
+            else if (!string.IsNullOrEmpty(fileName))
             {
                 fileName = fileName.Trim();
                 saveFileDialog1.FileName = fileName;
@@ -118,12 +116,13 @@ namespace TeamNateZone
                 }
                 else
                 {
-                    lblStatus.Text = "There has been a error downloading your file. Please speak with an Admin";
+                    lblStatus.Text = "Download Canceled";
                 }
+                
             }
             else
             {
-                lblStatus.Text = "No Attachemt to download";
+                //lblStatus.Text = "No Attachemt to download";
             }          
         }
     }

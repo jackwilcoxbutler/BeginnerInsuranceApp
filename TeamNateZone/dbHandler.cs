@@ -799,6 +799,45 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+        private int access_userFromClaim(string ID)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT UserID FROM Claims WHERE ClaimId = @ID";
+
+                cmd.Parameters.AddWithValue("@ID", ID);
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                try
+                {
+
+                    return dr.GetInt32(0);
+
+                }
+                catch (Exception err)
+                {
+                    //MessageBox.Show(err.Message, "Error Occurred");
+                    return 0;
+                }
+
+            }
+            catch (Exception err)
+            {
+                //MessageBox.Show(err.Message, "Error Occurred");
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         // </private methods>
         // <public methods>
         public String check_password(string username)
@@ -884,6 +923,10 @@ namespace TeamNateZone
         public byte[] get_file_claims(string ID)
         {
             return access_file_claims(ID);
+        }
+        public int get_userFromClaim(string ID)
+        {
+            return access_userFromClaim(ID);
         }
         // </public methods>
     }
