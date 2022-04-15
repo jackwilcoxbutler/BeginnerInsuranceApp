@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +16,13 @@ namespace TeamNateZone
     {
         User user;
         ClientWelcomeForm welcomeForm;
+        dbHandler db;
         public claimList(User user)
         {
             InitializeComponent();
             this.user = user;
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+
         }
 
         private void btnReturnToWelcome_Click(object sender, EventArgs e)
@@ -98,40 +102,29 @@ namespace TeamNateZone
 
         private void rndImageDownload_Click(object sender, EventArgs e)
         {
-            //if (db.get_attachment(From, To, Subject, Message) == 1)
-            //{
-            //    string fileName = db.get_filename(From, To, Subject, Message);
+            string ClaimID = enterClaimIDTxt.Text;
+            string fileName = db.get_filename_claim(ClaimID);
 
-            //    if (!string.IsNullOrEmpty(fileName))
-            //    {
-            //        fileName = fileName.Trim();
-            //        saveFileDialog1.FileName = fileName;
-            //        saveFileDialog1.DefaultExt = db.get_fileType(From, To, Subject, Message);
-            //        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //        {
-
-            //            byte[] fileContent = db.get_file(From, To, Subject, Message, fileName);
-            //            File.WriteAllBytes(fileName, fileContent);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        string message = "No Attachemt to download";
-            //        string title = "Download Attachemnt";
-            //        MessageBoxButtons buttons = MessageBoxButtons.OK;
-            //        DialogResult result = MessageBox.Show(message, title, buttons);
-
-            //    }
-            //}
-            //else
-            //{
-            //    string message = "No Attachemt to download";
-            //    string title = "Download Attachemnt";
-            //    MessageBoxButtons buttons = MessageBoxButtons.OK;
-            //    DialogResult result = MessageBox.Show(message, title, buttons);
-            //}
-
-            lblStatus.Text = "work in progess. Come back later";
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                fileName = fileName.Trim();
+                saveFileDialog1.FileName = fileName;
+                saveFileDialog1.DefaultExt = db.get_fileType_Claim(ClaimID);
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    byte[] fileContent = db.get_file_claims(ClaimID);
+                    File.WriteAllBytes(fileName, fileContent);
+                    lblStatus.Text = "File downloaded Successfully";
+                }
+                else
+                {
+                    lblStatus.Text = "There has been a error downloading your file. Please speak with an Admin";
+                }
+            }
+            else
+            {
+                lblStatus.Text = "No Attachemt to download";
+            }          
         }
     }
 }

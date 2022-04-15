@@ -686,6 +686,119 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+        private string acess_filename_claim(string ID)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT FileName FROM Claims WHERE ClaimId = @ID";
+
+                cmd.Parameters.AddWithValue("@ID", ID);
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                try
+                { 
+                    return dr.GetString(0);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                    return "";
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return "";
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        private string accesss_fileType_Claim (string ID)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+                cmd.CommandText = "SELECT FileContentType FROM Claims WHERE ClaimId = @ID";
+                cmd.Parameters.AddWithValue("@ID", ID);
+              
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                try
+                {
+
+                    return dr.GetString(0);
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                    return "";
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        private byte[] access_file_claims(string ID)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT FileData FROM Claims WHERE ClaimId = @ID";
+
+                cmd.Parameters.AddWithValue("@ID", ID);
+    
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                try
+                {
+                    byte[] byteArray = (byte[])dr[0];
+                    return byteArray;
+                }
+                catch (Exception err)
+                {
+
+                    return null;
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         // </private methods>
         // <public methods>
         public String check_password(string username)
@@ -759,6 +872,18 @@ namespace TeamNateZone
         public int get_attachment(string sender, string receiver, string subject, string message)
         {
             return attachment(sender, receiver, subject, message);
+        }
+        public string get_filename_claim(string ID)
+        {
+            return acess_filename_claim(ID);
+        }
+        public string get_fileType_Claim(string ID)
+        {
+            return accesss_fileType_Claim(ID);
+        }
+        public byte[] get_file_claims(string ID)
+        {
+            return access_file_claims(ID);
         }
         // </public methods>
     }
