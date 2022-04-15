@@ -335,35 +335,68 @@ namespace TeamNateZone
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
-            try
+            if (fileName != null)
             {
-                cmd.Connection = connection;
+                try
+                {
+                    cmd.Connection = connection;
 
-                cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status, FileName, FileContentType, FileData) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status, @fileName, @fileExtention, @file)";
+                    cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status, FileName, FileContentType, FileData) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status, @fileName, @fileExtention, @file)";
 
-                cmd.Parameters.AddWithValue("@userID", userID);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@type", type);
-                cmd.Parameters.AddWithValue("@description", description);
-                cmd.Parameters.AddWithValue("@startdate", startdate);
-                cmd.Parameters.AddWithValue("@lastupdate", lastupdate);
-                cmd.Parameters.AddWithValue("@status", "Submitted");
-                cmd.Parameters.AddWithValue("@file", Databytes);
-                cmd.Parameters.AddWithValue("@fileName", fileName);
-                cmd.Parameters.AddWithValue("@fileExtention", extention);
+                    cmd.Parameters.AddWithValue("@userID", userID);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@type", type);
+                    cmd.Parameters.AddWithValue("@description", description);
+                    cmd.Parameters.AddWithValue("@startdate", startdate);
+                    cmd.Parameters.AddWithValue("@lastupdate", lastupdate);
+                    cmd.Parameters.AddWithValue("@status", "Submitted");
+                    cmd.Parameters.AddWithValue("@file", Databytes);
+                    cmd.Parameters.AddWithValue("@fileName", fileName);
+                    cmd.Parameters.AddWithValue("@fileExtention", extention);
 
-                connection.Open();
+                    connection.Open();
 
-                dr = cmd.ExecuteReader();
+                    dr = cmd.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
-            catch (Exception err)
+            else
             {
-                MessageBox.Show(err.Message, "Error Occurred");
-            }
-            finally
-            {
-                connection.Close();
+                try
+                {
+                    cmd.Connection = connection;
+
+                    cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status);";
+
+                    cmd.Parameters.AddWithValue("@userID", userID);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@type", type);
+                    cmd.Parameters.AddWithValue("@description", description);
+                    cmd.Parameters.AddWithValue("@startdate", startdate);
+                    cmd.Parameters.AddWithValue("@lastupdate", lastupdate);
+                    cmd.Parameters.AddWithValue("@status", "Submitted");
+
+                    connection.Open();
+
+                    dr = cmd.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
         private DataTable access_inbox(User user)
