@@ -57,6 +57,7 @@ namespace TeamNateZone
             this.rndImageDownload = new CustomControls.RJControls.rndButton();
             this.btnView = new CustomControls.RJControls.rndButton();
             this.btnReturnToWelcome = new CustomControls.RJControls.rndButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet_Claims2)).BeginInit();
@@ -69,7 +70,7 @@ namespace TeamNateZone
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -88,11 +89,11 @@ namespace TeamNateZone
             this.dataGridView1.DataSource = this.claimsBindingSource1;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(1600, 862);
+            this.dataGridView1.Size = new System.Drawing.Size(1063, 552);
             this.dataGridView1.TabIndex = 3;
             // 
             // claimIdDataGridViewTextBoxColumn
@@ -102,7 +103,6 @@ namespace TeamNateZone
             this.claimIdDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimIdDataGridViewTextBoxColumn.Name = "claimIdDataGridViewTextBoxColumn";
             this.claimIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claimIdDataGridViewTextBoxColumn.Width = 128;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -111,7 +111,6 @@ namespace TeamNateZone
             this.userIDDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIDDataGridViewTextBoxColumn.Width = 122;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
@@ -120,7 +119,6 @@ namespace TeamNateZone
             this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
             this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usernameDataGridViewTextBoxColumn.Width = 155;
             // 
             // userEmailDataGridViewTextBoxColumn
             // 
@@ -129,7 +127,6 @@ namespace TeamNateZone
             this.userEmailDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
             this.userEmailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userEmailDataGridViewTextBoxColumn.Width = 155;
             // 
             // claimTypeDataGridViewTextBoxColumn
             // 
@@ -138,7 +135,6 @@ namespace TeamNateZone
             this.claimTypeDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimTypeDataGridViewTextBoxColumn.Name = "claimTypeDataGridViewTextBoxColumn";
             this.claimTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claimTypeDataGridViewTextBoxColumn.Width = 171;
             // 
             // claimDescriptionDataGridViewTextBoxColumn
             // 
@@ -147,7 +143,6 @@ namespace TeamNateZone
             this.claimDescriptionDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.claimDescriptionDataGridViewTextBoxColumn.Name = "claimDescriptionDataGridViewTextBoxColumn";
             this.claimDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claimDescriptionDataGridViewTextBoxColumn.Width = 231;
             // 
             // startDateDataGridViewTextBoxColumn
             // 
@@ -156,7 +151,6 @@ namespace TeamNateZone
             this.startDateDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
             this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.startDateDataGridViewTextBoxColumn.Width = 147;
             // 
             // endDateDataGridViewTextBoxColumn
             // 
@@ -165,7 +159,6 @@ namespace TeamNateZone
             this.endDateDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
             this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.endDateDataGridViewTextBoxColumn.Width = 140;
             // 
             // EstimatedEndDate
             // 
@@ -174,7 +167,6 @@ namespace TeamNateZone
             this.EstimatedEndDate.MinimumWidth = 8;
             this.EstimatedEndDate.Name = "EstimatedEndDate";
             this.EstimatedEndDate.ReadOnly = true;
-            this.EstimatedEndDate.Width = 235;
             // 
             // Status
             // 
@@ -183,7 +175,6 @@ namespace TeamNateZone
             this.Status.MinimumWidth = 8;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
-            this.Status.Width = 118;
             // 
             // LastUpdate
             // 
@@ -192,7 +183,6 @@ namespace TeamNateZone
             this.LastUpdate.MinimumWidth = 8;
             this.LastUpdate.Name = "LastUpdate";
             this.LastUpdate.ReadOnly = true;
-            this.LastUpdate.Width = 167;
             // 
             // claimsBindingSource1
             // 
@@ -225,10 +215,10 @@ namespace TeamNateZone
             // testPictureBox
             // 
             this.testPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.testPictureBox.Location = new System.Drawing.Point(12, 494);
-            this.testPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.testPictureBox.Location = new System.Drawing.Point(8, 316);
+            this.testPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.testPictureBox.Name = "testPictureBox";
-            this.testPictureBox.Size = new System.Drawing.Size(356, 262);
+            this.testPictureBox.Size = new System.Drawing.Size(237, 168);
             this.testPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.testPictureBox.TabIndex = 7;
             this.testPictureBox.TabStop = false;
@@ -240,10 +230,9 @@ namespace TeamNateZone
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.White;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(40, 756);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Location = new System.Drawing.Point(27, 484);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 51);
+            this.lblStatus.Size = new System.Drawing.Size(0, 31);
             this.lblStatus.TabIndex = 9;
             // 
             // viewClaimGroupBox
@@ -253,11 +242,11 @@ namespace TeamNateZone
             this.viewClaimGroupBox.Controls.Add(this.enterClaimIDTxt);
             this.viewClaimGroupBox.Controls.Add(this.claimIdLable);
             this.viewClaimGroupBox.Controls.Add(this.testPictureBox);
-            this.viewClaimGroupBox.Location = new System.Drawing.Point(1595, 0);
-            this.viewClaimGroupBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewClaimGroupBox.Location = new System.Drawing.Point(1063, 0);
+            this.viewClaimGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewClaimGroupBox.Name = "viewClaimGroupBox";
-            this.viewClaimGroupBox.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.viewClaimGroupBox.Size = new System.Drawing.Size(385, 862);
+            this.viewClaimGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.viewClaimGroupBox.Size = new System.Drawing.Size(257, 552);
             this.viewClaimGroupBox.TabIndex = 10;
             this.viewClaimGroupBox.TabStop = false;
             this.viewClaimGroupBox.Text = "View Claim Images";
@@ -266,30 +255,30 @@ namespace TeamNateZone
             // 
             this.viewClaimImageInstructions.BackColor = System.Drawing.Color.YellowGreen;
             this.viewClaimImageInstructions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.viewClaimImageInstructions.Location = new System.Drawing.Point(32, 75);
-            this.viewClaimImageInstructions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewClaimImageInstructions.Location = new System.Drawing.Point(21, 48);
+            this.viewClaimImageInstructions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewClaimImageInstructions.Name = "viewClaimImageInstructions";
             this.viewClaimImageInstructions.ReadOnly = true;
-            this.viewClaimImageInstructions.Size = new System.Drawing.Size(328, 127);
+            this.viewClaimImageInstructions.Size = new System.Drawing.Size(219, 81);
             this.viewClaimImageInstructions.TabIndex = 2;
             this.viewClaimImageInstructions.Text = "In the text box below, please type the Claim ID number of the claim you wish to v" +
     "iew your submitted images.";
             // 
             // enterClaimIDTxt
             // 
-            this.enterClaimIDTxt.Location = new System.Drawing.Point(96, 329);
-            this.enterClaimIDTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.enterClaimIDTxt.Location = new System.Drawing.Point(64, 211);
+            this.enterClaimIDTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enterClaimIDTxt.Name = "enterClaimIDTxt";
-            this.enterClaimIDTxt.Size = new System.Drawing.Size(196, 31);
+            this.enterClaimIDTxt.Size = new System.Drawing.Size(132, 22);
             this.enterClaimIDTxt.TabIndex = 1;
             // 
             // claimIdLable
             // 
             this.claimIdLable.AutoSize = true;
-            this.claimIdLable.Location = new System.Drawing.Point(100, 287);
-            this.claimIdLable.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.claimIdLable.Location = new System.Drawing.Point(67, 184);
+            this.claimIdLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.claimIdLable.Name = "claimIdLable";
-            this.claimIdLable.Size = new System.Drawing.Size(149, 25);
+            this.claimIdLable.Size = new System.Drawing.Size(97, 17);
             this.claimIdLable.TabIndex = 0;
             this.claimIdLable.Text = "Enter ClaimID:";
             // 
@@ -304,10 +293,9 @@ namespace TeamNateZone
             this.rndImageDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rndImageDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndImageDownload.ForeColor = System.Drawing.Color.White;
-            this.rndImageDownload.Location = new System.Drawing.Point(838, 758);
-            this.rndImageDownload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndImageDownload.Location = new System.Drawing.Point(559, 485);
             this.rndImageDownload.Name = "rndImageDownload";
-            this.rndImageDownload.Size = new System.Drawing.Size(210, 60);
+            this.rndImageDownload.Size = new System.Drawing.Size(140, 38);
             this.rndImageDownload.TabIndex = 8;
             this.rndImageDownload.Text = "Download";
             this.rndImageDownload.TextColor = System.Drawing.Color.White;
@@ -325,10 +313,9 @@ namespace TeamNateZone
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(1112, 756);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Location = new System.Drawing.Point(741, 484);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(210, 60);
+            this.btnView.Size = new System.Drawing.Size(140, 38);
             this.btnView.TabIndex = 6;
             this.btnView.Text = "View Image";
             this.btnView.TextColor = System.Drawing.Color.White;
@@ -346,10 +333,9 @@ namespace TeamNateZone
             this.btnReturnToWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturnToWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnToWelcome.ForeColor = System.Drawing.Color.White;
-            this.btnReturnToWelcome.Location = new System.Drawing.Point(1393, 754);
-            this.btnReturnToWelcome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturnToWelcome.Location = new System.Drawing.Point(929, 483);
             this.btnReturnToWelcome.Name = "btnReturnToWelcome";
-            this.btnReturnToWelcome.Size = new System.Drawing.Size(165, 62);
+            this.btnReturnToWelcome.Size = new System.Drawing.Size(110, 40);
             this.btnReturnToWelcome.TabIndex = 4;
             this.btnReturnToWelcome.Text = "Back";
             this.btnReturnToWelcome.TextColor = System.Drawing.Color.White;
@@ -358,18 +344,18 @@ namespace TeamNateZone
             // 
             // claimList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1982, 862);
+            this.ClientSize = new System.Drawing.Size(1321, 552);
             this.Controls.Add(this.viewClaimGroupBox);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.rndImageDownload);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "claimList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List of Claims";
@@ -415,5 +401,6 @@ namespace TeamNateZone
         private System.Windows.Forms.RichTextBox viewClaimImageInstructions;
         private System.Windows.Forms.TextBox enterClaimIDTxt;
         private System.Windows.Forms.Label claimIdLable;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
