@@ -31,17 +31,6 @@ namespace TeamNateZone
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.claimIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claimTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claimDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstimatedEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastUpdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.claimsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tEAM_ADataSet_Claims2 = new TeamNateZone.TEAM_ADataSet_Claims2();
             this.claimsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,6 +47,13 @@ namespace TeamNateZone
             this.btnView = new CustomControls.RJControls.rndButton();
             this.btnReturnToWelcome = new CustomControls.RJControls.rndButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.claimIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claimTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claimDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstimatedEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastUpdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet_Claims2)).BeginInit();
@@ -76,13 +72,9 @@ namespace TeamNateZone
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.claimIdDataGridViewTextBoxColumn,
-            this.userIDDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.userEmailDataGridViewTextBoxColumn,
             this.claimTypeDataGridViewTextBoxColumn,
             this.claimDescriptionDataGridViewTextBoxColumn,
             this.startDateDataGridViewTextBoxColumn,
-            this.endDateDataGridViewTextBoxColumn,
             this.EstimatedEndDate,
             this.Status,
             this.LastUpdate});
@@ -95,94 +87,6 @@ namespace TeamNateZone
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(1063, 552);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // claimIdDataGridViewTextBoxColumn
-            // 
-            this.claimIdDataGridViewTextBoxColumn.DataPropertyName = "ClaimId";
-            this.claimIdDataGridViewTextBoxColumn.HeaderText = "ClaimId";
-            this.claimIdDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.claimIdDataGridViewTextBoxColumn.Name = "claimIdDataGridViewTextBoxColumn";
-            this.claimIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // userEmailDataGridViewTextBoxColumn
-            // 
-            this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "UserEmail";
-            this.userEmailDataGridViewTextBoxColumn.HeaderText = "UserEmail";
-            this.userEmailDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
-            this.userEmailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claimTypeDataGridViewTextBoxColumn
-            // 
-            this.claimTypeDataGridViewTextBoxColumn.DataPropertyName = "Claim_Type";
-            this.claimTypeDataGridViewTextBoxColumn.HeaderText = "Claim_Type";
-            this.claimTypeDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.claimTypeDataGridViewTextBoxColumn.Name = "claimTypeDataGridViewTextBoxColumn";
-            this.claimTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claimDescriptionDataGridViewTextBoxColumn
-            // 
-            this.claimDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Claim_Description";
-            this.claimDescriptionDataGridViewTextBoxColumn.HeaderText = "Claim_Description";
-            this.claimDescriptionDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.claimDescriptionDataGridViewTextBoxColumn.Name = "claimDescriptionDataGridViewTextBoxColumn";
-            this.claimDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // EstimatedEndDate
-            // 
-            this.EstimatedEndDate.DataPropertyName = "EstimatedEndDate";
-            this.EstimatedEndDate.HeaderText = "EstimatedEndDate";
-            this.EstimatedEndDate.MinimumWidth = 8;
-            this.EstimatedEndDate.Name = "EstimatedEndDate";
-            this.EstimatedEndDate.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 8;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // LastUpdate
-            // 
-            this.LastUpdate.DataPropertyName = "LastUpdate";
-            this.LastUpdate.HeaderText = "LastUpdate";
-            this.LastUpdate.MinimumWidth = 8;
-            this.LastUpdate.Name = "LastUpdate";
-            this.LastUpdate.ReadOnly = true;
             // 
             // claimsBindingSource1
             // 
@@ -341,6 +245,62 @@ namespace TeamNateZone
             this.btnReturnToWelcome.TextColor = System.Drawing.Color.White;
             this.btnReturnToWelcome.UseVisualStyleBackColor = false;
             this.btnReturnToWelcome.Click += new System.EventHandler(this.btnReturnToWelcome_Click);
+            // 
+            // claimIdDataGridViewTextBoxColumn
+            // 
+            this.claimIdDataGridViewTextBoxColumn.DataPropertyName = "ClaimId";
+            this.claimIdDataGridViewTextBoxColumn.HeaderText = "ClaimId";
+            this.claimIdDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.claimIdDataGridViewTextBoxColumn.Name = "claimIdDataGridViewTextBoxColumn";
+            this.claimIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claimTypeDataGridViewTextBoxColumn
+            // 
+            this.claimTypeDataGridViewTextBoxColumn.DataPropertyName = "Claim_Type";
+            this.claimTypeDataGridViewTextBoxColumn.HeaderText = "Claim Type";
+            this.claimTypeDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.claimTypeDataGridViewTextBoxColumn.Name = "claimTypeDataGridViewTextBoxColumn";
+            this.claimTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claimDescriptionDataGridViewTextBoxColumn
+            // 
+            this.claimDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Claim_Description";
+            this.claimDescriptionDataGridViewTextBoxColumn.HeaderText = "Claim Description";
+            this.claimDescriptionDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.claimDescriptionDataGridViewTextBoxColumn.Name = "claimDescriptionDataGridViewTextBoxColumn";
+            this.claimDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "Start Date";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // EstimatedEndDate
+            // 
+            this.EstimatedEndDate.DataPropertyName = "EstimatedEndDate";
+            this.EstimatedEndDate.HeaderText = "Est End Date";
+            this.EstimatedEndDate.MinimumWidth = 8;
+            this.EstimatedEndDate.Name = "EstimatedEndDate";
+            this.EstimatedEndDate.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 8;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // LastUpdate
+            // 
+            this.LastUpdate.DataPropertyName = "LastUpdate";
+            this.LastUpdate.HeaderText = "LastUpdate";
+            this.LastUpdate.MinimumWidth = 8;
+            this.LastUpdate.Name = "LastUpdate";
+            this.LastUpdate.ReadOnly = true;
             // 
             // claimList
             // 
