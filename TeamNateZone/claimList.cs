@@ -63,8 +63,7 @@ namespace TeamNateZone
                 lblStatus.Text = "Please enter a valid Claim ID";
                 return;
             }
-            
-            if (string.IsNullOrEmpty(enterClaimIDTxt.Text))
+            else if (string.IsNullOrEmpty(enterClaimIDTxt.Text))
             {
                 lblStatus.Text = "Please enter a Claim ID to View Image";
             }
