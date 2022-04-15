@@ -330,7 +330,7 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
-        private void fileClaim(int userID, string username, string email, string type, string description, string startdate, string lastupdate)
+        private void fileClaim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, byte[] Databytes, string extention, string fileName)
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
@@ -339,7 +339,7 @@ namespace TeamNateZone
             {
                 cmd.Connection = connection;
 
-                cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status);";
+                cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status, FileName, FileContentType, FileData) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status, @fileName, @fileExtention, @file)";
 
                 cmd.Parameters.AddWithValue("@userID", userID);
                 cmd.Parameters.AddWithValue("@username", username);
@@ -349,6 +349,9 @@ namespace TeamNateZone
                 cmd.Parameters.AddWithValue("@startdate", startdate);
                 cmd.Parameters.AddWithValue("@lastupdate", lastupdate);
                 cmd.Parameters.AddWithValue("@status", "Submitted");
+                cmd.Parameters.AddWithValue("@file", Databytes);
+                cmd.Parameters.AddWithValue("@fileName", fileName);
+                cmd.Parameters.AddWithValue("@fileExtention", extention);
 
                 connection.Open();
 
@@ -680,9 +683,9 @@ namespace TeamNateZone
         {
             updateUserProfile(userID, email, password, street, city, state, zip);
         }
-        public void file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate)
+        public void file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, byte[] Databytes, string extention, string fileName)
         {
-            fileClaim(userID, username, email, type, description, startdate, lastupdate);
+            fileClaim(userID, username, email, type, description, startdate, lastupdate, Databytes, extention, fileName);
         }
         public bool update_Claim(int amt, int claimID)
         {

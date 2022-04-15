@@ -19,6 +19,13 @@ namespace TeamNateZone
         User user;
         Claim claim;
         ClientWelcomeForm welcomeForm;
+        Stream fileStream;
+        byte[] Databytes;
+        string extention;
+        string fileName;
+        string path;
+
+
         // images list will become a data member of the upcoming View Profile form //
         List<Stream> images = new List<Stream>();
         dbHandler db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
@@ -36,7 +43,7 @@ namespace TeamNateZone
             welcomeForm.Show();
         }
 
-        private /*async*/ void btnFile_Click(object sender, EventArgs e)
+        private void btnFile_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.OK;
 
@@ -51,35 +58,18 @@ namespace TeamNateZone
                 MessageBox.Show("Please enter a description and claim type", "invalid data", buttons);
                 return;
             }
-            db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString());
+            if (fileStream != null)
+            {
+                using (BinaryReader br = new BinaryReader(fileStream))
+                {
+                    Databytes = br.ReadBytes((Int32)fileStream.Length);
+                }
+            }
+            db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString(), Databytes, extention, fileName);
 
-            SqlConnection cn = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+            
 
-            // this will be the functionality for uploading media to the database from the upcoming View Profile form //
-             foreach (Stream image in images)
-             {
-                SqlCommand statement = new SqlCommand($"INSERT INTO ClaimMedia(UID,content) VALUES ({user.getUserID()},{image})", cn);
-                statement.ExecuteNonQueryAsync();
-
-             }
-             cn.Close();
-            MessageBox.Show("Your claim has been successfully submitted! Check your list of claims to track its status.", "Success!");
-            welcomeForm = new ClientWelcomeForm(user);
-            this.Close();
-            welcomeForm.Show();
-
-
-        //    claim = new Claim(user.getUserID(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value);
-        //    if (claim.fileClaim(user))
-        //    {
-        //        MessageBox.Show("Your claim has been successfully submitted! Check your list of claims to track its status.", "Success!");
-
-            //        welcomeForm = new ClientWelcomeForm(user);
-            //        this.Close();
-            //        welcomeForm.Show();
-            //    }
-            //WORKS JUST NEED TO ADD IMAGE HANDLING
-    }
+        }
 
         private Boolean isClosed;
         private void btnMenu_Click(object sender, EventArgs e)
@@ -107,18 +97,20 @@ namespace TeamNateZone
 
         }
 
-        // this functionality will migrate to View Profile form once it is created //
+       
         private void btnUpload_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    // hold in local memory until user actually files claim
-                    Stream image = openFileDialog1.OpenFile();
-                    images.Add(image);
-                    txtFileUpload.Text = openFileDialog1.FileName;
-                    MessageBox.Show("Uploaded image!", "Success");
+                    fileStream = openFileDialog1.OpenFile();
+                    path = openFileDialog1.FileName;
+                    txtFileUpload.Text = path;
+                    extention = path.Substring(path.LastIndexOf('.'));
+                    fileName = Path.GetFileName(path);
+                    extention = path.Substring(path.LastIndexOf('.'));
+                    MessageBox.Show("Uploaded File!", "Success");
                 }
                 catch (SecurityException ex)
                 {
