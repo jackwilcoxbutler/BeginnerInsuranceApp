@@ -147,9 +147,7 @@ C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
-C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
@@ -231,3 +229,7 @@ C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Admi
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.ViewUsersWithActiveClaims.resources
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources
+C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
+C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources
+C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsersWithActiveClaims.resources
+C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources

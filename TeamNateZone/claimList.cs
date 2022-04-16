@@ -42,8 +42,18 @@ namespace TeamNateZone
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Claims WHERE UserID = @userid", cn);
             da.SelectCommand.Parameters.AddWithValue("userid", user.getUserID());
             DataTable dtbl = new DataTable();
+
+
+
+
+
             da.Fill(dtbl);
+
+
+
             dataGridView1.DataSource = dtbl;
+            
+
             cn.Close();
         }
 
@@ -123,6 +133,11 @@ namespace TeamNateZone
             {
                 //lblStatus.Text = "No Attachemt to download";
             }          
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
