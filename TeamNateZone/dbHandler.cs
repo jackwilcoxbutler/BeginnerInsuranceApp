@@ -67,6 +67,44 @@ namespace TeamNateZone
             return true;
         }
        
+        private string getUsername(int userID)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT Username FROM SignInInfo WHERE UserID = @userid";
+
+                cmd.Parameters.AddWithValue("@userid", userID);
+
+                connection.Open();
+
+                dr = cmd.ExecuteReader();
+
+                dr.Read();
+
+                try
+                {
+                    return dr.GetString(0);
+                }
+                catch (Exception err)
+                {
+                    return "";
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
         private String getAuthorizedPassword(string userName)
         {
@@ -109,6 +147,7 @@ namespace TeamNateZone
             }
         }
 
+      
         private string getEmail(string email)
         {
             SqlCommand cmd = new SqlCommand();
@@ -931,6 +970,11 @@ namespace TeamNateZone
         public int get_userFromClaim(string ID)
         {
             return access_userFromClaim(ID);
+        }
+
+        public string get_username(int id)
+        {
+            return getUsername(id);
         }
         // </public methods>
     }

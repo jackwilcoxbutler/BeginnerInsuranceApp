@@ -155,7 +155,6 @@ C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.pdb
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimList.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.MessageForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage.resources
-C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
 C:\Users\anbat\Source\Repos\cmakdad\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
@@ -233,3 +232,5 @@ C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFi
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsersWithActiveClaims.resources
 C:\Users\Henry\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientViewClaimImages.resources
+C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsersWithActiveClaims.resources

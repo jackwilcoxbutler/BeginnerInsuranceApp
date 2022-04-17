@@ -44,6 +44,8 @@ namespace TeamNateZone
             zip = "";
         }
         //get methods
+
+     
         public int getUserID()
         {
             return id;

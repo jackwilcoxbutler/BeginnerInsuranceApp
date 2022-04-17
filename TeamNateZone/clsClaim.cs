@@ -17,16 +17,16 @@ namespace TeamNateZone
         //Data
         int userID { get; set; }
         public int claimID { get; set; }
-        int cmID { get; set; }
-        int fmID { get; set; }
-        string claimType { get; set; }
-        string claimDesc { get; set; }
-        string claimStatus { get; set; }
-        string paymentStatus { get; set; }
-        DateTime startDate { get; set; }
-        DateTime endDate { get; set; }
-        DateTime estEndDate { get; set; }
-        DateTime lastUpdate { get; set; }
+        public int cmID { get; set; }
+        public int fmID { get; set; }
+        public string claimType { get; set; }
+        public string claimDesc { get; set; }
+        public string claimStatus { get; set; }
+        public string paymentStatus { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
+        public DateTime estEndDate { get; set; }
+        public DateTime lastUpdate { get; set; }
 
         dbHandler db;
 
@@ -72,6 +72,7 @@ namespace TeamNateZone
         //Need a constructor that takes in parameters 
         public Claim(int claimID)
         {
+            Console.WriteLine("Testing");
             this.claimID = claimID;
             userID = getUserID(claimID);
             cmID = getCmID(claimID);
@@ -115,7 +116,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT UserID FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT UserID FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -124,6 +125,7 @@ namespace TeamNateZone
             }
             catch (Exception err)
             {
+                MessageBox.Show(err.Message);
                 return 0;
             }
             finally
@@ -143,7 +145,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT FmID FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT FmID FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -171,7 +173,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT CmID FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT CmID FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -200,7 +202,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Claim_Type FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT Claim_Type FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -228,7 +230,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Claim_Description FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT Claim_Description FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -256,7 +258,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Status FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT Status FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -284,7 +286,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT PaymentStatus FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT PaymentStatus FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -313,11 +315,12 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT StartDate FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT StartDate FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
                 dr.Read();
+                Console.WriteLine(" Start date testing: " + dr.GetDateTime(0));
                 return dr.GetDateTime(0);
             }
             catch (Exception err)
@@ -341,7 +344,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT EndDate FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT EndDate FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -369,7 +372,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT EstimatedEndDate FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT EstimatedEndDate FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -397,7 +400,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT LastUpdate FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT LastUpdate FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -472,7 +475,7 @@ namespace TeamNateZone
                 cn.ConnectionString =
                     @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT EstimatedAmount FROM Claim WHERE ClaimID = @claimID";
+                cmd.CommandText = "SELECT EstimatedAmount FROM Claims WHERE ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimID", claimID);
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -488,8 +491,5 @@ namespace TeamNateZone
                 cn.Close();
             }
         }
-
-
-        
     }
 }
