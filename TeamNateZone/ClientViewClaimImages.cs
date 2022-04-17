@@ -34,11 +34,12 @@ namespace TeamNateZone
             //setting up the image to display
             byte[] fileData = db.get_file_claims(cid.ToString());
             ShowClaimInfo();
-
-            Stream stream = new MemoryStream(fileData);
-
-            Image img = System.Drawing.Bitmap.FromStream(stream);
-            ClaimImgBox.BackgroundImage = img;
+            if (fileData != null)
+            {
+                Stream stream = new MemoryStream(fileData);
+                Image img = System.Drawing.Bitmap.FromStream(stream);
+                ClaimImgBox.BackgroundImage = img;
+            }
             ClaimImgBox.Visible = true;
             
         }

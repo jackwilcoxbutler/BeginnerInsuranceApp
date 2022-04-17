@@ -29,6 +29,7 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientViewClaimImages));
             this.imgPanel = new System.Windows.Forms.Panel();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
@@ -101,6 +102,9 @@ namespace TeamNateZone
             // 
             // ClaimImgBox
             // 
+            this.ClaimImgBox.BackColor = System.Drawing.Color.White;
+            this.ClaimImgBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClaimImgBox.BackgroundImage")));
+            this.ClaimImgBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClaimImgBox.Location = new System.Drawing.Point(0, 0);
             this.ClaimImgBox.Margin = new System.Windows.Forms.Padding(6);
             this.ClaimImgBox.Name = "ClaimImgBox";
