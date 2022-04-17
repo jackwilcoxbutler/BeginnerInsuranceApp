@@ -86,6 +86,7 @@ namespace TeamNateZone
                 Image img = System.Drawing.Bitmap.FromStream(stream);
                 testPictureBox.BackgroundImage = img;
                 testPictureBox.Visible = true;
+                maximize_rndButton1.Visible = true;
             }
             else
             {
@@ -138,6 +139,13 @@ namespace TeamNateZone
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rndButton1_Click(object sender, EventArgs e)
+        {
+            //Claim c = new Claim(int.Parse(enterClaimIDTxt.Text));
+            ClientViewClaimImages imageWindow = new ClientViewClaimImages(user, int.Parse(enterClaimIDTxt.Text));
+            imageWindow.Show();
         }
     }
 }

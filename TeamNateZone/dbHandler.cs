@@ -33,7 +33,7 @@ namespace TeamNateZone
 // </constructor>
 
 // <private methods>
-        private bool updateClaim(int amt,int claimID)
+        private bool updateClaim(int amt,int claimID, int fmid)
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
@@ -42,10 +42,11 @@ namespace TeamNateZone
                 cmd.Connection = connection;
 
                 cmd.CommandText = "UPDATE Claims" +
-                                   " SET EstimatedAmount = @amt, Status = 'Estimated',PaymentStatus = 'Pending', LastUpdate = @lastUpdate where ClaimID = @claimID";
+                                   " SET EstimatedAmount = @amt, Status = 'Estimated',PaymentStatus = 'Pending', LastUpdate = @lastUpdate, FmID =@fmid where ClaimID = @claimID";
                 cmd.Parameters.AddWithValue("@claimId", claimID);
                 cmd.Parameters.AddWithValue("@amt", amt);
                 cmd.Parameters.AddWithValue("@lastUpdate", DateTime.Now.ToString("M/d/yyyy"));
+                cmd.Parameters.AddWithValue("@fmid", fmid);
 
 
 
@@ -65,7 +66,8 @@ namespace TeamNateZone
             }
             return true;
         }
-    
+       
+
         private String getAuthorizedPassword(string userName)
         {
             if(getUsername(userName) == "")
@@ -298,6 +300,7 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+        
         private void updateUserProfile(int userID, string email, string password, string street, string city, string state, string zip)
         {
             SqlCommand cmd = new SqlCommand();
@@ -864,6 +867,7 @@ namespace TeamNateZone
         {
             return getUserAcct(username);
         }
+
         public void update_user_profile(int userID, string email, string password, string street, string city, string state, string zip)
         {
             updateUserProfile(userID, email, password, street, city, state, zip);
@@ -872,9 +876,9 @@ namespace TeamNateZone
         {
             fileClaim(userID, username, email, type, description, startdate, lastupdate, Databytes, extention, fileName);
         }
-        public bool update_Claim(int amt, int claimID)
+        public bool update_Claim(int amt, int claimID, int fmid)
         {
-            if (updateClaim(amt, claimID))
+            if (updateClaim(amt, claimID,fmid))
             {
                 return true;
             }
