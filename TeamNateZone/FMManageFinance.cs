@@ -16,10 +16,12 @@ namespace TeamNateZone
         int newSortColumn;
         ListSortDirection newColumnDirection = ListSortDirection.Ascending;
         User user;
+        private User userFM;
 
-        public FMManageFinance()
+        public FMManageFinance(User userFM)
         {
             InitializeComponent();
+            this.userFM = userFM;
         }
 
         private void LoadTable()
@@ -50,7 +52,7 @@ namespace TeamNateZone
                 {
                     int amt = int.Parse(txtAmt.Text);
 
-                    if (temp.estimateAmt(amt, temp.claimID))
+                    if (temp.estimateAmt(amt, temp.claimID, userFM.getUserID()))
                     {
                         MessageBox.Show("Amount added sucessfully");
                         LoadTable();

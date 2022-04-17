@@ -50,16 +50,24 @@ namespace TeamNateZone
 
         }
 
-        public Claim(int userID, string claimType,string claimDesc, DateTime startDate)
+        //Need a default constructor 
+        public Claim()
         {
-            this.userID = userID;
-            this.claimType = claimType;
-            this.claimDesc = claimDesc;
-            this.startDate = startDate;
+            this.claimID = 0;
+            this.userID = 0;
+            this.cmID = 0;
+            this.fmID = 0;
+            this.claimType = "";
+            this.claimDesc = "";
+            this.claimStatus = "";
+            this.paymentStatus = "";
+            this.startDate = new DateTime(1900,1,1);
+            this.endDate = new DateTime(1900,1,1);
+            this.estEndDate = new DateTime(2100,1,1);
+            this.lastUpdate = new DateTime(1900,1,1);
             this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
 
         }
-        //Need a default constructor 
 
         //Need a constructor that takes in parameters 
         public Claim(int claimID)
@@ -96,7 +104,7 @@ namespace TeamNateZone
         */
 
         //get functions to pull data from the database
-        private int getUserID(int claimID)
+        public int getUserID(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -124,7 +132,7 @@ namespace TeamNateZone
             }
         }
 
-        private int getFmID(int claimID)
+        public int getFmID(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -152,7 +160,7 @@ namespace TeamNateZone
             }
         }
 
-        private int getCmID(int claimID)
+        public int getCmID(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -181,7 +189,7 @@ namespace TeamNateZone
         }
 
 
-        private string getClaimType(int claimID)
+        public string getClaimType(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -209,7 +217,7 @@ namespace TeamNateZone
             }
         }
 
-        private string getClaimDesc(int claimID)
+        public string getClaimDesc(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -237,7 +245,7 @@ namespace TeamNateZone
             }
         }
 
-        private string getClaimStatus(int claimID)
+        public string getClaimStatus(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -265,7 +273,7 @@ namespace TeamNateZone
             }
         }
 
-        private string getPaymentStatus(int claimID)
+        public string getPaymentStatus(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -294,7 +302,7 @@ namespace TeamNateZone
         }
 
         //DateTime data type needs to go through some testing
-        private DateTime getStartDate(int claimID)
+        public DateTime getStartDate(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -322,7 +330,7 @@ namespace TeamNateZone
             }
         }
 
-        private DateTime getEndDate(int claimID)
+        public DateTime getEndDate(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -350,7 +358,7 @@ namespace TeamNateZone
             }
         }
 
-        private DateTime getEstEndDate(int claimID)
+        public DateTime getEstEndDate(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -378,7 +386,7 @@ namespace TeamNateZone
             }
         }
 
-        private DateTime getLastUpdate(int claimID)
+        public DateTime getLastUpdate(int claimID)
         {
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -408,51 +416,80 @@ namespace TeamNateZone
 
         public bool fileClaim(User user)
         {
-                SqlConnection cn = new SqlConnection();
-                SqlCommand cmd = new SqlCommand();
-                SqlDataReader dr;
-                string status = "Submitted";
-                try { 
-                    cn.ConnectionString =
-                        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                    cmd.Connection = cn;
+            SqlConnection cn = new SqlConnection(); 
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            string status = "Submitted";
+            try { 
+                cn.ConnectionString = 
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "INSERT INTO Claims(UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, Status) VALUES (@id, @username, @email, @type, @desc, @date, @stat)"; 
+                cmd.Parameters.AddWithValue("@id", userID);
+                cmd.Parameters.AddWithValue("@username", user.getUsername());
+                cmd.Parameters.AddWithValue("@email", user.getEmail()); 
+                cmd.Parameters.AddWithValue("@type", claimType); // may not have to ToString(), will try later
+                cmd.Parameters.AddWithValue("@desc", claimDesc);
+                cmd.Parameters.AddWithValue("@date", startDate); // again, may not need to ToString()
+                cmd.Parameters.AddWithValue("@stat", status);
 
-                    cmd.CommandText = "INSERT INTO Claims(UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, Status) VALUES (@id, @username, @email, @type, @desc, @date, @stat)";
-                    cmd.Parameters.AddWithValue("@id", userID);
-                    cmd.Parameters.AddWithValue("@username", user.getUsername());
-                    cmd.Parameters.AddWithValue("@email", user.getEmail());
-                    cmd.Parameters.AddWithValue("@type", claimType); // may not have to ToString(), will try later
-                    cmd.Parameters.AddWithValue("@desc", claimDesc);
-                    cmd.Parameters.AddWithValue("@date", startDate); // again, may not need to ToString()
-                    cmd.Parameters.AddWithValue("@stat", status);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                cn.Close();
 
-                    cn.Open();
-                    dr = cmd.ExecuteReader();
-                    dr.Read();
-                    cn.Close();
-
-           
             }
             catch (Exception err)
-                {
-                    return false;
-                    MessageBox.Show(err.Message, "Error Occurred");
-                }
-                finally
-                {
-                    cn.Close();
-                }
+            {
+                return false; 
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            finally 
+            { 
+                cn.Close();
+            }
             return true;
         }
 
-        public bool estimateAmt(int amt,int claimID)
+        public bool estimateAmt(int amt,int claimID, int fmId)
         {
-            if (db.update_Claim(amt, claimID))
+            fmID = fmId;
+            if (db.update_Claim(amt, claimID,fmId))
             {
                 return true;
             }
             return false;
         }
 
+        public int getEstimatedAmt(int claimID)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString =
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT EstimatedAmount FROM Claim WHERE ClaimID = @claimID";
+                cmd.Parameters.AddWithValue("@claimID", claimID);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetInt32(0);
+            }
+            catch (Exception err)
+            {
+                return 0;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+        
     }
 }

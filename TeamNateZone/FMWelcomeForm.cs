@@ -46,7 +46,7 @@ namespace TeamNateZone
 
         private void btnManageFinances_Click(object sender, EventArgs e)
         {
-            claimView = new FMManageFinance();
+            claimView = new FMManageFinance(user);
             claimView.Owner = this;
             claimView.Show();
             this.Hide();

@@ -46,12 +46,13 @@ namespace TeamNateZone
             this.tEAM_A_Claims_Dataset = new TeamNateZone.TEAM_A_Claims_Dataset();
             this.claimsTableAdapter = new TeamNateZone.TEAM_A_Claims_DatasetTableAdapters.ClaimsTableAdapter();
             this.claimsTableAdapter1 = new TeamNateZone.TEAM_ADataSet_Claims2TableAdapters.ClaimsTableAdapter();
-            this.testPictureBox = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.viewClaimGroupBox = new System.Windows.Forms.GroupBox();
+            this.maximize_rndButton1 = new CustomControls.RJControls.rndButton();
             this.viewClaimImageInstructions = new System.Windows.Forms.RichTextBox();
             this.enterClaimIDTxt = new System.Windows.Forms.TextBox();
             this.claimIdLable = new System.Windows.Forms.Label();
+            this.testPictureBox = new System.Windows.Forms.PictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.rndImageDownload = new CustomControls.RJControls.rndButton();
             this.btnView = new CustomControls.RJControls.rndButton();
@@ -61,8 +62,8 @@ namespace TeamNateZone
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet_Claims2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testPictureBox)).BeginInit();
             this.viewClaimGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.testPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -193,19 +194,6 @@ namespace TeamNateZone
             // 
             this.claimsTableAdapter1.ClearBeforeFill = true;
             // 
-            // testPictureBox
-            // 
-            this.testPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.testPictureBox.Location = new System.Drawing.Point(8, 316);
-            this.testPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.testPictureBox.Name = "testPictureBox";
-            this.testPictureBox.Size = new System.Drawing.Size(237, 167);
-            this.testPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.testPictureBox.TabIndex = 7;
-            this.testPictureBox.TabStop = false;
-            this.testPictureBox.Visible = false;
-            this.testPictureBox.WaitOnLoad = true;
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
@@ -219,6 +207,7 @@ namespace TeamNateZone
             // viewClaimGroupBox
             // 
             this.viewClaimGroupBox.BackColor = System.Drawing.Color.YellowGreen;
+            this.viewClaimGroupBox.Controls.Add(this.maximize_rndButton1);
             this.viewClaimGroupBox.Controls.Add(this.viewClaimImageInstructions);
             this.viewClaimGroupBox.Controls.Add(this.enterClaimIDTxt);
             this.viewClaimGroupBox.Controls.Add(this.claimIdLable);
@@ -231,6 +220,28 @@ namespace TeamNateZone
             this.viewClaimGroupBox.TabIndex = 10;
             this.viewClaimGroupBox.TabStop = false;
             this.viewClaimGroupBox.Text = "View Claim Images";
+            // 
+            // maximize_rndButton1
+            // 
+            this.maximize_rndButton1.BackColor = System.Drawing.Color.White;
+            this.maximize_rndButton1.BackgroundColor = System.Drawing.Color.White;
+            this.maximize_rndButton1.BorderColor = System.Drawing.Color.White;
+            this.maximize_rndButton1.BorderRadius = 15;
+            this.maximize_rndButton1.BorderSize = 0;
+            this.maximize_rndButton1.FlatAppearance.BorderSize = 0;
+            this.maximize_rndButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maximize_rndButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maximize_rndButton1.ForeColor = System.Drawing.Color.YellowGreen;
+            this.maximize_rndButton1.Location = new System.Drawing.Point(43, 393);
+            this.maximize_rndButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.maximize_rndButton1.Name = "maximize_rndButton1";
+            this.maximize_rndButton1.Size = new System.Drawing.Size(105, 31);
+            this.maximize_rndButton1.TabIndex = 11;
+            this.maximize_rndButton1.Text = "Maximize";
+            this.maximize_rndButton1.TextColor = System.Drawing.Color.YellowGreen;
+            this.maximize_rndButton1.UseVisualStyleBackColor = false;
+            this.maximize_rndButton1.Visible = false;
+            this.maximize_rndButton1.Click += new System.EventHandler(this.rndButton1_Click);
             // 
             // viewClaimImageInstructions
             // 
@@ -262,6 +273,18 @@ namespace TeamNateZone
             this.claimIdLable.Size = new System.Drawing.Size(97, 17);
             this.claimIdLable.TabIndex = 0;
             this.claimIdLable.Text = "Enter ClaimID:";
+            // 
+            // testPictureBox
+            // 
+            this.testPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.testPictureBox.Location = new System.Drawing.Point(6, 232);
+            this.testPictureBox.Name = "testPictureBox";
+            this.testPictureBox.Size = new System.Drawing.Size(178, 136);
+            this.testPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.testPictureBox.TabIndex = 7;
+            this.testPictureBox.TabStop = false;
+            this.testPictureBox.Visible = false;
+            this.testPictureBox.WaitOnLoad = true;
             // 
             // rndImageDownload
             // 
@@ -349,9 +372,9 @@ namespace TeamNateZone
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_ADataSet_Claims2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.claimsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEAM_A_Claims_Dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testPictureBox)).EndInit();
             this.viewClaimGroupBox.ResumeLayout(false);
             this.viewClaimGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.testPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,5 +409,6 @@ namespace TeamNateZone
         private System.Windows.Forms.TextBox enterClaimIDTxt;
         private System.Windows.Forms.Label claimIdLable;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private CustomControls.RJControls.rndButton maximize_rndButton1;
     }
 }
