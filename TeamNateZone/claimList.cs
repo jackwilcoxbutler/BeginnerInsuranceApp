@@ -143,8 +143,7 @@ namespace TeamNateZone
 
         private void rndButton1_Click(object sender, EventArgs e)
         {
-            //Claim c = new Claim(int.Parse(enterClaimIDTxt.Text));
-            ClientViewClaimImages imageWindow = new ClientViewClaimImages(user, int.Parse(enterClaimIDTxt.Text));
+            ClientViewClaimImages imageWindow = new ClientViewClaimImages(user, int.Parse(enterClaimIDTxt.Text.Trim()));
             imageWindow.Show();
         }
     }

@@ -50,33 +50,6 @@ namespace TeamNateZone
 
         }
 
-       /* public Claim(int userID, string claimType,string claimDesc, DateTime startDate)
-        {
-            this.userID = userID;
-            this.claimType = claimType;
-            this.claimDesc = claimDesc;
-            this.startDate = startDate;
-            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
-
-        }*/
-        public Claim(int userID, int cmID, int fmID, string claimType, string claimDesc, string claimStatus,
-            string paymentStatus, DateTime startDate, DateTime endDate, DateTime estEndDate, DateTime lastUpdate, int claimID) 
-        {
-            this.claimID = claimID;
-            this.userID = userID;
-            this.cmID = cmID;
-            this.fmID = fmID;
-            this.claimType = claimType;
-            this.claimDesc = claimDesc;
-            this.claimStatus = claimStatus;
-            this.paymentStatus = paymentStatus;
-            this.startDate = startDate;
-            this.endDate = endDate;
-            this.estEndDate = estEndDate;
-            this.lastUpdate = lastUpdate;
-            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
-
-        }
         //Need a default constructor 
         public Claim()
         {
@@ -111,23 +84,8 @@ namespace TeamNateZone
             endDate = getEndDate(claimID);
             estEndDate = getEstEndDate(claimID);
             lastUpdate = getLastUpdate(claimID);
-            //this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
 
-        }
-
-        public void initializeClaim(int claimID)
-        {
-            userID = getUserID(claimID);
-            cmID = getCmID(claimID);
-            fmID = getFmID(claimID);
-            claimType = getClaimType(claimID);
-            claimDesc = getClaimDesc(claimID);
-            claimStatus = getClaimStatus(claimID);
-            paymentStatus = getPaymentStatus(claimID);
-            startDate = getStartDate(claimID);
-            endDate = getEndDate(claimID);
-            estEndDate = getEstEndDate(claimID);
-            lastUpdate = getLastUpdate(claimID);
         }
 
         /*set methods
@@ -458,40 +416,38 @@ namespace TeamNateZone
 
         public bool fileClaim(User user)
         {
-                SqlConnection cn = new SqlConnection();
-                SqlCommand cmd = new SqlCommand();
-                SqlDataReader dr;
-                string status = "Submitted";
-                try { 
-                    cn.ConnectionString =
-                        @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                    cmd.Connection = cn;
+            SqlConnection cn = new SqlConnection(); 
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            string status = "Submitted";
+            try { 
+                cn.ConnectionString = 
+                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+                cmd.Connection = cn;
+                cmd.CommandText = "INSERT INTO Claims(UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, Status) VALUES (@id, @username, @email, @type, @desc, @date, @stat)"; 
+                cmd.Parameters.AddWithValue("@id", userID);
+                cmd.Parameters.AddWithValue("@username", user.getUsername());
+                cmd.Parameters.AddWithValue("@email", user.getEmail()); 
+                cmd.Parameters.AddWithValue("@type", claimType); // may not have to ToString(), will try later
+                cmd.Parameters.AddWithValue("@desc", claimDesc);
+                cmd.Parameters.AddWithValue("@date", startDate); // again, may not need to ToString()
+                cmd.Parameters.AddWithValue("@stat", status);
 
-                    cmd.CommandText = "INSERT INTO Claims(UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, Status) VALUES (@id, @username, @email, @type, @desc, @date, @stat)";
-                    cmd.Parameters.AddWithValue("@id", userID);
-                    cmd.Parameters.AddWithValue("@username", user.getUsername());
-                    cmd.Parameters.AddWithValue("@email", user.getEmail());
-                    cmd.Parameters.AddWithValue("@type", claimType); // may not have to ToString(), will try later
-                    cmd.Parameters.AddWithValue("@desc", claimDesc);
-                    cmd.Parameters.AddWithValue("@date", startDate); // again, may not need to ToString()
-                    cmd.Parameters.AddWithValue("@stat", status);
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                cn.Close();
 
-                    cn.Open();
-                    dr = cmd.ExecuteReader();
-                    dr.Read();
-                    cn.Close();
-
-           
             }
             catch (Exception err)
-                {
-                    return false;
-                    MessageBox.Show(err.Message, "Error Occurred");
-                }
-                finally
-                {
-                    cn.Close();
-                }
+            {
+                return false; 
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            finally 
+            { 
+                cn.Close();
+            }
             return true;
         }
 
@@ -533,162 +489,7 @@ namespace TeamNateZone
             }
         }
 
-        //not working
-        /*public Claim getClaim(int cid)
-        {
-            SqlConnection connection = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
 
-            try
-            {
-                connection.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = connection;
-
-                cmd.CommandText = "SELECT * FROM Claims WHERE ClaimId = @cid";
-
-                cmd.Parameters.AddWithValue("@ClaimId", cid);
-
-                connection.Open();
-
-                dr = cmd.ExecuteReader();
-
-                dr.Read();
-                Claim c = new Claim(
-                    dr.GetInt32(1), //userid
-                    dr.GetInt32(11), //cmid
-                    dr.GetInt32(12), //fmid
-                    dr.GetString(4), //claim type
-                    dr.GetString(5), //claim desc
-                    dr.GetString(8), //status
-                    dr.GetString(10), //payment status
-                    dr.GetDateTime(6), //start date
-                    dr.GetDateTime(7), //end date
-                    dr.GetDateTime(13), //est end datee
-                    dr.GetDateTime(9),//last update
-                    dr.GetInt32(0)); //claim id
-
-                return c;
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Error Occurred");
-                return null;
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }*/
-
-        public string getCMFNane(int cmid)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT fName FROM SignInInfo WHERE UserId = @cmid";
-                cmd.Parameters.AddWithValue("@cmid", cmid);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return "";
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public string getCMLNane(int cmid)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT lName FROM SignInInfo WHERE UserId = @cmid";
-                cmd.Parameters.AddWithValue("@cmid", cmid);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return "";
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public string getFMFNane(int fmid)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT fName FROM SignInInfo WHERE UserId = @fmid";
-                cmd.Parameters.AddWithValue("@fmid", fmid);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return "";
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public string getFMLNane(int fmid)
-        {
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-
-            try
-            {
-                cn.ConnectionString =
-                    @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT lName FROM SignInInfo WHERE UserId = @fmid";
-                cmd.Parameters.AddWithValue("@fmid", fmid);
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                return dr.GetString(0);
-            }
-            catch (Exception err)
-            {
-                return "";
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
+        
     }
 }
