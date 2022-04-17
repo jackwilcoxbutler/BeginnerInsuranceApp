@@ -377,13 +377,16 @@ namespace TeamNateZone
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
+            int fmID = getRandomFMID();
+            int cmID = getRandomCMID();
+
             if (fileName != null)
             {
                 try
                 {
                     cmd.Connection = connection;
 
-                    cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status, FileName, FileContentType, FileData) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status, @fileName, @fileExtention, @file)";
+                    cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status, FileName, FileContentType, FileData,FmID,CmID) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status, @fileName, @fileExtention, @file,@FmID,@CmID)";
 
                     cmd.Parameters.AddWithValue("@userID", userID);
                     cmd.Parameters.AddWithValue("@username", username);
@@ -396,7 +399,8 @@ namespace TeamNateZone
                     cmd.Parameters.AddWithValue("@file", Databytes);
                     cmd.Parameters.AddWithValue("@fileName", fileName);
                     cmd.Parameters.AddWithValue("@fileExtention", extention);
-
+                    cmd.Parameters.AddWithValue("@FmID", fmID);
+                    cmd.Parameters.AddWithValue("@CmID", cmID);
                     connection.Open();
 
                     dr = cmd.ExecuteReader();
@@ -417,7 +421,7 @@ namespace TeamNateZone
                 {
                     cmd.Connection = connection;
 
-                    cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status);";
+                    cmd.CommandText = "INSERT INTO Claims (UserID, Username, UserEmail, Claim_Type, Claim_Description, StartDate, LastUpdate, Status,FmID,CmID) VALUES (@userID, @username, @email, @type, @description, @startdate, @lastupdate, @status,@FmID,@CmID);";
 
                     cmd.Parameters.AddWithValue("@userID", userID);
                     cmd.Parameters.AddWithValue("@username", username);
@@ -427,6 +431,9 @@ namespace TeamNateZone
                     cmd.Parameters.AddWithValue("@startdate", startdate);
                     cmd.Parameters.AddWithValue("@lastupdate", lastupdate);
                     cmd.Parameters.AddWithValue("@status", "Submitted");
+
+                    cmd.Parameters.AddWithValue("@FmID", fmID);
+                    cmd.Parameters.AddWithValue("@CmID", cmID);
 
                     connection.Open();
 
@@ -844,6 +851,46 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+
+        private int fmNumClaims(int fmId)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT count(claimID) FROM Claims WHERE fmID = @ID";
+
+                cmd.Parameters.AddWithValue("@ID", fmId);
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                try
+                {
+
+                    return dr.GetInt32(0);
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error Occurred");
+                    return 0;
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         private int access_userFromClaim(string ID)
         {
             SqlConnection cn = new SqlConnection();
@@ -883,8 +930,82 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+
+
+
+
         // </private methods>
         // <public methods>
+        public int getRandomFMID()
+        {
+            List<int> list = new List<int>();
+            var random = new Random();
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE clearance = 2";
+                connection.Open();
+                using (dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        list.Add(dr.GetInt32(0));
+                    }
+                }
+                int index = random.Next(list.Count);
+
+                return list[index];
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public int getRandomCMID()
+        {
+            List<int> list = new List<int>();
+            var random = new Random();
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "SELECT UserID FROM SignInInfo WHERE clearance = 1";
+                connection.Open();
+                using (dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        list.Add(dr.GetInt32(0));
+                    }
+                }
+                int index = random.Next(list.Count);
+
+                return list[index];
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public String check_password(string username)
         {
             return getAuthorizedPassword(username);
