@@ -41,7 +41,7 @@ namespace TeamNateZone
             this.btnViewMessages = new CustomControls.RJControls.rndButton();
             this.btnManageAccount = new CustomControls.RJControls.rndButton();
             this.btnlogout = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,18 +210,18 @@ namespace TeamNateZone
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
-            // label7
+            // lblWelcome
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(312, 14);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(815, 77);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Welcome Claims Manager";
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Gadugi", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lblWelcome.Location = new System.Drawing.Point(312, 14);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(751, 71);
+            this.lblWelcome.TabIndex = 39;
+            this.lblWelcome.Text = "Welcome Claims Manager";
             // 
             // CMWelcomeForm
             // 
@@ -231,7 +231,7 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1878, 1055);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnViewAllClaims);
@@ -268,6 +268,6 @@ namespace TeamNateZone
         private CustomControls.RJControls.rndButton btnViewAllClaims;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnlogout;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

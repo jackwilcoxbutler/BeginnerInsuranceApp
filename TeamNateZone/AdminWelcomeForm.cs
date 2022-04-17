@@ -21,6 +21,8 @@ namespace TeamNateZone
             InitializeComponent();
             this.user = user;
 
+            lblWelcome.Text = "Welcome Admin: " + user.getFname() + " " + user.getLname();
+
         }
         private void btnViewClient_Click(object sender, EventArgs e)
         {

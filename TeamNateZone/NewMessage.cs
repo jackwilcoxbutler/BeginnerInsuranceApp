@@ -108,6 +108,10 @@ namespace TeamNateZone
                     txtReciever.Clear();
                     txtMessage.Clear();
                     txtSubject.Clear();
+
+                    MessageForm mf = (MessageForm)this.Owner;
+                    this.Close();
+                    mf.Show();
                 }
                 else
                 {

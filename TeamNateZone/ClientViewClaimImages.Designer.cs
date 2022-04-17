@@ -78,9 +78,9 @@ namespace TeamNateZone
             this.imgPanel.Controls.Add(this.vScrollBar1);
             this.imgPanel.Controls.Add(this.ClaimImgBox);
             this.imgPanel.Location = new System.Drawing.Point(0, 0);
-            this.imgPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.imgPanel.Margin = new System.Windows.Forms.Padding(6);
             this.imgPanel.Name = "imgPanel";
-            this.imgPanel.Size = new System.Drawing.Size(1284, 885);
+            this.imgPanel.Size = new System.Drawing.Size(1270, 885);
             this.imgPanel.TabIndex = 0;
             // 
             // hScrollBar1
@@ -88,13 +88,13 @@ namespace TeamNateZone
             this.hScrollBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.hScrollBar1.Location = new System.Drawing.Point(0, 868);
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(1267, 17);
+            this.hScrollBar1.Size = new System.Drawing.Size(1253, 17);
             this.hScrollBar1.TabIndex = 2;
             // 
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1267, 0);
+            this.vScrollBar1.Location = new System.Drawing.Point(1253, 0);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 885);
             this.vScrollBar1.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace TeamNateZone
             // ClaimImgBox
             // 
             this.ClaimImgBox.Location = new System.Drawing.Point(0, 0);
-            this.ClaimImgBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ClaimImgBox.Margin = new System.Windows.Forms.Padding(6);
             this.ClaimImgBox.Name = "ClaimImgBox";
             this.ClaimImgBox.Size = new System.Drawing.Size(1242, 840);
             this.ClaimImgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -138,10 +138,10 @@ namespace TeamNateZone
             this.infoPanel.Controls.Add(this.claimTypeLbl);
             this.infoPanel.Controls.Add(this.claimIDLbl);
             this.infoPanel.Controls.Add(this.claimInfoLbl);
-            this.infoPanel.Location = new System.Drawing.Point(1296, 0);
-            this.infoPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.infoPanel.Location = new System.Drawing.Point(1282, 0);
+            this.infoPanel.Margin = new System.Windows.Forms.Padding(6);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(674, 979);
+            this.infoPanel.Size = new System.Drawing.Size(674, 1063);
             this.infoPanel.TabIndex = 1;
             // 
             // claimDescTxtBox
@@ -150,7 +150,7 @@ namespace TeamNateZone
             this.claimDescTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.claimDescTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claimDescTxtBox.Location = new System.Drawing.Point(384, 198);
-            this.claimDescTxtBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.claimDescTxtBox.Margin = new System.Windows.Forms.Padding(6);
             this.claimDescTxtBox.Name = "claimDescTxtBox";
             this.claimDescTxtBox.ReadOnly = true;
             this.claimDescTxtBox.Size = new System.Drawing.Size(236, 560);
@@ -192,7 +192,7 @@ namespace TeamNateZone
             this.estimatePaymentTxt.BackColor = System.Drawing.SystemColors.Info;
             this.estimatePaymentTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.estimatePaymentTxt.Location = new System.Drawing.Point(56, 733);
-            this.estimatePaymentTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.estimatePaymentTxt.Margin = new System.Windows.Forms.Padding(6);
             this.estimatePaymentTxt.Name = "estimatePaymentTxt";
             this.estimatePaymentTxt.ReadOnly = true;
             this.estimatePaymentTxt.Size = new System.Drawing.Size(236, 24);
@@ -203,7 +203,7 @@ namespace TeamNateZone
             this.lastUpdateTxt.BackColor = System.Drawing.SystemColors.Info;
             this.lastUpdateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastUpdateTxt.Location = new System.Drawing.Point(384, 129);
-            this.lastUpdateTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lastUpdateTxt.Margin = new System.Windows.Forms.Padding(6);
             this.lastUpdateTxt.Name = "lastUpdateTxt";
             this.lastUpdateTxt.ReadOnly = true;
             this.lastUpdateTxt.Size = new System.Drawing.Size(236, 24);
@@ -214,7 +214,7 @@ namespace TeamNateZone
             this.paymentStatTxt.BackColor = System.Drawing.SystemColors.Info;
             this.paymentStatTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.paymentStatTxt.Location = new System.Drawing.Point(56, 658);
-            this.paymentStatTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.paymentStatTxt.Margin = new System.Windows.Forms.Padding(6);
             this.paymentStatTxt.Name = "paymentStatTxt";
             this.paymentStatTxt.ReadOnly = true;
             this.paymentStatTxt.Size = new System.Drawing.Size(236, 24);
@@ -225,7 +225,7 @@ namespace TeamNateZone
             this.statusTxt.BackColor = System.Drawing.SystemColors.Info;
             this.statusTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.statusTxt.Location = new System.Drawing.Point(56, 575);
-            this.statusTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.statusTxt.Margin = new System.Windows.Forms.Padding(6);
             this.statusTxt.Name = "statusTxt";
             this.statusTxt.ReadOnly = true;
             this.statusTxt.Size = new System.Drawing.Size(236, 24);
@@ -236,7 +236,7 @@ namespace TeamNateZone
             this.fmForClaimTxt.BackColor = System.Drawing.SystemColors.Info;
             this.fmForClaimTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fmForClaimTxt.Location = new System.Drawing.Point(56, 494);
-            this.fmForClaimTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmForClaimTxt.Margin = new System.Windows.Forms.Padding(6);
             this.fmForClaimTxt.Name = "fmForClaimTxt";
             this.fmForClaimTxt.ReadOnly = true;
             this.fmForClaimTxt.Size = new System.Drawing.Size(236, 24);
@@ -248,7 +248,7 @@ namespace TeamNateZone
             this.cmForClaimTxt.BackColor = System.Drawing.SystemColors.Info;
             this.cmForClaimTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cmForClaimTxt.Location = new System.Drawing.Point(56, 413);
-            this.cmForClaimTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmForClaimTxt.Margin = new System.Windows.Forms.Padding(6);
             this.cmForClaimTxt.Name = "cmForClaimTxt";
             this.cmForClaimTxt.ReadOnly = true;
             this.cmForClaimTxt.Size = new System.Drawing.Size(236, 24);
@@ -259,7 +259,7 @@ namespace TeamNateZone
             this.endDateTxt.BackColor = System.Drawing.SystemColors.Info;
             this.endDateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.endDateTxt.Location = new System.Drawing.Point(56, 335);
-            this.endDateTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.endDateTxt.Margin = new System.Windows.Forms.Padding(6);
             this.endDateTxt.Name = "endDateTxt";
             this.endDateTxt.ReadOnly = true;
             this.endDateTxt.Size = new System.Drawing.Size(236, 24);
@@ -270,7 +270,7 @@ namespace TeamNateZone
             this.startDateTxt.BackColor = System.Drawing.SystemColors.Info;
             this.startDateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.startDateTxt.Location = new System.Drawing.Point(56, 263);
-            this.startDateTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.startDateTxt.Margin = new System.Windows.Forms.Padding(6);
             this.startDateTxt.Name = "startDateTxt";
             this.startDateTxt.ReadOnly = true;
             this.startDateTxt.Size = new System.Drawing.Size(236, 24);
@@ -281,7 +281,7 @@ namespace TeamNateZone
             this.claimTypeTxt.BackColor = System.Drawing.SystemColors.Info;
             this.claimTypeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.claimTypeTxt.Location = new System.Drawing.Point(56, 198);
-            this.claimTypeTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.claimTypeTxt.Margin = new System.Windows.Forms.Padding(6);
             this.claimTypeTxt.Name = "claimTypeTxt";
             this.claimTypeTxt.ReadOnly = true;
             this.claimTypeTxt.Size = new System.Drawing.Size(236, 24);
@@ -292,7 +292,7 @@ namespace TeamNateZone
             this.claimIDTxt.BackColor = System.Drawing.SystemColors.Info;
             this.claimIDTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.claimIDTxt.Location = new System.Drawing.Point(56, 131);
-            this.claimIDTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.claimIDTxt.Margin = new System.Windows.Forms.Padding(6);
             this.claimIDTxt.Name = "claimIDTxt";
             this.claimIDTxt.ReadOnly = true;
             this.claimIDTxt.Size = new System.Drawing.Size(236, 24);
@@ -302,7 +302,7 @@ namespace TeamNateZone
             // loadClaimInfo_btn
             // 
             this.loadClaimInfo_btn.Location = new System.Drawing.Point(266, 840);
-            this.loadClaimInfo_btn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.loadClaimInfo_btn.Margin = new System.Windows.Forms.Padding(6);
             this.loadClaimInfo_btn.Name = "loadClaimInfo_btn";
             this.loadClaimInfo_btn.Size = new System.Drawing.Size(150, 44);
             this.loadClaimInfo_btn.TabIndex = 9;
@@ -409,15 +409,15 @@ namespace TeamNateZone
             this.buttonPanel.Controls.Add(this.downloadImgBtn);
             this.buttonPanel.Controls.Add(this.downloadInfoBtn);
             this.buttonPanel.Location = new System.Drawing.Point(0, 898);
-            this.buttonPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonPanel.Margin = new System.Windows.Forms.Padding(6);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(1284, 81);
+            this.buttonPanel.Size = new System.Drawing.Size(1284, 165);
             this.buttonPanel.TabIndex = 2;
             // 
             // backBtn
             // 
             this.backBtn.Location = new System.Drawing.Point(534, 13);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(6);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(150, 44);
             this.backBtn.TabIndex = 2;
@@ -427,7 +427,7 @@ namespace TeamNateZone
             // downloadImgBtn
             // 
             this.downloadImgBtn.Location = new System.Drawing.Point(72, 13);
-            this.downloadImgBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.downloadImgBtn.Margin = new System.Windows.Forms.Padding(6);
             this.downloadImgBtn.Name = "downloadImgBtn";
             this.downloadImgBtn.Size = new System.Drawing.Size(244, 44);
             this.downloadImgBtn.TabIndex = 1;
@@ -437,7 +437,7 @@ namespace TeamNateZone
             // downloadInfoBtn
             // 
             this.downloadInfoBtn.Location = new System.Drawing.Point(876, 13);
-            this.downloadInfoBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.downloadInfoBtn.Margin = new System.Windows.Forms.Padding(6);
             this.downloadInfoBtn.Name = "downloadInfoBtn";
             this.downloadInfoBtn.Size = new System.Drawing.Size(330, 44);
             this.downloadInfoBtn.TabIndex = 0;
@@ -452,11 +452,11 @@ namespace TeamNateZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1972, 979);
+            this.ClientSize = new System.Drawing.Size(1958, 1063);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.imgPanel);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ClientViewClaimImages";
             this.Text = "ClientViewClaimImages";
             this.imgPanel.ResumeLayout(false);

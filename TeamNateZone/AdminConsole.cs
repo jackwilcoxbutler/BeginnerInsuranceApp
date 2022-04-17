@@ -45,12 +45,5 @@ public partial class AdminConsole : Form
             rf.Owner = this;
             rf.Show();
         }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            LoginForm lf = new LoginForm();
-            lf.Show();
-            this.Hide();
-        }
     }
 }

@@ -42,7 +42,7 @@ namespace TeamNateZone
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogout = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,18 +219,18 @@ namespace TeamNateZone
             this.label6.TabIndex = 37;
             this.label6.Text = "View Messages";
             // 
-            // label7
+            // lblWelcome
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(222, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(533, 77);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Welcome Admin";
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lblWelcome.Location = new System.Drawing.Point(222, 28);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(533, 77);
+            this.lblWelcome.TabIndex = 38;
+            this.lblWelcome.Text = "Welcome Admin";
             // 
             // AdminWelcomeForm
             // 
@@ -239,7 +239,7 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1773, 848);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.pictureBox1);
@@ -275,6 +275,6 @@ namespace TeamNateZone
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

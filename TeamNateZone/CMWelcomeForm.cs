@@ -21,6 +21,8 @@ namespace TeamNateZone
         {
             InitializeComponent();
             this.user = user;
+
+            lblWelcome.Text = "Welcome Claims Manager: " + user.getFname() + " " + user.getLname();
         }
 
 

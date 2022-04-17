@@ -28,7 +28,9 @@ namespace TeamNateZone
         public ClientWelcomeForm(User user)
         {
             InitializeComponent();
-            this.user = user;            
+            this.user = user;
+
+            lblWelcome.Text = "Welcome Client: " + user.getFname() + " " + user.getLname();
         }
 
 
@@ -82,5 +84,7 @@ namespace TeamNateZone
             message.Owner = this;
             message.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e) { }
     }
 }
