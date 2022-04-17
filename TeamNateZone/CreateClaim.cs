@@ -65,7 +65,13 @@ namespace TeamNateZone
                     Databytes = br.ReadBytes((Int32)fileStream.Length);
                 }
             }
-            db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString(), Databytes, extention, fileName);
+            if(db.file_claim(user.getUserID(), user.getUsername(), user.getEmail(), claimType.SelectedItem.ToString(), detailsTextBox.Text, datetime.Value.ToString(), datetime.Value.ToString(), Databytes, extention, fileName))
+            {
+                label2.Text = "Claim Filed Successfully";
+                label3.Text = "Go back to View Claims";
+                label2.Visible = true;
+                label3.Visible = true;
+            }
 
             
 

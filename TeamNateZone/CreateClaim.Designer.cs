@@ -45,9 +45,11 @@ namespace TeamNateZone
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new CustomControls.RJControls.rndButton();
             this.btnFile = new CustomControls.RJControls.rndButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -232,6 +234,28 @@ namespace TeamNateZone
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(120, 123);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(141, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 42);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.YellowGreen;
@@ -274,16 +298,16 @@ namespace TeamNateZone
             this.btnFile.UseVisualStyleBackColor = false;
             this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 
-            // pictureBox2
+            // label3
             // 
-            this.pictureBox2.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 123);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(141, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 42);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "label3";
+            this.label3.Visible = false;
             // 
             // CreateClaim
             // 
@@ -293,6 +317,8 @@ namespace TeamNateZone
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(888, 925);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFile);
@@ -336,5 +362,7 @@ namespace TeamNateZone
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

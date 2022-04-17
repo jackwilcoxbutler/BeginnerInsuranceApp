@@ -372,7 +372,7 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
-        private void fileClaim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, byte[] Databytes, string extention, string fileName)
+        private bool fileClaim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, byte[] Databytes, string extention, string fileName)
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
@@ -404,6 +404,7 @@ namespace TeamNateZone
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message, "Error Occurred");
+                    return false;
                 }
                 finally
                 {
@@ -434,12 +435,14 @@ namespace TeamNateZone
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message, "Error Occurred");
+                    return false;
                 }
                 finally
                 {
                     connection.Close();
                 }
             }
+            return true;
         }
         private DataTable access_inbox(User user)
         {
@@ -911,9 +914,9 @@ namespace TeamNateZone
         {
             updateUserProfile(userID, email, password, street, city, state, zip);
         }
-        public void file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, byte[] Databytes, string extention, string fileName)
+        public bool file_claim(int userID, string username, string email, string type, string description, string startdate, string lastupdate, byte[] Databytes, string extention, string fileName)
         {
-            fileClaim(userID, username, email, type, description, startdate, lastupdate, Databytes, extention, fileName);
+            return fileClaim(userID, username, email, type, description, startdate, lastupdate, Databytes, extention, fileName);
         }
         public bool update_Claim(int amt, int claimID, int fmid)
         {
