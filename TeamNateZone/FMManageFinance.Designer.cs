@@ -64,13 +64,13 @@ namespace TeamNateZone
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.FmView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.FmView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FmView.Location = new System.Drawing.Point(-3, 12);
+            this.FmView.Location = new System.Drawing.Point(-5, -2);
             this.FmView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FmView.Name = "FmView";
             this.FmView.ReadOnly = true;
             this.FmView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.FmView.RowTemplate.Height = 33;
-            this.FmView.Size = new System.Drawing.Size(1675, 554);
+            this.FmView.Size = new System.Drawing.Size(1694, 614);
             this.FmView.TabIndex = 0;
             this.FmView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_ColumnHeaderMouseClick);
             this.FmView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_RowHeaderMouseClick);

@@ -17,30 +17,16 @@ namespace TeamNateZone
         ListSortDirection newColumnDirection = ListSortDirection.Ascending;
         User user;
         private User userFM;
+        dbHandler db = new dbHandler(Properties.Settings.Default.TEAM_A_ConnectionString);
 
         public FMManageFinance(User userFM)
         {
             InitializeComponent();
             this.userFM = userFM;
+            FmView.DataSource = db.LoadTable(userFM.getUserID());
+
         }
 
-        private void LoadTable()
-        {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString =
-                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
-            cn.Open();
-
-            
-              SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims", cn);
-            //SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims WHERE FmID = @fmid OR FmID IS NULL", cn);
-            //da.SelectCommand.Parameters.Add("@fmid", userFM.getUserID());
-
-            DataTable dtbl = new DataTable();
-            da.Fill(dtbl);
-            FmView.DataSource = dtbl;
-            cn.Close();
-        }
 
         private void btnMakeEstimate_Click(object sender, EventArgs e)
         {
@@ -57,7 +43,7 @@ namespace TeamNateZone
                     if (temp.estimateAmt(amt, temp.claimID, userFM.getUserID()))
                     {
                         MessageBox.Show("Amount added sucessfully");
-                        LoadTable();
+                        FmView.DataSource = db.LoadTable(userFM.getUserID());
                         return;
                     }
                     txtAmt.Text = "DB Connection Failed Try Again";
@@ -76,7 +62,7 @@ namespace TeamNateZone
         }
         private void FMManageFinance_Load(object sender, EventArgs e)
         {
-            LoadTable();
+            FmView.DataSource = db.LoadTable(userFM.getUserID());
         }
 
         private void btnGoBack_Click(object sender, EventArgs e)
@@ -137,5 +123,7 @@ namespace TeamNateZone
                 txtAmt.Text = "Please make claim estimate";
             }
         }
+
+       
     }
 }

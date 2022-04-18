@@ -1006,6 +1006,28 @@ namespace TeamNateZone
             }
         }
 
+        public DataTable LoadTable(int FmID)
+        {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString =
+                @"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True";
+            cn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandText = ("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims where FmID = @FmID");
+            cmd.Parameters.AddWithValue("@FmID", FmID);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+           
+            //SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims WHERE FmID = @fmid OR FmID IS NULL", cn);
+            //da.SelectCommand.Parameters.Add("@fmid", userFM.getUserID());
+
+            DataTable dtbl = new DataTable();
+            da.Fill(dtbl);
+            cn.Close();
+            return dtbl;
+        }
+
         public String check_password(string username)
         {
             return getAuthorizedPassword(username);
