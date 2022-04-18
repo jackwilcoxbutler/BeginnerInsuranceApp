@@ -86,5 +86,11 @@ namespace TeamNateZone
         }
 
         private void label2_Click(object sender, EventArgs e) { }
+
+        private void btnViewFolders_Click(object sender, EventArgs e)
+        {
+            folderPage folderScreen = new folderPage(user);
+            folderScreen.Show();
+        }
     }
 }

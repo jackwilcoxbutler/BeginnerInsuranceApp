@@ -104,6 +104,7 @@ namespace TeamNateZone
                         db.store_user_information(txtFname.Text, txtLname.Text, txtAddress.Text, txtCity.Text, stateTxt, txtZip.Text, txtUsername.Text, txtPassword.Text, txtEmail.Text);
                         MessageBox.Show(message);
                         User user = db.get_user_information(txtUsername.Text);
+                        db.create_folder(user.getUserID());
                         ClientWelcomeForm wf = new ClientWelcomeForm(user);
                         this.Close();
                         wf.Show();

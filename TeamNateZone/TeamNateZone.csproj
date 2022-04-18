@@ -109,6 +109,12 @@
     <Compile Include="FMWelcomeForm.Designer.cs">
       <DependentUpon>FMWelcomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="folderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="folderPage.Designer.cs">
+      <DependentUpon>folderPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="TEAM_ADataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +124,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TEAM_ADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TEAM_ADataSet_Folders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEAM_ADataSet_Folders.xsd</DependentUpon>
     </Compile>
     <Compile Include="ViewMessageForm.cs">
       <SubType>Form</SubType>
@@ -233,6 +244,9 @@
     <EmbeddedResource Include="FMWelcomeForm.resx">
       <DependentUpon>FMWelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="folderPage.resx">
+      <DependentUpon>folderPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +344,17 @@
     </None>
     <None Include="TEAM_ADataSet_Claims21.xss">
       <DependentUpon>TEAM_ADataSet_Claims21.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet_Folders.xsc">
+      <DependentUpon>TEAM_ADataSet_Folders.xsd</DependentUpon>
+    </None>
+    <None Include="TEAM_ADataSet_Folders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEAM_ADataSet_Folders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEAM_ADataSet_Folders.xss">
+      <DependentUpon>TEAM_ADataSet_Folders.xsd</DependentUpon>
     </None>
     <None Include="TEAM_A_Claims_Dataset.xsc">
       <DependentUpon>TEAM_A_Claims_Dataset.xsd</DependentUpon>

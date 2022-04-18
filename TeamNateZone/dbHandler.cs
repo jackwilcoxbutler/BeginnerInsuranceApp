@@ -224,6 +224,29 @@ namespace TeamNateZone
                 connection.Close();
             }
         }
+
+        private void createFolder(int userid)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "INSERT INTO Folders (UserID) VALUES (@userid);";
+                cmd.Parameters.AddWithValue("@userid", userid);
+                connection.Open();
+                dr = cmd.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "error occurred");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         private void store_in_database(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
             SqlCommand cmd = new SqlCommand();
@@ -1039,6 +1062,11 @@ namespace TeamNateZone
         public string get_username(string username)
         {
             return getUsername(username);
+        }
+
+        public void create_folder(int user)
+        {
+            createFolder(user);
         }
         public void store_user_information(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {
