@@ -29,6 +29,7 @@ namespace TeamNateZone
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMessageForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogout = new System.Windows.Forms.Button();
             this.txtMessage = new System.Windows.Forms.TextBox();
@@ -48,9 +49,10 @@ namespace TeamNateZone
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TeamNateZone.Properties.Resources.updatedPandaIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 129);
+            this.pictureBox1.Size = new System.Drawing.Size(202, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -59,9 +61,10 @@ namespace TeamNateZone
             // 
             this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogout.Image = global::TeamNateZone.Properties.Resources.logoutIcon;
-            this.btnlogout.Location = new System.Drawing.Point(919, 28);
+            this.btnlogout.Location = new System.Drawing.Point(1378, 44);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(86, 86);
+            this.btnlogout.Size = new System.Drawing.Size(129, 134);
             this.btnlogout.TabIndex = 34;
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
@@ -70,21 +73,23 @@ namespace TeamNateZone
             // 
             this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMessage.Location = new System.Drawing.Point(39, 195);
+            this.txtMessage.Location = new System.Drawing.Point(58, 305);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ReadOnly = true;
             this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMessage.Size = new System.Drawing.Size(975, 334);
+            this.txtMessage.Size = new System.Drawing.Size(1462, 521);
             this.txtMessage.TabIndex = 36;
             // 
             // txtFrom
             // 
             this.txtFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFrom.Location = new System.Drawing.Point(339, 93);
+            this.txtFrom.Location = new System.Drawing.Point(508, 145);
+            this.txtFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.ReadOnly = true;
-            this.txtFrom.Size = new System.Drawing.Size(244, 22);
+            this.txtFrom.Size = new System.Drawing.Size(365, 31);
             this.txtFrom.TabIndex = 37;
             // 
             // label1
@@ -92,9 +97,10 @@ namespace TeamNateZone
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label1.Location = new System.Drawing.Point(197, 131);
+            this.label1.Location = new System.Drawing.Point(296, 205);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 36);
+            this.label1.Size = new System.Drawing.Size(205, 55);
             this.label1.TabIndex = 38;
             this.label1.Text = "Subject:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -104,28 +110,31 @@ namespace TeamNateZone
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label3.Location = new System.Drawing.Point(197, 79);
+            this.label3.Location = new System.Drawing.Point(296, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 36);
+            this.label3.Size = new System.Drawing.Size(168, 55);
             this.label3.TabIndex = 40;
             this.label3.Text = "From: ";
             // 
             // txtSubject
             // 
             this.txtSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubject.Location = new System.Drawing.Point(339, 145);
+            this.txtSubject.Location = new System.Drawing.Point(508, 227);
+            this.txtSubject.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.ReadOnly = true;
-            this.txtSubject.Size = new System.Drawing.Size(244, 22);
+            this.txtSubject.Size = new System.Drawing.Size(365, 31);
             this.txtSubject.TabIndex = 41;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(179, 12);
+            this.label5.Location = new System.Drawing.Point(268, 19);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 44);
+            this.label5.Size = new System.Drawing.Size(411, 70);
             this.label5.TabIndex = 42;
             this.label5.Text = "View Message";
             // 
@@ -140,10 +149,9 @@ namespace TeamNateZone
             this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDownload.ForeColor = System.Drawing.Color.White;
-            this.btnDownload.Location = new System.Drawing.Point(39, 543);
-            this.btnDownload.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDownload.Location = new System.Drawing.Point(58, 848);
             this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(314, 47);
+            this.btnDownload.Size = new System.Drawing.Size(471, 73);
             this.btnDownload.TabIndex = 45;
             this.btnDownload.Text = "Download Attachment";
             this.btnDownload.TextColor = System.Drawing.Color.White;
@@ -161,10 +169,9 @@ namespace TeamNateZone
             this.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForward.ForeColor = System.Drawing.Color.White;
-            this.btnForward.Location = new System.Drawing.Point(434, 543);
-            this.btnForward.Margin = new System.Windows.Forms.Padding(2);
+            this.btnForward.Location = new System.Drawing.Point(651, 848);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(152, 47);
+            this.btnForward.Size = new System.Drawing.Size(228, 73);
             this.btnForward.TabIndex = 44;
             this.btnForward.Text = "Forward";
             this.btnForward.TextColor = System.Drawing.Color.White;
@@ -182,10 +189,9 @@ namespace TeamNateZone
             this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.Location = new System.Drawing.Point(620, 543);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSend.Location = new System.Drawing.Point(930, 848);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(163, 47);
+            this.btnSend.Size = new System.Drawing.Size(244, 73);
             this.btnSend.TabIndex = 43;
             this.btnSend.Text = "Reply";
             this.btnSend.TextColor = System.Drawing.Color.White;
@@ -203,10 +209,9 @@ namespace TeamNateZone
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(879, 543);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(1318, 848);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(134, 47);
+            this.btnBack.Size = new System.Drawing.Size(201, 73);
             this.btnBack.TabIndex = 35;
             this.btnBack.Text = "Back";
             this.btnBack.TextColor = System.Drawing.Color.White;
@@ -215,10 +220,10 @@ namespace TeamNateZone
             // 
             // ViewMessageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1047, 622);
+            this.ClientSize = new System.Drawing.Size(1570, 972);
             this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.btnForward);
             this.Controls.Add(this.btnSend);
@@ -231,6 +236,8 @@ namespace TeamNateZone
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewMessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message";

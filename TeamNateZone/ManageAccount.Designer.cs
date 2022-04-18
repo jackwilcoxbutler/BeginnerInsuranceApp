@@ -77,6 +77,7 @@ namespace TeamNateZone
             // 
             // tbEmail
             // 
+            this.tbEmail.BackColor = System.Drawing.Color.White;
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(246, 386);
             this.tbEmail.Name = "tbEmail";
@@ -86,6 +87,7 @@ namespace TeamNateZone
             // 
             // tbAddress
             // 
+            this.tbAddress.BackColor = System.Drawing.Color.White;
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddress.Location = new System.Drawing.Point(396, 631);
             this.tbAddress.Name = "tbAddress";
@@ -148,6 +150,7 @@ namespace TeamNateZone
             // 
             // tbPassword
             // 
+            this.tbPassword.BackColor = System.Drawing.Color.White;
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(324, 477);
             this.tbPassword.Name = "tbPassword";
@@ -190,6 +193,7 @@ namespace TeamNateZone
             // 
             // tbCity
             // 
+            this.tbCity.BackColor = System.Drawing.Color.White;
             this.tbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCity.Location = new System.Drawing.Point(342, 698);
             this.tbCity.Name = "tbCity";
@@ -210,6 +214,7 @@ namespace TeamNateZone
             // 
             // tbState
             // 
+            this.tbState.BackColor = System.Drawing.Color.White;
             this.tbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbState.Location = new System.Drawing.Point(644, 698);
             this.tbState.MaxLength = 2;
@@ -231,6 +236,7 @@ namespace TeamNateZone
             // 
             // tbZip
             // 
+            this.tbZip.BackColor = System.Drawing.Color.White;
             this.tbZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbZip.Location = new System.Drawing.Point(803, 698);
             this.tbZip.MaxLength = 5;
@@ -272,6 +278,7 @@ namespace TeamNateZone
             // 
             // tbUserName
             // 
+            this.tbUserName.BackColor = System.Drawing.Color.White;
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUserName.Location = new System.Drawing.Point(248, 297);
             this.tbUserName.Name = "tbUserName";
@@ -442,6 +449,7 @@ namespace TeamNateZone
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ManageAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

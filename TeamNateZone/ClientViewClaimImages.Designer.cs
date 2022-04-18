@@ -31,10 +31,9 @@ namespace TeamNateZone
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientViewClaimImages));
             this.imgPanel = new System.Windows.Forms.Panel();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.ClaimImgBox = new System.Windows.Forms.PictureBox();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.claimDescTxtBox = new System.Windows.Forms.RichTextBox();
             this.claimDescLbl = new System.Windows.Forms.Label();
             this.estimatedPaymentLbl = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@ namespace TeamNateZone
             this.downloadInfoBtn = new System.Windows.Forms.Button();
             this.info_saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.image_saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.imgPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClaimImgBox)).BeginInit();
             this.infoPanel.SuspendLayout();
@@ -75,30 +73,12 @@ namespace TeamNateZone
             // 
             this.imgPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgPanel.Controls.Add(this.hScrollBar1);
-            this.imgPanel.Controls.Add(this.vScrollBar1);
             this.imgPanel.Controls.Add(this.ClaimImgBox);
             this.imgPanel.Location = new System.Drawing.Point(0, 0);
             this.imgPanel.Margin = new System.Windows.Forms.Padding(6);
             this.imgPanel.Name = "imgPanel";
             this.imgPanel.Size = new System.Drawing.Size(1270, 884);
             this.imgPanel.TabIndex = 0;
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hScrollBar1.Location = new System.Drawing.Point(0, 867);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(1253, 17);
-            this.hScrollBar1.TabIndex = 2;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1253, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 884);
-            this.vScrollBar1.TabIndex = 1;
             // 
             // ClaimImgBox
             // 
@@ -108,7 +88,7 @@ namespace TeamNateZone
             this.ClaimImgBox.Location = new System.Drawing.Point(0, 0);
             this.ClaimImgBox.Margin = new System.Windows.Forms.Padding(6);
             this.ClaimImgBox.Name = "ClaimImgBox";
-            this.ClaimImgBox.Size = new System.Drawing.Size(1242, 841);
+            this.ClaimImgBox.Size = new System.Drawing.Size(1270, 898);
             this.ClaimImgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClaimImgBox.TabIndex = 0;
             this.ClaimImgBox.TabStop = false;
@@ -142,11 +122,21 @@ namespace TeamNateZone
             this.infoPanel.Controls.Add(this.claimTypeLbl);
             this.infoPanel.Controls.Add(this.claimIDLbl);
             this.infoPanel.Controls.Add(this.claimInfoLbl);
-            this.infoPanel.Location = new System.Drawing.Point(1282, 0);
+            this.infoPanel.Location = new System.Drawing.Point(1270, 0);
             this.infoPanel.Margin = new System.Windows.Forms.Padding(6);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(674, 1062);
+            this.infoPanel.Size = new System.Drawing.Size(656, 1062);
             this.infoPanel.TabIndex = 1;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(30, 914);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(86, 31);
+            this.lblStatus.TabIndex = 24;
+            this.lblStatus.Text = "label1";
             // 
             // claimDescTxtBox
             // 
@@ -442,25 +432,16 @@ namespace TeamNateZone
             // 
             this.image_saveFileDialog.DefaultExt = "pdf";
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(30, 914);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(86, 31);
-            this.lblStatus.TabIndex = 24;
-            this.lblStatus.Text = "label1";
-            // 
             // ClientViewClaimImages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.imgPanel);
+            this.Controls.Add(this.buttonPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ClientViewClaimImages";
             this.Text = "ClientViewClaimImages";
@@ -476,8 +457,6 @@ namespace TeamNateZone
         #endregion
 
         private System.Windows.Forms.Panel imgPanel;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox ClaimImgBox;
         private System.Windows.Forms.Panel infoPanel;
         private System.Windows.Forms.Label paymentStatLbl;

@@ -252,6 +252,7 @@ namespace TeamNateZone
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.btnManageAccount);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminWelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
