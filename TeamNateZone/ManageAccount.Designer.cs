@@ -89,7 +89,7 @@ namespace TeamNateZone
             // 
             this.tbAddress.BackColor = System.Drawing.Color.White;
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.Location = new System.Drawing.Point(396, 631);
+            this.tbAddress.Location = new System.Drawing.Point(396, 465);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.ReadOnly = true;
             this.tbAddress.Size = new System.Drawing.Size(522, 44);
@@ -100,7 +100,7 @@ namespace TeamNateZone
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label1.Location = new System.Drawing.Point(28, 484);
+            this.label1.Location = new System.Drawing.Point(28, 606);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 37);
             this.label1.TabIndex = 19;
@@ -122,7 +122,7 @@ namespace TeamNateZone
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label3.Location = new System.Drawing.Point(24, 631);
+            this.label3.Location = new System.Drawing.Point(24, 465);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 51);
             this.label3.TabIndex = 21;
@@ -152,7 +152,7 @@ namespace TeamNateZone
             // 
             this.tbPassword.BackColor = System.Drawing.Color.White;
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(324, 477);
+            this.tbPassword.Location = new System.Drawing.Point(324, 599);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '•';
             this.tbPassword.ReadOnly = true;
@@ -164,7 +164,7 @@ namespace TeamNateZone
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label9.Location = new System.Drawing.Point(238, 638);
+            this.label9.Location = new System.Drawing.Point(238, 472);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 37);
             this.label9.TabIndex = 34;
@@ -175,7 +175,7 @@ namespace TeamNateZone
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label10.Location = new System.Drawing.Point(238, 702);
+            this.label10.Location = new System.Drawing.Point(238, 536);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 37);
             this.label10.TabIndex = 35;
@@ -186,7 +186,7 @@ namespace TeamNateZone
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(501, 664);
+            this.label11.Location = new System.Drawing.Point(501, 498);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 37);
             this.label11.TabIndex = 36;
@@ -195,7 +195,7 @@ namespace TeamNateZone
             // 
             this.tbCity.BackColor = System.Drawing.Color.White;
             this.tbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCity.Location = new System.Drawing.Point(342, 698);
+            this.tbCity.Location = new System.Drawing.Point(342, 532);
             this.tbCity.Name = "tbCity";
             this.tbCity.ReadOnly = true;
             this.tbCity.Size = new System.Drawing.Size(186, 44);
@@ -206,7 +206,7 @@ namespace TeamNateZone
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label12.Location = new System.Drawing.Point(534, 706);
+            this.label12.Location = new System.Drawing.Point(534, 540);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 37);
             this.label12.TabIndex = 38;
@@ -216,7 +216,7 @@ namespace TeamNateZone
             // 
             this.tbState.BackColor = System.Drawing.Color.White;
             this.tbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbState.Location = new System.Drawing.Point(644, 698);
+            this.tbState.Location = new System.Drawing.Point(644, 532);
             this.tbState.MaxLength = 2;
             this.tbState.Name = "tbState";
             this.tbState.ReadOnly = true;
@@ -228,7 +228,7 @@ namespace TeamNateZone
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label13.Location = new System.Drawing.Point(722, 701);
+            this.label13.Location = new System.Drawing.Point(722, 535);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 37);
             this.label13.TabIndex = 40;
@@ -238,7 +238,7 @@ namespace TeamNateZone
             // 
             this.tbZip.BackColor = System.Drawing.Color.White;
             this.tbZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbZip.Location = new System.Drawing.Point(803, 698);
+            this.tbZip.Location = new System.Drawing.Point(803, 532);
             this.tbZip.MaxLength = 5;
             this.tbZip.Name = "tbZip";
             this.tbZip.ReadOnly = true;
@@ -248,7 +248,7 @@ namespace TeamNateZone
             // txtVerify
             // 
             this.txtVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerify.Location = new System.Drawing.Point(324, 558);
+            this.txtVerify.Location = new System.Drawing.Point(324, 680);
             this.txtVerify.Name = "txtVerify";
             this.txtVerify.PasswordChar = '•';
             this.txtVerify.Size = new System.Drawing.Size(594, 44);
@@ -259,7 +259,7 @@ namespace TeamNateZone
             this.lbVerify.AutoSize = true;
             this.lbVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbVerify.ForeColor = System.Drawing.Color.YellowGreen;
-            this.lbVerify.Location = new System.Drawing.Point(28, 566);
+            this.lbVerify.Location = new System.Drawing.Point(28, 688);
             this.lbVerify.Name = "lbVerify";
             this.lbVerify.Size = new System.Drawing.Size(273, 37);
             this.lbVerify.TabIndex = 43;
@@ -290,10 +290,10 @@ namespace TeamNateZone
             // 
             this.btnStopView.BackgroundImage = global::TeamNateZone.Properties.Resources.StopView1;
             this.btnStopView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnStopView.Location = new System.Drawing.Point(933, 550);
+            this.btnStopView.Location = new System.Drawing.Point(933, 599);
             this.btnStopView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStopView.Name = "btnStopView";
-            this.btnStopView.Size = new System.Drawing.Size(104, 55);
+            this.btnStopView.Size = new System.Drawing.Size(92, 47);
             this.btnStopView.TabIndex = 50;
             this.btnStopView.UseVisualStyleBackColor = true;
             this.btnStopView.Click += new System.EventHandler(this.btnStopView_Click);
@@ -302,7 +302,7 @@ namespace TeamNateZone
             // 
             this.btnStartView.BackgroundImage = global::TeamNateZone.Properties.Resources.startView;
             this.btnStartView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStartView.Location = new System.Drawing.Point(933, 477);
+            this.btnStartView.Location = new System.Drawing.Point(933, 599);
             this.btnStartView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStartView.Name = "btnStartView";
             this.btnStartView.Size = new System.Drawing.Size(92, 47);
@@ -405,7 +405,7 @@ namespace TeamNateZone
             this.btnBackAM.ForeColor = System.Drawing.Color.White;
             this.btnBackAM.Location = new System.Drawing.Point(931, 770);
             this.btnBackAM.Name = "btnBackAM";
-            this.btnBackAM.Size = new System.Drawing.Size(204, 56);
+            this.btnBackAM.Size = new System.Drawing.Size(204, 59);
             this.btnBackAM.TabIndex = 28;
             this.btnBackAM.Text = "Back";
             this.btnBackAM.TextColor = System.Drawing.Color.White;
@@ -419,7 +419,7 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1154, 858);
+            this.ClientSize = new System.Drawing.Size(1154, 853);
             this.Controls.Add(this.btnStopView);
             this.Controls.Add(this.btnStartView);
             this.Controls.Add(this.btnCancel);

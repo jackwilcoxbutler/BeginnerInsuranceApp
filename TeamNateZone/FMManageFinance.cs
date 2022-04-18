@@ -120,7 +120,7 @@ namespace TeamNateZone
         {
             if (FmView.SelectedRows.Count == 1)
             {
-                txtAmt.Text = "Please make claim estimate";
+                txtAmt.Text = "";
             }
         }
 
