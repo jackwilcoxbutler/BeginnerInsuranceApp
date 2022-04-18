@@ -236,3 +236,4 @@ C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.View
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientViewClaimImages.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsersWithActiveClaims.resources
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.ClientViewClaimImages.resources
+C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.folderPage.resources
