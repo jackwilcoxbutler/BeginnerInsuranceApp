@@ -141,9 +141,9 @@ namespace TeamNateZone
             // 
             // claimDescTxtBox
             // 
-            this.claimDescTxtBox.BackColor = System.Drawing.SystemColors.Info;
+            this.claimDescTxtBox.BackColor = System.Drawing.Color.White;
             this.claimDescTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.claimDescTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.claimDescTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claimDescTxtBox.Location = new System.Drawing.Point(384, 198);
             this.claimDescTxtBox.Margin = new System.Windows.Forms.Padding(6);
             this.claimDescTxtBox.Name = "claimDescTxtBox";
@@ -184,113 +184,123 @@ namespace TeamNateZone
             // 
             // estimatePaymentTxt
             // 
-            this.estimatePaymentTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.estimatePaymentTxt.BackColor = System.Drawing.Color.White;
             this.estimatePaymentTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.estimatePaymentTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estimatePaymentTxt.Location = new System.Drawing.Point(56, 733);
             this.estimatePaymentTxt.Margin = new System.Windows.Forms.Padding(6);
             this.estimatePaymentTxt.Name = "estimatePaymentTxt";
             this.estimatePaymentTxt.ReadOnly = true;
-            this.estimatePaymentTxt.Size = new System.Drawing.Size(236, 24);
+            this.estimatePaymentTxt.Size = new System.Drawing.Size(236, 37);
             this.estimatePaymentTxt.TabIndex = 19;
             // 
             // lastUpdateTxt
             // 
-            this.lastUpdateTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.lastUpdateTxt.BackColor = System.Drawing.Color.White;
             this.lastUpdateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastUpdateTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastUpdateTxt.Location = new System.Drawing.Point(384, 130);
             this.lastUpdateTxt.Margin = new System.Windows.Forms.Padding(6);
             this.lastUpdateTxt.Name = "lastUpdateTxt";
             this.lastUpdateTxt.ReadOnly = true;
-            this.lastUpdateTxt.Size = new System.Drawing.Size(236, 24);
+            this.lastUpdateTxt.Size = new System.Drawing.Size(236, 37);
             this.lastUpdateTxt.TabIndex = 18;
             // 
             // paymentStatTxt
             // 
-            this.paymentStatTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.paymentStatTxt.BackColor = System.Drawing.Color.White;
             this.paymentStatTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paymentStatTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentStatTxt.Location = new System.Drawing.Point(56, 658);
             this.paymentStatTxt.Margin = new System.Windows.Forms.Padding(6);
             this.paymentStatTxt.Name = "paymentStatTxt";
             this.paymentStatTxt.ReadOnly = true;
-            this.paymentStatTxt.Size = new System.Drawing.Size(236, 24);
+            this.paymentStatTxt.Size = new System.Drawing.Size(236, 37);
             this.paymentStatTxt.TabIndex = 17;
             // 
             // statusTxt
             // 
-            this.statusTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.statusTxt.BackColor = System.Drawing.Color.White;
             this.statusTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.statusTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusTxt.Location = new System.Drawing.Point(56, 575);
             this.statusTxt.Margin = new System.Windows.Forms.Padding(6);
             this.statusTxt.Name = "statusTxt";
             this.statusTxt.ReadOnly = true;
-            this.statusTxt.Size = new System.Drawing.Size(236, 24);
+            this.statusTxt.Size = new System.Drawing.Size(236, 37);
             this.statusTxt.TabIndex = 16;
             // 
             // fmForClaimTxt
             // 
-            this.fmForClaimTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.fmForClaimTxt.BackColor = System.Drawing.Color.White;
             this.fmForClaimTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fmForClaimTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fmForClaimTxt.Location = new System.Drawing.Point(56, 494);
             this.fmForClaimTxt.Margin = new System.Windows.Forms.Padding(6);
             this.fmForClaimTxt.Name = "fmForClaimTxt";
             this.fmForClaimTxt.ReadOnly = true;
-            this.fmForClaimTxt.Size = new System.Drawing.Size(236, 24);
+            this.fmForClaimTxt.Size = new System.Drawing.Size(236, 37);
             this.fmForClaimTxt.TabIndex = 15;
             this.fmForClaimTxt.TextChanged += new System.EventHandler(this.fmForClaimTxt_TextChanged);
             // 
             // cmForClaimTxt
             // 
-            this.cmForClaimTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.cmForClaimTxt.BackColor = System.Drawing.Color.White;
             this.cmForClaimTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cmForClaimTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmForClaimTxt.Location = new System.Drawing.Point(56, 412);
             this.cmForClaimTxt.Margin = new System.Windows.Forms.Padding(6);
             this.cmForClaimTxt.Name = "cmForClaimTxt";
             this.cmForClaimTxt.ReadOnly = true;
-            this.cmForClaimTxt.Size = new System.Drawing.Size(236, 24);
+            this.cmForClaimTxt.Size = new System.Drawing.Size(236, 37);
             this.cmForClaimTxt.TabIndex = 14;
             // 
             // endDateTxt
             // 
-            this.endDateTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.endDateTxt.BackColor = System.Drawing.Color.White;
             this.endDateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.endDateTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.endDateTxt.Location = new System.Drawing.Point(56, 334);
             this.endDateTxt.Margin = new System.Windows.Forms.Padding(6);
             this.endDateTxt.Name = "endDateTxt";
             this.endDateTxt.ReadOnly = true;
-            this.endDateTxt.Size = new System.Drawing.Size(236, 24);
+            this.endDateTxt.Size = new System.Drawing.Size(236, 37);
             this.endDateTxt.TabIndex = 13;
             // 
             // startDateTxt
             // 
-            this.startDateTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.startDateTxt.BackColor = System.Drawing.Color.White;
             this.startDateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.startDateTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startDateTxt.Location = new System.Drawing.Point(56, 262);
             this.startDateTxt.Margin = new System.Windows.Forms.Padding(6);
             this.startDateTxt.Name = "startDateTxt";
             this.startDateTxt.ReadOnly = true;
-            this.startDateTxt.Size = new System.Drawing.Size(236, 24);
+            this.startDateTxt.Size = new System.Drawing.Size(236, 37);
             this.startDateTxt.TabIndex = 12;
             // 
             // claimTypeTxt
             // 
-            this.claimTypeTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.claimTypeTxt.BackColor = System.Drawing.Color.White;
             this.claimTypeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.claimTypeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claimTypeTxt.Location = new System.Drawing.Point(56, 198);
             this.claimTypeTxt.Margin = new System.Windows.Forms.Padding(6);
             this.claimTypeTxt.Name = "claimTypeTxt";
             this.claimTypeTxt.ReadOnly = true;
-            this.claimTypeTxt.Size = new System.Drawing.Size(236, 24);
+            this.claimTypeTxt.Size = new System.Drawing.Size(236, 37);
             this.claimTypeTxt.TabIndex = 11;
             // 
             // claimIDTxt
             // 
-            this.claimIDTxt.BackColor = System.Drawing.SystemColors.Info;
+            this.claimIDTxt.BackColor = System.Drawing.Color.White;
             this.claimIDTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.claimIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claimIDTxt.Location = new System.Drawing.Point(56, 131);
             this.claimIDTxt.Margin = new System.Windows.Forms.Padding(6);
             this.claimIDTxt.Name = "claimIDTxt";
             this.claimIDTxt.ReadOnly = true;
-            this.claimIDTxt.Size = new System.Drawing.Size(236, 24);
+            this.claimIDTxt.Size = new System.Drawing.Size(236, 37);
             this.claimIDTxt.TabIndex = 10;
             this.claimIDTxt.TextChanged += new System.EventHandler(this.claimIDTxt_TextChanged);
             // 

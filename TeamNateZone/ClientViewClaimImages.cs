@@ -87,19 +87,29 @@ namespace TeamNateZone
                 if (claim.estEndDate.Equals(maxDateTime))
                 {
                     endDateTxt.Text = "N/A";
-                    cmForClaimTxt.Text = "N/A";
+                   // cmForClaimTxt.Text = "N/A";
                 }
                 else
                 {
-                    endDateTxt.Text = claim.estEndDate.ToString();
+                    endDateTxt.Text = claim.estEndDate.Day.ToString();
                     //cmForClaimTxt.Text = cmid.ToString();
-                    cmForClaimTxt.Text = cmUser;
+                   // cmForClaimTxt.Text = cmUser;
                 }
             }
             else
             {
-                endDateTxt.Text = claim.endDate.ToString();
+                endDateTxt.Text = claim.endDate.Day.ToString();
                 //cmForClaimTxt.Text = cmid.ToString();
+               // cmForClaimTxt.Text = cmUser;
+            }
+
+            if(claim.cmID == 0)
+            {
+                cmForClaimTxt.Text = "N/A";
+
+            }
+            else
+            {
                 cmForClaimTxt.Text = cmUser;
             }
 
