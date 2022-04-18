@@ -15,7 +15,7 @@ namespace TeamNateZone
         //lastUpdate, payment status, CM ID, FM ID, Estimated End Date 
 
         //Data
-        int userID { get; set; }
+        public int userID { get; set; }
         public int claimID { get; set; }
         public int cmID { get; set; }
         public int fmID { get; set; }

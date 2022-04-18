@@ -19,8 +19,11 @@ namespace TeamNateZone
         claimList claimListForm;
         Claim claim;
         dbHandler db;
-        private int cid,cmid,fmid,uid,estAmt;
+        public int cid,cmid,fmid,uid,estAmt;
         private string cType, cDesc, stat, payStat,fmUser,cmUser;
+
+        
+
         private DateTime start, end, update, estEnd;
         private DateTime minDateTime = new DateTime(1900, 1, 1);
         private DateTime maxDateTime = new DateTime(2100, 1, 1);
@@ -189,7 +192,38 @@ namespace TeamNateZone
 
         }
 
-  
+        private void downloadImgBtn_Click(object sender, EventArgs e)
+        {
+            string cid = claim.claimID.ToString();
+
+            string fileName = db.get_filename_claim(cid);
+
+            int ClaimUser = claim.userID;
+           
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                fileName = fileName.Trim();
+                info_saveFileDialog2.FileName = fileName;
+                info_saveFileDialog2.DefaultExt = db.get_fileType_Claim(cid);
+                if (info_saveFileDialog2.ShowDialog() == DialogResult.OK)
+                {
+                    byte[] fileContent = db.get_file_claims(cid);
+                    File.WriteAllBytes(fileName, fileContent);
+                    lblStatus.Text = "File downloaded Successfully";
+                }
+                else
+                {
+                    lblStatus.Text = "Download Cancelled";
+                }
+
+            }
+            else
+            {
+                lblStatus.Text = "No Attachmentt to download";
+            }
+        }
+
+
 
     }
 }

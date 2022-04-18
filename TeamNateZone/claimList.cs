@@ -90,7 +90,8 @@ namespace TeamNateZone
             }
             else
             {
-                lblStatus.Text = " The File you are trying to view is not in the correct format to view \n You can download the file using the dowload button";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(" The File you are trying to view is not in the correct format to view \n You can download the file using the dowload button");
             }
 
 

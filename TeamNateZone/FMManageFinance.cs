@@ -32,9 +32,9 @@ namespace TeamNateZone
             cn.Open();
 
             
-            //  SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims", cn);
-            SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims WHERE FmID = @fmid OR FmID IS NULL", cn);
-            da.SelectCommand.Parameters.Add("@fmid", userFM.getUserID());
+              SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims", cn);
+            //SqlDataAdapter da = new SqlDataAdapter("SELECT ClaimID, Username, Status,StartDate, LastUpdate, EstimatedAmount, PaymentStatus, Claim_Type, Claim_Description FROM Claims WHERE FmID = @fmid OR FmID IS NULL", cn);
+            //da.SelectCommand.Parameters.Add("@fmid", userFM.getUserID());
 
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);
