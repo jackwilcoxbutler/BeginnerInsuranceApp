@@ -37,7 +37,7 @@ namespace TeamNateZone
         private void claimList_Load(object sender, EventArgs e)
         {
             SqlConnection cn = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
-            
+
             cn.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Claims WHERE UserID = @userid", cn);
             da.SelectCommand.Parameters.AddWithValue("userid", user.getUserID());
@@ -52,7 +52,7 @@ namespace TeamNateZone
 
 
             dataGridView1.DataSource = dtbl;
-            
+
 
             cn.Close();
         }
@@ -92,8 +92,8 @@ namespace TeamNateZone
             {
                 lblStatus.Text = " The File you are trying to view is not in the correct format to view \n You can download the file using the dowload button";
             }
-            
-            
+
+
         }
 
         private void rndImageDownload_Click(object sender, EventArgs e)
@@ -128,12 +128,12 @@ namespace TeamNateZone
                 {
                     lblStatus.Text = "Download Canceled";
                 }
-                
+
             }
             else
             {
-                //lblStatus.Text = "No Attachemt to download";
-            }          
+                lblStatus.Text = "No Attachemt to download";
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -143,8 +143,18 @@ namespace TeamNateZone
 
         private void rndButton1_Click(object sender, EventArgs e)
         {
-            ClientViewClaimImages imageWindow = new ClientViewClaimImages(user, int.Parse(enterClaimIDTxt.Text.Trim()));
-            imageWindow.Show();
+            if (int.TryParse(enterClaimIDTxt.Text, out int result))
+            {
+                ClientViewClaimImages imageWindow = new ClientViewClaimImages(user, int.Parse(enterClaimIDTxt.Text.Trim()));
+                imageWindow.Show();
+            }
+            else
+            {
+                lblStatus.Text = "Please Enter a numarical Claim Id ";
+            }
+            {
+
+            }
         }
     }
 }
