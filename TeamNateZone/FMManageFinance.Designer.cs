@@ -70,8 +70,10 @@ namespace TeamNateZone
             this.FmView.ReadOnly = true;
             this.FmView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.FmView.RowTemplate.Height = 33;
+            this.FmView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FmView.Size = new System.Drawing.Size(1694, 614);
             this.FmView.TabIndex = 0;
+            this.FmView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_CellMouseDoubleClick);
             this.FmView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_ColumnHeaderMouseClick);
             this.FmView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FmView_RowHeaderMouseClick);
             // 

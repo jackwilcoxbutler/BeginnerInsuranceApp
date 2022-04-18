@@ -137,6 +137,7 @@ namespace TeamNateZone
             this.lblStatus.Size = new System.Drawing.Size(86, 31);
             this.lblStatus.TabIndex = 24;
             this.lblStatus.Text = "label1";
+            this.lblStatus.Visible = false;
             // 
             // claimDescTxtBox
             // 

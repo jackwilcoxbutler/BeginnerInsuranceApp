@@ -50,9 +50,9 @@ namespace TeamNateZone
                 }
                 else
                 {
-                    MessageBox.Show("Please enter an integer value!"+ System.Environment.NewLine + "No commas or special characters.", "Error");
+                    MessageBox.Show("Please enter an integer value!" + System.Environment.NewLine + "No commas or special characters.", "Error");
                 }
-                
+
             }
             else
             {
@@ -124,6 +124,15 @@ namespace TeamNateZone
             }
         }
 
-       
+        private void FmView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (FmView.SelectedRows.Count == 1)
+            {
+                Claim claim = new Claim((int)FmView.SelectedRows[0].Cells[0].Value);
+                ClientViewClaimImages form = new ClientViewClaimImages(claim.claimID);
+                form.Show();
+            }
+        }
+
     }
 }
