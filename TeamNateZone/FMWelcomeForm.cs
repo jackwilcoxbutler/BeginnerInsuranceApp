@@ -24,19 +24,13 @@ namespace TeamNateZone
             lblWelcome.Text = "Welcome Financial Manager: " + user.getFname() + " " + user.getLname();
 
         }
-        private void btnViewClient_Click(object sender, EventArgs e)
-        {
-           ViewUsersWithActiveClaims v = new ViewUsersWithActiveClaims(user);
-           v.Show();           
-        }
         private void btnViewMessages_Click(object sender, EventArgs e)
         {
             this.Hide();
             message = new MessageForm(user);
             message.Owner = this;
-            message.Show();
+            message.Show();          
         }
-
         private void btnManageAccount_Click(object sender, EventArgs e)
         {
             ManageAccount manage;
@@ -52,6 +46,12 @@ namespace TeamNateZone
             claimView.Owner = this;
             claimView.Show();
             this.Hide();
+        }
+
+        private void btnViewClient_Click(object sender, EventArgs e)
+        {
+            ViewUsersWithActiveClaims v = new ViewUsersWithActiveClaims(user);
+            v.Show();
         }
 
         private void btnlogout_Click(object sender, EventArgs e)

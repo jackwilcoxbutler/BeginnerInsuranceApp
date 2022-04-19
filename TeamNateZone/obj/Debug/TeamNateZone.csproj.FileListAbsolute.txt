@@ -77,7 +77,6 @@ C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ManageAcco
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.Properties.Resources.resources
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.RegistrationForm.resources
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientWelcomeForm.resources
-C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsers.resources
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.GenerateResource.cache
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\cmmak\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.exe
@@ -167,7 +166,6 @@ C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AllClaimLi
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMManageFinance.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.MessageForm.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.NewMessage.resources
-C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FMCMViewUsers.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewMessageForm.resources
 C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources
 C:\Users\Jack Wilcox\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminWelcomeForm.resources
@@ -239,3 +237,8 @@ C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.Client
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.folderPage.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.folderPage.resources
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.FilesFolderView.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ClientViewClaimImages.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FilesFolderView.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.folderPage.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUsersWithActiveClaims.resources
+C:\Users\cmmak\Source\Repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.AdminViewUsers.resources
