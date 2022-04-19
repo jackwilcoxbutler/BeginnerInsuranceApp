@@ -238,3 +238,4 @@ C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.ViewUser
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.ClientViewClaimImages.resources
 C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.folderPage.resources
 C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.folderPage.resources
+C:\Users\anbat\Source\Repos\SE361.3.0\TeamNateZone\obj\Debug\TeamNateZone.FilesFolderView.resources

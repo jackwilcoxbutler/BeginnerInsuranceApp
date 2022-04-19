@@ -49,11 +49,11 @@ namespace TeamNateZone
             cn.Close();
 
         }
-
+        
         private void btnExpand_Click(object sender, EventArgs e)
         {
             //client only
-            FilesFolderView files = new FilesFolderView(user);
+            FilesFolderView files = new FilesFolderView(user, folderIdTxt.Text);
             files.Show();
         }
 

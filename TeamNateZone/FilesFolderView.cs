@@ -16,6 +16,7 @@ namespace TeamNateZone
         User user;
         User other;
         dbHandler db;
+        string FID;
 
         public FilesFolderView(User user, User other)
         {
@@ -28,10 +29,11 @@ namespace TeamNateZone
             otherUserLbl.Text = other.getFname() + " " + other.getLname() + ".";
 
         }
-        public FilesFolderView(User user)
+        public FilesFolderView(User user, string fid)
         {
             InitializeComponent();
             this.user = user;
+            FID = fid;
             this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
             string name = user.getFname() + " " + user.getLname() + ".";
             userLbl.Text = name;
@@ -44,10 +46,10 @@ namespace TeamNateZone
             SqlDataAdapter da;
             cn.Open();
             //client
-            if(user.getClearance() == 0)
+            if (user.getClearance() == 0)
             {
-                da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolder WHERE UserID = @id",cn);
-                da.SelectCommand.Parameters.AddWithValue("@id", user.getUserID());
+                da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolders WHERE UserID = @id", cn);
+                da.SelectCommand.Parameters.AddWithValue("@id", FID);
 
                 DataTable dtbl = new DataTable();
 
@@ -57,10 +59,10 @@ namespace TeamNateZone
                 //db.get_files_folder_client(user.getUserID());
             }
             //admin
-            else if(user.getClearance() == 3)
-            { 
-                da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolder WHERE UserID = @id", cn);
-                da.SelectCommand.Parameters.AddWithValue("@id", other.getUserID());
+            else if (user.getClearance() == 3)
+            {
+                da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolders WHERE UserID = @id", cn);
+                da.SelectCommand.Parameters.AddWithValue("@id", FID);
 
                 DataTable dtbl = new DataTable();
 
@@ -73,17 +75,17 @@ namespace TeamNateZone
             else
             {
                 //fm
-                if(user.getClearance() == 2)
+                if (user.getClearance() == 2)
                 {
-                    da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolder WHERE UserID = @id AND FmPermission = @true", cn);
-                    da.SelectCommand.Parameters.AddWithValue("@id", other.getUserID());
+                    da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolders WHERE UserID = @id AND FmPermission = @true", cn);
+                    da.SelectCommand.Parameters.AddWithValue("@id", FID);
                     da.SelectCommand.Parameters.AddWithValue("@true", 1);
                 }
                 //cm
                 else
                 {
-                    da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolder WHERE UserID = @id AND CmPermission = @true", cn);
-                    da.SelectCommand.Parameters.AddWithValue("@id", other.getUserID());
+                    da = new SqlDataAdapter("SELECT filesID, UserID, FileName, FileDescription FROM FilesInFolders WHERE UserID = @id AND CmPermission = @true", cn);
+                    da.SelectCommand.Parameters.AddWithValue("@id", FID);
                     da.SelectCommand.Parameters.AddWithValue("@true", 1);
                 }
 
@@ -97,13 +99,6 @@ namespace TeamNateZone
 
                 //db.get_files_folder_all(other.getUserID());
             }
-
-        }
-
-
-        //not needed
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }
