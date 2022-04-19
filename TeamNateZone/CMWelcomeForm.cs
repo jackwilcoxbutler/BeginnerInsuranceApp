@@ -26,10 +26,12 @@ namespace TeamNateZone
         }
 
 
-        private void btnViewClientList_Click(object sender, EventArgs e)
+        private void btnViewAllClaims_Click(object sender, EventArgs e)
         {
-            ViewUsersWithActiveClaims v = new ViewUsersWithActiveClaims(user);
-            v.Show();
+            this.Hide();
+            AlllistClaims = new AllClaimList(user);
+            AlllistClaims.Owner = this;
+            AlllistClaims.Show();
         }
 
         private void btnManageAccount_Click(object sender, EventArgs e)
@@ -53,12 +55,11 @@ namespace TeamNateZone
             message.Show();
         }
 
+        // View Client List
         private void rndButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AlllistClaims = new AllClaimList(user);
-            AlllistClaims.Owner = this;
-            AlllistClaims.Show();
+            ViewUsersWithActiveClaims v = new ViewUsersWithActiveClaims(user);
+            v.Show();
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
