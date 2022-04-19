@@ -293,8 +293,12 @@
     <EmbeddedResource Include="AdminViewUsers.resx">
       <DependentUpon>AdminViewUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AdminClassDiagram.vsdx" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram.cd" />
+    <None Include="ClientClassDiagram.vsdx" />
+    <None Include="CMClassDiagram.vsdx" />
+    <None Include="FMClassDiagram.vsdx" />
     <None Include="FMFinanceManageDataSet.xsc">
       <DependentUpon>FMFinanceManageDataSet.xsd</DependentUpon>
     </None>
