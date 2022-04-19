@@ -89,6 +89,7 @@ namespace TeamNateZone
 
         private void btnViewFolders_Click(object sender, EventArgs e)
         {
+            this.Hide();
             folderPage folderScreen = new folderPage(user);
             folderScreen.Show();
         }

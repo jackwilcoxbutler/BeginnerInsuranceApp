@@ -13,11 +13,17 @@ namespace TeamNateZone
 {
     public partial class folderPage : Form
     {
-         User user;
+        User user;
+        ClientWelcomeForm welcomeForm;
+        CMWelcomeForm cmwelcomeForm;
+        FMWelcomeForm fmwelcomeForm;
+        AdminWelcomeForm AdminwelcomeForm;
+        dbHandler db;
         public folderPage(User user)
         {
             InitializeComponent();
             this.user = user;
+            this.db = new dbHandler(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
         }
 
         private void folderPage_Load(object sender, EventArgs e)
@@ -51,6 +57,40 @@ namespace TeamNateZone
         private void btnExpand_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            if (user.getRole() == "Client")
+            {
+                welcomeForm = new ClientWelcomeForm(user);
+                welcomeForm.Owner = this;
+                welcomeForm.Show();
+            }
+            else if (user.getRole() == "Claims Manager")
+            {
+                cmwelcomeForm = new CMWelcomeForm(user);
+                cmwelcomeForm.Owner = this;
+                cmwelcomeForm.Show();
+            }
+            else if (user.getRole() == "Finance Manager")
+            {
+                fmwelcomeForm = new FMWelcomeForm(user);
+                fmwelcomeForm.Owner = this;
+                fmwelcomeForm.Show();
+            }
+            else if (user.getRole() == "Admin")
+            {
+                AdminwelcomeForm = new AdminWelcomeForm(user);
+                AdminwelcomeForm.Owner = this;
+                AdminwelcomeForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error Occurred");
+            }
         }
     }
 }
