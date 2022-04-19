@@ -34,26 +34,28 @@ namespace TeamNateZone
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnViewClientList = new CustomControls.RJControls.rndButton();
-            this.btnViewMessages = new CustomControls.RJControls.rndButton();
-            this.btnManageAccount = new CustomControls.RJControls.rndButton();
-            this.btnGrantPermissions = new CustomControls.RJControls.rndButton();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogout = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnGrantPermissions = new CustomControls.RJControls.rndButton();
+            this.btnViewClientList = new CustomControls.RJControls.rndButton();
+            this.btnViewMessages = new CustomControls.RJControls.rndButton();
+            this.btnManageAccount = new CustomControls.RJControls.rndButton();
+            this.btnViewFolders = new CustomControls.RJControls.rndButton();
+            this.lblFolders = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(874, 709);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1076, 642);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(421, 62);
+            this.label4.Size = new System.Drawing.Size(323, 48);
             this.label4.TabIndex = 32;
             this.label4.Text = "Manage Account";
             // 
@@ -78,110 +80,22 @@ namespace TeamNateZone
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 709);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(388, 643);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 62);
+            this.label1.Size = new System.Drawing.Size(290, 48);
             this.label1.TabIndex = 29;
             this.label1.Text = "View Client List";
-            // 
-            // btnViewClientList
-            // 
-            this.btnViewClientList.BackColor = System.Drawing.Color.White;
-            this.btnViewClientList.BackgroundColor = System.Drawing.Color.White;
-            this.btnViewClientList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewClientList.BackgroundImage")));
-            this.btnViewClientList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnViewClientList.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnViewClientList.BorderRadius = 30;
-            this.btnViewClientList.BorderSize = 5;
-            this.btnViewClientList.FlatAppearance.BorderSize = 0;
-            this.btnViewClientList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewClientList.ForeColor = System.Drawing.Color.White;
-            this.btnViewClientList.ImageIndex = 0;
-            this.btnViewClientList.Location = new System.Drawing.Point(51, 175);
-            this.btnViewClientList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnViewClientList.Name = "btnViewClientList";
-            this.btnViewClientList.Size = new System.Drawing.Size(354, 503);
-            this.btnViewClientList.TabIndex = 27;
-            this.btnViewClientList.TextColor = System.Drawing.Color.White;
-            this.btnViewClientList.UseVisualStyleBackColor = false;
-            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClient_Click);
-            // 
-            // btnViewMessages
-            // 
-            this.btnViewMessages.BackColor = System.Drawing.Color.White;
-            this.btnViewMessages.BackgroundColor = System.Drawing.Color.White;
-            this.btnViewMessages.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewMessages.BackgroundImage")));
-            this.btnViewMessages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnViewMessages.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnViewMessages.BorderRadius = 30;
-            this.btnViewMessages.BorderSize = 5;
-            this.btnViewMessages.FlatAppearance.BorderSize = 0;
-            this.btnViewMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewMessages.ForeColor = System.Drawing.Color.White;
-            this.btnViewMessages.ImageIndex = 0;
-            this.btnViewMessages.Location = new System.Drawing.Point(456, 183);
-            this.btnViewMessages.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnViewMessages.Name = "btnViewMessages";
-            this.btnViewMessages.Size = new System.Drawing.Size(376, 506);
-            this.btnViewMessages.TabIndex = 25;
-            this.btnViewMessages.TextColor = System.Drawing.Color.White;
-            this.btnViewMessages.UseVisualStyleBackColor = false;
-            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
-            // 
-            // btnManageAccount
-            // 
-            this.btnManageAccount.BackColor = System.Drawing.Color.White;
-            this.btnManageAccount.BackgroundColor = System.Drawing.Color.White;
-            this.btnManageAccount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageAccount.BackgroundImage")));
-            this.btnManageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnManageAccount.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnManageAccount.BorderRadius = 30;
-            this.btnManageAccount.BorderSize = 5;
-            this.btnManageAccount.FlatAppearance.BorderSize = 0;
-            this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageAccount.ForeColor = System.Drawing.Color.White;
-            this.btnManageAccount.ImageIndex = 0;
-            this.btnManageAccount.Location = new System.Drawing.Point(886, 183);
-            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(388, 511);
-            this.btnManageAccount.TabIndex = 26;
-            this.btnManageAccount.TextColor = System.Drawing.Color.White;
-            this.btnManageAccount.UseVisualStyleBackColor = false;
-            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
-            // 
-            // btnGrantPermissions
-            // 
-            this.btnGrantPermissions.BackColor = System.Drawing.Color.White;
-            this.btnGrantPermissions.BackgroundColor = System.Drawing.Color.White;
-            this.btnGrantPermissions.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGrantPermissions.BackgroundImage")));
-            this.btnGrantPermissions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGrantPermissions.BorderColor = System.Drawing.Color.YellowGreen;
-            this.btnGrantPermissions.BorderRadius = 30;
-            this.btnGrantPermissions.BorderSize = 5;
-            this.btnGrantPermissions.FlatAppearance.BorderSize = 0;
-            this.btnGrantPermissions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrantPermissions.ForeColor = System.Drawing.Color.White;
-            this.btnGrantPermissions.ImageIndex = 0;
-            this.btnGrantPermissions.Location = new System.Drawing.Point(1334, 186);
-            this.btnGrantPermissions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGrantPermissions.Name = "btnGrantPermissions";
-            this.btnGrantPermissions.Size = new System.Drawing.Size(388, 520);
-            this.btnGrantPermissions.TabIndex = 33;
-            this.btnGrantPermissions.TextColor = System.Drawing.Color.White;
-            this.btnGrantPermissions.UseVisualStyleBackColor = false;
-            this.btnGrantPermissions.Click += new System.EventHandler(this.btnGrantPermissions_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1299, 709);
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1407, 642);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(442, 62);
+            this.label5.Size = new System.Drawing.Size(341, 48);
             this.label5.TabIndex = 34;
             this.label5.Text = "Grant Permissions";
             // 
@@ -211,11 +125,11 @@ namespace TeamNateZone
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(458, 709);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(735, 643);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(376, 62);
+            this.label6.Size = new System.Drawing.Size(289, 48);
             this.label6.TabIndex = 37;
             this.label6.Text = "View Messages";
             // 
@@ -232,6 +146,126 @@ namespace TeamNateZone
             this.lblWelcome.TabIndex = 38;
             this.lblWelcome.Text = "Welcome Admin";
             // 
+            // btnGrantPermissions
+            // 
+            this.btnGrantPermissions.BackColor = System.Drawing.Color.White;
+            this.btnGrantPermissions.BackgroundColor = System.Drawing.Color.White;
+            this.btnGrantPermissions.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGrantPermissions.BackgroundImage")));
+            this.btnGrantPermissions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGrantPermissions.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnGrantPermissions.BorderRadius = 30;
+            this.btnGrantPermissions.BorderSize = 5;
+            this.btnGrantPermissions.FlatAppearance.BorderSize = 0;
+            this.btnGrantPermissions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrantPermissions.ForeColor = System.Drawing.Color.White;
+            this.btnGrantPermissions.ImageIndex = 0;
+            this.btnGrantPermissions.Location = new System.Drawing.Point(1435, 230);
+            this.btnGrantPermissions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGrantPermissions.Name = "btnGrantPermissions";
+            this.btnGrantPermissions.Size = new System.Drawing.Size(288, 402);
+            this.btnGrantPermissions.TabIndex = 33;
+            this.btnGrantPermissions.TextColor = System.Drawing.Color.White;
+            this.btnGrantPermissions.UseVisualStyleBackColor = false;
+            this.btnGrantPermissions.Click += new System.EventHandler(this.btnGrantPermissions_Click);
+            // 
+            // btnViewClientList
+            // 
+            this.btnViewClientList.BackColor = System.Drawing.Color.White;
+            this.btnViewClientList.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewClientList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewClientList.BackgroundImage")));
+            this.btnViewClientList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewClientList.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewClientList.BorderRadius = 30;
+            this.btnViewClientList.BorderSize = 5;
+            this.btnViewClientList.FlatAppearance.BorderSize = 0;
+            this.btnViewClientList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewClientList.ForeColor = System.Drawing.Color.White;
+            this.btnViewClientList.ImageIndex = 0;
+            this.btnViewClientList.Location = new System.Drawing.Point(390, 232);
+            this.btnViewClientList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnViewClientList.Name = "btnViewClientList";
+            this.btnViewClientList.Size = new System.Drawing.Size(288, 398);
+            this.btnViewClientList.TabIndex = 27;
+            this.btnViewClientList.TextColor = System.Drawing.Color.White;
+            this.btnViewClientList.UseVisualStyleBackColor = false;
+            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClient_Click);
+            // 
+            // btnViewMessages
+            // 
+            this.btnViewMessages.BackColor = System.Drawing.Color.White;
+            this.btnViewMessages.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewMessages.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewMessages.BackgroundImage")));
+            this.btnViewMessages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewMessages.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewMessages.BorderRadius = 30;
+            this.btnViewMessages.BorderSize = 5;
+            this.btnViewMessages.FlatAppearance.BorderSize = 0;
+            this.btnViewMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewMessages.ForeColor = System.Drawing.Color.White;
+            this.btnViewMessages.ImageIndex = 0;
+            this.btnViewMessages.Location = new System.Drawing.Point(736, 232);
+            this.btnViewMessages.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnViewMessages.Name = "btnViewMessages";
+            this.btnViewMessages.Size = new System.Drawing.Size(288, 398);
+            this.btnViewMessages.TabIndex = 25;
+            this.btnViewMessages.TextColor = System.Drawing.Color.White;
+            this.btnViewMessages.UseVisualStyleBackColor = false;
+            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
+            // 
+            // btnManageAccount
+            // 
+            this.btnManageAccount.BackColor = System.Drawing.Color.White;
+            this.btnManageAccount.BackgroundColor = System.Drawing.Color.White;
+            this.btnManageAccount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageAccount.BackgroundImage")));
+            this.btnManageAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnManageAccount.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnManageAccount.BorderRadius = 30;
+            this.btnManageAccount.BorderSize = 5;
+            this.btnManageAccount.FlatAppearance.BorderSize = 0;
+            this.btnManageAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageAccount.ForeColor = System.Drawing.Color.White;
+            this.btnManageAccount.ImageIndex = 0;
+            this.btnManageAccount.Location = new System.Drawing.Point(1084, 230);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnManageAccount.Name = "btnManageAccount";
+            this.btnManageAccount.Size = new System.Drawing.Size(288, 402);
+            this.btnManageAccount.TabIndex = 26;
+            this.btnManageAccount.TextColor = System.Drawing.Color.White;
+            this.btnManageAccount.UseVisualStyleBackColor = false;
+            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
+            // 
+            // btnViewFolders
+            // 
+            this.btnViewFolders.BackColor = System.Drawing.Color.White;
+            this.btnViewFolders.BackgroundColor = System.Drawing.Color.White;
+            this.btnViewFolders.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewFolders.BackgroundImage")));
+            this.btnViewFolders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewFolders.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnViewFolders.BorderRadius = 30;
+            this.btnViewFolders.BorderSize = 5;
+            this.btnViewFolders.FlatAppearance.BorderSize = 0;
+            this.btnViewFolders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewFolders.ForeColor = System.Drawing.Color.White;
+            this.btnViewFolders.ImageIndex = 0;
+            this.btnViewFolders.Location = new System.Drawing.Point(41, 230);
+            this.btnViewFolders.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnViewFolders.Name = "btnViewFolders";
+            this.btnViewFolders.Size = new System.Drawing.Size(288, 402);
+            this.btnViewFolders.TabIndex = 41;
+            this.btnViewFolders.TextColor = System.Drawing.Color.White;
+            this.btnViewFolders.UseVisualStyleBackColor = false;
+            // 
+            // lblFolders
+            // 
+            this.lblFolders.AutoSize = true;
+            this.lblFolders.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFolders.Location = new System.Drawing.Point(13, 643);
+            this.lblFolders.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFolders.Name = "lblFolders";
+            this.lblFolders.Size = new System.Drawing.Size(357, 48);
+            this.lblFolders.TabIndex = 42;
+            this.lblFolders.Text = "View Claim Folders";
+            // 
             // AdminWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -239,6 +273,8 @@ namespace TeamNateZone
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1773, 848);
+            this.Controls.Add(this.lblFolders);
+            this.Controls.Add(this.btnViewFolders);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnlogout);
@@ -277,5 +313,7 @@ namespace TeamNateZone
         private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblWelcome;
+        private CustomControls.RJControls.rndButton btnViewFolders;
+        private System.Windows.Forms.Label lblFolders;
     }
 }
