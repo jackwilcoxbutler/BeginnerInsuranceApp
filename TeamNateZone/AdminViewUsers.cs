@@ -116,7 +116,7 @@ namespace TeamNateZone
         }
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            int id = (int)dataGridView1.CurrentRow.Cells[10].Value;
+            int id = (int)dataGridView1.CurrentRow.Cells[8].Value;
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             cn.ConnectionString =
