@@ -46,6 +46,7 @@ namespace TeamNateZone
         private void btnFile_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.OK;
+            //int fid = db.get_folder_id(user.getUserID());
 
             if (datetime.Value > DateTime.Today.AddDays(1))
             {
@@ -71,6 +72,7 @@ namespace TeamNateZone
                 label3.Text = "Go back to View Claims";
                 label2.Visible = true;
                 label3.Visible = true;
+                db.file_file(user.getUserID(), fileName, detailsTextBox.Text, extention, Databytes, 1, 1, 1, db.get_folder_id(user.getUserID()));
             }
 
             

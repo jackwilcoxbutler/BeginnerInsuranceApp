@@ -1050,6 +1050,66 @@ namespace TeamNateZone
             cn.Close();
             return dtbl;
         }
+        
+        //something is going wrong here with the file data type conversion
+        private void filefile(int userid, string fname, string desc, string exten, byte[] datab, int fmPerm, int cmPerm,int clientPerm,int folderid)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+
+                cmd.CommandText = "INSERT INTO FilesInFolders (UserID, FileName, FolderID, FileContentType, FileData, FmPermission, CmPermission, ClientPermission, FileDescription) VALUES (@userID,  @fileName, @fileExtention, @file, @folderid, @Fmp, @CmP, @CP, @description);";
+
+                cmd.Parameters.AddWithValue("@userID", userid);
+                cmd.Parameters.AddWithValue("@description", desc);
+                cmd.Parameters.AddWithValue("@file", datab);
+                cmd.Parameters.AddWithValue("@fileName", fname);
+                cmd.Parameters.AddWithValue("@fileExtention", exten);
+                cmd.Parameters.AddWithValue("@FmP", fmPerm);
+                cmd.Parameters.AddWithValue("@CmP", cmPerm);
+                cmd.Parameters.AddWithValue("@CP", clientPerm);
+                cmd.Parameters.AddWithValue("@folderid", folderid);
+
+                connection.Open();
+
+                dr = cmd.ExecuteReader();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error Occurred");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        private int getFolderID(int userid)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                cmd.Connection = connection;
+                cmd.CommandText = "SELECT UserID FROM Folders WHERE UserID = @id";
+                cmd.Parameters.AddWithValue("@id", userid);
+
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                return dr.GetInt32(0);
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message, "Folder Does not Exist");
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
         public String check_password(string username)
         {
@@ -1067,6 +1127,14 @@ namespace TeamNateZone
         public void create_folder(int user)
         {
             createFolder(user);
+        }
+        public void file_file(int userid, string fname, string desc, string exten, byte[] datab, int fmPerm, int cmPerm, int clientPerm, int folderid)
+        {
+            filefile(userid, fname, desc, exten, datab, fmPerm, cmPerm, clientPerm, folderid);
+        }
+        public int get_folder_id(int userid)
+        {
+            return getFolderID(userid);
         }
         public void store_user_information(string first, string last, string address, string city, string state, string zip, string userName, string passWord, string eMail)
         {

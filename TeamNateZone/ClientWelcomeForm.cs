@@ -91,6 +91,7 @@ namespace TeamNateZone
         {
             folderPage folderScreen = new folderPage(user);
             folderScreen.Show();
+            this.Hide();
         }
     }
 }

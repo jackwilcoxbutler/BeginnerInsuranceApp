@@ -13,11 +13,13 @@ namespace TeamNateZone
 {
     public partial class folderPage : Form
     {
-         User user;
+        User user;
+        int userClearLevel; 
         public folderPage(User user)
         {
             InitializeComponent();
             this.user = user;
+            userClearLevel = user.getClearance();
         }
 
         private void folderPage_Load(object sender, EventArgs e)
@@ -50,7 +52,34 @@ namespace TeamNateZone
 
         private void btnExpand_Click(object sender, EventArgs e)
         {
+            //client only
+            FilesFolderView files = new FilesFolderView(user);
+            files.Show();
+        }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if(userClearLevel == 0)
+            {
+                ClientWelcomeForm cWel = new ClientWelcomeForm(user);
+                cWel.Show();
+            }
+            else if(userClearLevel == 1)
+            {
+                CMWelcomeForm cmWelc = new CMWelcomeForm(user);
+                cmWelc.Show();
+            }
+            else if(userClearLevel == 2)
+            {
+                FMWelcomeForm fmWelc = new FMWelcomeForm(user);
+                fmWelc.Show();
+            }
+            else
+            {
+                AdminWelcomeForm adWelc = new AdminWelcomeForm(user);
+                adWelc.Show();
+            }
         }
     }
 }
