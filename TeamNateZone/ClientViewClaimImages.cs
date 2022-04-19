@@ -22,7 +22,10 @@ namespace TeamNateZone
         public int cid,cmid,fmid,uid,estAmt;
         private string cType, cDesc, stat, payStat,fmUser,cmUser;
 
-        
+        private void rndImageDownload_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private DateTime start, end, update, estEnd;
         private DateTime minDateTime = new DateTime(1900, 1, 1);

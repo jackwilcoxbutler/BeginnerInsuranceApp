@@ -91,7 +91,7 @@ namespace TeamNateZone
             else
             {
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
-                MessageBox.Show(" The File you are trying to view is not in the correct format to view \n You can download the file using the dowload button");
+                MessageBox.Show(" The File you are trying to view is not in the correct format to view \n If a file is attached, You can download the file using the download button");
             }
 
 
@@ -133,7 +133,7 @@ namespace TeamNateZone
             }
             else
             {
-                lblStatus.Text = "No Attachemt to download";
+                lblStatus.Text = "No Attachment to download";
             }
         }
 

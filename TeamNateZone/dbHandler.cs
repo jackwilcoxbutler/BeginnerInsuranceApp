@@ -623,7 +623,7 @@ namespace TeamNateZone
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+                //MessageBox.Show(err.Message, "Error Occurred");
                 return null;
             }
             finally
@@ -667,7 +667,7 @@ namespace TeamNateZone
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+                //MessageBox.Show(err.Message, "Error Occurred");
                 return null;
             }
             finally
@@ -710,7 +710,7 @@ namespace TeamNateZone
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+                //MessageBox.Show(err.Message, "Error Occurred");
                 return null;
             }
             finally
@@ -783,14 +783,14 @@ namespace TeamNateZone
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(err.Message, "Error Occurred");
+                    //MessageBox.Show(err.Message, "Error Occurred");
                     return "";
                 }
 
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+                //MessageBox.Show(err.Message, "Error Occurred");
                 return "";
             }
             finally
@@ -820,14 +820,14 @@ namespace TeamNateZone
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(err.Message, "Error Occurred");
+                    //MessageBox.Show(err.Message, "Error Occurred");
                     return "";
                 }
 
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error Occurred");
+                //MessageBox.Show(err.Message, "Error Occurred");
                 return null;
             }
             finally
