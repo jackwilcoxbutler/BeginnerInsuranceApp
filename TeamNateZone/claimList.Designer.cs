@@ -104,13 +104,14 @@ namespace TeamNateZone
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1594, 861);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // claimIdDataGridViewTextBoxColumn
@@ -217,9 +218,9 @@ namespace TeamNateZone
             this.viewClaimGroupBox.Controls.Add(this.claimIdLable);
             this.viewClaimGroupBox.Controls.Add(this.testPictureBox);
             this.viewClaimGroupBox.Location = new System.Drawing.Point(1594, 0);
-            this.viewClaimGroupBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewClaimGroupBox.Margin = new System.Windows.Forms.Padding(6);
             this.viewClaimGroupBox.Name = "viewClaimGroupBox";
-            this.viewClaimGroupBox.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewClaimGroupBox.Padding = new System.Windows.Forms.Padding(6);
             this.viewClaimGroupBox.Size = new System.Drawing.Size(386, 861);
             this.viewClaimGroupBox.TabIndex = 10;
             this.viewClaimGroupBox.TabStop = false;
@@ -250,7 +251,7 @@ namespace TeamNateZone
             this.viewClaimImageInstructions.BackColor = System.Drawing.Color.YellowGreen;
             this.viewClaimImageInstructions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.viewClaimImageInstructions.Location = new System.Drawing.Point(32, 75);
-            this.viewClaimImageInstructions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewClaimImageInstructions.Margin = new System.Windows.Forms.Padding(6);
             this.viewClaimImageInstructions.Name = "viewClaimImageInstructions";
             this.viewClaimImageInstructions.ReadOnly = true;
             this.viewClaimImageInstructions.Size = new System.Drawing.Size(328, 127);
@@ -261,7 +262,7 @@ namespace TeamNateZone
             // enterClaimIDTxt
             // 
             this.enterClaimIDTxt.Location = new System.Drawing.Point(96, 328);
-            this.enterClaimIDTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.enterClaimIDTxt.Margin = new System.Windows.Forms.Padding(6);
             this.enterClaimIDTxt.Name = "enterClaimIDTxt";
             this.enterClaimIDTxt.Size = new System.Drawing.Size(196, 31);
             this.enterClaimIDTxt.TabIndex = 1;
@@ -366,7 +367,7 @@ namespace TeamNateZone
             this.Controls.Add(this.btnReturnToWelcome);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "claimList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List of Claims";

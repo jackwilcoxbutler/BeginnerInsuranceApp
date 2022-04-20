@@ -167,5 +167,15 @@ namespace TeamNateZone
                 form.Show();
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                Claim claim = new Claim((int)dataGridView1.SelectedRows[0].Cells[0].Value);
+                ClientViewClaimImages form = new ClientViewClaimImages(claim.claimID);
+                form.Show();
+            }
+        }
     }
 }
