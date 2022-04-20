@@ -271,3 +271,4 @@ C:\Users\Jack Wilcox\OneDrive - Butler University\SE361Final\TeamNateZone\obj\De
 C:\Users\Jack Wilcox\OneDrive - Butler University\SE361Final\TeamNateZone\obj\Debug\TeamNateZone.csproj.CoreCompileInputs.cache
 C:\Users\Jack Wilcox\OneDrive - Butler University\SE361Final\TeamNateZone\obj\Debug\TeamNateZone.exe
 C:\Users\Jack Wilcox\OneDrive - Butler University\SE361Final\TeamNateZone\obj\Debug\TeamNateZone.pdb
+C:\Users\nknight\source\repos\SE361\TeamNateZone\obj\Debug\TeamNateZone.FilesFolderView.resources

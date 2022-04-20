@@ -64,9 +64,13 @@ namespace TeamNateZone
 
         private void btnViewFolders_Click(object sender, EventArgs e)
         {
+            //The following will be implemented in the next issue of the program
+            /*
             folderPage folderScreen = new folderPage(user);
             folderScreen.Show();
             this.Hide();
+            */
+            MessageBox.Show("The Following File Viewer System will be implemented in the next program release");
         }
     }
 }
