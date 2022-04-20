@@ -58,10 +58,10 @@ namespace TeamNateZone
             this.claimIDLbl = new System.Windows.Forms.Label();
             this.claimInfoLbl = new System.Windows.Forms.Label();
             this.buttonPanel = new System.Windows.Forms.Panel();
-            this.info_saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.image_saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.rndImageDownload = new CustomControls.RJControls.rndButton();
             this.downloadImgBtn = new CustomControls.RJControls.rndButton();
+            this.info_saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.image_saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.imgPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClaimImgBox)).BeginInit();
             this.infoPanel.SuspendLayout();
@@ -125,7 +125,7 @@ namespace TeamNateZone
             this.infoPanel.Location = new System.Drawing.Point(1267, 0);
             this.infoPanel.Margin = new System.Windows.Forms.Padding(6);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(659, 1062);
+            this.infoPanel.Size = new System.Drawing.Size(659, 1037);
             this.infoPanel.TabIndex = 1;
             // 
             // lblStatus
@@ -399,18 +399,15 @@ namespace TeamNateZone
             // 
             this.buttonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPanel.AutoSize = true;
             this.buttonPanel.BackColor = System.Drawing.Color.White;
             this.buttonPanel.Controls.Add(this.rndImageDownload);
             this.buttonPanel.Controls.Add(this.downloadImgBtn);
             this.buttonPanel.Location = new System.Drawing.Point(0, 898);
             this.buttonPanel.Margin = new System.Windows.Forms.Padding(6);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(1284, 166);
+            this.buttonPanel.Size = new System.Drawing.Size(1284, 141);
             this.buttonPanel.TabIndex = 2;
-            // 
-            // image_saveFileDialog
-            // 
-            this.image_saveFileDialog.DefaultExt = "pdf";
             // 
             // rndImageDownload
             // 
@@ -454,12 +451,16 @@ namespace TeamNateZone
             this.downloadImgBtn.UseVisualStyleBackColor = false;
             this.downloadImgBtn.Click += new System.EventHandler(this.downloadImgBtn_Click);
             // 
+            // image_saveFileDialog
+            // 
+            this.image_saveFileDialog.DefaultExt = "pdf";
+            // 
             // ClientViewClaimImages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1924, 1030);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.imgPanel);
             this.Controls.Add(this.buttonPanel);

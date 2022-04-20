@@ -1060,13 +1060,14 @@ namespace TeamNateZone
             {
                 cmd.Connection = connection;
 
-                cmd.CommandText = "INSERT INTO FilesInFolders (UserID, FileName, FolderID, FileContentType, FileData, FmPermission, CmPermission, ClientPermission, FileDescription) VALUES (@userID,  @fileName, @fileExtention, @file, @folderid, @Fmp, @CmP, @CP, @description);";
+                cmd.CommandText = "INSERT INTO FilesInFolders (UserID, FileName, FolderID, FileContentType, FileData, FmPermission, CmPermission, ClientPermission, FileDescription) " +
+                                                      "VALUES (@userID,  @fileName, @folderid,@fileExtension, @file, @Fmp, @CmP, @CP, @description);";
 
                 cmd.Parameters.AddWithValue("@userID", userid);
                 cmd.Parameters.AddWithValue("@description", desc);
                 cmd.Parameters.AddWithValue("@file", datab);
                 cmd.Parameters.AddWithValue("@fileName", fname);
-                cmd.Parameters.AddWithValue("@fileExtention", exten);
+                cmd.Parameters.AddWithValue("@fileExtension", exten);
                 cmd.Parameters.AddWithValue("@FmP", fmPerm);
                 cmd.Parameters.AddWithValue("@CmP", cmPerm);
                 cmd.Parameters.AddWithValue("@CP", clientPerm);
