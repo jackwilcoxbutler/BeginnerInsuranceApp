@@ -29,9 +29,10 @@ namespace TeamNateZone
         private void btnViewAllClaims_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AlllistClaims = new AllClaimList(user);
-            AlllistClaims.Owner = this;
-            AlllistClaims.Show();
+            claimList newForm = new claimList(user);
+            newForm.Owner = this;
+            newForm.Show();
+            this.Hide();
         }
 
         private void btnManageAccount_Click(object sender, EventArgs e)

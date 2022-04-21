@@ -28,9 +28,17 @@ namespace TeamNateZone
         private void btnReturnToWelcome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            welcomeForm = new ClientWelcomeForm(user);
-            welcomeForm.Owner = this;
-            welcomeForm.Show();
+            if (user.getClearance() == 0)
+            {
+                welcomeForm = new ClientWelcomeForm(user);
+                welcomeForm.Owner = this;
+                welcomeForm.Show();
+            }else if(user.getClearance() == 1 | user.getClearance() == 2)
+            {
+                this.Owner.Show();
+                this.Hide();
+
+            }
         }
 
 
@@ -39,8 +47,25 @@ namespace TeamNateZone
             SqlConnection cn = new SqlConnection(@"Data Source=se361.cysfo7qeek6c.us-east-1.rds.amazonaws.com;Initial Catalog=TEAM_A;Persist Security Info=True;User ID=TEAM_A;Password=j2uBr3v4F4y7kgAZF3CZmmMP;Encrypt=True;TrustServerCertificate=True");
 
             cn.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Claims WHERE UserID = @userid", cn);
-            da.SelectCommand.Parameters.AddWithValue("userid", user.getUserID());
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            if (user.getClearance() == 0)
+            {
+                da = new SqlDataAdapter("SELECT * FROM Claims WHERE UserID = @userid", cn);
+                da.SelectCommand.Parameters.AddWithValue("userid", user.getUserID());
+            }
+            else if(user.getClearance() == 1)
+            {
+                da = new SqlDataAdapter("SELECT * FROM Claims WHERE CmID = @CmID", cn);
+                da.SelectCommand.Parameters.AddWithValue("CmID", user.getUserID());
+
+            }
+            else if (user.getClearance() == 2)
+            {
+
+                da = new SqlDataAdapter("SELECT * FROM Claims WHERE FmID = @FmID", cn);
+                da.SelectCommand.Parameters.AddWithValue("FmID", user.getUserID());
+            }
             DataTable dtbl = new DataTable();
 
 
@@ -68,12 +93,7 @@ namespace TeamNateZone
             string ClaimID = enterClaimIDTxt.Text;
             int ClaimUser = db.get_userFromClaim(ClaimID);
             Console.WriteLine(db.get_fileType_Claim(ClaimID));
-            if (user.getUserID() != ClaimUser)
-            {
-                lblStatus.Text = "Please enter a valid Claim ID";
-                return;
-            }
-            else if (string.IsNullOrEmpty(enterClaimIDTxt.Text))
+           if (string.IsNullOrEmpty(enterClaimIDTxt.Text))
             {
                 lblStatus.Text = "Please enter a Claim ID to View Image";
             }
@@ -109,12 +129,7 @@ namespace TeamNateZone
             string fileName = db.get_filename_claim(ClaimID);
 
             int ClaimUser = db.get_userFromClaim(ClaimID);
-            if (user.getUserID() != ClaimUser)
-            {
-                lblStatus.Text = "Please enter a valid Claim ID";
-                return;
-            }
-            else if (!string.IsNullOrEmpty(fileName))
+            if (!string.IsNullOrEmpty(fileName))
             {
                 fileName = fileName.Trim();
                 saveFileDialog1.FileName = fileName;
