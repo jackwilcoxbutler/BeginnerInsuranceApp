@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PandaIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -416,6 +419,7 @@
     <Content Include="Images\p.jpg" />
     <Content Include="Images\p.ico" />
     <Content Include="Panda Logo.jpeg" />
+    <Content Include="PandaIcon.ico" />
     <Content Include="Resources\account.png" />
     <Content Include="Resources\clipBoard.jpeg" />
     <Content Include="Resources\message.png" />
