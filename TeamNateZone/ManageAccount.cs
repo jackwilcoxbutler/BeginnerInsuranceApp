@@ -32,24 +32,45 @@ namespace TeamNateZone
             tbPassword.Text = user.getPassword();
             tbEmail.Text = user.getEmail();
             tbAddress.Text = user.getStreet();
-            tbCity.Text = user.getCity();
-            tbState.Text = user.getState();
-            tbZip.Text = user.getZip();
-//            String s = user.getCC();
-// WE SHOULD NOT ATTACH PAYMENT INFORMATION TO OUR LOCAL USER OBJECT
-/*
-            if(!String.IsNullOrWhiteSpace(s))
+            if(user.getCity() == "")
             {
-            //}
-            //else
-            //{
-                tbCC14.Text = user.getCC().Substring(0, 4);
-                tbCC24.Text = user.getCC().Substring(4, 4);
-                tbCC34.Text = user.getCC().Substring(8, 4);
+                tbCity.Clear();
             }
-            tbCVV.Text = user.getCVV();
-            tbCCExp.Text = user.getCCExp();
-*/
+            else
+            {
+                tbCity.Text = user.getCity();
+            }
+            if (user.getState() == "  ")
+            {
+                tbState.Clear();
+            }
+            else
+            {
+                tbState.Text = user.getState();
+            }
+            if (user.getZip() == "     ")
+            {
+                tbZip.Clear();
+            }
+            else
+            {
+                tbZip.Text = user.getZip();
+            }
+            //            String s = user.getCC();
+            // WE SHOULD NOT ATTACH PAYMENT INFORMATION TO OUR LOCAL USER OBJECT
+            /*
+                        if(!String.IsNullOrWhiteSpace(s))
+                        {
+                        //}
+                        //else
+                        //{
+                            tbCC14.Text = user.getCC().Substring(0, 4);
+                            tbCC24.Text = user.getCC().Substring(4, 4);
+                            tbCC34.Text = user.getCC().Substring(8, 4);
+                        }
+                        tbCVV.Text = user.getCVV();
+                        tbCCExp.Text = user.getCCExp();
+            */
             btnUpdatePassword.Visible = false;
             lbVerify.Visible = false;
             txtVerify.Visible = false;
@@ -140,7 +161,7 @@ namespace TeamNateZone
                 btnStopView.Visible = false;
                 tbPassword.PasswordChar = '•';
 
-                MessageBox.Show("New Password Has Been Set!", "Success");
+                MessageBox.Show("User Information Updated.", "Success");
             }
             else
             {
