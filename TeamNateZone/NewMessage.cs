@@ -111,7 +111,9 @@ namespace TeamNateZone
 
                     message = new MessageForm(user);
                     message.Owner = this;
+                    this.Hide();
                     message.Show();
+
                 }
                 else
                 {
