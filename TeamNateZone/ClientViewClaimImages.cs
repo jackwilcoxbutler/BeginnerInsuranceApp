@@ -155,9 +155,9 @@ namespace TeamNateZone
             cmUser = db.get_username(claim.cmID);
             claimDescTxtBox.Text = claim.claimDesc;
             claimIDTxt.Text = claim.claimID.ToString();
-            startDateTxt.Text = claim.startDate.ToString();
+            startDateTxt.Text = claim.startDate.Day.ToString();
             statusTxt.Text = claim.claimStatus;
-            lastUpdateTxt.Text = claim.lastUpdate.ToString();
+            lastUpdateTxt.Text = claim.lastUpdate.Day.ToString();
             claimTypeTxt.Text = claim.claimType;
 
 
