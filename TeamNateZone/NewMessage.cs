@@ -109,9 +109,9 @@ namespace TeamNateZone
                     txtMessage.Clear();
                     txtSubject.Clear();
 
-                    MessageForm mf = (MessageForm)this.Owner;
-                    this.Close();
-                    mf.Show();
+                    message = new MessageForm(user);
+                    message.Owner = this;
+                    message.Show();
                 }
                 else
                 {
